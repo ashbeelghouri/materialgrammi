@@ -1,0 +1,4 @@
+.fixed-header {
+    position: sticky;
+    top: 45px;
+}

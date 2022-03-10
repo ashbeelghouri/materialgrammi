@@ -1,0 +1,11 @@
+<app-headers>{{title}}</app-headers>
+<app-description></app-description>
+<app-selectors>{{selector}}</app-selectors>
+<h3 class="padH-10">Input Options</h3>
+<app-input-options [options]="inputOptions"></app-input-options>
+<app-output-options [options]="outputOptions"></app-output-options>
+<app-examples [name]="title" [code] = "code" [optionsApplied]="optionsApplied">
+    <mg-daterange (range)="selectRange($event)"></mg-daterange>
+    <p class="font-20 padV-20" *ngIf="selected.startdate && selected.enddate">Dates Selected are from {{selected.startdate}} to {{selected.enddate}}</p>
+
+</app-examples>

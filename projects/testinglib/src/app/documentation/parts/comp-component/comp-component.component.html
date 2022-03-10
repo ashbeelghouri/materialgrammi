@@ -1,0 +1,19 @@
+<app-headers>{{title}}</app-headers>
+<app-description></app-description>
+<app-selectors>{{selector}}</app-selectors>
+<h3 class="padH-10">Input Options</h3>
+<app-input-options [options]="inputOptions"></app-input-options>
+<app-output-options [options]="outputOptions"></app-output-options>
+<div class="pad-10">
+    <app-examples [name]="title" [code] = "code" [optionsApplied]="optionsApplied">
+        <mg-component size="s">
+            <p class="pad-10 grey2">Simple TEXT in the component of size small (s)</p>
+        </mg-component>
+        <mg-component size="m">
+            <p class="pad-10 grey2">Simple TEXT in the component of size medium (m)</p>
+        </mg-component>
+        <mg-component size="l">
+            <p class="pad-10 grey2">Simple TEXT in the component of size large (l)</p>
+        </mg-component>
+    </app-examples>
+</div>

@@ -1,0 +1,28 @@
+<app-headers>{{title}}</app-headers>
+<app-description></app-description>
+<app-selectors>{{selector}}</app-selectors>
+<h3 class="padH-10">Input Options</h3>
+<app-input-options [options]="inputOptions"></app-input-options>
+<app-output-options [options]="outputOptions"></app-output-options>
+<div class="pad-10">
+    <app-examples [name]="title" [code] = "code" [optionsApplied]="optionsApplied">
+        <div class="row">
+            <div class="col m4 l4 s12">
+                <div class="pad-5">
+                    <mg-image src="https://picsum.photos/300/300?random=1" [rounded]="true" [shadowed]="true" [filters]="optionsApplied.filters"></mg-image>
+                </div>
+            </div>
+            <div class="col m4 l4 s12">
+                <div class="pad-5">
+                    <mg-image src="https://picsum.photos/300/300?random=2" [rounded]="true" [shadowed]="true" [filters]="optionsApplied.filters"></mg-image>
+                </div>
+            </div>
+            <div class="col m4 l4 s12">
+                <div class="pad-5">
+                    <mg-image src="https://picsum.photos/300/300?random=3" [rounded]="true" [shadowed]="true" [filters]="optionsApplied.filters"></mg-image>
+                </div>
+            </div>
+        </div>
+        
+    </app-examples>
+</div>

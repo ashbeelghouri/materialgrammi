@@ -1,0 +1,3 @@
+<div class="code" [ngClass]="class">
+    <p class="spacing-2 text-grey7 padB-5" *ngFor="let c of code; let i=index;"><span *ngIf="numbering" class="pad-5 text-blueGrey8 grey2">{{i + 1}}</span> <span [ngClass]="numbering ? '' : 'padL-5'">{{c}}</span></p>
+</div>

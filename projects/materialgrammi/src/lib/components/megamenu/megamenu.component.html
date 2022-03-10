@@ -1,0 +1,10 @@
+<div class="megamenu-wrapper"  (mouseleave)="closeMenu()">
+  <div class="megamenu-links">
+    <ng-container *ngFor="let m of menu">
+      <a class="btn" [innerHtml]="m.name" [ngClass]="menuBtnClass(m.id)" (mouseover)="openMenu(m.id)"></a>
+    </ng-container>
+  </div>
+  <div class="megamenu-content" (mouseover)="active = true" [ngClass]="megamenuContentClass()">
+    <ng-content></ng-content>
+  </div>
+</div>

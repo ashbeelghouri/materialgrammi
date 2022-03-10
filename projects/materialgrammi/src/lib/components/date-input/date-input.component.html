@@ -1,0 +1,21 @@
+<div (click)="active = true"  (focusin)="inputFocused(true)" (mouseleave)="inputFocused(false)" [ngClass]="class">
+    <mg-input [theme]="input.theme" [style]="input.style" [label]="label" 
+    [placeholder] = "format" [control]="input.control" type="text" 
+    [textValue]="textValue" [onDark]="input.darkmode" [class]="input.class"></mg-input>
+    <div class="calendar-input pad-10" [ngClass]="calendarClass()">
+        <p class="text-right">
+            <a [innerHtml]="icons.close" 
+            class="font-20 grey3 text-grey8 
+            hover-grey2 text-hover-grey10 
+            shadow-1 padH-13 radius-50 padV-5" 
+            style="position: absolute; right: 20px; margin-top: -10px;" 
+            (click)="active = false"></a>
+        </p>
+        
+        <mg-calendar (dayIsClicked)="dateSelected($event)" [theme]="calendar.theme" 
+        [disabled]="calendar.disabled" [events]="[]" [abbreviation] = "calendar.abbreviation"
+        [format]="format" [disabledRange]="disabledRange"></mg-calendar>
+    </div>
+</div>
+
+

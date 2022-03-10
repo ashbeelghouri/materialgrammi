@@ -1,0 +1,17 @@
+<div class="mg-switch-wrapper" [ngClass] = "size == 's' ? 'switch-small' : size == 'm' ? 'switch-medium' : 'switch-large'">
+
+  <ng-container *ngIf="options.left && showChoices">
+    <div class="mg-switch-choice" [ngClass]="leftClasses()" [innerHtml]="options.left" (click)="toggleChoices()"></div>
+  </ng-container>
+
+
+  <input type="checkbox" class="mg-switch" [ngClass]="classesOnInput()" [checked]="selected"
+    (click)="toggleChoices()" />
+
+  <ng-container *ngIf="options.right && showChoices">
+    <div class="mg-switch-choice" [ngClass]="rightClasses()" [innerHtml]="options.right" (click)="toggleChoices()">
+    </div>
+  </ng-container>
+
+
+</div>

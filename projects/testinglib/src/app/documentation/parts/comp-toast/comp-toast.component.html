@@ -1,0 +1,12 @@
+<app-headers>{{title}}</app-headers>
+<app-description></app-description>
+<app-selectors>{{selector}}</app-selectors>
+<h3 class="padH-10">Input Options</h3>
+<app-input-options [options]="inputOptions"></app-input-options>
+<app-output-options [options]="outputOptions"></app-output-options>
+<div class="pad-10">
+    <app-examples [name]="title" [code] = "code" [optionsApplied]="optionsApplied">
+        <mg-button theme="primary" (clicked)="optionsApplied.show()">Toast is <span class="marginL-5 pad-5 blue" [innerHtml]="show ? 'on' : 'off'"></span></mg-button>
+        <mg-toast [show]="show">Hi, I am simple taost!></mg-toast>
+    </app-examples>
+</div>

@@ -1,0 +1,7 @@
+<div [ngClass]="class">
+  <div class="is-draggable" (drag)="onDrag($event)" (dragstart)="onDrag($event)" [draggable]="dragable">
+    <div class="drag-element">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

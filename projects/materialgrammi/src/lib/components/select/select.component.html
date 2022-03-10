@@ -1,0 +1,10 @@
+<div class="select-wrapper select-{{theme}} select-{{selectType}}">
+  <div class="select-title" (click)="toggleOptions()"><span [innerHtml]="titleDisplay"></span> <span class="right"><i class="fas fa-chevron-down"></i></span></div>
+  <div class="select-options" [ngClass]="optionsClasses()">
+    <ng-container *ngIf="enableSearch">
+      <mg-input placeholder="Find" label="" [theme]="theme" (keyup)="searchFromOptions($event)"></mg-input>
+    </ng-container>
+    <hr>
+    <div class="select-option" [ngClass]="isHighlighted(opt.name)" *ngFor="let opt of options" [innerHtml]="opt.name" (click)="selectOption(opt)"></div>
+  </div>
+</div>

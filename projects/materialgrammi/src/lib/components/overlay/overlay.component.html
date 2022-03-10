@@ -1,0 +1,4 @@
+<div class="overlay {{canvasPosition}} size-{{offSize}}" [ngClass]="mainClasses()">
+  <ng-content></ng-content>
+</div>
+<div (click)="close()" class="off-overlay blur" [ngClass]="overlayClasses()"></div>

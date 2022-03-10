@@ -1,0 +1,14 @@
+<app-headers>{{title}}</app-headers>
+<app-description></app-description>
+<app-selectors>{{selector}}</app-selectors>
+<h3 class="padH-10">Input Options</h3>
+<app-input-options [options]="inputOptions"></app-input-options>
+<app-output-options [options]="outputOptions"></app-output-options>
+
+<div class="pad-10">
+    <app-examples [name]="title" [code] = "code" [optionsApplied]="optionsApplied">
+        <mg-checkbox size="s" theme = "primary" [isSelected]="true">Small</mg-checkbox>
+        <mg-checkbox size="m" theme = "success" [isSelected]="true">Medium / Default</mg-checkbox>
+        <mg-checkbox size="l" theme = "info" [isSelected]="true">Large</mg-checkbox>
+    </app-examples>
+</div>

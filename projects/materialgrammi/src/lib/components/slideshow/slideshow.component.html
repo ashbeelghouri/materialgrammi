@@ -1,0 +1,13 @@
+<div class="slideshow-wrapper" #slideshowWrapper [ngClass]="class">
+  <div class="slideshow">
+    <ng-container *ngFor="let item of items; let i = index;">
+      <div class="slide-wrapper">
+        <div class="slide" [innerHtml]="item" [ngClass]="slideClasses()"></div>
+      </div>
+    </ng-container>
+  </div>
+  <div class="controls" *ngIf="showControls">
+    <a class="control-previous" (click)="previousPage()"><i class="fas fa-chevron-left"></i></a>
+    <a class="control-next" (click)="nextPage()"><i class="fas fa-chevron-right"></i></a>
+  </div>
+</div>

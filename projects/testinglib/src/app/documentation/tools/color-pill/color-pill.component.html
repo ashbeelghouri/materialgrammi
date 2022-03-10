@@ -1,0 +1,8 @@
+<div class="col m4 l4 s12" style="float: left;">
+    <h3 class="marginT-20 text-center bold">{{name}} <small class="text-grey7 font-14">{{description}}</small></h3>
+    <div class="color-pill pad-10 spacing-2 marginB-10 marginR-5 radius-15 shadow-1 text-center" *ngFor="let d of color" [ngClass]="d.name + ' text-' + d.clr">
+        <span *ngIf="active > 0" class="left not-selectable pointer" (click)="onClickChange(true)"><i class="fas fa-times"></i></span>
+        <span class="spacing-2 not-selectable pointer" (click)="onClickChange(false)">{{pre}}{{d.name}}</span>
+        <span class="right" (click)="copy(d.name)"><i class="fas fa-copy"></i> <span class="font-10 padX-5" [innerHtml]="showToast && d.name == selected ? 'copied' : ''"></span></span>
+    </div>
+</div>

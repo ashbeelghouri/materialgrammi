@@ -1,0 +1,52 @@
+<div class="pad-10">
+  <div class="pad-5">
+    <h3><span [innerHtml]="tableTitle" *ngIf="showOptions.title">Table</span> <small class="right" *ngIf="showOptions.count">{{count}} <i
+          class="fas fa-list-ol padL-5 pointer" (click)="openSorter()" *ngIf="showOptions.sort"></i> <i
+          class="fas fa-filter padL-5 font-16 pointer" (click)="openFilter()" *ngIf="showOptions.filter"></i></small></h3>
+    <mg-collapse widgetId="1" [show]="openFilterBox">
+      <div class="pad-10 collapse-filter-box">
+        <h4>Filter </h4>
+        <mg-button (clicked)="search($event)" theme="success" btnSize="sm"><i class="fas fa-search padR-5"></i> Search
+        </mg-button>
+        <div class="row">
+          <div class="col m3 l3 s6" *ngFor="let filter of filterQuery">
+            <mg-input [control]="filter.val" [label]="filter.name"></mg-input>
+          </div>
+        </div>
+      </div>
+    </mg-collapse>
+
+    <mg-collapse widgetId="2" [show]="openSortBox">
+      <div class="pad-10 collapse-sorter-box">
+        <h4 style="margin-bottom: 5px;">Sort</h4>
+        <mg-select [options]="sortOptions" (value)="sort($event)"></mg-select>
+      </div>
+    </mg-collapse>
+  </div>
+  <table class="{{theme}}">
+    <thead [ngClass]="fixedHeader ? 'fixed-header' : ''">
+      <ng-container>
+        
+        <th *ngFor="let head of headings; let k = index"><span (click)="sort(head)">
+          <mg-dropable (dataRecieved)="recieveData($event, k)">
+            <mg-dragable [data]="{order: k}" [dragable]="dragableSort">
+              {{head}}
+            </mg-dragable>
+          </mg-dropable>
+          </span></th>
+      </ng-container>
+      
+    </thead>
+    <tbody>
+      <ng-container>
+        <tr *ngFor="let data of reformedData">
+          <td *ngFor="let col of data" [innerHtml]="col"></td>
+        </tr>
+      </ng-container>
+      
+    </tbody>
+  </table>
+  <div class="padV-5" *ngIf="paginate.status">
+    <mg-pagination [theme]="theme" [fullDataMode]="true" [data]="mgData" [perPage]="paginate.perPage" getdata="updatePaginatedData($event)"></mg-pagination>
+  </div>
+</div>

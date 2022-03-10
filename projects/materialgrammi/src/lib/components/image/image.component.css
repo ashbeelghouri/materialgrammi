@@ -1,0 +1,7 @@
+.img.rounded {
+  border-radius: 5px;
+}
+
+.img.circled {
+  border-radius: 50%;
+}

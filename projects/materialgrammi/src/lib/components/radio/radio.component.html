@@ -1,0 +1,9 @@
+<div class="radio" [ngClass]="mainClasses()">
+  <div class="option">
+    <div class="radio-option" *ngFor="let option of options">
+      <input [id]="option.value" type="radio" [name]="name" [value]="option.value" (click)="select(option.value)">
+      <div class="radio-shadow"></div>
+      <label [for]="option.value" [innerHtml]="option.name" (click)="select(option.value)" [ngClass]="classesOnLabel()"></label>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="main" style="position: relative;" [ngClass]="class">
+  <div class="dropdown-container" [ngClass]="dropdownClasses()" (mouseover)="openDropDown()"
+    (mouseleave)="closeDropDown()">
+    <div class="dropdown-content">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

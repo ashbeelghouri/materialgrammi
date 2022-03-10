@@ -1,0 +1,4 @@
+<div class="form-{{fStyle}} {{theme}}" [ngClass]="mainClasses()">
+  <label [innerHtml]="label" (click)="labelClick()" [ngClass]="fStyle == 'control' && focused ? 'marginL-10' : ''"></label>
+  <textarea #inputElementText (focus)="onFocusIn()" (focusout)="onFocusOut()" (keyup)="onKeyUp($event)"></textarea>
+</div>

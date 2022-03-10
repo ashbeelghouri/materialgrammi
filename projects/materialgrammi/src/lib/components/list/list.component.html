@@ -1,0 +1,3 @@
+<ul *ngIf="items.length > 0" class="mg-list {{theme}}" [ngClass]="class">
+  <li *ngFor="let item of items" [innerHtml]="item" class="item"></li>
+</ul>

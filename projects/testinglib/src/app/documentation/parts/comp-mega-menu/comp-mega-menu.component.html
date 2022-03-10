@@ -1,0 +1,27 @@
+<app-headers>{{title}}</app-headers>
+<app-description></app-description>
+<app-selectors>{{selector}}</app-selectors>
+<h3 class="padH-10">Input Options</h3>
+<app-input-options [options]="inputOptions"></app-input-options>
+<app-output-options [options]="outputOptions"></app-output-options>
+<div class="pad-10">
+    <app-examples [name]="title" [code] = "code" [optionsApplied]="optionsApplied">
+        <mg-megamenu id="example-megamenu" [menu]="optionsApplied.menu">
+            <mg-widget id="menu-link-01" parent="example-megamenu" type="megamenu">
+                <p class="grey8 text-white pad-30">First Menu</p>
+            </mg-widget>
+            <mg-widget id="menu-link-02" parent="example-megamenu" type="megamenu">
+                <p class="grey8 text-white pad-30">Second Menu</p>
+            </mg-widget>
+            <mg-widget id="menu-link-03" parent="example-megamenu" type="megamenu">
+                <p class="grey8 text-white pad-30">Third Menu</p>
+            </mg-widget>
+            <mg-widget id="menu-link-04" parent="example-megamenu" type="megamenu">
+                <p class="grey8 text-white pad-30">Fourth Menu</p>
+            </mg-widget>
+            <mg-widget id="menu-link-05" parent="example-megamenu" type="megamenu">
+                <p class="grey8 text-white pad-30">Fifth Menu</p>
+            </mg-widget>
+        </mg-megamenu>
+    </app-examples>
+</div>

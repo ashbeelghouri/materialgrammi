@@ -1,0 +1,10 @@
+<div class="tab-wrapper" [ngClass]="mainClasses()">
+    <div class="tab-links" [ngClass]="bg">
+        <div class="tabs">
+            <a *ngFor="let tb of options" [innerHtml]="tb.name" (click)="activateWidget(tb.widget)" [ngClass]="buttonClass(tb.widget)"></a>
+        </div>
+    </div>
+    <div class="tab-content">
+        <ng-content></ng-content>
+    </div>
+</div>

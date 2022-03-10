@@ -1,0 +1,20 @@
+<app-headers>{{title}}</app-headers>
+<app-description></app-description>
+<app-selectors>{{selector}}</app-selectors>
+<h3 class="padH-10">Input Options</h3>
+<app-input-options [options]="inputOptions"></app-input-options>
+<app-output-options [options]="outputOptions"></app-output-options>
+<div class="pad-10">
+    <app-examples [name]="title" [code] = "code" [optionsApplied]="optionsApplied">
+        <mg-offcanvas [active]="false" id="example-canvas-option">
+            <div class="pad-10 grey2" mg-data="sidebar">
+                <h1>Sidebar</h1>
+            </div>
+            <div class="content">
+                <p class="pad-20 grey3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <mg-button theme="primary" taskType="offCanvas" task="open" target="example-canvas-option">open canvas</mg-button>
+                <mg-button theme="danger" taskType="offCanvas" task="close" target="example-canvas-option">close canvas</mg-button>
+            </div>
+        </mg-offcanvas>
+    </app-examples>
+</div>

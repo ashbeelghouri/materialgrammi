@@ -1,0 +1,7 @@
+<div class="pagination-wrapper pagination-{{theme}}">
+  <div class="page page-previous" [innerHtml]="icons.previous" (click)="onPrevious()"></div>
+  <div class="page" *ngFor="let page of pages" [ngClass]="isActivePage(page)" (click)="onPageClick(page)">
+    {{page}}
+  </div>
+  <div class="page page-next" [innerHtml]="icons.next" (click)="onNext()"></div>
+</div>

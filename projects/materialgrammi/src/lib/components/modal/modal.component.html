@@ -1,0 +1,6 @@
+<div class="modal" [ngClass]="mainModelClasses()">
+  <div class="content on-{{position}} {{modalSize}}" [ngClass]="mainModelClasses()">
+    <ng-content></ng-content>
+  </div>
+  <div (click)="close()" class="overlay blur" [ngClass]="overlayClasses()"></div>
+</div>

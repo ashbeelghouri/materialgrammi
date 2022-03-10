@@ -1,0 +1,5 @@
+<div (dragenter)="dragEntered($event)" (dragleave)="dragLeft($event)" 
+(dragover)="draggedOver($event)"
+  (drop)="onDrop($event)" [ngClass]="class">
+  <ng-content></ng-content>
+</div>

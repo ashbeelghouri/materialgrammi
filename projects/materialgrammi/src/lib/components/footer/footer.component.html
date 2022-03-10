@@ -1,0 +1,21 @@
+<div class="footer" [ngClass]="mainFooterClasses() + ' ' + class">
+  <div class="section-top">
+    <div class="left-section">
+      <ng-content select="[slot=left-section]"></ng-content>
+    </div>
+    <div class="middle-section">
+      <ng-content select="[slot=middle-section]"></ng-content>
+    </div>
+    <div class="right-section">
+      <ng-content select="[slot=right-section]"></ng-content>
+    </div>
+  </div>
+  <div class="section-bottom">
+    <div class="left-bottom-section">
+      <ng-content select="[slot=left-bottom-section]"></ng-content>
+    </div>
+    <div class="right-bottom-section">
+      <ng-content select="[slot=right-bottom-section]"></ng-content>
+    </div>
+  </div>
+</div>

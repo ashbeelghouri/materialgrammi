@@ -1,0 +1,6 @@
+<div class="breadcrumb-wrapper" [ngClass]="showDarkMode() + ' ' + class" *ngIf="links.length > 0">
+  <ng-container *ngFor="let link of links; let i = index;">
+    <a [routerLink]="link.url" class="breadcrumb" [ngClass]="active(link)">{{link.name}}</a>
+    <span class="marginL-5 marginR-5" *ngIf="links[i+1]" [innerHtml]="devider"></span>
+  </ng-container>
+</div>

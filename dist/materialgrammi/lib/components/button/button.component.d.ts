@@ -1,0 +1,44 @@
+import { EventEmitter, OnInit } from '@angular/core';
+import { MaterialgrammiService } from '../../materialgrammi.service';
+import * as i0 from "@angular/core";
+export declare class ButtonComponent implements OnInit {
+    private service;
+    clicked: EventEmitter<any>;
+    taskType: string;
+    btnStyle: string;
+    task: string;
+    target: any;
+    theme: string;
+    class: string;
+    btnSize: string;
+    isBlock: boolean;
+    round: boolean;
+    allowMargin: boolean;
+    link: string;
+    allowShrink: boolean;
+    options: any;
+    isExternalLink: boolean;
+    newTab: boolean;
+    active: EventEmitter<any>;
+    route: string[];
+    buttonType: string;
+    buttonClasses: string;
+    shrink: boolean;
+    constructor(service: MaterialgrammiService);
+    ngOnInit(): void;
+    isClicked(): void;
+    btnClasses(): string;
+    collapse(): void;
+    wizard(): void;
+    mouseEnter(): void;
+    mouseLeave(): void;
+    slideShow(): void;
+    modal(): void;
+    overlay(): void;
+    offCanvas(): void;
+    mousedown(): void;
+    mouseup(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ButtonComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonComponent, "mg-button", never, { "taskType": "taskType"; "btnStyle": "btnStyle"; "task": "task"; "target": "target"; "theme": "theme"; "class": "class"; "btnSize": "btnSize"; "isBlock": "isBlock"; "round": "round"; "allowMargin": "allowMargin"; "link": "link"; "allowShrink": "allowShrink"; "options": "options"; "isExternalLink": "isExternalLink"; "newTab": "newTab"; }, { "clicked": "clicked"; "active": "active"; }, never, ["*"]>;
+}
+//# sourceMappingURL=button.component.d.ts.map

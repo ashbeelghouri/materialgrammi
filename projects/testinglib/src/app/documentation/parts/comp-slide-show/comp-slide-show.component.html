@@ -1,0 +1,13 @@
+<app-headers>{{title}}</app-headers>
+<app-description></app-description>
+<app-selectors>{{selector}}</app-selectors>
+<h3 class="padH-10">Input Options</h3>
+<app-input-options [options]="inputOptions"></app-input-options>
+<app-output-options [options]="outputOptions"></app-output-options>
+<div class="pad-10">
+    <app-examples [name]="title" [code] = "code" [optionsApplied]="optionsApplied">
+        <mg-slideshow [perPage]="optionsApplied.perPage" id="example-slideshow" 
+        [gap]="optionsApplied.gap" [items]="optionsApplied.items" [heightAdjustment]="false" 
+        [maxHeight]="optionsApplied.maxHeight" [showControls]="optionsApplied.showControls"></mg-slideshow>
+    </app-examples>
+</div>

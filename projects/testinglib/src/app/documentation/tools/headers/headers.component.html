@@ -1,0 +1,12 @@
+<div class="padV-10 padH-20 green8">
+    <h2 class="text-grey3">
+        <small class="right" *ngIf="false">
+            <mg-button taskType="offCanvas" [task]="menuActive ? 'close' : 'open'" 
+                class="font-12"
+                theme="lite"
+                widgetId="main-off-canvas"
+                btnStyle="link" (active)="toggleMenu($event)"><i class="fas fa-bars"></i></mg-button>
+        </small>
+        <ng-content></ng-content>
+    </h2>
+</div>

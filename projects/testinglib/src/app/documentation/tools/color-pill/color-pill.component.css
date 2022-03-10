@@ -1,0 +1,18 @@
+.color-pill{
+    transition: all .20s ease-in-out;
+}
+
+.color-pill:hover{
+    transform: translateX(-15px) scale(1.09);
+    border: 1px solid #fff;
+}
+
+.color-pill .right i{
+    cursor: pointer;
+    transition: all .20s ease-in-out;
+}
+
+.color-pill .right:hover i{
+    transform: scale(2);
+    cursor: pointer;
+}

@@ -1,0 +1,8 @@
+<div class="offcanvas" [ngClass]="mainClasses()">
+  <div class="sidebar-wrapper">
+    <ng-content select="[mg-data=sidebar]"></ng-content>
+  </div>
+  <div class="content-wrapper">
+    <ng-content></ng-content>
+  </div>
+</div>

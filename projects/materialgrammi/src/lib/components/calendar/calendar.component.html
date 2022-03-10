@@ -1,0 +1,66 @@
+<div class="calendar" [ngClass]="(toggleEvent == true ? theme + ' activatedEvent' : theme) + ' ' + class">
+    <div class="month-wrapper">
+      <div class="month" *ngFor="let month of months; let i = index" [ngClass]="i == inView.month ? 'active': ''">
+        <div class="calendar-info" *ngIf="controls">
+          <div class="previous-year">
+            <a (click)="prevYear()" [innerHtml]="icons.year.previous"></a>
+          </div>
+          <div class="previous-month">
+            <a (click)="prevMonth()" [innerHtml]="icons.month.previous"></a>
+          </div>
+          <div class="month-name">
+            <span class="monthSpan">{{month}}</span><span class="yearName">{{inView.year}}</span>
+          </div>
+          <div class="next-month">
+            <a (click)="nextMonth()" [innerHtml]="icons.month.next"></a>
+          </div>
+          <div class="next-year">
+            <a (click)="nextYear()  " [innerHtml]="icons.year.next"></a>
+          </div>
+        </div>
+        <div class="weekdays">
+          <p *ngFor="let wkday of weekDays">{{wkday}}</p>
+        </div>
+        <div class="month-days">
+          <ng-container *ngFor="let d of days[i].dates">
+            <mg-dropable (dataRecieved)="updateOnDay($event)" (onEvent)="handleDropZone($event, {date: d.num, month: d.month, year: inView.year})">
+              <div class="day" [ngClass]="dayClass(d.num, d.month, inView.year, d.disabled)"
+              (click)="clickOnDay(d.num, d.month, inView.year, d.disabled)">
+                <ng-container *ngIf="d.num == 0"></ng-container>
+                <ng-container *ngIf="d.num != 0">{{d.num}}</ng-container>
+              </div>
+            </mg-dropable>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <div class="event-details">
+      <ng-container *ngIf="toggleSelect.data">
+        <ng-container *ngFor="let eventData of toggleSelect.data">
+            <div class="event-info-wrapper">
+              <mg-dragable [draggable]="true" [data]="eventData">
+                <div class="event-detail-title" [innerHtml]="eventData.name"></div>
+                <div class="event-detail-date" [innerHtml]="eventData.date"></div>
+              </mg-dragable>
+              
+              <div class="event-detail-description" [innerHtml]="eventData.description"></div>
+            </div>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+
+  <mg-overlay bgClass="grey2" [id]="id" canvasPosition="bottom" offSize="2" [active]="activateNewEvent" (isClosed)="closeNewEvent()">
+    <div class="pad-10">
+      <h2 class="text-grey8 marginV-15">Book an event on <small class="font-15 text-red8">{{ clickedOn }}</small> </h2>
+      <div class="row col m12 l12 s12">
+        <mg-input label="Event Name" fStyle="material" class="marginT-5" (keyup)="setBookEvent($event, 'name')"></mg-input>
+      </div>
+      <div class="row col m12 l12 s12">
+        <mg-text label="Event Description" fStyle="material" class="margin-5" (keyup)="setBookEvent($event, 'desc')"></mg-text>
+      </div>
+      <div class="col m12 l12 s12 text-right">
+        <mg-button (click)="createNewEvent()" theme="success">Book an event <i class="fas fa-angle-double-right"></i></mg-button>
+      </div>
+    </div>
+  </mg-overlay>

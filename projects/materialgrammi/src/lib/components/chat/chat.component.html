@@ -1,0 +1,29 @@
+<div class="chat-wrapper" *ngIf="show" [ngClass]="mainChatClasses() + ' ' + class">
+  <div class="chat-header">
+    <div class="row">
+      <div class="col m8 l8 s8" [innerHtml]="header" (click)="minimizeToggle()"></div>
+      <div class="col m4 l4 s4">
+        <p class="text-right"><a class="padR-10" (click)="minimizeToggle()"><i class="fas fa-minus"></i></a><a (click)="closeChat()"><i class="fas fa-times"></i></a></p>
+      </div>
+    </div>
+  </div>
+  <div class="chat-body"  #scrollMe>
+    <div class="chat-message" *ngFor="let msg of messages" [ngClass]="msg.isSender ? 'is-sender' : 'is-reciever'">
+      <p class="message-info">
+        <span class="by">
+          {{msg.sender}}
+        </span>
+        <span class="time">
+          {{msg.time}}
+        </span>
+      </p>
+      <p class="message-description">
+        <span [innerHtml]="msg.description"></span>
+      </p>
+    </div>
+  </div>
+  <div class="chat-footer">
+    <input type="text" placeholder="your message" (keyup)="storeMessage($event)"/>
+    <a (click)="sendMessage()"><i class="fas fa-paper-plane"></i></a>
+  </div>
+</div>

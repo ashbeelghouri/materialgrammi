@@ -1,0 +1,33 @@
+<app-headers>{{title}}</app-headers>
+<app-description></app-description>
+<app-selectors>{{selector}}</app-selectors>
+<h3 class="padH-10">Input Options</h3>
+<app-input-options [options]="inputOptions"></app-input-options>
+<app-output-options [options]="outputOptions"></app-output-options>
+<div class="pad-10">
+    <app-examples [name]="title" [code] = "code" [optionsApplied]="optionsApplied">
+        <mg-footer>
+            <div class="" slot="left-section">
+                <a class="block">Link 1</a>
+                <a class="block">Link 4</a>
+                <a class="block">Link 7</a>
+            </div>
+            <div class="" slot="middle-section">
+                <a class="block">Link 2</a>
+                <a class="block">Link 5</a>
+                <a class="block">Link 8</a>
+            </div>
+            <div class="" slot="right-section">
+                <a class="block">Link 3</a>
+                <a class="block">Link 6</a>
+                <a class="block">Link 9</a>
+            </div>
+            <div class="" slot="left-bottom-section">
+                <p>created using materialgrammi</p>
+            </div>
+            <div class="" slot="right-bottom-section">
+                <p>copyrights &copy; 2022 materialgrammi.com</p>
+            </div>
+        </mg-footer>
+    </app-examples>
+</div>

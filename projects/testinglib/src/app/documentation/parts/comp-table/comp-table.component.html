@@ -1,0 +1,15 @@
+<app-headers>{{title}}</app-headers>
+<app-description></app-description>
+<app-selectors>{{selector}}</app-selectors>
+<h3 class="padH-10">Input Options</h3>
+<app-input-options [options]="inputOptions"></app-input-options>
+<app-output-options [options]="outputOptions"></app-output-options>
+<div class="pad-10">
+    <app-examples [name]="title" [code] = "code" [optionsApplied]="optionsApplied" [explaination]="explaination">
+        <mg-table [mgData]="optionsApplied.data" [dragableSort]="optionsApplied.dragableSort" 
+        [fixedHeader] = "optionsApplied.fixedHeader" [theme]="optionsApplied.theme" 
+        [columnsOrder]="optionsApplied.columnsOrder"
+        [paginate]="optionsApplied.paginate"
+        ></mg-table>
+    </app-examples>
+</div>

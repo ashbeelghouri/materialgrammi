@@ -1,0 +1,27 @@
+<ng-container *ngIf="buttonType == 'external'">
+  <a class="btn" (click)="isClicked()" (mouseenter)="mouseEnter()" (mouseleave)="mouseLeave()"
+  [ngClass]="btnClasses()" [href]="route" [target]="newTab ? '_blank' : '_self'"
+  (mousedown)="mousedown()" (mouseup)="mouseup()">
+    <ng-container *ngTemplateOutlet="mycontent"></ng-container>
+  </a>
+</ng-container>
+
+<ng-container *ngIf="buttonType == 'internal'">
+  <a class="btn" (click)="isClicked()" (mouseenter)="mouseEnter()"
+  (mouseleave)="mouseLeave()" [ngClass]="btnClasses()" [routerLink]="route"
+  (mousedown)="mousedown()" (mouseup)="mouseup()">
+    <ng-container *ngTemplateOutlet="mycontent"></ng-container>
+  </a>
+</ng-container>
+
+<ng-container *ngIf="buttonType == 'widget'">
+  <a class="btn" (click)="isClicked()" (mouseenter)="mouseEnter()" (mouseleave)="mouseLeave()"
+  [ngClass]="btnClasses()"
+  (mousedown)="mousedown()" (mouseup)="mouseup()">
+    <ng-container *ngTemplateOutlet="mycontent"></ng-container>
+  </a>
+</ng-container>
+
+<ng-template #mycontent>
+  <ng-content></ng-content>
+</ng-template>

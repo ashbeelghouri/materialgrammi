@@ -1,0 +1,3 @@
+<div class="title {{theme}}" [ngClass]="isActive(item.active)" [innerHtml]="item.title"
+  (click)="onClickTitle()"></div>
+<div class="body {{theme}}" [innerHtml]="item.description" [ngClass]="isActive(item.active)"></div>

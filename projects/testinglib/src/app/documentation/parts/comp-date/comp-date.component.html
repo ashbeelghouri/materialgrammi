@@ -1,0 +1,9 @@
+<app-headers>{{title}}</app-headers>
+<app-description></app-description>
+<app-selectors>{{selector}}</app-selectors>
+<h3 class="padH-10">Input Options</h3>
+<app-input-options [options]="inputOptions"></app-input-options>
+<app-output-options [options]="outputOptions"></app-output-options>
+<app-examples [name]="title" [code] = "code" [optionsApplied]="optionsApplied">
+    <mg-date></mg-date>
+</app-examples>

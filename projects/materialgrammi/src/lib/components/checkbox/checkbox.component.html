@@ -1,0 +1,6 @@
+<div class="checkbox" [ngClass]="mainClasses() + ' ' + class">
+  <input [id]="id" type="checkbox" [checked]="isSelected" style="opacity: 0; position: absolute;"/>
+  <label class="check" [for]="id" (click)="toggleCheck()"></label>
+  <label class="label" [for]="id" [ngClass]="labelClass()"
+    (click)="toggleCheck()"><ng-content></ng-content></label>
+</div>

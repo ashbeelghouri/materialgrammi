@@ -1,0 +1,14 @@
+<app-headers>{{title}}</app-headers>
+<app-description></app-description>
+<app-selectors>{{selector}}</app-selectors>
+<h3 class="padH-10">Input Options</h3>
+<app-input-options [options]="inputOptions"></app-input-options>
+<app-output-options [options]="outputOptions"></app-output-options>
+<div class="pad-10">
+    <app-examples [name]="title" [code] = "code" [optionsApplied]="optionsApplied">
+        <mg-button target="dropdown-example" taskType="dropdown" task="open">Open dropdown</mg-button>
+        <mg-dropdown id="dropdown-example">
+            <p class="pad-30 grey3">Content of dropdown</p>
+        </mg-dropdown>
+    </app-examples>
+</div>
