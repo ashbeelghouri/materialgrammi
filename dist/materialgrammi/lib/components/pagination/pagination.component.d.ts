@@ -25,10 +25,9 @@ export declare class PaginationComponent implements OnInit, OnChanges {
     sendData(): void;
     removePages(): void;
     onPageClick(pageNumber: any): void;
-    isActivePage(pageNumber: any): "active" | "";
+    isActivePage(pageNumber: any): "" | "active";
     onNext(): void;
     onPrevious(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<PaginationComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<PaginationComponent, "mg-pagination", never, { "theme": "theme"; "data": "data"; "fullDataMode": "fullDataMode"; "perPage": "perPage"; "currentPage": "currentPage"; "icons": "icons"; "max": "max"; }, { "page": "page"; "getdata": "getdata"; }, never, never>;
 }
-//# sourceMappingURL=pagination.component.d.ts.map

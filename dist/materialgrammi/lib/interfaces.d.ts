@@ -15,4 +15,3 @@ export interface Megamenu {
     name: string;
     id: string;
 }
-//# sourceMappingURL=interfaces.d.ts.map

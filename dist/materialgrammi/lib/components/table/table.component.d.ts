@@ -56,4 +56,3 @@ export declare class TableComponent implements OnInit, OnChanges, AfterContentCh
     static ɵfac: i0.ɵɵFactoryDeclaration<TableComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableComponent, "mg-table", never, { "theme": "theme"; "mgData": "mgData"; "ignoredColumns": "ignoredColumns"; "sortBy": "sortBy"; "sortDirection": "sortDirection"; "tableTitle": "tableTitle"; "fixedHeader": "fixedHeader"; "dragableSort": "dragableSort"; "paginate": "paginate"; "pagingPosition": "pagingPosition"; "columnsOrder": "columnsOrder"; "showOptions": "showOptions"; }, {}, never, never>;
 }
-//# sourceMappingURL=table.component.d.ts.map

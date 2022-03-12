@@ -8,4 +8,3 @@ export declare class NoteComponent implements OnInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<NoteComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<NoteComponent, "mg-note", never, { "theme": "theme"; "alignCenter": "alignCenter"; }, {}, never, ["*"]>;
 }
-//# sourceMappingURL=note.component.d.ts.map

@@ -10,4 +10,3 @@ export declare class ChipComponent implements OnInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ChipComponent, "mg-chip", never, { "theme": "theme"; "outline": "outline"; "class": "class"; }, {}, never, ["*"]>;
 }
-//# sourceMappingURL=chip.component.d.ts.map

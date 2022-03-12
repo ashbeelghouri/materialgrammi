@@ -6,4 +6,3 @@ export declare class SidebarComponent implements OnInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<SidebarComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SidebarComponent, "mg-sidebar", never, {}, {}, never, never>;
 }
-//# sourceMappingURL=sidebar.component.d.ts.map

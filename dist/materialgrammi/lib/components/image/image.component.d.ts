@@ -19,4 +19,3 @@ export declare class ImageComponent implements OnInit, AfterViewInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<ImageComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ImageComponent, "mg-image", never, { "src": "src"; "responsive": "responsive"; "rounded": "rounded"; "circled": "circled"; "shadowed": "shadowed"; "class": "class"; "filters": "filters"; }, {}, never, never>;
 }
-//# sourceMappingURL=image.component.d.ts.map

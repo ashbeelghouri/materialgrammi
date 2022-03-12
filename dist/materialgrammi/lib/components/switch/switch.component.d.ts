@@ -21,4 +21,3 @@ export declare class SwitchComponent implements OnInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<SwitchComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SwitchComponent, "mg-switch", never, { "options": "options"; "type": "type"; "theme": "theme"; "size": "size"; "showChoices": "showChoices"; "onDark": "onDark"; "selected": "selected"; }, { "value": "value"; }, never, never>;
 }
-//# sourceMappingURL=switch.component.d.ts.map

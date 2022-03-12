@@ -1,8 +1,6 @@
 import { Component, Input } from '@angular/core';
 import * as i0 from "@angular/core";
 import * as i1 from "@angular/common";
-const _c0 = [[["", "header", ""]], "*", [["", "footer", ""]]];
-const _c1 = ["[header]", "*", "[footer]"];
 export class CardComponent {
     constructor() {
         this.class = ``;
@@ -10,21 +8,12 @@ export class CardComponent {
     ngOnInit() {
     }
 }
-CardComponent.ɵfac = function CardComponent_Factory(t) { return new (t || CardComponent)(); };
-CardComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: CardComponent, selectors: [["mg-card"]], inputs: { class: "class" }, ngContentSelectors: _c1, decls: 4, vars: 1, consts: [[1, "card", 3, "ngClass"]], template: function CardComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵprojectionDef(_c0);
-        i0.ɵɵelementStart(0, "div", 0);
-        i0.ɵɵprojection(1);
-        i0.ɵɵprojection(2, 1);
-        i0.ɵɵprojection(3, 2);
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        i0.ɵɵproperty("ngClass", ctx.class);
-    } }, directives: [i1.NgClass], styles: [""] });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CardComponent, [{
-        type: Component,
-        args: [{ selector: 'mg-card', template: "<div class=\"card\" [ngClass]=\"class\">\n  <ng-content select=\"[header]\"></ng-content>\n  <ng-content></ng-content>\n  <ng-content select=\"[footer]\"></ng-content>\n</div>\n", styles: [""] }]
-    }], function () { return []; }, { class: [{
-            type: Input
-        }] }); })();
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2FyZC5jb21wb25lbnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi8uLi9wcm9qZWN0cy9tYXRlcmlhbGdyYW1taS9zcmMvbGliL2NvbXBvbmVudHMvY2FyZC9jYXJkLmNvbXBvbmVudC50cyIsIi4uLy4uLy4uLy4uLy4uLy4uL3Byb2plY3RzL21hdGVyaWFsZ3JhbW1pL3NyYy9saWIvY29tcG9uZW50cy9jYXJkL2NhcmQuY29tcG9uZW50Lmh0bWwiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxFQUFFLFNBQVMsRUFBRSxLQUFLLEVBQVUsTUFBTSxlQUFlLENBQUM7Ozs7O0FBT3pELE1BQU0sT0FBTyxhQUFhO0lBRXhCO1FBRFMsVUFBSyxHQUFHLEVBQUUsQ0FBQztJQUNKLENBQUM7SUFFakIsUUFBUTtJQUNSLENBQUM7OzBFQUxVLGFBQWE7Z0VBQWIsYUFBYTs7UUNQMUIsOEJBQW9DO1FBQ2xDLGtCQUEyQztRQUMzQyxxQkFBeUI7UUFDekIscUJBQTJDO1FBQzdDLGlCQUFNOztRQUpZLG1DQUFpQjs7dUZET3RCLGFBQWE7Y0FMekIsU0FBUzsyQkFDRSxTQUFTO3NDQUtWLEtBQUs7a0JBQWIsS0FBSyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbXBvbmVudCwgSW5wdXQsIE9uSW5pdCB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6ICdtZy1jYXJkJyxcbiAgdGVtcGxhdGVVcmw6ICcuL2NhcmQuY29tcG9uZW50Lmh0bWwnLFxuICBzdHlsZVVybHM6IFsnLi9jYXJkLmNvbXBvbmVudC5jc3MnXVxufSlcbmV4cG9ydCBjbGFzcyBDYXJkQ29tcG9uZW50IGltcGxlbWVudHMgT25Jbml0IHtcbiAgQElucHV0KCkgY2xhc3MgPSBgYDtcbiAgY29uc3RydWN0b3IoKSB7IH1cblxuICBuZ09uSW5pdCgpOiB2b2lkIHtcbiAgfVxuXG59XG4iLCI8ZGl2IGNsYXNzPVwiY2FyZFwiIFtuZ0NsYXNzXT1cImNsYXNzXCI+XG4gIDxuZy1jb250ZW50IHNlbGVjdD1cIltoZWFkZXJdXCI+PC9uZy1jb250ZW50PlxuICA8bmctY29udGVudD48L25nLWNvbnRlbnQ+XG4gIDxuZy1jb250ZW50IHNlbGVjdD1cIltmb290ZXJdXCI+PC9uZy1jb250ZW50PlxuPC9kaXY+XG4iXX0=
+CardComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: CardComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+CardComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: CardComponent, selector: "mg-card", inputs: { class: "class" }, ngImport: i0, template: "<div class=\"card\" [ngClass]=\"class\">\n  <ng-content select=\"[header]\"></ng-content>\n  <ng-content></ng-content>\n  <ng-content select=\"[footer]\"></ng-content>\n</div>\n", styles: [""], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: CardComponent, decorators: [{
+            type: Component,
+            args: [{ selector: 'mg-card', template: "<div class=\"card\" [ngClass]=\"class\">\n  <ng-content select=\"[header]\"></ng-content>\n  <ng-content></ng-content>\n  <ng-content select=\"[footer]\"></ng-content>\n</div>\n", styles: [""] }]
+        }], ctorParameters: function () { return []; }, propDecorators: { class: [{
+                type: Input
+            }] } });
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2FyZC5jb21wb25lbnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi8uLi9wcm9qZWN0cy9tYXRlcmlhbGdyYW1taS9zcmMvbGliL2NvbXBvbmVudHMvY2FyZC9jYXJkLmNvbXBvbmVudC50cyIsIi4uLy4uLy4uLy4uLy4uLy4uL3Byb2plY3RzL21hdGVyaWFsZ3JhbW1pL3NyYy9saWIvY29tcG9uZW50cy9jYXJkL2NhcmQuY29tcG9uZW50Lmh0bWwiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxFQUFFLFNBQVMsRUFBRSxLQUFLLEVBQVUsTUFBTSxlQUFlLENBQUM7OztBQU96RCxNQUFNLE9BQU8sYUFBYTtJQUV4QjtRQURTLFVBQUssR0FBRyxFQUFFLENBQUM7SUFDSixDQUFDO0lBRWpCLFFBQVE7SUFDUixDQUFDOzswR0FMVSxhQUFhOzhGQUFiLGFBQWEsMkVDUDFCLG1MQUtBOzJGREVhLGFBQWE7a0JBTHpCLFNBQVM7K0JBQ0UsU0FBUzswRUFLVixLQUFLO3NCQUFiLEtBQUsiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBDb21wb25lbnQsIElucHV0LCBPbkluaXQgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcblxuQENvbXBvbmVudCh7XG4gIHNlbGVjdG9yOiAnbWctY2FyZCcsXG4gIHRlbXBsYXRlVXJsOiAnLi9jYXJkLmNvbXBvbmVudC5odG1sJyxcbiAgc3R5bGVVcmxzOiBbJy4vY2FyZC5jb21wb25lbnQuY3NzJ11cbn0pXG5leHBvcnQgY2xhc3MgQ2FyZENvbXBvbmVudCBpbXBsZW1lbnRzIE9uSW5pdCB7XG4gIEBJbnB1dCgpIGNsYXNzID0gYGA7XG4gIGNvbnN0cnVjdG9yKCkgeyB9XG5cbiAgbmdPbkluaXQoKTogdm9pZCB7XG4gIH1cblxufVxuIiwiPGRpdiBjbGFzcz1cImNhcmRcIiBbbmdDbGFzc109XCJjbGFzc1wiPlxuICA8bmctY29udGVudCBzZWxlY3Q9XCJbaGVhZGVyXVwiPjwvbmctY29udGVudD5cbiAgPG5nLWNvbnRlbnQ+PC9uZy1jb250ZW50PlxuICA8bmctY29udGVudCBzZWxlY3Q9XCJbZm9vdGVyXVwiPjwvbmctY29udGVudD5cbjwvZGl2PlxuIl19

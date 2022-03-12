@@ -24,4 +24,3 @@ export declare class TextInputComponent implements OnInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<TextInputComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TextInputComponent, "mg-text", never, { "theme": "theme"; "fStyle": "fStyle"; "on_dark": "on_dark"; "label": "label"; "control": "control"; }, { "value": "value"; "isFocused": "isFocused"; "keyup": "keyup"; }, never, never>;
 }
-//# sourceMappingURL=text-input.component.d.ts.map

@@ -381,32 +381,27 @@ class MaterialgrammiService {
         });
     }
 }
-MaterialgrammiService.ɵfac = function MaterialgrammiService_Factory(t) { return new (t || MaterialgrammiService)(); };
-MaterialgrammiService.ɵprov = /*@__PURE__*/ i0.ɵɵdefineInjectable({ token: MaterialgrammiService, factory: MaterialgrammiService.ɵfac, providedIn: 'root' });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MaterialgrammiService, [{
+MaterialgrammiService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MaterialgrammiService, deps: [], target: i0.ɵɵFactoryTarget.Injectable });
+MaterialgrammiService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MaterialgrammiService, providedIn: 'root' });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MaterialgrammiService, decorators: [{
             type: Injectable,
             args: [{
                     providedIn: 'root'
                 }]
-        }], function () { return []; }, null);
-})();
+        }], ctorParameters: function () { return []; } });
 
 class MaterialgrammiComponent {
     constructor() { }
     ngOnInit() {
     }
 }
-MaterialgrammiComponent.ɵfac = function MaterialgrammiComponent_Factory(t) { return new (t || MaterialgrammiComponent)(); };
-MaterialgrammiComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: MaterialgrammiComponent, selectors: [["lib-materialgrammi"]], decls: 2, vars: 0, template: function MaterialgrammiComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelementStart(0, "p");
-            i0.ɵɵtext(1, " materialgrammi works! ");
-            i0.ɵɵelementEnd();
-        }
-    }, encapsulation: 2 });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MaterialgrammiComponent, [{
+MaterialgrammiComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MaterialgrammiComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+MaterialgrammiComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: MaterialgrammiComponent, selector: "lib-materialgrammi", ngImport: i0, template: `
+    <p>
+      materialgrammi works!
+    </p>
+  `, isInline: true });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MaterialgrammiComponent, decorators: [{
             type: Component,
             args: [{
                     selector: 'lib-materialgrammi',
@@ -417,10 +412,8 @@ MaterialgrammiComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Mat
   `,
                     styles: []
                 }]
-        }], function () { return []; }, null);
-})();
+        }], ctorParameters: function () { return []; } });
 
-const _c0$q = ["*"];
 class TestComponentComponent {
     constructor(myservice) {
         this.myservice = myservice;
@@ -429,21 +422,12 @@ class TestComponentComponent {
     ngOnInit() {
     }
 }
-TestComponentComponent.ɵfac = function TestComponentComponent_Factory(t) { return new (t || TestComponentComponent)(i0.ɵɵdirectiveInject(MaterialgrammiService)); };
-TestComponentComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TestComponentComponent, selectors: [["lib-test"]], ngContentSelectors: _c0$q, decls: 2, vars: 0, consts: [[2, "padding", "5px", "border", "1px solid #212121", "cursor", "pointer"]], template: function TestComponentComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵprojectionDef();
-            i0.ɵɵelementStart(0, "a", 0);
-            i0.ɵɵprojection(1);
-            i0.ɵɵelementEnd();
-        }
-    }, styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TestComponentComponent, [{
+TestComponentComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: TestComponentComponent, deps: [{ token: MaterialgrammiService }], target: i0.ɵɵFactoryTarget.Component });
+TestComponentComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: TestComponentComponent, selector: "lib-test", ngImport: i0, template: "<a style=\"padding: 5px; border: 1px solid #212121; cursor: pointer;\"><ng-content></ng-content></a>\n", styles: [""] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: TestComponentComponent, decorators: [{
             type: Component,
             args: [{ selector: 'lib-test', template: "<a style=\"padding: 5px; border: 1px solid #212121; cursor: pointer;\"><ng-content></ng-content></a>\n", styles: [""] }]
-        }], function () { return [{ type: MaterialgrammiService }]; }, null);
-})();
+        }], ctorParameters: function () { return [{ type: MaterialgrammiService }]; } });
 
 class AccordionItemComponent {
     constructor() {
@@ -461,27 +445,12 @@ class AccordionItemComponent {
         return state ? 'active' : '';
     }
 }
-AccordionItemComponent.ɵfac = function AccordionItemComponent_Factory(t) { return new (t || AccordionItemComponent)(); };
-AccordionItemComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: AccordionItemComponent, selectors: [["mg-accordion-item"]], inputs: { item: "item", itemid: "itemid", theme: "theme" }, outputs: { isClicked: "isClicked" }, decls: 2, vars: 10, consts: [[3, "ngClass", "innerHtml", "click"], [3, "innerHtml", "ngClass"]], template: function AccordionItemComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelementStart(0, "div", 0);
-            i0.ɵɵlistener("click", function AccordionItemComponent_Template_div_click_0_listener() { return ctx.onClickTitle(); });
-            i0.ɵɵelementEnd();
-            i0.ɵɵelement(1, "div", 1);
-        }
-        if (rf & 2) {
-            i0.ɵɵclassMapInterpolate1("title ", ctx.theme, "");
-            i0.ɵɵproperty("ngClass", ctx.isActive(ctx.item.active))("innerHtml", ctx.item.title, i0.ɵɵsanitizeHtml);
-            i0.ɵɵadvance(1);
-            i0.ɵɵclassMapInterpolate1("body ", ctx.theme, "");
-            i0.ɵɵproperty("innerHtml", ctx.item.description, i0.ɵɵsanitizeHtml)("ngClass", ctx.isActive(ctx.item.active));
-        }
-    }, directives: [i1.NgClass], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(AccordionItemComponent, [{
+AccordionItemComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: AccordionItemComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+AccordionItemComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: AccordionItemComponent, selector: "mg-accordion-item", inputs: { item: "item", itemid: "itemid", theme: "theme" }, outputs: { isClicked: "isClicked" }, ngImport: i0, template: "<div class=\"title {{theme}}\" [ngClass]=\"isActive(item.active)\" [innerHtml]=\"item.title\"\n  (click)=\"onClickTitle()\"></div>\n<div class=\"body {{theme}}\" [innerHtml]=\"item.description\" [ngClass]=\"isActive(item.active)\"></div>\n", styles: [""], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: AccordionItemComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-accordion-item', template: "<div class=\"title {{theme}}\" [ngClass]=\"isActive(item.active)\" [innerHtml]=\"item.title\"\n  (click)=\"onClickTitle()\"></div>\n<div class=\"body {{theme}}\" [innerHtml]=\"item.description\" [ngClass]=\"isActive(item.active)\"></div>\n", styles: [""] }]
-        }], function () { return []; }, { item: [{
+        }], ctorParameters: function () { return []; }, propDecorators: { item: [{
                 type: Input
             }], isClicked: [{
                 type: Output
@@ -489,44 +458,8 @@ AccordionItemComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Acco
                 type: Input
             }], theme: [{
                 type: Input
-            }] });
-})();
+            }] } });
 
-function AccordionComponent_ng_container_0_ng_container_2_Template(rf, ctx) {
-    if (rf & 1) {
-        const _r5 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelementStart(1, "div", 3);
-        i0.ɵɵelementStart(2, "mg-accordion-item", 4);
-        i0.ɵɵlistener("isClicked", function AccordionComponent_ng_container_0_ng_container_2_Template_mg_accordion_item_isClicked_2_listener($event) { i0.ɵɵrestoreView(_r5); const ctx_r4 = i0.ɵɵnextContext(2); return ctx_r4.toggleItem($event); });
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementContainerEnd();
-    }
-    if (rf & 2) {
-        const item_r2 = ctx.$implicit;
-        const i_r3 = ctx.index;
-        const ctx_r1 = i0.ɵɵnextContext(2);
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("theme", ctx_r1.theme)("itemid", i_r3)("item", item_r2);
-    }
-}
-function AccordionComponent_ng_container_0_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelementStart(1, "div", 1);
-        i0.ɵɵtemplate(2, AccordionComponent_ng_container_0_ng_container_2_Template, 3, 3, "ng-container", 2);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementContainerEnd();
-    }
-    if (rf & 2) {
-        const ctx_r0 = i0.ɵɵnextContext();
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngClass", ctx_r0.class);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngForOf", ctx_r0.items);
-    }
-}
 class AccordionComponent {
     constructor() {
         this.theme = "dark";
@@ -567,51 +500,19 @@ class AccordionComponent {
         this.turnAllOff(itemNumber);
     }
 }
-AccordionComponent.ɵfac = function AccordionComponent_Factory(t) { return new (t || AccordionComponent)(); };
-AccordionComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: AccordionComponent, selectors: [["mg-accordion"]], inputs: { theme: "theme", items: "items", class: "class" }, decls: 1, vars: 1, consts: [[4, "ngIf"], [1, "accordion", 3, "ngClass"], [4, "ngFor", "ngForOf"], [1, "marginB-2"], [3, "theme", "itemid", "item", "isClicked"]], template: function AccordionComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵtemplate(0, AccordionComponent_ng_container_0_Template, 3, 2, "ng-container", 0);
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("ngIf", ctx.items.length > 0);
-        }
-    }, directives: [i1.NgIf, i1.NgClass, i1.NgForOf, AccordionItemComponent], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(AccordionComponent, [{
+AccordionComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: AccordionComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+AccordionComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: AccordionComponent, selector: "mg-accordion", inputs: { theme: "theme", items: "items", class: "class" }, ngImport: i0, template: "<ng-container *ngIf=\"items.length > 0\">\n  <div class=\"accordion\" [ngClass]=\"class\">\n    <ng-container *ngFor=\"let item of items; let i = index\">\n      <div class=\"marginB-2\">\n        <mg-accordion-item [theme]=\"theme\" [itemid]=\"i\" [item]=\"item\" (isClicked)=\"toggleItem($event)\">\n        </mg-accordion-item>\n      </div>\n    </ng-container>\n  </div>\n</ng-container>\n", styles: [""], components: [{ type: AccordionItemComponent, selector: "mg-accordion-item", inputs: ["item", "itemid", "theme"], outputs: ["isClicked"] }], directives: [{ type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: AccordionComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-accordion', template: "<ng-container *ngIf=\"items.length > 0\">\n  <div class=\"accordion\" [ngClass]=\"class\">\n    <ng-container *ngFor=\"let item of items; let i = index\">\n      <div class=\"marginB-2\">\n        <mg-accordion-item [theme]=\"theme\" [itemid]=\"i\" [item]=\"item\" (isClicked)=\"toggleItem($event)\">\n        </mg-accordion-item>\n      </div>\n    </ng-container>\n  </div>\n</ng-container>\n", styles: [""] }]
-        }], function () { return []; }, { theme: [{
+        }], ctorParameters: function () { return []; }, propDecorators: { theme: [{
                 type: Input
             }], items: [{
                 type: Input
             }], class: [{
                 type: Input
-            }] });
-})();
+            }] } });
 
-function WidgetComponent_ng_container_0_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵprojection(1);
-        i0.ɵɵelementContainerEnd();
-    }
-}
-function WidgetComponent_ng_container_1_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵprojection(1, 1);
-        i0.ɵɵelementContainerEnd();
-    }
-}
-function WidgetComponent_ng_container_2_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵprojection(1, 2);
-        i0.ɵɵelementContainerEnd();
-    }
-}
-const _c0$p = [[["", "mg-data", "header"]], "*", [["", "mg-data", "footer"]]];
-const _c1$5 = ["[mg-data=header]", "*", "[mg-data=footer]"];
 class WidgetComponent {
     constructor(mainService) {
         this.mainService = mainService;
@@ -689,27 +590,12 @@ class WidgetComponent {
         }
     }
 }
-WidgetComponent.ɵfac = function WidgetComponent_Factory(t) { return new (t || WidgetComponent)(i0.ɵɵdirectiveInject(MaterialgrammiService)); };
-WidgetComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: WidgetComponent, selectors: [["mg-widget"]], inputs: { id: "id", parent: "parent", type: "type", options: "options", status: "status", standalone: "standalone" }, outputs: { triggered: "triggered" }, features: [i0.ɵɵNgOnChangesFeature], ngContentSelectors: _c1$5, decls: 3, vars: 3, consts: [[4, "ngIf"]], template: function WidgetComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵprojectionDef(_c0$p);
-            i0.ɵɵtemplate(0, WidgetComponent_ng_container_0_Template, 2, 0, "ng-container", 0);
-            i0.ɵɵtemplate(1, WidgetComponent_ng_container_1_Template, 2, 0, "ng-container", 0);
-            i0.ɵɵtemplate(2, WidgetComponent_ng_container_2_Template, 2, 0, "ng-container", 0);
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("ngIf", ctx.settings.header.always || ctx.status);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", ctx.status);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", ctx.settings.footer.always || ctx.status);
-        }
-    }, directives: [i1.NgIf], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(WidgetComponent, [{
+WidgetComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: WidgetComponent, deps: [{ token: MaterialgrammiService }], target: i0.ɵɵFactoryTarget.Component });
+WidgetComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: WidgetComponent, selector: "mg-widget", inputs: { id: "id", parent: "parent", type: "type", options: "options", status: "status", standalone: "standalone" }, outputs: { triggered: "triggered" }, usesOnChanges: true, ngImport: i0, template: "<ng-container *ngIf=\"settings.header.always || status\">\n  <ng-content select=\"[mg-data=header]\"></ng-content>\n</ng-container>\n<ng-container *ngIf=\"status\">\n  <ng-content></ng-content>\n</ng-container>\n<ng-container *ngIf=\"settings.footer.always || status\">\n  <ng-content select=\"[mg-data=footer]\"></ng-content>\n</ng-container>\n", styles: [""], directives: [{ type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: WidgetComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-widget', template: "<ng-container *ngIf=\"settings.header.always || status\">\n  <ng-content select=\"[mg-data=header]\"></ng-content>\n</ng-container>\n<ng-container *ngIf=\"status\">\n  <ng-content></ng-content>\n</ng-container>\n<ng-container *ngIf=\"settings.footer.always || status\">\n  <ng-content select=\"[mg-data=footer]\"></ng-content>\n</ng-container>\n", styles: [""] }]
-        }], function () { return [{ type: MaterialgrammiService }]; }, { id: [{
+        }], ctorParameters: function () { return [{ type: MaterialgrammiService }]; }, propDecorators: { id: [{
                 type: Input
             }], parent: [{
                 type: Input
@@ -723,39 +609,8 @@ WidgetComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: WidgetCompo
                 type: Input
             }], triggered: [{
                 type: Output
-            }] });
-})();
+            }] } });
 
-function AlertComponent_div_0_a_1_Template(rf, ctx) {
-    if (rf & 1) {
-        const _r3 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementStart(0, "a", 3);
-        i0.ɵɵlistener("click", function AlertComponent_div_0_a_1_Template_a_click_0_listener() { i0.ɵɵrestoreView(_r3); const ctx_r2 = i0.ɵɵnextContext(2); return ctx_r2.hide(); });
-        i0.ɵɵtext(1, "x");
-        i0.ɵɵelementEnd();
-    }
-}
-const _c0$o = function (a0) { return { "text-center block": a0 }; };
-function AlertComponent_div_0_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 1);
-        i0.ɵɵtemplate(1, AlertComponent_div_0_a_1_Template, 2, 0, "a", 2);
-        i0.ɵɵelementStart(2, "span", 1);
-        i0.ɵɵprojection(3);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    }
-    if (rf & 2) {
-        const ctx_r0 = i0.ɵɵnextContext();
-        i0.ɵɵclassMapInterpolate1("alert ", ctx_r0.theme, "");
-        i0.ɵɵproperty("ngClass", ctx_r0.class);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", ctx_r0.closeBtn);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction1(6, _c0$o, ctx_r0.alignCenter === true));
-    }
-}
-const _c1$4 = ["*"];
 class AlertComponent {
     constructor() {
         this.theme = "danger";
@@ -770,21 +625,12 @@ class AlertComponent {
         this.show = false;
     }
 }
-AlertComponent.ɵfac = function AlertComponent_Factory(t) { return new (t || AlertComponent)(); };
-AlertComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: AlertComponent, selectors: [["mg-alert"]], inputs: { theme: "theme", show: "show", alignCenter: "alignCenter", closeBtn: "closeBtn", class: "class" }, ngContentSelectors: _c1$4, decls: 1, vars: 1, consts: [[3, "class", "ngClass", 4, "ngIf"], [3, "ngClass"], ["class", "closealert", 3, "click", 4, "ngIf"], [1, "closealert", 3, "click"]], template: function AlertComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵprojectionDef();
-            i0.ɵɵtemplate(0, AlertComponent_div_0_Template, 4, 8, "div", 0);
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("ngIf", ctx.show);
-        }
-    }, directives: [i1.NgIf, i1.NgClass], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(AlertComponent, [{
+AlertComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: AlertComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+AlertComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: AlertComponent, selector: "mg-alert", inputs: { theme: "theme", show: "show", alignCenter: "alignCenter", closeBtn: "closeBtn", class: "class" }, ngImport: i0, template: "<div class=\"alert {{theme}}\" *ngIf=\"show\" [ngClass]=\"class\">\n  <a class=\"closealert\" (click)=\"hide()\" *ngIf=\"closeBtn\">x</a>\n  <span [ngClass]=\"{'text-center block' : alignCenter === true}\">\n    <ng-content></ng-content>\n  </span>\n</div>\n", styles: [""], directives: [{ type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: AlertComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-alert', template: "<div class=\"alert {{theme}}\" *ngIf=\"show\" [ngClass]=\"class\">\n  <a class=\"closealert\" (click)=\"hide()\" *ngIf=\"closeBtn\">x</a>\n  <span [ngClass]=\"{'text-center block' : alignCenter === true}\">\n    <ng-content></ng-content>\n  </span>\n</div>\n", styles: [""] }]
-        }], function () { return []; }, { theme: [{
+        }], ctorParameters: function () { return []; }, propDecorators: { theme: [{
                 type: Input
             }], show: [{
                 type: Input
@@ -794,52 +640,8 @@ AlertComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: AlertCompone
                 type: Input
             }], class: [{
                 type: Input
-            }] });
-})();
+            }] } });
 
-function BreadcrumbComponent_div_0_ng_container_1_span_3_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelement(0, "span", 5);
-    }
-    if (rf & 2) {
-        const ctx_r4 = i0.ɵɵnextContext(3);
-        i0.ɵɵproperty("innerHtml", ctx_r4.devider, i0.ɵɵsanitizeHtml);
-    }
-}
-function BreadcrumbComponent_div_0_ng_container_1_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelementStart(1, "a", 3);
-        i0.ɵɵtext(2);
-        i0.ɵɵelementEnd();
-        i0.ɵɵtemplate(3, BreadcrumbComponent_div_0_ng_container_1_span_3_Template, 1, 1, "span", 4);
-        i0.ɵɵelementContainerEnd();
-    }
-    if (rf & 2) {
-        const link_r2 = ctx.$implicit;
-        const i_r3 = ctx.index;
-        const ctx_r1 = i0.ɵɵnextContext(2);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("routerLink", link_r2.url)("ngClass", ctx_r1.active(link_r2));
-        i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(link_r2.name);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", ctx_r1.links[i_r3 + 1]);
-    }
-}
-function BreadcrumbComponent_div_0_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 1);
-        i0.ɵɵtemplate(1, BreadcrumbComponent_div_0_ng_container_1_Template, 4, 4, "ng-container", 2);
-        i0.ɵɵelementEnd();
-    }
-    if (rf & 2) {
-        const ctx_r0 = i0.ɵɵnextContext();
-        i0.ɵɵproperty("ngClass", ctx_r0.showDarkMode() + " " + ctx_r0.class);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngForOf", ctx_r0.links);
-    }
-}
 class BreadcrumbComponent {
     constructor() {
         this.links = [];
@@ -856,20 +658,12 @@ class BreadcrumbComponent {
         return link.active ? 'active' : '';
     }
 }
-BreadcrumbComponent.ɵfac = function BreadcrumbComponent_Factory(t) { return new (t || BreadcrumbComponent)(); };
-BreadcrumbComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: BreadcrumbComponent, selectors: [["mg-breadcrumb"]], inputs: { links: "links", darkmode: "darkmode", devider: "devider", class: "class" }, decls: 1, vars: 1, consts: [["class", "breadcrumb-wrapper", 3, "ngClass", 4, "ngIf"], [1, "breadcrumb-wrapper", 3, "ngClass"], [4, "ngFor", "ngForOf"], [1, "breadcrumb", 3, "routerLink", "ngClass"], ["class", "marginL-5 marginR-5", 3, "innerHtml", 4, "ngIf"], [1, "marginL-5", "marginR-5", 3, "innerHtml"]], template: function BreadcrumbComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵtemplate(0, BreadcrumbComponent_div_0_Template, 2, 2, "div", 0);
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("ngIf", ctx.links.length > 0);
-        }
-    }, directives: [i1.NgIf, i1.NgClass, i1.NgForOf, i2.RouterLinkWithHref], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(BreadcrumbComponent, [{
+BreadcrumbComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: BreadcrumbComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+BreadcrumbComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: BreadcrumbComponent, selector: "mg-breadcrumb", inputs: { links: "links", darkmode: "darkmode", devider: "devider", class: "class" }, ngImport: i0, template: "<div class=\"breadcrumb-wrapper\" [ngClass]=\"showDarkMode() + ' ' + class\" *ngIf=\"links.length > 0\">\n  <ng-container *ngFor=\"let link of links; let i = index;\">\n    <a [routerLink]=\"link.url\" class=\"breadcrumb\" [ngClass]=\"active(link)\">{{link.name}}</a>\n    <span class=\"marginL-5 marginR-5\" *ngIf=\"links[i+1]\" [innerHtml]=\"devider\"></span>\n  </ng-container>\n</div>\n", styles: [""], directives: [{ type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { type: i2.RouterLinkWithHref, selector: "a[routerLink],area[routerLink]", inputs: ["target", "queryParams", "fragment", "queryParamsHandling", "preserveFragment", "skipLocationChange", "replaceUrl", "state", "relativeTo", "routerLink"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: BreadcrumbComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-breadcrumb', template: "<div class=\"breadcrumb-wrapper\" [ngClass]=\"showDarkMode() + ' ' + class\" *ngIf=\"links.length > 0\">\n  <ng-container *ngFor=\"let link of links; let i = index;\">\n    <a [routerLink]=\"link.url\" class=\"breadcrumb\" [ngClass]=\"active(link)\">{{link.name}}</a>\n    <span class=\"marginL-5 marginR-5\" *ngIf=\"links[i+1]\" [innerHtml]=\"devider\"></span>\n  </ng-container>\n</div>\n", styles: [""] }]
-        }], function () { return []; }, { links: [{
+        }], ctorParameters: function () { return []; }, propDecorators: { links: [{
                 type: Input
             }], darkmode: [{
                 type: Input
@@ -877,11 +671,8 @@ BreadcrumbComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Breadcr
                 type: Input
             }], class: [{
                 type: Input
-            }] });
-})();
+            }] } });
 
-const _c0$n = [[["", "header", ""]], "*", [["", "footer", ""]]];
-const _c1$3 = ["[header]", "*", "[footer]"];
 class CardComponent {
     constructor() {
         this.class = ``;
@@ -889,30 +680,15 @@ class CardComponent {
     ngOnInit() {
     }
 }
-CardComponent.ɵfac = function CardComponent_Factory(t) { return new (t || CardComponent)(); };
-CardComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: CardComponent, selectors: [["mg-card"]], inputs: { class: "class" }, ngContentSelectors: _c1$3, decls: 4, vars: 1, consts: [[1, "card", 3, "ngClass"]], template: function CardComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵprojectionDef(_c0$n);
-            i0.ɵɵelementStart(0, "div", 0);
-            i0.ɵɵprojection(1);
-            i0.ɵɵprojection(2, 1);
-            i0.ɵɵprojection(3, 2);
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("ngClass", ctx.class);
-        }
-    }, directives: [i1.NgClass], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CardComponent, [{
+CardComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: CardComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+CardComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: CardComponent, selector: "mg-card", inputs: { class: "class" }, ngImport: i0, template: "<div class=\"card\" [ngClass]=\"class\">\n  <ng-content select=\"[header]\"></ng-content>\n  <ng-content></ng-content>\n  <ng-content select=\"[footer]\"></ng-content>\n</div>\n", styles: [""], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: CardComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-card', template: "<div class=\"card\" [ngClass]=\"class\">\n  <ng-content select=\"[header]\"></ng-content>\n  <ng-content></ng-content>\n  <ng-content select=\"[footer]\"></ng-content>\n</div>\n", styles: [""] }]
-        }], function () { return []; }, { class: [{
+        }], ctorParameters: function () { return []; }, propDecorators: { class: [{
                 type: Input
-            }] });
-})();
+            }] } });
 
-const _c0$m = ["*"];
 class ChipComponent {
     constructor() {
         this.theme = "dark";
@@ -928,32 +704,19 @@ class ChipComponent {
         return results;
     }
 }
-ChipComponent.ɵfac = function ChipComponent_Factory(t) { return new (t || ChipComponent)(); };
-ChipComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ChipComponent, selectors: [["mg-chip"]], inputs: { theme: "theme", outline: "outline", class: "class" }, ngContentSelectors: _c0$m, decls: 2, vars: 1, consts: [[1, "chip", 3, "ngClass"]], template: function ChipComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵprojectionDef();
-            i0.ɵɵelementStart(0, "div", 0);
-            i0.ɵɵprojection(1);
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("ngClass", ctx.chipClass() + " " + ctx.class);
-        }
-    }, directives: [i1.NgClass], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ChipComponent, [{
+ChipComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: ChipComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+ChipComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: ChipComponent, selector: "mg-chip", inputs: { theme: "theme", outline: "outline", class: "class" }, ngImport: i0, template: "<div class=\"chip\" [ngClass]=\"chipClass() + ' ' + class\">\n  <ng-content></ng-content>\n</div>\n", styles: [""], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: ChipComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-chip', template: "<div class=\"chip\" [ngClass]=\"chipClass() + ' ' + class\">\n  <ng-content></ng-content>\n</div>\n", styles: [""] }]
-        }], function () { return []; }, { theme: [{
+        }], ctorParameters: function () { return []; }, propDecorators: { theme: [{
                 type: Input
             }], outline: [{
                 type: Input
             }], class: [{
                 type: Input
-            }] });
-})();
+            }] } });
 
-const _c0$l = ["*"];
 class DragableComponent {
     constructor() {
         this.dragable = true;
@@ -976,30 +739,12 @@ class DragableComponent {
         this.onEvent.emit(this.eventProperties);
     }
 }
-DragableComponent.ɵfac = function DragableComponent_Factory(t) { return new (t || DragableComponent)(); };
-DragableComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DragableComponent, selectors: [["mg-dragable"]], inputs: { dragable: "dragable", data: "data", class: "class" }, outputs: { onEvent: "onEvent" }, ngContentSelectors: _c0$l, decls: 4, vars: 2, consts: [[3, "ngClass"], [1, "is-draggable", 3, "draggable", "drag", "dragstart"], [1, "drag-element"]], template: function DragableComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵprojectionDef();
-            i0.ɵɵelementStart(0, "div", 0);
-            i0.ɵɵelementStart(1, "div", 1);
-            i0.ɵɵlistener("drag", function DragableComponent_Template_div_drag_1_listener($event) { return ctx.onDrag($event); })("dragstart", function DragableComponent_Template_div_dragstart_1_listener($event) { return ctx.onDrag($event); });
-            i0.ɵɵelementStart(2, "div", 2);
-            i0.ɵɵprojection(3);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("ngClass", ctx.class);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("draggable", ctx.dragable);
-        }
-    }, directives: [i1.NgClass], styles: [".is-draggable[_ngcontent-%COMP%]{opacity:1!important;cursor:pointer}"] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DragableComponent, [{
+DragableComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: DragableComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+DragableComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: DragableComponent, selector: "mg-dragable", inputs: { dragable: "dragable", data: "data", class: "class" }, outputs: { onEvent: "onEvent" }, ngImport: i0, template: "<div [ngClass]=\"class\">\n  <div class=\"is-draggable\" (drag)=\"onDrag($event)\" (dragstart)=\"onDrag($event)\" [draggable]=\"dragable\">\n    <div class=\"drag-element\">\n      <ng-content></ng-content>\n    </div>\n  </div>\n</div>\n", styles: [".is-draggable{opacity:1!important;cursor:pointer}\n"], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: DragableComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-dragable', template: "<div [ngClass]=\"class\">\n  <div class=\"is-draggable\" (drag)=\"onDrag($event)\" (dragstart)=\"onDrag($event)\" [draggable]=\"dragable\">\n    <div class=\"drag-element\">\n      <ng-content></ng-content>\n    </div>\n  </div>\n</div>\n", styles: [".is-draggable{opacity:1!important;cursor:pointer}\n"] }]
-        }], function () { return []; }, { dragable: [{
+        }], ctorParameters: function () { return []; }, propDecorators: { dragable: [{
                 type: Input
             }], data: [{
                 type: Input
@@ -1007,10 +752,8 @@ DragableComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DragableC
                 type: Input
             }], onEvent: [{
                 type: Output
-            }] });
-})();
+            }] } });
 
-const _c0$k = ["*"];
 class DropableComponent {
     constructor() {
         this.onEvent = new EventEmitter();
@@ -1069,24 +812,12 @@ class DropableComponent {
         this.dataRecieved.emit(this.data);
     }
 }
-DropableComponent.ɵfac = function DropableComponent_Factory(t) { return new (t || DropableComponent)(); };
-DropableComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DropableComponent, selectors: [["mg-dropable"]], inputs: { dropFiles: "dropFiles", class: "class" }, outputs: { onEvent: "onEvent", dataRecieved: "dataRecieved" }, ngContentSelectors: _c0$k, decls: 2, vars: 1, consts: [[3, "ngClass", "dragenter", "dragleave", "dragover", "drop"]], template: function DropableComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵprojectionDef();
-            i0.ɵɵelementStart(0, "div", 0);
-            i0.ɵɵlistener("dragenter", function DropableComponent_Template_div_dragenter_0_listener($event) { return ctx.dragEntered($event); })("dragleave", function DropableComponent_Template_div_dragleave_0_listener($event) { return ctx.dragLeft($event); })("dragover", function DropableComponent_Template_div_dragover_0_listener($event) { return ctx.draggedOver($event); })("drop", function DropableComponent_Template_div_drop_0_listener($event) { return ctx.onDrop($event); });
-            i0.ɵɵprojection(1);
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("ngClass", ctx.class);
-        }
-    }, directives: [i1.NgClass], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DropableComponent, [{
+DropableComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: DropableComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+DropableComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: DropableComponent, selector: "mg-dropable", inputs: { dropFiles: "dropFiles", class: "class" }, outputs: { onEvent: "onEvent", dataRecieved: "dataRecieved" }, ngImport: i0, template: "<div (dragenter)=\"dragEntered($event)\" (dragleave)=\"dragLeft($event)\" \n(dragover)=\"draggedOver($event)\"\n  (drop)=\"onDrop($event)\" [ngClass]=\"class\">\n  <ng-content></ng-content>\n</div>\n", styles: [""], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: DropableComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-dropable', template: "<div (dragenter)=\"dragEntered($event)\" (dragleave)=\"dragLeft($event)\" \n(dragover)=\"draggedOver($event)\"\n  (drop)=\"onDrop($event)\" [ngClass]=\"class\">\n  <ng-content></ng-content>\n</div>\n", styles: [""] }]
-        }], function () { return []; }, { onEvent: [{
+        }], ctorParameters: function () { return []; }, propDecorators: { onEvent: [{
                 type: Output
             }], dataRecieved: [{
                 type: Output
@@ -1094,11 +825,8 @@ DropableComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DropableC
                 type: Input
             }], class: [{
                 type: Input
-            }] });
-})();
+            }] } });
 
-const _c0$j = [[["", "slot", "left-section"]], [["", "slot", "middle-section"]], [["", "slot", "right-section"]], [["", "slot", "left-bottom-section"]], [["", "slot", "right-bottom-section"]]];
-const _c1$2 = ["[slot=left-section]", "[slot=middle-section]", "[slot=right-section]", "[slot=left-bottom-section]", "[slot=right-bottom-section]"];
 class FooterComponent {
     constructor() {
         this.theme = "success";
@@ -1114,50 +842,19 @@ class FooterComponent {
         return results;
     }
 }
-FooterComponent.ɵfac = function FooterComponent_Factory(t) { return new (t || FooterComponent)(); };
-FooterComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: FooterComponent, selectors: [["mg-footer"]], inputs: { theme: "theme", toBottom: "toBottom", class: "class" }, ngContentSelectors: _c1$2, decls: 13, vars: 1, consts: [[1, "footer", 3, "ngClass"], [1, "section-top"], [1, "left-section"], [1, "middle-section"], [1, "right-section"], [1, "section-bottom"], [1, "left-bottom-section"], [1, "right-bottom-section"]], template: function FooterComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵprojectionDef(_c0$j);
-            i0.ɵɵelementStart(0, "div", 0);
-            i0.ɵɵelementStart(1, "div", 1);
-            i0.ɵɵelementStart(2, "div", 2);
-            i0.ɵɵprojection(3);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(4, "div", 3);
-            i0.ɵɵprojection(5, 1);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(6, "div", 4);
-            i0.ɵɵprojection(7, 2);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(8, "div", 5);
-            i0.ɵɵelementStart(9, "div", 6);
-            i0.ɵɵprojection(10, 3);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(11, "div", 7);
-            i0.ɵɵprojection(12, 4);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("ngClass", ctx.mainFooterClasses() + " " + ctx.class);
-        }
-    }, directives: [i1.NgClass], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(FooterComponent, [{
+FooterComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: FooterComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+FooterComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: FooterComponent, selector: "mg-footer", inputs: { theme: "theme", toBottom: "toBottom", class: "class" }, ngImport: i0, template: "<div class=\"footer\" [ngClass]=\"mainFooterClasses() + ' ' + class\">\n  <div class=\"section-top\">\n    <div class=\"left-section\">\n      <ng-content select=\"[slot=left-section]\"></ng-content>\n    </div>\n    <div class=\"middle-section\">\n      <ng-content select=\"[slot=middle-section]\"></ng-content>\n    </div>\n    <div class=\"right-section\">\n      <ng-content select=\"[slot=right-section]\"></ng-content>\n    </div>\n  </div>\n  <div class=\"section-bottom\">\n    <div class=\"left-bottom-section\">\n      <ng-content select=\"[slot=left-bottom-section]\"></ng-content>\n    </div>\n    <div class=\"right-bottom-section\">\n      <ng-content select=\"[slot=right-bottom-section]\"></ng-content>\n    </div>\n  </div>\n</div>\n", styles: [""], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: FooterComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-footer', template: "<div class=\"footer\" [ngClass]=\"mainFooterClasses() + ' ' + class\">\n  <div class=\"section-top\">\n    <div class=\"left-section\">\n      <ng-content select=\"[slot=left-section]\"></ng-content>\n    </div>\n    <div class=\"middle-section\">\n      <ng-content select=\"[slot=middle-section]\"></ng-content>\n    </div>\n    <div class=\"right-section\">\n      <ng-content select=\"[slot=right-section]\"></ng-content>\n    </div>\n  </div>\n  <div class=\"section-bottom\">\n    <div class=\"left-bottom-section\">\n      <ng-content select=\"[slot=left-bottom-section]\"></ng-content>\n    </div>\n    <div class=\"right-bottom-section\">\n      <ng-content select=\"[slot=right-bottom-section]\"></ng-content>\n    </div>\n  </div>\n</div>\n", styles: [""] }]
-        }], function () { return []; }, { theme: [{
+        }], ctorParameters: function () { return []; }, propDecorators: { theme: [{
                 type: Input
             }], toBottom: [{
                 type: Input
             }], class: [{
                 type: Input
-            }] });
-})();
+            }] } });
 
-const _c0$i = ["*"];
 class CheckboxComponent {
     constructor(service) {
         this.service = service;
@@ -1192,36 +889,12 @@ class CheckboxComponent {
         this.isChecked.emit(this.selected);
     }
 }
-CheckboxComponent.ɵfac = function CheckboxComponent_Factory(t) { return new (t || CheckboxComponent)(i0.ɵɵdirectiveInject(MaterialgrammiService)); };
-CheckboxComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: CheckboxComponent, selectors: [["mg-checkbox"]], inputs: { size: "size", theme: "theme", onDark: "onDark", isSelected: "isSelected", class: "class" }, outputs: { isChecked: "isChecked" }, ngContentSelectors: _c0$i, decls: 5, vars: 6, consts: [[1, "checkbox", 3, "ngClass"], ["type", "checkbox", 2, "opacity", "0", "position", "absolute", 3, "id", "checked"], [1, "check", 3, "for", "click"], [1, "label", 3, "for", "ngClass", "click"]], template: function CheckboxComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵprojectionDef();
-            i0.ɵɵelementStart(0, "div", 0);
-            i0.ɵɵelement(1, "input", 1);
-            i0.ɵɵelementStart(2, "label", 2);
-            i0.ɵɵlistener("click", function CheckboxComponent_Template_label_click_2_listener() { return ctx.toggleCheck(); });
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(3, "label", 3);
-            i0.ɵɵlistener("click", function CheckboxComponent_Template_label_click_3_listener() { return ctx.toggleCheck(); });
-            i0.ɵɵprojection(4);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("ngClass", ctx.mainClasses() + " " + ctx.class);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("id", ctx.id)("checked", ctx.isSelected);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("for", ctx.id);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("for", ctx.id)("ngClass", ctx.labelClass());
-        }
-    }, directives: [i1.NgClass], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CheckboxComponent, [{
+CheckboxComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: CheckboxComponent, deps: [{ token: MaterialgrammiService }], target: i0.ɵɵFactoryTarget.Component });
+CheckboxComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: CheckboxComponent, selector: "mg-checkbox", inputs: { size: "size", theme: "theme", onDark: "onDark", isSelected: "isSelected", class: "class" }, outputs: { isChecked: "isChecked" }, ngImport: i0, template: "<div class=\"checkbox\" [ngClass]=\"mainClasses() + ' ' + class\">\n  <input [id]=\"id\" type=\"checkbox\" [checked]=\"isSelected\" style=\"opacity: 0; position: absolute;\"/>\n  <label class=\"check\" [for]=\"id\" (click)=\"toggleCheck()\"></label>\n  <label class=\"label\" [for]=\"id\" [ngClass]=\"labelClass()\"\n    (click)=\"toggleCheck()\"><ng-content></ng-content></label>\n</div>\n", styles: [""], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: CheckboxComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-checkbox', template: "<div class=\"checkbox\" [ngClass]=\"mainClasses() + ' ' + class\">\n  <input [id]=\"id\" type=\"checkbox\" [checked]=\"isSelected\" style=\"opacity: 0; position: absolute;\"/>\n  <label class=\"check\" [for]=\"id\" (click)=\"toggleCheck()\"></label>\n  <label class=\"label\" [for]=\"id\" [ngClass]=\"labelClass()\"\n    (click)=\"toggleCheck()\"><ng-content></ng-content></label>\n</div>\n", styles: [""] }]
-        }], function () { return [{ type: MaterialgrammiService }]; }, { size: [{
+        }], ctorParameters: function () { return [{ type: MaterialgrammiService }]; }, propDecorators: { size: [{
                 type: Input
             }], theme: [{
                 type: Input
@@ -1233,25 +906,8 @@ CheckboxComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: CheckboxC
                 type: Input
             }], isChecked: [{
                 type: Output
-            }] });
-})();
+            }] } });
 
-const _c0$h = ["inputElement"];
-function InputComponent_ng_container_1_Template(rf, ctx) {
-    if (rf & 1) {
-        const _r3 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelementStart(1, "label", 4);
-        i0.ɵɵlistener("click", function InputComponent_ng_container_1_Template_label_click_1_listener() { i0.ɵɵrestoreView(_r3); const ctx_r2 = i0.ɵɵnextContext(); return ctx_r2.labelClick(); });
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementContainerEnd();
-    }
-    if (rf & 2) {
-        const ctx_r0 = i0.ɵɵnextContext();
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("innerHtml", ctx_r0.label, i0.ɵɵsanitizeHtml)("ngClass", ctx_r0.fStyle == "control" && ctx_r0.active ? "marginL-10" : "");
-    }
-}
 class InputComponent {
     constructor() {
         this.theme = "success";
@@ -1306,38 +962,12 @@ class InputComponent {
         this.inputElem.nativeElement.focus();
     }
 }
-InputComponent.ɵfac = function InputComponent_Factory(t) { return new (t || InputComponent)(); };
-InputComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: InputComponent, selectors: [["mg-input"]], viewQuery: function InputComponent_Query(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵviewQuery(_c0$h, 5);
-        }
-        if (rf & 2) {
-            let _t;
-            i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.inputElem = _t.first);
-        }
-    }, inputs: { theme: "theme", fStyle: "fStyle", label: "label", placeholder: "placeholder", control: "control", type: "type", onDark: "onDark", class: "class", textValue: "textValue", rounded: "rounded" }, outputs: { value: "value", isFocused: "isFocused", keyup: "keyup" }, decls: 4, vars: 10, consts: [[3, "ngClass"], [4, "ngIf"], [3, "type", "value", "ngClass", "placeholder", "focus", "focusout", "keyup"], ["inputElement", ""], [3, "innerHtml", "ngClass", "click"]], template: function InputComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelementStart(0, "div", 0);
-            i0.ɵɵtemplate(1, InputComponent_ng_container_1_Template, 2, 2, "ng-container", 1);
-            i0.ɵɵelementStart(2, "input", 2, 3);
-            i0.ɵɵlistener("focus", function InputComponent_Template_input_focus_2_listener() { return ctx.onFocusIn(); })("focusout", function InputComponent_Template_input_focusout_2_listener() { return ctx.onFocusOut(); })("keyup", function InputComponent_Template_input_keyup_2_listener($event) { return ctx.onKeyUp($event); });
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵclassMapInterpolate2("form-", ctx.fStyle, " ", ctx.theme, "");
-            i0.ɵɵproperty("ngClass", ctx.mainClasses());
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", ctx.label && ctx.label != "");
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("type", ctx.type)("value", ctx.textValue)("ngClass", ctx.class + (ctx.rounded ? "radius-5" : ""))("placeholder", ctx.input_placeholder);
-        }
-    }, directives: [i1.NgClass, i1.NgIf], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(InputComponent, [{
+InputComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: InputComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+InputComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: InputComponent, selector: "mg-input", inputs: { theme: "theme", fStyle: "fStyle", label: "label", placeholder: "placeholder", control: "control", type: "type", onDark: "onDark", class: "class", textValue: "textValue", rounded: "rounded" }, outputs: { value: "value", isFocused: "isFocused", keyup: "keyup" }, viewQueries: [{ propertyName: "inputElem", first: true, predicate: ["inputElement"], descendants: true }], ngImport: i0, template: "<div class=\"form-{{fStyle}} {{theme}}\" [ngClass]=\"mainClasses()\">\n  <ng-container *ngIf=\"label && label!=''\">\n    <label [innerHtml]=\"label\" (click)=\"labelClick()\" [ngClass]=\"fStyle == 'control' && active ? 'marginL-10' : ''\"></label>\n  </ng-container>\n  <input #inputElement [type]=\"type\" (focus)=\"onFocusIn()\" (focusout)=\"onFocusOut()\" (keyup)=\"onKeyUp($event)\" [value]=\"textValue\" [ngClass]=\"class + (rounded ? 'radius-5' : '')\" [placeholder] = \"input_placeholder\"/>\n</div>\n", styles: [""], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: InputComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-input', template: "<div class=\"form-{{fStyle}} {{theme}}\" [ngClass]=\"mainClasses()\">\n  <ng-container *ngIf=\"label && label!=''\">\n    <label [innerHtml]=\"label\" (click)=\"labelClick()\" [ngClass]=\"fStyle == 'control' && active ? 'marginL-10' : ''\"></label>\n  </ng-container>\n  <input #inputElement [type]=\"type\" (focus)=\"onFocusIn()\" (focusout)=\"onFocusOut()\" (keyup)=\"onKeyUp($event)\" [value]=\"textValue\" [ngClass]=\"class + (rounded ? 'radius-5' : '')\" [placeholder] = \"input_placeholder\"/>\n</div>\n", styles: [""] }]
-        }], function () { return []; }, { theme: [{
+        }], ctorParameters: function () { return []; }, propDecorators: { theme: [{
                 type: Input
             }], fStyle: [{
                 type: Input
@@ -1366,8 +996,7 @@ InputComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: InputCompone
             }], inputElem: [{
                 type: ViewChild,
                 args: ['inputElement']
-            }] });
-})();
+            }] } });
 
 class DaterService {
     constructor() {
@@ -1537,18 +1166,15 @@ class DaterService {
         return d1.getTime() < d2.getTime();
     }
 }
-DaterService.ɵfac = function DaterService_Factory(t) { return new (t || DaterService)(); };
-DaterService.ɵprov = /*@__PURE__*/ i0.ɵɵdefineInjectable({ token: DaterService, factory: DaterService.ɵfac, providedIn: 'root' });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DaterService, [{
+DaterService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: DaterService, deps: [], target: i0.ɵɵFactoryTarget.Injectable });
+DaterService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: DaterService, providedIn: 'root' });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: DaterService, decorators: [{
             type: Injectable,
             args: [{
                     providedIn: 'root'
                 }]
-        }], function () { return []; }, null);
-})();
+        }], ctorParameters: function () { return []; } });
 
-const _c0$g = ["*"];
 class OverlayComponent {
     constructor(service) {
         this.service = service;
@@ -1589,29 +1215,12 @@ class OverlayComponent {
         this.isClosed.emit(true);
     }
 }
-OverlayComponent.ɵfac = function OverlayComponent_Factory(t) { return new (t || OverlayComponent)(i0.ɵɵdirectiveInject(MaterialgrammiService)); };
-OverlayComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: OverlayComponent, selectors: [["mg-overlay"]], inputs: { bgClass: "bgClass", overlayClass: "overlayClass", offSize: "offSize", canvasPosition: "canvasPosition", id: "id", active: "active" }, outputs: { isClosed: "isClosed" }, ngContentSelectors: _c0$g, decls: 3, vars: 6, consts: [[3, "ngClass"], [1, "off-overlay", "blur", 3, "ngClass", "click"]], template: function OverlayComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵprojectionDef();
-            i0.ɵɵelementStart(0, "div", 0);
-            i0.ɵɵprojection(1);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(2, "div", 1);
-            i0.ɵɵlistener("click", function OverlayComponent_Template_div_click_2_listener() { return ctx.close(); });
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵclassMapInterpolate2("overlay ", ctx.canvasPosition, " size-", ctx.offSize, "");
-            i0.ɵɵproperty("ngClass", ctx.mainClasses());
-            i0.ɵɵadvance(2);
-            i0.ɵɵproperty("ngClass", ctx.overlayClasses());
-        }
-    }, directives: [i1.NgClass], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(OverlayComponent, [{
+OverlayComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: OverlayComponent, deps: [{ token: MaterialgrammiService }], target: i0.ɵɵFactoryTarget.Component });
+OverlayComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: OverlayComponent, selector: "mg-overlay", inputs: { bgClass: "bgClass", overlayClass: "overlayClass", offSize: "offSize", canvasPosition: "canvasPosition", id: "id", active: "active" }, outputs: { isClosed: "isClosed" }, ngImport: i0, template: "<div class=\"overlay {{canvasPosition}} size-{{offSize}}\" [ngClass]=\"mainClasses()\">\n  <ng-content></ng-content>\n</div>\n<div (click)=\"close()\" class=\"off-overlay blur\" [ngClass]=\"overlayClasses()\"></div>\n", styles: [""], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: OverlayComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-overlay', template: "<div class=\"overlay {{canvasPosition}} size-{{offSize}}\" [ngClass]=\"mainClasses()\">\n  <ng-content></ng-content>\n</div>\n<div (click)=\"close()\" class=\"off-overlay blur\" [ngClass]=\"overlayClasses()\"></div>\n", styles: [""] }]
-        }], function () { return [{ type: MaterialgrammiService }]; }, { bgClass: [{
+        }], ctorParameters: function () { return [{ type: MaterialgrammiService }]; }, propDecorators: { bgClass: [{
                 type: Input
             }], overlayClass: [{
                 type: Input
@@ -1625,10 +1234,8 @@ OverlayComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: OverlayCom
                 type: Input
             }], isClosed: [{
                 type: Output
-            }] });
-})();
+            }] } });
 
-const _c0$f = ["inputElementText"];
 class TextInputComponent {
     constructor() {
         this.theme = "dark";
@@ -1673,38 +1280,12 @@ class TextInputComponent {
         this.inputElem.nativeElement.focus();
     }
 }
-TextInputComponent.ɵfac = function TextInputComponent_Factory(t) { return new (t || TextInputComponent)(); };
-TextInputComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TextInputComponent, selectors: [["mg-text"]], viewQuery: function TextInputComponent_Query(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵviewQuery(_c0$f, 5);
-        }
-        if (rf & 2) {
-            let _t;
-            i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.inputElem = _t.first);
-        }
-    }, inputs: { theme: "theme", fStyle: "fStyle", on_dark: "on_dark", label: "label", control: "control" }, outputs: { value: "value", isFocused: "isFocused", keyup: "keyup" }, decls: 4, vars: 7, consts: [[3, "ngClass"], [3, "innerHtml", "ngClass", "click"], [3, "focus", "focusout", "keyup"], ["inputElementText", ""]], template: function TextInputComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelementStart(0, "div", 0);
-            i0.ɵɵelementStart(1, "label", 1);
-            i0.ɵɵlistener("click", function TextInputComponent_Template_label_click_1_listener() { return ctx.labelClick(); });
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(2, "textarea", 2, 3);
-            i0.ɵɵlistener("focus", function TextInputComponent_Template_textarea_focus_2_listener() { return ctx.onFocusIn(); })("focusout", function TextInputComponent_Template_textarea_focusout_2_listener() { return ctx.onFocusOut(); })("keyup", function TextInputComponent_Template_textarea_keyup_2_listener($event) { return ctx.onKeyUp($event); });
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵclassMapInterpolate2("form-", ctx.fStyle, " ", ctx.theme, "");
-            i0.ɵɵproperty("ngClass", ctx.mainClasses());
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("innerHtml", ctx.label, i0.ɵɵsanitizeHtml)("ngClass", ctx.fStyle == "control" && ctx.focused ? "marginL-10" : "");
-        }
-    }, directives: [i1.NgClass], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TextInputComponent, [{
+TextInputComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: TextInputComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+TextInputComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: TextInputComponent, selector: "mg-text", inputs: { theme: "theme", fStyle: "fStyle", on_dark: "on_dark", label: "label", control: "control" }, outputs: { value: "value", isFocused: "isFocused", keyup: "keyup" }, viewQueries: [{ propertyName: "inputElem", first: true, predicate: ["inputElementText"], descendants: true }], ngImport: i0, template: "<div class=\"form-{{fStyle}} {{theme}}\" [ngClass]=\"mainClasses()\">\n  <label [innerHtml]=\"label\" (click)=\"labelClick()\" [ngClass]=\"fStyle == 'control' && focused ? 'marginL-10' : ''\"></label>\n  <textarea #inputElementText (focus)=\"onFocusIn()\" (focusout)=\"onFocusOut()\" (keyup)=\"onKeyUp($event)\"></textarea>\n</div>\n", styles: [""], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: TextInputComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-text', template: "<div class=\"form-{{fStyle}} {{theme}}\" [ngClass]=\"mainClasses()\">\n  <label [innerHtml]=\"label\" (click)=\"labelClick()\" [ngClass]=\"fStyle == 'control' && focused ? 'marginL-10' : ''\"></label>\n  <textarea #inputElementText (focus)=\"onFocusIn()\" (focusout)=\"onFocusOut()\" (keyup)=\"onKeyUp($event)\"></textarea>\n</div>\n", styles: [""] }]
-        }], function () { return []; }, { theme: [{
+        }], ctorParameters: function () { return []; }, propDecorators: { theme: [{
                 type: Input
             }], fStyle: [{
                 type: Input
@@ -1723,87 +1304,8 @@ TextInputComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TextInpu
             }], inputElem: [{
                 type: ViewChild,
                 args: ['inputElementText']
-            }] });
-})();
+            }] } });
 
-function ButtonComponent_ng_container_0_ng_container_2_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementContainer(0);
-    }
-}
-function ButtonComponent_ng_container_0_Template(rf, ctx) {
-    if (rf & 1) {
-        const _r7 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelementStart(1, "a", 2);
-        i0.ɵɵlistener("click", function ButtonComponent_ng_container_0_Template_a_click_1_listener() { i0.ɵɵrestoreView(_r7); const ctx_r6 = i0.ɵɵnextContext(); return ctx_r6.isClicked(); })("mouseenter", function ButtonComponent_ng_container_0_Template_a_mouseenter_1_listener() { i0.ɵɵrestoreView(_r7); const ctx_r8 = i0.ɵɵnextContext(); return ctx_r8.mouseEnter(); })("mouseleave", function ButtonComponent_ng_container_0_Template_a_mouseleave_1_listener() { i0.ɵɵrestoreView(_r7); const ctx_r9 = i0.ɵɵnextContext(); return ctx_r9.mouseLeave(); })("mousedown", function ButtonComponent_ng_container_0_Template_a_mousedown_1_listener() { i0.ɵɵrestoreView(_r7); const ctx_r10 = i0.ɵɵnextContext(); return ctx_r10.mousedown(); })("mouseup", function ButtonComponent_ng_container_0_Template_a_mouseup_1_listener() { i0.ɵɵrestoreView(_r7); const ctx_r11 = i0.ɵɵnextContext(); return ctx_r11.mouseup(); });
-        i0.ɵɵtemplate(2, ButtonComponent_ng_container_0_ng_container_2_Template, 1, 0, "ng-container", 3);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementContainerEnd();
-    }
-    if (rf & 2) {
-        const ctx_r0 = i0.ɵɵnextContext();
-        const _r3 = i0.ɵɵreference(4);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngClass", ctx_r0.btnClasses())("href", ctx_r0.route, i0.ɵɵsanitizeUrl)("target", ctx_r0.newTab ? "_blank" : "_self");
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngTemplateOutlet", _r3);
-    }
-}
-function ButtonComponent_ng_container_1_ng_container_2_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementContainer(0);
-    }
-}
-function ButtonComponent_ng_container_1_Template(rf, ctx) {
-    if (rf & 1) {
-        const _r14 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelementStart(1, "a", 4);
-        i0.ɵɵlistener("click", function ButtonComponent_ng_container_1_Template_a_click_1_listener() { i0.ɵɵrestoreView(_r14); const ctx_r13 = i0.ɵɵnextContext(); return ctx_r13.isClicked(); })("mouseenter", function ButtonComponent_ng_container_1_Template_a_mouseenter_1_listener() { i0.ɵɵrestoreView(_r14); const ctx_r15 = i0.ɵɵnextContext(); return ctx_r15.mouseEnter(); })("mouseleave", function ButtonComponent_ng_container_1_Template_a_mouseleave_1_listener() { i0.ɵɵrestoreView(_r14); const ctx_r16 = i0.ɵɵnextContext(); return ctx_r16.mouseLeave(); })("mousedown", function ButtonComponent_ng_container_1_Template_a_mousedown_1_listener() { i0.ɵɵrestoreView(_r14); const ctx_r17 = i0.ɵɵnextContext(); return ctx_r17.mousedown(); })("mouseup", function ButtonComponent_ng_container_1_Template_a_mouseup_1_listener() { i0.ɵɵrestoreView(_r14); const ctx_r18 = i0.ɵɵnextContext(); return ctx_r18.mouseup(); });
-        i0.ɵɵtemplate(2, ButtonComponent_ng_container_1_ng_container_2_Template, 1, 0, "ng-container", 3);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementContainerEnd();
-    }
-    if (rf & 2) {
-        const ctx_r1 = i0.ɵɵnextContext();
-        const _r3 = i0.ɵɵreference(4);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngClass", ctx_r1.btnClasses())("routerLink", ctx_r1.route);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngTemplateOutlet", _r3);
-    }
-}
-function ButtonComponent_ng_container_2_ng_container_2_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementContainer(0);
-    }
-}
-function ButtonComponent_ng_container_2_Template(rf, ctx) {
-    if (rf & 1) {
-        const _r21 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelementStart(1, "a", 5);
-        i0.ɵɵlistener("click", function ButtonComponent_ng_container_2_Template_a_click_1_listener() { i0.ɵɵrestoreView(_r21); const ctx_r20 = i0.ɵɵnextContext(); return ctx_r20.isClicked(); })("mouseenter", function ButtonComponent_ng_container_2_Template_a_mouseenter_1_listener() { i0.ɵɵrestoreView(_r21); const ctx_r22 = i0.ɵɵnextContext(); return ctx_r22.mouseEnter(); })("mouseleave", function ButtonComponent_ng_container_2_Template_a_mouseleave_1_listener() { i0.ɵɵrestoreView(_r21); const ctx_r23 = i0.ɵɵnextContext(); return ctx_r23.mouseLeave(); })("mousedown", function ButtonComponent_ng_container_2_Template_a_mousedown_1_listener() { i0.ɵɵrestoreView(_r21); const ctx_r24 = i0.ɵɵnextContext(); return ctx_r24.mousedown(); })("mouseup", function ButtonComponent_ng_container_2_Template_a_mouseup_1_listener() { i0.ɵɵrestoreView(_r21); const ctx_r25 = i0.ɵɵnextContext(); return ctx_r25.mouseup(); });
-        i0.ɵɵtemplate(2, ButtonComponent_ng_container_2_ng_container_2_Template, 1, 0, "ng-container", 3);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementContainerEnd();
-    }
-    if (rf & 2) {
-        const ctx_r2 = i0.ɵɵnextContext();
-        const _r3 = i0.ɵɵreference(4);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngClass", ctx_r2.btnClasses());
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngTemplateOutlet", _r3);
-    }
-}
-function ButtonComponent_ng_template_3_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵprojection(0);
-    }
-}
-const _c0$e = ["*"];
 class ButtonComponent {
     constructor(service) {
         this.service = service;
@@ -1972,28 +1474,12 @@ class ButtonComponent {
         }
     }
 }
-ButtonComponent.ɵfac = function ButtonComponent_Factory(t) { return new (t || ButtonComponent)(i0.ɵɵdirectiveInject(MaterialgrammiService)); };
-ButtonComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ButtonComponent, selectors: [["mg-button"]], inputs: { taskType: "taskType", btnStyle: "btnStyle", task: "task", target: "target", theme: "theme", class: "class", btnSize: "btnSize", isBlock: "isBlock", round: "round", allowMargin: "allowMargin", link: "link", allowShrink: "allowShrink", options: "options", isExternalLink: "isExternalLink", newTab: "newTab" }, outputs: { clicked: "clicked", active: "active" }, ngContentSelectors: _c0$e, decls: 5, vars: 3, consts: [[4, "ngIf"], ["mycontent", ""], [1, "btn", 3, "ngClass", "href", "target", "click", "mouseenter", "mouseleave", "mousedown", "mouseup"], [4, "ngTemplateOutlet"], [1, "btn", 3, "ngClass", "routerLink", "click", "mouseenter", "mouseleave", "mousedown", "mouseup"], [1, "btn", 3, "ngClass", "click", "mouseenter", "mouseleave", "mousedown", "mouseup"]], template: function ButtonComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵprojectionDef();
-            i0.ɵɵtemplate(0, ButtonComponent_ng_container_0_Template, 3, 4, "ng-container", 0);
-            i0.ɵɵtemplate(1, ButtonComponent_ng_container_1_Template, 3, 3, "ng-container", 0);
-            i0.ɵɵtemplate(2, ButtonComponent_ng_container_2_Template, 3, 2, "ng-container", 0);
-            i0.ɵɵtemplate(3, ButtonComponent_ng_template_3_Template, 1, 0, "ng-template", null, 1, i0.ɵɵtemplateRefExtractor);
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("ngIf", ctx.buttonType == "external");
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", ctx.buttonType == "internal");
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", ctx.buttonType == "widget");
-        }
-    }, directives: [i1.NgIf, i1.NgClass, i1.NgTemplateOutlet, i2.RouterLinkWithHref], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ButtonComponent, [{
+ButtonComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: ButtonComponent, deps: [{ token: MaterialgrammiService }], target: i0.ɵɵFactoryTarget.Component });
+ButtonComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: ButtonComponent, selector: "mg-button", inputs: { taskType: "taskType", btnStyle: "btnStyle", task: "task", target: "target", theme: "theme", class: "class", btnSize: "btnSize", isBlock: "isBlock", round: "round", allowMargin: "allowMargin", link: "link", allowShrink: "allowShrink", options: "options", isExternalLink: "isExternalLink", newTab: "newTab" }, outputs: { clicked: "clicked", active: "active" }, ngImport: i0, template: "<ng-container *ngIf=\"buttonType == 'external'\">\n  <a class=\"btn\" (click)=\"isClicked()\" (mouseenter)=\"mouseEnter()\" (mouseleave)=\"mouseLeave()\"\n  [ngClass]=\"btnClasses()\" [href]=\"route\" [target]=\"newTab ? '_blank' : '_self'\"\n  (mousedown)=\"mousedown()\" (mouseup)=\"mouseup()\">\n    <ng-container *ngTemplateOutlet=\"mycontent\"></ng-container>\n  </a>\n</ng-container>\n\n<ng-container *ngIf=\"buttonType == 'internal'\">\n  <a class=\"btn\" (click)=\"isClicked()\" (mouseenter)=\"mouseEnter()\"\n  (mouseleave)=\"mouseLeave()\" [ngClass]=\"btnClasses()\" [routerLink]=\"route\"\n  (mousedown)=\"mousedown()\" (mouseup)=\"mouseup()\">\n    <ng-container *ngTemplateOutlet=\"mycontent\"></ng-container>\n  </a>\n</ng-container>\n\n<ng-container *ngIf=\"buttonType == 'widget'\">\n  <a class=\"btn\" (click)=\"isClicked()\" (mouseenter)=\"mouseEnter()\" (mouseleave)=\"mouseLeave()\"\n  [ngClass]=\"btnClasses()\"\n  (mousedown)=\"mousedown()\" (mouseup)=\"mouseup()\">\n    <ng-container *ngTemplateOutlet=\"mycontent\"></ng-container>\n  </a>\n</ng-container>\n\n<ng-template #mycontent>\n  <ng-content></ng-content>\n</ng-template>\n", styles: [""], directives: [{ type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { type: i1.NgTemplateOutlet, selector: "[ngTemplateOutlet]", inputs: ["ngTemplateOutletContext", "ngTemplateOutlet"] }, { type: i2.RouterLinkWithHref, selector: "a[routerLink],area[routerLink]", inputs: ["target", "queryParams", "fragment", "queryParamsHandling", "preserveFragment", "skipLocationChange", "replaceUrl", "state", "relativeTo", "routerLink"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: ButtonComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-button', template: "<ng-container *ngIf=\"buttonType == 'external'\">\n  <a class=\"btn\" (click)=\"isClicked()\" (mouseenter)=\"mouseEnter()\" (mouseleave)=\"mouseLeave()\"\n  [ngClass]=\"btnClasses()\" [href]=\"route\" [target]=\"newTab ? '_blank' : '_self'\"\n  (mousedown)=\"mousedown()\" (mouseup)=\"mouseup()\">\n    <ng-container *ngTemplateOutlet=\"mycontent\"></ng-container>\n  </a>\n</ng-container>\n\n<ng-container *ngIf=\"buttonType == 'internal'\">\n  <a class=\"btn\" (click)=\"isClicked()\" (mouseenter)=\"mouseEnter()\"\n  (mouseleave)=\"mouseLeave()\" [ngClass]=\"btnClasses()\" [routerLink]=\"route\"\n  (mousedown)=\"mousedown()\" (mouseup)=\"mouseup()\">\n    <ng-container *ngTemplateOutlet=\"mycontent\"></ng-container>\n  </a>\n</ng-container>\n\n<ng-container *ngIf=\"buttonType == 'widget'\">\n  <a class=\"btn\" (click)=\"isClicked()\" (mouseenter)=\"mouseEnter()\" (mouseleave)=\"mouseLeave()\"\n  [ngClass]=\"btnClasses()\"\n  (mousedown)=\"mousedown()\" (mouseup)=\"mouseup()\">\n    <ng-container *ngTemplateOutlet=\"mycontent\"></ng-container>\n  </a>\n</ng-container>\n\n<ng-template #mycontent>\n  <ng-content></ng-content>\n</ng-template>\n", styles: [""] }]
-        }], function () { return [{ type: MaterialgrammiService }]; }, { clicked: [{
+        }], ctorParameters: function () { return [{ type: MaterialgrammiService }]; }, propDecorators: { clicked: [{
                 type: Output
             }], taskType: [{
                 type: Input
@@ -2027,174 +1513,8 @@ ButtonComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ButtonCompo
                 type: Input
             }], active: [{
                 type: Output
-            }] });
-})();
+            }] } });
 
-function CalendarComponent_div_2_div_1_Template(rf, ctx) {
-    if (rf & 1) {
-        const _r8 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementStart(0, "div", 20);
-        i0.ɵɵelementStart(1, "div", 21);
-        i0.ɵɵelementStart(2, "a", 22);
-        i0.ɵɵlistener("click", function CalendarComponent_div_2_div_1_Template_a_click_2_listener() { i0.ɵɵrestoreView(_r8); const ctx_r7 = i0.ɵɵnextContext(2); return ctx_r7.prevYear(); });
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(3, "div", 23);
-        i0.ɵɵelementStart(4, "a", 22);
-        i0.ɵɵlistener("click", function CalendarComponent_div_2_div_1_Template_a_click_4_listener() { i0.ɵɵrestoreView(_r8); const ctx_r9 = i0.ɵɵnextContext(2); return ctx_r9.prevMonth(); });
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(5, "div", 24);
-        i0.ɵɵelementStart(6, "span", 25);
-        i0.ɵɵtext(7);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(8, "span", 26);
-        i0.ɵɵtext(9);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(10, "div", 27);
-        i0.ɵɵelementStart(11, "a", 22);
-        i0.ɵɵlistener("click", function CalendarComponent_div_2_div_1_Template_a_click_11_listener() { i0.ɵɵrestoreView(_r8); const ctx_r10 = i0.ɵɵnextContext(2); return ctx_r10.nextMonth(); });
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(12, "div", 28);
-        i0.ɵɵelementStart(13, "a", 22);
-        i0.ɵɵlistener("click", function CalendarComponent_div_2_div_1_Template_a_click_13_listener() { i0.ɵɵrestoreView(_r8); const ctx_r11 = i0.ɵɵnextContext(2); return ctx_r11.nextYear(); });
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    }
-    if (rf & 2) {
-        const month_r2 = i0.ɵɵnextContext().$implicit;
-        const ctx_r4 = i0.ɵɵnextContext();
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("innerHtml", ctx_r4.icons.year.previous, i0.ɵɵsanitizeHtml);
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("innerHtml", ctx_r4.icons.month.previous, i0.ɵɵsanitizeHtml);
-        i0.ɵɵadvance(3);
-        i0.ɵɵtextInterpolate(month_r2);
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate(ctx_r4.inView.year);
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("innerHtml", ctx_r4.icons.month.next, i0.ɵɵsanitizeHtml);
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("innerHtml", ctx_r4.icons.year.next, i0.ɵɵsanitizeHtml);
-    }
-}
-function CalendarComponent_div_2_p_3_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementStart(0, "p");
-        i0.ɵɵtext(1);
-        i0.ɵɵelementEnd();
-    }
-    if (rf & 2) {
-        const wkday_r13 = ctx.$implicit;
-        i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(wkday_r13);
-    }
-}
-function CalendarComponent_div_2_ng_container_5_ng_container_3_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementContainer(0);
-    }
-}
-function CalendarComponent_div_2_ng_container_5_ng_container_4_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵtext(1);
-        i0.ɵɵelementContainerEnd();
-    }
-    if (rf & 2) {
-        const d_r14 = i0.ɵɵnextContext().$implicit;
-        i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(d_r14.num);
-    }
-}
-function CalendarComponent_div_2_ng_container_5_Template(rf, ctx) {
-    if (rf & 1) {
-        const _r19 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelementStart(1, "mg-dropable", 29);
-        i0.ɵɵlistener("dataRecieved", function CalendarComponent_div_2_ng_container_5_Template_mg_dropable_dataRecieved_1_listener($event) { i0.ɵɵrestoreView(_r19); const ctx_r18 = i0.ɵɵnextContext(2); return ctx_r18.updateOnDay($event); })("onEvent", function CalendarComponent_div_2_ng_container_5_Template_mg_dropable_onEvent_1_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r19); const d_r14 = restoredCtx.$implicit; const ctx_r20 = i0.ɵɵnextContext(2); return ctx_r20.handleDropZone($event, { date: d_r14.num, month: d_r14.month, year: ctx_r20.inView.year }); });
-        i0.ɵɵelementStart(2, "div", 30);
-        i0.ɵɵlistener("click", function CalendarComponent_div_2_ng_container_5_Template_div_click_2_listener() { const restoredCtx = i0.ɵɵrestoreView(_r19); const d_r14 = restoredCtx.$implicit; const ctx_r21 = i0.ɵɵnextContext(2); return ctx_r21.clickOnDay(d_r14.num, d_r14.month, ctx_r21.inView.year, d_r14.disabled); });
-        i0.ɵɵtemplate(3, CalendarComponent_div_2_ng_container_5_ng_container_3_Template, 1, 0, "ng-container", 4);
-        i0.ɵɵtemplate(4, CalendarComponent_div_2_ng_container_5_ng_container_4_Template, 2, 1, "ng-container", 4);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementContainerEnd();
-    }
-    if (rf & 2) {
-        const d_r14 = ctx.$implicit;
-        const ctx_r6 = i0.ɵɵnextContext(2);
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("ngClass", ctx_r6.dayClass(d_r14.num, d_r14.month, ctx_r6.inView.year, d_r14.disabled));
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", d_r14.num == 0);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", d_r14.num != 0);
-    }
-}
-function CalendarComponent_div_2_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 15);
-        i0.ɵɵtemplate(1, CalendarComponent_div_2_div_1_Template, 14, 6, "div", 16);
-        i0.ɵɵelementStart(2, "div", 17);
-        i0.ɵɵtemplate(3, CalendarComponent_div_2_p_3_Template, 2, 1, "p", 18);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(4, "div", 19);
-        i0.ɵɵtemplate(5, CalendarComponent_div_2_ng_container_5_Template, 5, 3, "ng-container", 18);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    }
-    if (rf & 2) {
-        const i_r3 = ctx.index;
-        const ctx_r0 = i0.ɵɵnextContext();
-        i0.ɵɵproperty("ngClass", i_r3 == ctx_r0.inView.month ? "active" : "");
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", ctx_r0.controls);
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("ngForOf", ctx_r0.weekDays);
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("ngForOf", ctx_r0.days[i_r3].dates);
-    }
-}
-function CalendarComponent_ng_container_4_ng_container_1_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelementStart(1, "div", 31);
-        i0.ɵɵelementStart(2, "mg-dragable", 32);
-        i0.ɵɵelement(3, "div", 33);
-        i0.ɵɵelement(4, "div", 34);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelement(5, "div", 35);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementContainerEnd();
-    }
-    if (rf & 2) {
-        const eventData_r23 = ctx.$implicit;
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("draggable", true)("data", eventData_r23);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("innerHtml", eventData_r23.name, i0.ɵɵsanitizeHtml);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("innerHtml", eventData_r23.date, i0.ɵɵsanitizeHtml);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("innerHtml", eventData_r23.description, i0.ɵɵsanitizeHtml);
-    }
-}
-function CalendarComponent_ng_container_4_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵtemplate(1, CalendarComponent_ng_container_4_ng_container_1_Template, 6, 5, "ng-container", 18);
-        i0.ɵɵelementContainerEnd();
-    }
-    if (rf & 2) {
-        const ctx_r1 = i0.ɵɵnextContext();
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngForOf", ctx_r1.toggleSelect.data);
-    }
-}
 class CalendarComponent {
     constructor(dater, service) {
         this.dater = dater;
@@ -2527,63 +1847,12 @@ class CalendarComponent {
         }
     }
 }
-CalendarComponent.ɵfac = function CalendarComponent_Factory(t) { return new (t || CalendarComponent)(i0.ɵɵdirectiveInject(DaterService), i0.ɵɵdirectiveInject(MaterialgrammiService)); };
-CalendarComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: CalendarComponent, selectors: [["mg-calendar"]], inputs: { abbreviation: "abbreviation", bookEvents: "bookEvents", theme: "theme", disabled: "disabled", size: "size", disabledRange: "disabledRange", events: "events", format: "format", icons: "icons", controls: "controls", class: "class" }, outputs: { dayIsClicked: "dayIsClicked", dayDrop: "dayDrop", newEvent: "newEvent" }, features: [i0.ɵɵNgOnChangesFeature], decls: 19, vars: 6, consts: [[1, "calendar", 3, "ngClass"], [1, "month-wrapper"], ["class", "month", 3, "ngClass", 4, "ngFor", "ngForOf"], [1, "event-details"], [4, "ngIf"], ["bgClass", "grey2", "canvasPosition", "bottom", "offSize", "2", 3, "id", "active", "isClosed"], [1, "pad-10"], [1, "text-grey8", "marginV-15"], [1, "font-15", "text-red8"], [1, "row", "col", "m12", "l12", "s12"], ["label", "Event Name", "fStyle", "material", 1, "marginT-5", 3, "keyup"], ["label", "Event Description", "fStyle", "material", 1, "margin-5", 3, "keyup"], [1, "col", "m12", "l12", "s12", "text-right"], ["theme", "success", 3, "click"], [1, "fas", "fa-angle-double-right"], [1, "month", 3, "ngClass"], ["class", "calendar-info", 4, "ngIf"], [1, "weekdays"], [4, "ngFor", "ngForOf"], [1, "month-days"], [1, "calendar-info"], [1, "previous-year"], [3, "innerHtml", "click"], [1, "previous-month"], [1, "month-name"], [1, "monthSpan"], [1, "yearName"], [1, "next-month"], [1, "next-year"], [3, "dataRecieved", "onEvent"], [1, "day", 3, "ngClass", "click"], [1, "event-info-wrapper"], [3, "draggable", "data"], [1, "event-detail-title", 3, "innerHtml"], [1, "event-detail-date", 3, "innerHtml"], [1, "event-detail-description", 3, "innerHtml"]], template: function CalendarComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelementStart(0, "div", 0);
-            i0.ɵɵelementStart(1, "div", 1);
-            i0.ɵɵtemplate(2, CalendarComponent_div_2_Template, 6, 4, "div", 2);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(3, "div", 3);
-            i0.ɵɵtemplate(4, CalendarComponent_ng_container_4_Template, 2, 1, "ng-container", 4);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(5, "mg-overlay", 5);
-            i0.ɵɵlistener("isClosed", function CalendarComponent_Template_mg_overlay_isClosed_5_listener() { return ctx.closeNewEvent(); });
-            i0.ɵɵelementStart(6, "div", 6);
-            i0.ɵɵelementStart(7, "h2", 7);
-            i0.ɵɵtext(8, "Book an event on ");
-            i0.ɵɵelementStart(9, "small", 8);
-            i0.ɵɵtext(10);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(11, "div", 9);
-            i0.ɵɵelementStart(12, "mg-input", 10);
-            i0.ɵɵlistener("keyup", function CalendarComponent_Template_mg_input_keyup_12_listener($event) { return ctx.setBookEvent($event, "name"); });
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(13, "div", 9);
-            i0.ɵɵelementStart(14, "mg-text", 11);
-            i0.ɵɵlistener("keyup", function CalendarComponent_Template_mg_text_keyup_14_listener($event) { return ctx.setBookEvent($event, "desc"); });
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(15, "div", 12);
-            i0.ɵɵelementStart(16, "mg-button", 13);
-            i0.ɵɵlistener("click", function CalendarComponent_Template_mg_button_click_16_listener() { return ctx.createNewEvent(); });
-            i0.ɵɵtext(17, "Book an event ");
-            i0.ɵɵelement(18, "i", 14);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("ngClass", (ctx.toggleEvent == true ? ctx.theme + " activatedEvent" : ctx.theme) + " " + ctx.class);
-            i0.ɵɵadvance(2);
-            i0.ɵɵproperty("ngForOf", ctx.months);
-            i0.ɵɵadvance(2);
-            i0.ɵɵproperty("ngIf", ctx.toggleSelect.data);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("id", ctx.id)("active", ctx.activateNewEvent);
-            i0.ɵɵadvance(5);
-            i0.ɵɵtextInterpolate(ctx.clickedOn);
-        }
-    }, directives: [i1.NgClass, i1.NgForOf, i1.NgIf, OverlayComponent, InputComponent, TextInputComponent, ButtonComponent, DropableComponent, DragableComponent], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CalendarComponent, [{
+CalendarComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: CalendarComponent, deps: [{ token: DaterService }, { token: MaterialgrammiService }], target: i0.ɵɵFactoryTarget.Component });
+CalendarComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: CalendarComponent, selector: "mg-calendar", inputs: { abbreviation: "abbreviation", bookEvents: "bookEvents", theme: "theme", disabled: "disabled", size: "size", disabledRange: "disabledRange", events: "events", format: "format", icons: "icons", controls: "controls", class: "class" }, outputs: { dayIsClicked: "dayIsClicked", dayDrop: "dayDrop", newEvent: "newEvent" }, usesOnChanges: true, ngImport: i0, template: "<div class=\"calendar\" [ngClass]=\"(toggleEvent == true ? theme + ' activatedEvent' : theme) + ' ' + class\">\n    <div class=\"month-wrapper\">\n      <div class=\"month\" *ngFor=\"let month of months; let i = index\" [ngClass]=\"i == inView.month ? 'active': ''\">\n        <div class=\"calendar-info\" *ngIf=\"controls\">\n          <div class=\"previous-year\">\n            <a (click)=\"prevYear()\" [innerHtml]=\"icons.year.previous\"></a>\n          </div>\n          <div class=\"previous-month\">\n            <a (click)=\"prevMonth()\" [innerHtml]=\"icons.month.previous\"></a>\n          </div>\n          <div class=\"month-name\">\n            <span class=\"monthSpan\">{{month}}</span><span class=\"yearName\">{{inView.year}}</span>\n          </div>\n          <div class=\"next-month\">\n            <a (click)=\"nextMonth()\" [innerHtml]=\"icons.month.next\"></a>\n          </div>\n          <div class=\"next-year\">\n            <a (click)=\"nextYear()  \" [innerHtml]=\"icons.year.next\"></a>\n          </div>\n        </div>\n        <div class=\"weekdays\">\n          <p *ngFor=\"let wkday of weekDays\">{{wkday}}</p>\n        </div>\n        <div class=\"month-days\">\n          <ng-container *ngFor=\"let d of days[i].dates\">\n            <mg-dropable (dataRecieved)=\"updateOnDay($event)\" (onEvent)=\"handleDropZone($event, {date: d.num, month: d.month, year: inView.year})\">\n              <div class=\"day\" [ngClass]=\"dayClass(d.num, d.month, inView.year, d.disabled)\"\n              (click)=\"clickOnDay(d.num, d.month, inView.year, d.disabled)\">\n                <ng-container *ngIf=\"d.num == 0\"></ng-container>\n                <ng-container *ngIf=\"d.num != 0\">{{d.num}}</ng-container>\n              </div>\n            </mg-dropable>\n          </ng-container>\n        </div>\n      </div>\n    </div>\n    <div class=\"event-details\">\n      <ng-container *ngIf=\"toggleSelect.data\">\n        <ng-container *ngFor=\"let eventData of toggleSelect.data\">\n            <div class=\"event-info-wrapper\">\n              <mg-dragable [draggable]=\"true\" [data]=\"eventData\">\n                <div class=\"event-detail-title\" [innerHtml]=\"eventData.name\"></div>\n                <div class=\"event-detail-date\" [innerHtml]=\"eventData.date\"></div>\n              </mg-dragable>\n              \n              <div class=\"event-detail-description\" [innerHtml]=\"eventData.description\"></div>\n            </div>\n        </ng-container>\n      </ng-container>\n    </div>\n  </div>\n\n  <mg-overlay bgClass=\"grey2\" [id]=\"id\" canvasPosition=\"bottom\" offSize=\"2\" [active]=\"activateNewEvent\" (isClosed)=\"closeNewEvent()\">\n    <div class=\"pad-10\">\n      <h2 class=\"text-grey8 marginV-15\">Book an event on <small class=\"font-15 text-red8\">{{ clickedOn }}</small> </h2>\n      <div class=\"row col m12 l12 s12\">\n        <mg-input label=\"Event Name\" fStyle=\"material\" class=\"marginT-5\" (keyup)=\"setBookEvent($event, 'name')\"></mg-input>\n      </div>\n      <div class=\"row col m12 l12 s12\">\n        <mg-text label=\"Event Description\" fStyle=\"material\" class=\"margin-5\" (keyup)=\"setBookEvent($event, 'desc')\"></mg-text>\n      </div>\n      <div class=\"col m12 l12 s12 text-right\">\n        <mg-button (click)=\"createNewEvent()\" theme=\"success\">Book an event <i class=\"fas fa-angle-double-right\"></i></mg-button>\n      </div>\n    </div>\n  </mg-overlay>", styles: [""], components: [{ type: DropableComponent, selector: "mg-dropable", inputs: ["dropFiles", "class"], outputs: ["onEvent", "dataRecieved"] }, { type: DragableComponent, selector: "mg-dragable", inputs: ["dragable", "data", "class"], outputs: ["onEvent"] }, { type: OverlayComponent, selector: "mg-overlay", inputs: ["bgClass", "overlayClass", "offSize", "canvasPosition", "id", "active"], outputs: ["isClosed"] }, { type: InputComponent, selector: "mg-input", inputs: ["theme", "fStyle", "label", "placeholder", "control", "type", "onDark", "class", "textValue", "rounded"], outputs: ["value", "isFocused", "keyup"] }, { type: TextInputComponent, selector: "mg-text", inputs: ["theme", "fStyle", "on_dark", "label", "control"], outputs: ["value", "isFocused", "keyup"] }, { type: ButtonComponent, selector: "mg-button", inputs: ["taskType", "btnStyle", "task", "target", "theme", "class", "btnSize", "isBlock", "round", "allowMargin", "link", "allowShrink", "options", "isExternalLink", "newTab"], outputs: ["clicked", "active"] }], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: CalendarComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-calendar', template: "<div class=\"calendar\" [ngClass]=\"(toggleEvent == true ? theme + ' activatedEvent' : theme) + ' ' + class\">\n    <div class=\"month-wrapper\">\n      <div class=\"month\" *ngFor=\"let month of months; let i = index\" [ngClass]=\"i == inView.month ? 'active': ''\">\n        <div class=\"calendar-info\" *ngIf=\"controls\">\n          <div class=\"previous-year\">\n            <a (click)=\"prevYear()\" [innerHtml]=\"icons.year.previous\"></a>\n          </div>\n          <div class=\"previous-month\">\n            <a (click)=\"prevMonth()\" [innerHtml]=\"icons.month.previous\"></a>\n          </div>\n          <div class=\"month-name\">\n            <span class=\"monthSpan\">{{month}}</span><span class=\"yearName\">{{inView.year}}</span>\n          </div>\n          <div class=\"next-month\">\n            <a (click)=\"nextMonth()\" [innerHtml]=\"icons.month.next\"></a>\n          </div>\n          <div class=\"next-year\">\n            <a (click)=\"nextYear()  \" [innerHtml]=\"icons.year.next\"></a>\n          </div>\n        </div>\n        <div class=\"weekdays\">\n          <p *ngFor=\"let wkday of weekDays\">{{wkday}}</p>\n        </div>\n        <div class=\"month-days\">\n          <ng-container *ngFor=\"let d of days[i].dates\">\n            <mg-dropable (dataRecieved)=\"updateOnDay($event)\" (onEvent)=\"handleDropZone($event, {date: d.num, month: d.month, year: inView.year})\">\n              <div class=\"day\" [ngClass]=\"dayClass(d.num, d.month, inView.year, d.disabled)\"\n              (click)=\"clickOnDay(d.num, d.month, inView.year, d.disabled)\">\n                <ng-container *ngIf=\"d.num == 0\"></ng-container>\n                <ng-container *ngIf=\"d.num != 0\">{{d.num}}</ng-container>\n              </div>\n            </mg-dropable>\n          </ng-container>\n        </div>\n      </div>\n    </div>\n    <div class=\"event-details\">\n      <ng-container *ngIf=\"toggleSelect.data\">\n        <ng-container *ngFor=\"let eventData of toggleSelect.data\">\n            <div class=\"event-info-wrapper\">\n              <mg-dragable [draggable]=\"true\" [data]=\"eventData\">\n                <div class=\"event-detail-title\" [innerHtml]=\"eventData.name\"></div>\n                <div class=\"event-detail-date\" [innerHtml]=\"eventData.date\"></div>\n              </mg-dragable>\n              \n              <div class=\"event-detail-description\" [innerHtml]=\"eventData.description\"></div>\n            </div>\n        </ng-container>\n      </ng-container>\n    </div>\n  </div>\n\n  <mg-overlay bgClass=\"grey2\" [id]=\"id\" canvasPosition=\"bottom\" offSize=\"2\" [active]=\"activateNewEvent\" (isClosed)=\"closeNewEvent()\">\n    <div class=\"pad-10\">\n      <h2 class=\"text-grey8 marginV-15\">Book an event on <small class=\"font-15 text-red8\">{{ clickedOn }}</small> </h2>\n      <div class=\"row col m12 l12 s12\">\n        <mg-input label=\"Event Name\" fStyle=\"material\" class=\"marginT-5\" (keyup)=\"setBookEvent($event, 'name')\"></mg-input>\n      </div>\n      <div class=\"row col m12 l12 s12\">\n        <mg-text label=\"Event Description\" fStyle=\"material\" class=\"margin-5\" (keyup)=\"setBookEvent($event, 'desc')\"></mg-text>\n      </div>\n      <div class=\"col m12 l12 s12 text-right\">\n        <mg-button (click)=\"createNewEvent()\" theme=\"success\">Book an event <i class=\"fas fa-angle-double-right\"></i></mg-button>\n      </div>\n    </div>\n  </mg-overlay>", styles: [""] }]
-        }], function () { return [{ type: DaterService }, { type: MaterialgrammiService }]; }, { abbreviation: [{
+        }], ctorParameters: function () { return [{ type: DaterService }, { type: MaterialgrammiService }]; }, propDecorators: { abbreviation: [{
                 type: Input
             }], bookEvents: [{
                 type: Input
@@ -2611,10 +1880,8 @@ CalendarComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: CalendarC
                 type: Output
             }], newEvent: [{
                 type: Output
-            }] });
-})();
+            }] } });
 
-const _c0$d = function () { return []; };
 class DateInputComponent {
     constructor() {
         this.input = {
@@ -2670,43 +1937,12 @@ class DateInputComponent {
         }
     }
 }
-DateInputComponent.ɵfac = function DateInputComponent_Factory(t) { return new (t || DateInputComponent)(); };
-DateInputComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DateInputComponent, selectors: [["mg-date"]], inputs: { input: "input", label: "label", class: "class", calendar: "calendar", disabledRange: "disabledRange", icons: "icons", format: "format" }, outputs: { getdate: "getdate" }, features: [i0.ɵɵNgOnChangesFeature], decls: 6, vars: 20, consts: [[3, "ngClass", "click", "focusin", "mouseleave"], ["type", "text", 3, "theme", "label", "placeholder", "control", "textValue", "onDark"], [1, "calendar-input", "pad-10", 3, "ngClass"], [1, "text-right"], [1, "font-20", "grey3", "text-grey8", "hover-grey2", "text-hover-grey10", "shadow-1", "padH-13", "radius-50", "padV-5", 2, "position", "absolute", "right", "20px", "margin-top", "-10px", 3, "innerHtml", "click"], [3, "theme", "disabled", "events", "abbreviation", "format", "disabledRange", "dayIsClicked"]], template: function DateInputComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelementStart(0, "div", 0);
-            i0.ɵɵlistener("click", function DateInputComponent_Template_div_click_0_listener() { return ctx.active = true; })("focusin", function DateInputComponent_Template_div_focusin_0_listener() { return ctx.inputFocused(true); })("mouseleave", function DateInputComponent_Template_div_mouseleave_0_listener() { return ctx.inputFocused(false); });
-            i0.ɵɵelement(1, "mg-input", 1);
-            i0.ɵɵelementStart(2, "div", 2);
-            i0.ɵɵelementStart(3, "p", 3);
-            i0.ɵɵelementStart(4, "a", 4);
-            i0.ɵɵlistener("click", function DateInputComponent_Template_a_click_4_listener() { return ctx.active = false; });
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(5, "mg-calendar", 5);
-            i0.ɵɵlistener("dayIsClicked", function DateInputComponent_Template_mg_calendar_dayIsClicked_5_listener($event) { return ctx.dateSelected($event); });
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("ngClass", ctx.class);
-            i0.ɵɵadvance(1);
-            i0.ɵɵstyleMap(ctx.input.style);
-            i0.ɵɵclassMap(ctx.input.class);
-            i0.ɵɵproperty("theme", ctx.input.theme)("label", ctx.label)("placeholder", ctx.format)("control", ctx.input.control)("textValue", ctx.textValue)("onDark", ctx.input.darkmode);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngClass", ctx.calendarClass());
-            i0.ɵɵadvance(2);
-            i0.ɵɵproperty("innerHtml", ctx.icons.close, i0.ɵɵsanitizeHtml);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("theme", ctx.calendar.theme)("disabled", ctx.calendar.disabled)("events", i0.ɵɵpureFunction0(19, _c0$d))("abbreviation", ctx.calendar.abbreviation)("format", ctx.format)("disabledRange", ctx.disabledRange);
-        }
-    }, directives: [i1.NgClass, InputComponent, CalendarComponent], styles: [".calendar-input[_ngcontent-%COMP%]{display:none}.calendar-input.active[_ngcontent-%COMP%]{display:block}"] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DateInputComponent, [{
+DateInputComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: DateInputComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+DateInputComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: DateInputComponent, selector: "mg-date", inputs: { input: "input", label: "label", class: "class", calendar: "calendar", disabledRange: "disabledRange", icons: "icons", format: "format" }, outputs: { getdate: "getdate" }, usesOnChanges: true, ngImport: i0, template: "<div (click)=\"active = true\"  (focusin)=\"inputFocused(true)\" (mouseleave)=\"inputFocused(false)\" [ngClass]=\"class\">\n    <mg-input [theme]=\"input.theme\" [style]=\"input.style\" [label]=\"label\" \n    [placeholder] = \"format\" [control]=\"input.control\" type=\"text\" \n    [textValue]=\"textValue\" [onDark]=\"input.darkmode\" [class]=\"input.class\"></mg-input>\n    <div class=\"calendar-input pad-10\" [ngClass]=\"calendarClass()\">\n        <p class=\"text-right\">\n            <a [innerHtml]=\"icons.close\" \n            class=\"font-20 grey3 text-grey8 \n            hover-grey2 text-hover-grey10 \n            shadow-1 padH-13 radius-50 padV-5\" \n            style=\"position: absolute; right: 20px; margin-top: -10px;\" \n            (click)=\"active = false\"></a>\n        </p>\n        \n        <mg-calendar (dayIsClicked)=\"dateSelected($event)\" [theme]=\"calendar.theme\" \n        [disabled]=\"calendar.disabled\" [events]=\"[]\" [abbreviation] = \"calendar.abbreviation\"\n        [format]=\"format\" [disabledRange]=\"disabledRange\"></mg-calendar>\n    </div>\n</div>\n\n\n", styles: [".calendar-input{display:none}.calendar-input.active{display:block}\n"], components: [{ type: InputComponent, selector: "mg-input", inputs: ["theme", "fStyle", "label", "placeholder", "control", "type", "onDark", "class", "textValue", "rounded"], outputs: ["value", "isFocused", "keyup"] }, { type: CalendarComponent, selector: "mg-calendar", inputs: ["abbreviation", "bookEvents", "theme", "disabled", "size", "disabledRange", "events", "format", "icons", "controls", "class"], outputs: ["dayIsClicked", "dayDrop", "newEvent"] }], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: DateInputComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-date', template: "<div (click)=\"active = true\"  (focusin)=\"inputFocused(true)\" (mouseleave)=\"inputFocused(false)\" [ngClass]=\"class\">\n    <mg-input [theme]=\"input.theme\" [style]=\"input.style\" [label]=\"label\" \n    [placeholder] = \"format\" [control]=\"input.control\" type=\"text\" \n    [textValue]=\"textValue\" [onDark]=\"input.darkmode\" [class]=\"input.class\"></mg-input>\n    <div class=\"calendar-input pad-10\" [ngClass]=\"calendarClass()\">\n        <p class=\"text-right\">\n            <a [innerHtml]=\"icons.close\" \n            class=\"font-20 grey3 text-grey8 \n            hover-grey2 text-hover-grey10 \n            shadow-1 padH-13 radius-50 padV-5\" \n            style=\"position: absolute; right: 20px; margin-top: -10px;\" \n            (click)=\"active = false\"></a>\n        </p>\n        \n        <mg-calendar (dayIsClicked)=\"dateSelected($event)\" [theme]=\"calendar.theme\" \n        [disabled]=\"calendar.disabled\" [events]=\"[]\" [abbreviation] = \"calendar.abbreviation\"\n        [format]=\"format\" [disabledRange]=\"disabledRange\"></mg-calendar>\n    </div>\n</div>\n\n\n", styles: [".calendar-input{display:none}.calendar-input.active{display:block}\n"] }]
-        }], function () { return []; }, { input: [{
+        }], ctorParameters: function () { return []; }, propDecorators: { input: [{
                 type: Input
             }], label: [{
                 type: Input
@@ -2722,31 +1958,8 @@ DateInputComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DateInpu
                 type: Input
             }], getdate: [{
                 type: Output
-            }] });
-})();
+            }] } });
 
-function RadioComponent_div_2_Template(rf, ctx) {
-    if (rf & 1) {
-        const _r3 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementStart(0, "div", 3);
-        i0.ɵɵelementStart(1, "input", 4);
-        i0.ɵɵlistener("click", function RadioComponent_div_2_Template_input_click_1_listener() { const restoredCtx = i0.ɵɵrestoreView(_r3); const option_r1 = restoredCtx.$implicit; const ctx_r2 = i0.ɵɵnextContext(); return ctx_r2.select(option_r1.value); });
-        i0.ɵɵelementEnd();
-        i0.ɵɵelement(2, "div", 5);
-        i0.ɵɵelementStart(3, "label", 6);
-        i0.ɵɵlistener("click", function RadioComponent_div_2_Template_label_click_3_listener() { const restoredCtx = i0.ɵɵrestoreView(_r3); const option_r1 = restoredCtx.$implicit; const ctx_r4 = i0.ɵɵnextContext(); return ctx_r4.select(option_r1.value); });
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    }
-    if (rf & 2) {
-        const option_r1 = ctx.$implicit;
-        const ctx_r0 = i0.ɵɵnextContext();
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("id", option_r1.value)("name", ctx_r0.name)("value", option_r1.value);
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("for", option_r1.value)("innerHtml", option_r1.name, i0.ɵɵsanitizeHtml)("ngClass", ctx_r0.classesOnLabel());
-    }
-}
 class RadioComponent {
     constructor() {
         this.options = false;
@@ -2778,26 +1991,12 @@ class RadioComponent {
         return results;
     }
 }
-RadioComponent.ɵfac = function RadioComponent_Factory(t) { return new (t || RadioComponent)(); };
-RadioComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: RadioComponent, selectors: [["mg-radio"]], inputs: { options: "options", name: "name", size: "size", isInline: "isInline", theme: "theme", onDark: "onDark" }, outputs: { value: "value" }, decls: 3, vars: 2, consts: [[1, "radio", 3, "ngClass"], [1, "option"], ["class", "radio-option", 4, "ngFor", "ngForOf"], [1, "radio-option"], ["type", "radio", 3, "id", "name", "value", "click"], [1, "radio-shadow"], [3, "for", "innerHtml", "ngClass", "click"]], template: function RadioComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelementStart(0, "div", 0);
-            i0.ɵɵelementStart(1, "div", 1);
-            i0.ɵɵtemplate(2, RadioComponent_div_2_Template, 4, 6, "div", 2);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("ngClass", ctx.mainClasses());
-            i0.ɵɵadvance(2);
-            i0.ɵɵproperty("ngForOf", ctx.options);
-        }
-    }, directives: [i1.NgClass, i1.NgForOf], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(RadioComponent, [{
+RadioComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: RadioComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+RadioComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: RadioComponent, selector: "mg-radio", inputs: { options: "options", name: "name", size: "size", isInline: "isInline", theme: "theme", onDark: "onDark" }, outputs: { value: "value" }, ngImport: i0, template: "<div class=\"radio\" [ngClass]=\"mainClasses()\">\n  <div class=\"option\">\n    <div class=\"radio-option\" *ngFor=\"let option of options\">\n      <input [id]=\"option.value\" type=\"radio\" [name]=\"name\" [value]=\"option.value\" (click)=\"select(option.value)\">\n      <div class=\"radio-shadow\"></div>\n      <label [for]=\"option.value\" [innerHtml]=\"option.name\" (click)=\"select(option.value)\" [ngClass]=\"classesOnLabel()\"></label>\n    </div>\n  </div>\n</div>\n", styles: [""], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: RadioComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-radio', template: "<div class=\"radio\" [ngClass]=\"mainClasses()\">\n  <div class=\"option\">\n    <div class=\"radio-option\" *ngFor=\"let option of options\">\n      <input [id]=\"option.value\" type=\"radio\" [name]=\"name\" [value]=\"option.value\" (click)=\"select(option.value)\">\n      <div class=\"radio-shadow\"></div>\n      <label [for]=\"option.value\" [innerHtml]=\"option.name\" (click)=\"select(option.value)\" [ngClass]=\"classesOnLabel()\"></label>\n    </div>\n  </div>\n</div>\n", styles: [""] }]
-        }], function () { return []; }, { options: [{
+        }], ctorParameters: function () { return []; }, propDecorators: { options: [{
                 type: Input
             }], name: [{
                 type: Input
@@ -2811,37 +2010,8 @@ RadioComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: RadioCompone
                 type: Input
             }], value: [{
                 type: Output
-            }] });
-})();
+            }] } });
 
-function SelectComponent_ng_container_6_Template(rf, ctx) {
-    if (rf & 1) {
-        const _r3 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelementStart(1, "mg-input", 7);
-        i0.ɵɵlistener("keyup", function SelectComponent_ng_container_6_Template_mg_input_keyup_1_listener($event) { i0.ɵɵrestoreView(_r3); const ctx_r2 = i0.ɵɵnextContext(); return ctx_r2.searchFromOptions($event); });
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementContainerEnd();
-    }
-    if (rf & 2) {
-        const ctx_r0 = i0.ɵɵnextContext();
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("theme", ctx_r0.theme);
-    }
-}
-function SelectComponent_div_8_Template(rf, ctx) {
-    if (rf & 1) {
-        const _r6 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementStart(0, "div", 8);
-        i0.ɵɵlistener("click", function SelectComponent_div_8_Template_div_click_0_listener() { const restoredCtx = i0.ɵɵrestoreView(_r6); const opt_r4 = restoredCtx.$implicit; const ctx_r5 = i0.ɵɵnextContext(); return ctx_r5.selectOption(opt_r4); });
-        i0.ɵɵelementEnd();
-    }
-    if (rf & 2) {
-        const opt_r4 = ctx.$implicit;
-        const ctx_r1 = i0.ɵɵnextContext();
-        i0.ɵɵproperty("ngClass", ctx_r1.isHighlighted(opt_r4.name))("innerHtml", opt_r4.name, i0.ɵɵsanitizeHtml);
-    }
-}
 class SelectComponent {
     constructor(eRef) {
         this.eRef = eRef;
@@ -2937,45 +2107,12 @@ class SelectComponent {
         }
     }
 }
-SelectComponent.ɵfac = function SelectComponent_Factory(t) { return new (t || SelectComponent)(i0.ɵɵdirectiveInject(i0.ElementRef)); };
-SelectComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SelectComponent, selectors: [["mg-select"]], hostBindings: function SelectComponent_HostBindings(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵlistener("click", function SelectComponent_click_HostBindingHandler($event) { return ctx.clickout($event); }, false, i0.ɵɵresolveDocument)("keydown.escape", function SelectComponent_keydown_escape_HostBindingHandler($event) { return ctx.handleKeyboardEvent($event); }, false, i0.ɵɵresolveDocument);
-        }
-    }, inputs: { searchOpt: "searchOpt", theme: "theme", selectTitle: "selectTitle", selectType: "selectType", enableSearch: "enableSearch", options: "options" }, outputs: { value: "value" }, decls: 9, vars: 8, consts: [[1, "select-title", 3, "click"], [3, "innerHtml"], [1, "right"], [1, "fas", "fa-chevron-down"], [1, "select-options", 3, "ngClass"], [4, "ngIf"], ["class", "select-option", 3, "ngClass", "innerHtml", "click", 4, "ngFor", "ngForOf"], ["placeholder", "Find", "label", "", 3, "theme", "keyup"], [1, "select-option", 3, "ngClass", "innerHtml", "click"]], template: function SelectComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelementStart(0, "div");
-            i0.ɵɵelementStart(1, "div", 0);
-            i0.ɵɵlistener("click", function SelectComponent_Template_div_click_1_listener() { return ctx.toggleOptions(); });
-            i0.ɵɵelement(2, "span", 1);
-            i0.ɵɵelementStart(3, "span", 2);
-            i0.ɵɵelement(4, "i", 3);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(5, "div", 4);
-            i0.ɵɵtemplate(6, SelectComponent_ng_container_6_Template, 2, 1, "ng-container", 5);
-            i0.ɵɵelement(7, "hr");
-            i0.ɵɵtemplate(8, SelectComponent_div_8_Template, 1, 2, "div", 6);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵclassMapInterpolate2("select-wrapper select-", ctx.theme, " select-", ctx.selectType, "");
-            i0.ɵɵadvance(2);
-            i0.ɵɵproperty("innerHtml", ctx.titleDisplay, i0.ɵɵsanitizeHtml);
-            i0.ɵɵadvance(3);
-            i0.ɵɵproperty("ngClass", ctx.optionsClasses());
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", ctx.enableSearch);
-            i0.ɵɵadvance(2);
-            i0.ɵɵproperty("ngForOf", ctx.options);
-        }
-    }, directives: [i1.NgClass, i1.NgIf, i1.NgForOf, InputComponent], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectComponent, [{
+SelectComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: SelectComponent, deps: [{ token: i0.ElementRef }], target: i0.ɵɵFactoryTarget.Component });
+SelectComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: SelectComponent, selector: "mg-select", inputs: { searchOpt: "searchOpt", theme: "theme", selectTitle: "selectTitle", selectType: "selectType", enableSearch: "enableSearch", options: "options" }, outputs: { value: "value" }, host: { listeners: { "document:click": "clickout($event)", "document:keydown.escape": "handleKeyboardEvent($event)" } }, ngImport: i0, template: "<div class=\"select-wrapper select-{{theme}} select-{{selectType}}\">\n  <div class=\"select-title\" (click)=\"toggleOptions()\"><span [innerHtml]=\"titleDisplay\"></span> <span class=\"right\"><i class=\"fas fa-chevron-down\"></i></span></div>\n  <div class=\"select-options\" [ngClass]=\"optionsClasses()\">\n    <ng-container *ngIf=\"enableSearch\">\n      <mg-input placeholder=\"Find\" label=\"\" [theme]=\"theme\" (keyup)=\"searchFromOptions($event)\"></mg-input>\n    </ng-container>\n    <hr>\n    <div class=\"select-option\" [ngClass]=\"isHighlighted(opt.name)\" *ngFor=\"let opt of options\" [innerHtml]=\"opt.name\" (click)=\"selectOption(opt)\"></div>\n  </div>\n</div>\n", styles: [""], components: [{ type: InputComponent, selector: "mg-input", inputs: ["theme", "fStyle", "label", "placeholder", "control", "type", "onDark", "class", "textValue", "rounded"], outputs: ["value", "isFocused", "keyup"] }], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: SelectComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-select', template: "<div class=\"select-wrapper select-{{theme}} select-{{selectType}}\">\n  <div class=\"select-title\" (click)=\"toggleOptions()\"><span [innerHtml]=\"titleDisplay\"></span> <span class=\"right\"><i class=\"fas fa-chevron-down\"></i></span></div>\n  <div class=\"select-options\" [ngClass]=\"optionsClasses()\">\n    <ng-container *ngIf=\"enableSearch\">\n      <mg-input placeholder=\"Find\" label=\"\" [theme]=\"theme\" (keyup)=\"searchFromOptions($event)\"></mg-input>\n    </ng-container>\n    <hr>\n    <div class=\"select-option\" [ngClass]=\"isHighlighted(opt.name)\" *ngFor=\"let opt of options\" [innerHtml]=\"opt.name\" (click)=\"selectOption(opt)\"></div>\n  </div>\n</div>\n", styles: [""] }]
-        }], function () { return [{ type: i0.ElementRef }]; }, { value: [{
+        }], ctorParameters: function () { return [{ type: i0.ElementRef }]; }, propDecorators: { value: [{
                 type: Output
             }], searchOpt: [{
                 type: Input
@@ -2995,39 +2132,8 @@ SelectComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SelectCompo
             }], handleKeyboardEvent: [{
                 type: HostListener,
                 args: ['document:keydown.escape', ['$event']]
-            }] });
-})();
+            }] } });
 
-function SwitchComponent_ng_container_1_Template(rf, ctx) {
-    if (rf & 1) {
-        const _r3 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelementStart(1, "div", 3);
-        i0.ɵɵlistener("click", function SwitchComponent_ng_container_1_Template_div_click_1_listener() { i0.ɵɵrestoreView(_r3); const ctx_r2 = i0.ɵɵnextContext(); return ctx_r2.toggleChoices(); });
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementContainerEnd();
-    }
-    if (rf & 2) {
-        const ctx_r0 = i0.ɵɵnextContext();
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngClass", ctx_r0.leftClasses())("innerHtml", ctx_r0.options.left, i0.ɵɵsanitizeHtml);
-    }
-}
-function SwitchComponent_ng_container_3_Template(rf, ctx) {
-    if (rf & 1) {
-        const _r5 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelementStart(1, "div", 3);
-        i0.ɵɵlistener("click", function SwitchComponent_ng_container_3_Template_div_click_1_listener() { i0.ɵɵrestoreView(_r5); const ctx_r4 = i0.ɵɵnextContext(); return ctx_r4.toggleChoices(); });
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementContainerEnd();
-    }
-    if (rf & 2) {
-        const ctx_r1 = i0.ɵɵnextContext();
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngClass", ctx_r1.rightClasses())("innerHtml", ctx_r1.options.right, i0.ɵɵsanitizeHtml);
-    }
-}
 class SwitchComponent {
     constructor() {
         this.options = {
@@ -3070,32 +2176,12 @@ class SwitchComponent {
         return results;
     }
 }
-SwitchComponent.ɵfac = function SwitchComponent_Factory(t) { return new (t || SwitchComponent)(); };
-SwitchComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SwitchComponent, selectors: [["mg-switch"]], inputs: { options: "options", type: "type", theme: "theme", size: "size", showChoices: "showChoices", onDark: "onDark", selected: "selected" }, outputs: { value: "value" }, decls: 4, vars: 5, consts: [[1, "mg-switch-wrapper", 3, "ngClass"], [4, "ngIf"], ["type", "checkbox", 1, "mg-switch", 3, "ngClass", "checked", "click"], [1, "mg-switch-choice", 3, "ngClass", "innerHtml", "click"]], template: function SwitchComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelementStart(0, "div", 0);
-            i0.ɵɵtemplate(1, SwitchComponent_ng_container_1_Template, 2, 2, "ng-container", 1);
-            i0.ɵɵelementStart(2, "input", 2);
-            i0.ɵɵlistener("click", function SwitchComponent_Template_input_click_2_listener() { return ctx.toggleChoices(); });
-            i0.ɵɵelementEnd();
-            i0.ɵɵtemplate(3, SwitchComponent_ng_container_3_Template, 2, 2, "ng-container", 1);
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("ngClass", ctx.size == "s" ? "switch-small" : ctx.size == "m" ? "switch-medium" : "switch-large");
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", ctx.options.left && ctx.showChoices);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngClass", ctx.classesOnInput())("checked", ctx.selected);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", ctx.options.right && ctx.showChoices);
-        }
-    }, directives: [i1.NgClass, i1.NgIf], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SwitchComponent, [{
+SwitchComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: SwitchComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+SwitchComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: SwitchComponent, selector: "mg-switch", inputs: { options: "options", type: "type", theme: "theme", size: "size", showChoices: "showChoices", onDark: "onDark", selected: "selected" }, outputs: { value: "value" }, ngImport: i0, template: "<div class=\"mg-switch-wrapper\" [ngClass] = \"size == 's' ? 'switch-small' : size == 'm' ? 'switch-medium' : 'switch-large'\">\n\n  <ng-container *ngIf=\"options.left && showChoices\">\n    <div class=\"mg-switch-choice\" [ngClass]=\"leftClasses()\" [innerHtml]=\"options.left\" (click)=\"toggleChoices()\"></div>\n  </ng-container>\n\n\n  <input type=\"checkbox\" class=\"mg-switch\" [ngClass]=\"classesOnInput()\" [checked]=\"selected\"\n    (click)=\"toggleChoices()\" />\n\n  <ng-container *ngIf=\"options.right && showChoices\">\n    <div class=\"mg-switch-choice\" [ngClass]=\"rightClasses()\" [innerHtml]=\"options.right\" (click)=\"toggleChoices()\">\n    </div>\n  </ng-container>\n\n\n</div>\n", styles: [""], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: SwitchComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-switch', template: "<div class=\"mg-switch-wrapper\" [ngClass] = \"size == 's' ? 'switch-small' : size == 'm' ? 'switch-medium' : 'switch-large'\">\n\n  <ng-container *ngIf=\"options.left && showChoices\">\n    <div class=\"mg-switch-choice\" [ngClass]=\"leftClasses()\" [innerHtml]=\"options.left\" (click)=\"toggleChoices()\"></div>\n  </ng-container>\n\n\n  <input type=\"checkbox\" class=\"mg-switch\" [ngClass]=\"classesOnInput()\" [checked]=\"selected\"\n    (click)=\"toggleChoices()\" />\n\n  <ng-container *ngIf=\"options.right && showChoices\">\n    <div class=\"mg-switch-choice\" [ngClass]=\"rightClasses()\" [innerHtml]=\"options.right\" (click)=\"toggleChoices()\">\n    </div>\n  </ng-container>\n\n\n</div>\n", styles: [""] }]
-        }], function () { return []; }, { options: [{
+        }], ctorParameters: function () { return []; }, propDecorators: { options: [{
                 type: Input
             }], type: [{
                 type: Input
@@ -3111,32 +2197,8 @@ SwitchComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SwitchCompo
                 type: Input
             }], value: [{
                 type: Output
-            }] });
-})();
+            }] } });
 
-function ListComponent_ul_0_li_1_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelement(0, "li", 3);
-    }
-    if (rf & 2) {
-        const item_r2 = ctx.$implicit;
-        i0.ɵɵproperty("innerHtml", item_r2, i0.ɵɵsanitizeHtml);
-    }
-}
-function ListComponent_ul_0_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementStart(0, "ul", 1);
-        i0.ɵɵtemplate(1, ListComponent_ul_0_li_1_Template, 1, 1, "li", 2);
-        i0.ɵɵelementEnd();
-    }
-    if (rf & 2) {
-        const ctx_r0 = i0.ɵɵnextContext();
-        i0.ɵɵclassMapInterpolate1("mg-list ", ctx_r0.theme, "");
-        i0.ɵɵproperty("ngClass", ctx_r0.class);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngForOf", ctx_r0.items);
-    }
-}
 class ListComponent {
     constructor() {
         this.items = [];
@@ -3146,209 +2208,31 @@ class ListComponent {
     ngOnInit() {
     }
 }
-ListComponent.ɵfac = function ListComponent_Factory(t) { return new (t || ListComponent)(); };
-ListComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ListComponent, selectors: [["mg-list"]], inputs: { items: "items", theme: "theme", class: "class" }, decls: 1, vars: 1, consts: [[3, "class", "ngClass", 4, "ngIf"], [3, "ngClass"], ["class", "item", 3, "innerHtml", 4, "ngFor", "ngForOf"], [1, "item", 3, "innerHtml"]], template: function ListComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵtemplate(0, ListComponent_ul_0_Template, 2, 5, "ul", 0);
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("ngIf", ctx.items.length > 0);
-        }
-    }, directives: [i1.NgIf, i1.NgClass, i1.NgForOf], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ListComponent, [{
+ListComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: ListComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+ListComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: ListComponent, selector: "mg-list", inputs: { items: "items", theme: "theme", class: "class" }, ngImport: i0, template: "<ul *ngIf=\"items.length > 0\" class=\"mg-list {{theme}}\" [ngClass]=\"class\">\n  <li *ngFor=\"let item of items\" [innerHtml]=\"item\" class=\"item\"></li>\n</ul>\n", styles: [""], directives: [{ type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: ListComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-list', template: "<ul *ngIf=\"items.length > 0\" class=\"mg-list {{theme}}\" [ngClass]=\"class\">\n  <li *ngFor=\"let item of items\" [innerHtml]=\"item\" class=\"item\"></li>\n</ul>\n", styles: [""] }]
-        }], function () { return []; }, { items: [{
+        }], ctorParameters: function () { return []; }, propDecorators: { items: [{
                 type: Input
             }], theme: [{
                 type: Input
             }], class: [{
                 type: Input
-            }] });
-})();
+            }] } });
 
 class LoaderComponent {
     constructor() { }
     ngOnInit() {
     }
 }
-LoaderComponent.ɵfac = function LoaderComponent_Factory(t) { return new (t || LoaderComponent)(); };
-LoaderComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: LoaderComponent, selectors: [["mg-loader"]], decls: 2, vars: 0, template: function LoaderComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelementStart(0, "p");
-            i0.ɵɵtext(1, "loader works!");
-            i0.ɵɵelementEnd();
-        }
-    }, styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(LoaderComponent, [{
+LoaderComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: LoaderComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+LoaderComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: LoaderComponent, selector: "mg-loader", ngImport: i0, template: "<p>loader works!</p>\n", styles: [""] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: LoaderComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-loader', template: "<p>loader works!</p>\n", styles: [""] }]
-        }], function () { return []; }, null);
-})();
+        }], ctorParameters: function () { return []; } });
 
-function NavbarComponent_ng_container_6_a_2_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelement(0, "a", 10);
-    }
-    if (rf & 2) {
-        const ctx_r3 = i0.ɵɵnextContext(2);
-        i0.ɵɵproperty("innerHtml", ctx_r3.navData.left.data.name, i0.ɵɵsanitizeHtml);
-    }
-}
-function NavbarComponent_ng_container_6_Template(rf, ctx) {
-    if (rf & 1) {
-        const _r5 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelementStart(1, "input", 8);
-        i0.ɵɵlistener("keyup", function NavbarComponent_ng_container_6_Template_input_keyup_1_listener($event) { i0.ɵɵrestoreView(_r5); const ctx_r4 = i0.ɵɵnextContext(); return ctx_r4.onEnterSearchQuery($event); });
-        i0.ɵɵelementEnd();
-        i0.ɵɵtemplate(2, NavbarComponent_ng_container_6_a_2_Template, 1, 1, "a", 9);
-        i0.ɵɵelementContainerEnd();
-    }
-    if (rf & 2) {
-        const ctx_r0 = i0.ɵɵnextContext();
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("placeholder", ctx_r0.navData.left.data.placeholder);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", ctx_r0.navData.left.data.btn);
-    }
-}
-function NavbarComponent_ng_container_7_ng_container_1_ng_container_1_a_4_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelement(0, "a", 16);
-    }
-    if (rf & 2) {
-        const droplink_r11 = ctx.$implicit;
-        i0.ɵɵproperty("innerHtml", droplink_r11.name, i0.ɵɵsanitizeHtml);
-    }
-}
-function NavbarComponent_ng_container_7_ng_container_1_ng_container_1_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelementStart(1, "div", 12);
-        i0.ɵɵelement(2, "a", 13);
-        i0.ɵɵelementStart(3, "div", 14);
-        i0.ɵɵtemplate(4, NavbarComponent_ng_container_7_ng_container_1_ng_container_1_a_4_Template, 1, 1, "a", 15);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementContainerEnd();
-    }
-    if (rf & 2) {
-        const ndata_r7 = i0.ɵɵnextContext().$implicit;
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("innerHtml", ndata_r7.name, i0.ɵɵsanitizeHtml)("routerLink", ndata_r7.link);
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("ngForOf", ndata_r7.links);
-    }
-}
-function NavbarComponent_ng_container_7_ng_container_1_ng_container_2_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelement(1, "a", 3);
-        i0.ɵɵelementContainerEnd();
-    }
-    if (rf & 2) {
-        const ndata_r7 = i0.ɵɵnextContext().$implicit;
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("innerHtml", ndata_r7.name, i0.ɵɵsanitizeHtml)("routerLink", ndata_r7.link);
-    }
-}
-function NavbarComponent_ng_container_7_ng_container_1_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵtemplate(1, NavbarComponent_ng_container_7_ng_container_1_ng_container_1_Template, 5, 3, "ng-container", 6);
-        i0.ɵɵtemplate(2, NavbarComponent_ng_container_7_ng_container_1_ng_container_2_Template, 2, 2, "ng-container", 6);
-        i0.ɵɵelementContainerEnd();
-    }
-    if (rf & 2) {
-        const ndata_r7 = ctx.$implicit;
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", ndata_r7.type && ndata_r7.type == "dropdown");
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", !ndata_r7.type);
-    }
-}
-function NavbarComponent_ng_container_7_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵtemplate(1, NavbarComponent_ng_container_7_ng_container_1_Template, 3, 2, "ng-container", 11);
-        i0.ɵɵelementContainerEnd();
-    }
-    if (rf & 2) {
-        const ctx_r1 = i0.ɵɵnextContext();
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngForOf", ctx_r1.navData.left.data);
-    }
-}
-function NavbarComponent_ng_container_9_ng_container_1_ng_container_1_a_4_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelement(0, "a", 16);
-    }
-    if (rf & 2) {
-        const droplink_r19 = ctx.$implicit;
-        i0.ɵɵproperty("innerHtml", droplink_r19.name, i0.ɵɵsanitizeHtml);
-    }
-}
-function NavbarComponent_ng_container_9_ng_container_1_ng_container_1_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelementStart(1, "div", 12);
-        i0.ɵɵelement(2, "a", 13);
-        i0.ɵɵelementStart(3, "div", 14);
-        i0.ɵɵtemplate(4, NavbarComponent_ng_container_9_ng_container_1_ng_container_1_a_4_Template, 1, 1, "a", 15);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementContainerEnd();
-    }
-    if (rf & 2) {
-        const ndata_r15 = i0.ɵɵnextContext().$implicit;
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("innerHtml", ndata_r15.name, i0.ɵɵsanitizeHtml)("routerLink", ndata_r15.link);
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("ngForOf", ndata_r15.links);
-    }
-}
-function NavbarComponent_ng_container_9_ng_container_1_ng_container_2_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelement(1, "a", 3);
-        i0.ɵɵelementContainerEnd();
-    }
-    if (rf & 2) {
-        const ndata_r15 = i0.ɵɵnextContext().$implicit;
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("innerHtml", ndata_r15.name, i0.ɵɵsanitizeHtml)("routerLink", ndata_r15.link);
-    }
-}
-function NavbarComponent_ng_container_9_ng_container_1_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵtemplate(1, NavbarComponent_ng_container_9_ng_container_1_ng_container_1_Template, 5, 3, "ng-container", 6);
-        i0.ɵɵtemplate(2, NavbarComponent_ng_container_9_ng_container_1_ng_container_2_Template, 2, 2, "ng-container", 6);
-        i0.ɵɵelementContainerEnd();
-    }
-    if (rf & 2) {
-        const ndata_r15 = ctx.$implicit;
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", ndata_r15.type && ndata_r15.type == "dropdown");
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", !ndata_r15.type);
-    }
-}
-function NavbarComponent_ng_container_9_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵtemplate(1, NavbarComponent_ng_container_9_ng_container_1_Template, 3, 2, "ng-container", 11);
-        i0.ɵɵelementContainerEnd();
-    }
-    if (rf & 2) {
-        const ctx_r2 = i0.ɵɵnextContext();
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngForOf", ctx_r2.navData.right.data);
-    }
-}
 class NavbarComponent {
     constructor() {
         this.searchedText = new EventEmitter();
@@ -3442,48 +2326,12 @@ class NavbarComponent {
         this.searchedText.emit(this.searchQuery);
     }
 }
-NavbarComponent.ɵfac = function NavbarComponent_Factory(t) { return new (t || NavbarComponent)(); };
-NavbarComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: NavbarComponent, selectors: [["mg-navbar"]], inputs: { spaceAround: "spaceAround", theme: "theme", onSmallMenuButton: "onSmallMenuButton", isFixed: "isFixed", partitionType: "partitionType", navData: "navData" }, outputs: { searchedText: "searchedText" }, decls: 10, vars: 10, consts: [[1, "navbar-wrapper"], [3, "ngClass"], [1, "section", "brand"], [3, "innerHtml", "routerLink"], [1, "small-only-open-nav", 3, "innerHtml", "click"], [1, "section", "left-nav"], [4, "ngIf"], [1, "section", "right-nav"], ["type", "text", 1, "input", 3, "placeholder", "keyup"], ["class", "input-button", 3, "innerHtml", 4, "ngIf"], [1, "input-button", 3, "innerHtml"], [4, "ngFor", "ngForOf"], [1, "dropdown"], [1, "trigger-dropdown", 3, "innerHtml", "routerLink"], [1, "drop-menu"], [3, "innerHtml", 4, "ngFor", "ngForOf"], [3, "innerHtml"]], template: function NavbarComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelementStart(0, "div", 0);
-            i0.ɵɵelementStart(1, "div", 1);
-            i0.ɵɵelementStart(2, "div", 2);
-            i0.ɵɵelement(3, "a", 3);
-            i0.ɵɵelementStart(4, "a", 4);
-            i0.ɵɵlistener("click", function NavbarComponent_Template_a_click_4_listener() { return ctx.toggleNav(); });
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(5, "div", 5);
-            i0.ɵɵtemplate(6, NavbarComponent_ng_container_6_Template, 3, 2, "ng-container", 6);
-            i0.ɵɵtemplate(7, NavbarComponent_ng_container_7_Template, 2, 1, "ng-container", 6);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(8, "div", 7);
-            i0.ɵɵtemplate(9, NavbarComponent_ng_container_9_Template, 2, 1, "ng-container", 6);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵadvance(1);
-            i0.ɵɵclassMapInterpolate1("navbar ", ctx.theme, "");
-            i0.ɵɵproperty("ngClass", ctx.mainNavClasses());
-            i0.ɵɵadvance(2);
-            i0.ɵɵproperty("innerHtml", ctx.navData.brand.name, i0.ɵɵsanitizeHtml)("routerLink", ctx.navData.brand.link);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("innerHtml", ctx.onSmallMenuButton, i0.ɵɵsanitizeHtml);
-            i0.ɵɵadvance(2);
-            i0.ɵɵproperty("ngIf", ctx.navData && ctx.navData.left && ctx.navData.left.navType == "input");
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", ctx.navData && ctx.navData.left && ctx.navData.left.navType == "links");
-            i0.ɵɵadvance(2);
-            i0.ɵɵproperty("ngIf", ctx.navData && ctx.navData.right && ctx.navData.right.navType == "links");
-        }
-    }, directives: [i1.NgClass, i2.RouterLinkWithHref, i1.NgIf, i1.NgForOf], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(NavbarComponent, [{
+NavbarComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: NavbarComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+NavbarComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: NavbarComponent, selector: "mg-navbar", inputs: { spaceAround: "spaceAround", theme: "theme", onSmallMenuButton: "onSmallMenuButton", isFixed: "isFixed", partitionType: "partitionType", navData: "navData" }, outputs: { searchedText: "searchedText" }, ngImport: i0, template: "<div class=\"navbar-wrapper\">\n  <div class=\"navbar {{theme}}\" [ngClass]=\"mainNavClasses()\">\n    <div class=\"section brand\">\n      <a [innerHtml]=\"navData.brand.name\" [routerLink]=\"navData.brand.link\"></a>\n      <a (click)=\"toggleNav()\" class=\"small-only-open-nav\" [innerHtml]=\"onSmallMenuButton\"></a>\n    </div>\n\n    <div class=\"section left-nav\">\n      <ng-container *ngIf=\"navData && navData.left && navData.left.navType == 'input'\">\n        <input type=\"text\" (keyup) = \"onEnterSearchQuery($event)\" class=\"input\" [placeholder]=\"navData.left.data.placeholder\" />\n        <a class=\"input-button\" *ngIf=\"navData.left.data.btn\" [innerHtml]=\"navData.left.data.name\"></a>\n      </ng-container>\n      <ng-container *ngIf=\"navData && navData.left && navData.left.navType == 'links'\">\n        <ng-container *ngFor=\"let ndata of navData.left.data\">\n          <!-- dropdown -->\n          <ng-container *ngIf=\"ndata.type && ndata.type == 'dropdown'\">\n            <div class=\"dropdown\">\n              <a [innerHtml]=\"ndata.name\" [routerLink]=\"ndata.link\" class=\"trigger-dropdown\"></a>\n              <div class=\"drop-menu\">\n                <a *ngFor=\"let droplink of ndata.links\" [innerHtml]=\"droplink.name\"></a>\n              </div>\n            </div>\n          </ng-container>\n          <ng-container *ngIf=\"!ndata.type\">\n            <a [innerHtml]=\"ndata.name\" [routerLink]=\"ndata.link\"></a>\n          </ng-container>\n        </ng-container>\n      </ng-container>\n    </div>\n    <div class=\"section right-nav\">\n      <ng-container *ngIf=\"navData && navData.right && navData.right.navType == 'links'\">\n        <ng-container *ngFor=\"let ndata of navData.right.data\">\n          <!-- dropdown -->\n          <ng-container *ngIf=\"ndata.type && ndata.type == 'dropdown'\">\n            <div class=\"dropdown\">\n              <a [innerHtml]=\"ndata.name\" [routerLink]=\"ndata.link\" class=\"trigger-dropdown\"></a>\n              <div class=\"drop-menu\">\n                <a *ngFor=\"let droplink of ndata.links\" [innerHtml]=\"droplink.name\"></a>\n              </div>\n            </div>\n          </ng-container>\n          <ng-container *ngIf=\"!ndata.type\">\n            <a [innerHtml]=\"ndata.name\" [routerLink]=\"ndata.link\"></a>\n          </ng-container>\n        </ng-container>\n      </ng-container>\n    </div>\n  </div>\n</div>\n", styles: [""], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { type: i2.RouterLinkWithHref, selector: "a[routerLink],area[routerLink]", inputs: ["target", "queryParams", "fragment", "queryParamsHandling", "preserveFragment", "skipLocationChange", "replaceUrl", "state", "relativeTo", "routerLink"] }, { type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: NavbarComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-navbar', template: "<div class=\"navbar-wrapper\">\n  <div class=\"navbar {{theme}}\" [ngClass]=\"mainNavClasses()\">\n    <div class=\"section brand\">\n      <a [innerHtml]=\"navData.brand.name\" [routerLink]=\"navData.brand.link\"></a>\n      <a (click)=\"toggleNav()\" class=\"small-only-open-nav\" [innerHtml]=\"onSmallMenuButton\"></a>\n    </div>\n\n    <div class=\"section left-nav\">\n      <ng-container *ngIf=\"navData && navData.left && navData.left.navType == 'input'\">\n        <input type=\"text\" (keyup) = \"onEnterSearchQuery($event)\" class=\"input\" [placeholder]=\"navData.left.data.placeholder\" />\n        <a class=\"input-button\" *ngIf=\"navData.left.data.btn\" [innerHtml]=\"navData.left.data.name\"></a>\n      </ng-container>\n      <ng-container *ngIf=\"navData && navData.left && navData.left.navType == 'links'\">\n        <ng-container *ngFor=\"let ndata of navData.left.data\">\n          <!-- dropdown -->\n          <ng-container *ngIf=\"ndata.type && ndata.type == 'dropdown'\">\n            <div class=\"dropdown\">\n              <a [innerHtml]=\"ndata.name\" [routerLink]=\"ndata.link\" class=\"trigger-dropdown\"></a>\n              <div class=\"drop-menu\">\n                <a *ngFor=\"let droplink of ndata.links\" [innerHtml]=\"droplink.name\"></a>\n              </div>\n            </div>\n          </ng-container>\n          <ng-container *ngIf=\"!ndata.type\">\n            <a [innerHtml]=\"ndata.name\" [routerLink]=\"ndata.link\"></a>\n          </ng-container>\n        </ng-container>\n      </ng-container>\n    </div>\n    <div class=\"section right-nav\">\n      <ng-container *ngIf=\"navData && navData.right && navData.right.navType == 'links'\">\n        <ng-container *ngFor=\"let ndata of navData.right.data\">\n          <!-- dropdown -->\n          <ng-container *ngIf=\"ndata.type && ndata.type == 'dropdown'\">\n            <div class=\"dropdown\">\n              <a [innerHtml]=\"ndata.name\" [routerLink]=\"ndata.link\" class=\"trigger-dropdown\"></a>\n              <div class=\"drop-menu\">\n                <a *ngFor=\"let droplink of ndata.links\" [innerHtml]=\"droplink.name\"></a>\n              </div>\n            </div>\n          </ng-container>\n          <ng-container *ngIf=\"!ndata.type\">\n            <a [innerHtml]=\"ndata.name\" [routerLink]=\"ndata.link\"></a>\n          </ng-container>\n        </ng-container>\n      </ng-container>\n    </div>\n  </div>\n</div>\n", styles: [""] }]
-        }], function () { return []; }, { searchedText: [{
+        }], ctorParameters: function () { return []; }, propDecorators: { searchedText: [{
                 type: Output
             }], spaceAround: [{
                 type: Input
@@ -3497,11 +2345,8 @@ NavbarComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: NavbarCompo
                 type: Input
             }], navData: [{
                 type: Input
-            }] });
-})();
+            }] } });
 
-const _c0$c = function (a0) { return { "text-center block": a0 }; };
-const _c1$1 = ["*"];
 class NoteComponent {
     constructor() {
         this.theme = "primary";
@@ -3510,49 +2355,17 @@ class NoteComponent {
     ngOnInit() {
     }
 }
-NoteComponent.ɵfac = function NoteComponent_Factory(t) { return new (t || NoteComponent)(); };
-NoteComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: NoteComponent, selectors: [["mg-note"]], inputs: { theme: "theme", alignCenter: "alignCenter" }, ngContentSelectors: _c1$1, decls: 3, vars: 6, consts: [[3, "ngClass"]], template: function NoteComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵprojectionDef();
-            i0.ɵɵelementStart(0, "div");
-            i0.ɵɵelementStart(1, "span", 0);
-            i0.ɵɵprojection(2);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵclassMapInterpolate1("note ", ctx.theme, "");
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction1(4, _c0$c, ctx.alignCenter === true));
-        }
-    }, directives: [i1.NgClass], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(NoteComponent, [{
+NoteComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: NoteComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+NoteComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: NoteComponent, selector: "mg-note", inputs: { theme: "theme", alignCenter: "alignCenter" }, ngImport: i0, template: "<div class=\"note {{theme}}\">\n  <span [ngClass]=\"{'text-center block' : alignCenter === true}\">\n    <ng-content></ng-content>\n  </span>\n</div>\n", styles: [""], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: NoteComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-note', template: "<div class=\"note {{theme}}\">\n  <span [ngClass]=\"{'text-center block' : alignCenter === true}\">\n    <ng-content></ng-content>\n  </span>\n</div>\n", styles: [""] }]
-        }], function () { return []; }, { theme: [{
+        }], ctorParameters: function () { return []; }, propDecorators: { theme: [{
                 type: Input
             }], alignCenter: [{
                 type: Input
-            }] });
-})();
+            }] } });
 
-function PaginationComponent_div_2_Template(rf, ctx) {
-    if (rf & 1) {
-        const _r3 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementStart(0, "div", 3);
-        i0.ɵɵlistener("click", function PaginationComponent_div_2_Template_div_click_0_listener() { const restoredCtx = i0.ɵɵrestoreView(_r3); const page_r1 = restoredCtx.$implicit; const ctx_r2 = i0.ɵɵnextContext(); return ctx_r2.onPageClick(page_r1); });
-        i0.ɵɵtext(1);
-        i0.ɵɵelementEnd();
-    }
-    if (rf & 2) {
-        const page_r1 = ctx.$implicit;
-        const ctx_r0 = i0.ɵɵnextContext();
-        i0.ɵɵproperty("ngClass", ctx_r0.isActivePage(page_r1));
-        i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", page_r1, " ");
-    }
-}
 class PaginationComponent {
     constructor() {
         this.page = new EventEmitter();
@@ -3647,34 +2460,12 @@ class PaginationComponent {
         this.calculatePage();
     }
 }
-PaginationComponent.ɵfac = function PaginationComponent_Factory(t) { return new (t || PaginationComponent)(); };
-PaginationComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: PaginationComponent, selectors: [["mg-pagination"]], inputs: { theme: "theme", data: "data", fullDataMode: "fullDataMode", perPage: "perPage", currentPage: "currentPage", icons: "icons", max: "max" }, outputs: { page: "page", getdata: "getdata" }, features: [i0.ɵɵNgOnChangesFeature], decls: 4, vars: 6, consts: [[1, "page", "page-previous", "not-selectable", 3, "innerHtml", "click"], ["class", "page not-selectable", 3, "ngClass", "click", 4, "ngFor", "ngForOf"], [1, "page", "page-next", "not-selectable", 3, "innerHtml", "click"], [1, "page", "not-selectable", 3, "ngClass", "click"]], template: function PaginationComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelementStart(0, "div");
-            i0.ɵɵelementStart(1, "div", 0);
-            i0.ɵɵlistener("click", function PaginationComponent_Template_div_click_1_listener() { return ctx.onPrevious(); });
-            i0.ɵɵelementEnd();
-            i0.ɵɵtemplate(2, PaginationComponent_div_2_Template, 2, 2, "div", 1);
-            i0.ɵɵelementStart(3, "div", 2);
-            i0.ɵɵlistener("click", function PaginationComponent_Template_div_click_3_listener() { return ctx.onNext(); });
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵclassMapInterpolate1("pagination-wrapper pagination-", ctx.theme, "");
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("innerHtml", ctx.icons.previous, i0.ɵɵsanitizeHtml);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngForOf", ctx.pages);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("innerHtml", ctx.icons.next, i0.ɵɵsanitizeHtml);
-        }
-    }, directives: [i1.NgForOf, i1.NgClass], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PaginationComponent, [{
+PaginationComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: PaginationComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+PaginationComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: PaginationComponent, selector: "mg-pagination", inputs: { theme: "theme", data: "data", fullDataMode: "fullDataMode", perPage: "perPage", currentPage: "currentPage", icons: "icons", max: "max" }, outputs: { page: "page", getdata: "getdata" }, usesOnChanges: true, ngImport: i0, template: "<div class=\"pagination-wrapper pagination-{{theme}}\">\n  <div class=\"page page-previous not-selectable\" [innerHtml]=\"icons.previous\" (click)=\"onPrevious()\"></div>\n  <div class=\"page not-selectable\" *ngFor=\"let page of pages\" [ngClass]=\"isActivePage(page)\" (click)=\"onPageClick(page)\">\n    {{page}}\n  </div>\n  <div class=\"page page-next not-selectable\" [innerHtml]=\"icons.next\" (click)=\"onNext()\"></div>\n</div>\n", styles: [""], directives: [{ type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: PaginationComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-pagination', template: "<div class=\"pagination-wrapper pagination-{{theme}}\">\n  <div class=\"page page-previous not-selectable\" [innerHtml]=\"icons.previous\" (click)=\"onPrevious()\"></div>\n  <div class=\"page not-selectable\" *ngFor=\"let page of pages\" [ngClass]=\"isActivePage(page)\" (click)=\"onPageClick(page)\">\n    {{page}}\n  </div>\n  <div class=\"page page-next not-selectable\" [innerHtml]=\"icons.next\" (click)=\"onNext()\"></div>\n</div>\n", styles: [""] }]
-        }], function () { return []; }, { page: [{
+        }], ctorParameters: function () { return []; }, propDecorators: { page: [{
                 type: Output
             }], getdata: [{
                 type: Output
@@ -3692,10 +2483,8 @@ PaginationComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Paginat
                 type: Input
             }], max: [{
                 type: Input
-            }] });
-})();
+            }] } });
 
-const _c0$b = ["*"];
 class CollapseComponent {
     constructor(service) {
         this.service = service;
@@ -3726,23 +2515,12 @@ class CollapseComponent {
         return classes;
     }
 }
-CollapseComponent.ɵfac = function CollapseComponent_Factory(t) { return new (t || CollapseComponent)(i0.ɵɵdirectiveInject(MaterialgrammiService)); };
-CollapseComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: CollapseComponent, selectors: [["mg-collapse"]], inputs: { id: "id", show: "show", class: "class" }, outputs: { active: "active" }, ngContentSelectors: _c0$b, decls: 2, vars: 1, consts: [[1, "collapse", 3, "ngClass"]], template: function CollapseComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵprojectionDef();
-            i0.ɵɵelementStart(0, "div", 0);
-            i0.ɵɵprojection(1);
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("ngClass", ctx.mainCollapseClasses() + " " + ctx.class);
-        }
-    }, directives: [i1.NgClass], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CollapseComponent, [{
+CollapseComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: CollapseComponent, deps: [{ token: MaterialgrammiService }], target: i0.ɵɵFactoryTarget.Component });
+CollapseComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: CollapseComponent, selector: "mg-collapse", inputs: { id: "id", show: "show", class: "class" }, outputs: { active: "active" }, ngImport: i0, template: "<div class=\"collapse\" [ngClass]=\"mainCollapseClasses() + ' ' + class\">\n  <ng-content></ng-content>\n</div>\n", styles: [""], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: CollapseComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-collapse', template: "<div class=\"collapse\" [ngClass]=\"mainCollapseClasses() + ' ' + class\">\n  <ng-content></ng-content>\n</div>\n", styles: [""] }]
-        }], function () { return [{ type: MaterialgrammiService }]; }, { id: [{
+        }], ctorParameters: function () { return [{ type: MaterialgrammiService }]; }, propDecorators: { id: [{
                 type: Input
             }], show: [{
                 type: Input
@@ -3750,143 +2528,8 @@ CollapseComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: CollapseC
                 type: Input
             }], active: [{
                 type: Output
-            }] });
-})();
+            }] } });
 
-function TableComponent_span_3_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementStart(0, "span", 17);
-        i0.ɵɵtext(1, "Table");
-        i0.ɵɵelementEnd();
-    }
-    if (rf & 2) {
-        const ctx_r0 = i0.ɵɵnextContext();
-        i0.ɵɵproperty("innerHtml", ctx_r0.tableTitle, i0.ɵɵsanitizeHtml);
-    }
-}
-function TableComponent_small_4_i_2_Template(rf, ctx) {
-    if (rf & 1) {
-        const _r10 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementStart(0, "i", 21);
-        i0.ɵɵlistener("click", function TableComponent_small_4_i_2_Template_i_click_0_listener() { i0.ɵɵrestoreView(_r10); const ctx_r9 = i0.ɵɵnextContext(2); return ctx_r9.openSorter(); });
-        i0.ɵɵelementEnd();
-    }
-}
-function TableComponent_small_4_i_3_Template(rf, ctx) {
-    if (rf & 1) {
-        const _r12 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementStart(0, "i", 22);
-        i0.ɵɵlistener("click", function TableComponent_small_4_i_3_Template_i_click_0_listener() { i0.ɵɵrestoreView(_r12); const ctx_r11 = i0.ɵɵnextContext(2); return ctx_r11.openFilter(); });
-        i0.ɵɵelementEnd();
-    }
-}
-function TableComponent_small_4_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementStart(0, "small", 18);
-        i0.ɵɵtext(1);
-        i0.ɵɵtemplate(2, TableComponent_small_4_i_2_Template, 1, 0, "i", 19);
-        i0.ɵɵtemplate(3, TableComponent_small_4_i_3_Template, 1, 0, "i", 20);
-        i0.ɵɵelementEnd();
-    }
-    if (rf & 2) {
-        const ctx_r1 = i0.ɵɵnextContext();
-        i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1("", ctx_r1.count, " ");
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", ctx_r1.showOptions.sort);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", ctx_r1.showOptions.filter);
-    }
-}
-function TableComponent_div_13_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 23);
-        i0.ɵɵelement(1, "mg-input", 24);
-        i0.ɵɵelementEnd();
-    }
-    if (rf & 2) {
-        const filter_r13 = ctx.$implicit;
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("control", filter_r13.val)("label", filter_r13.name);
-    }
-}
-function TableComponent_div_19_Template(rf, ctx) {
-    if (rf & 1) {
-        const _r15 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementStart(0, "div", 25);
-        i0.ɵɵelementStart(1, "mg-pagination", 26);
-        i0.ɵɵlistener("page", function TableComponent_div_19_Template_mg_pagination_page_1_listener($event) { i0.ɵɵrestoreView(_r15); const ctx_r14 = i0.ɵɵnextContext(); return ctx_r14.setCurrentPage($event); })("getdata", function TableComponent_div_19_Template_mg_pagination_getdata_1_listener($event) { i0.ɵɵrestoreView(_r15); const ctx_r16 = i0.ɵɵnextContext(); return ctx_r16.updatePaginatedData($event); });
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    }
-    if (rf & 2) {
-        const ctx_r3 = i0.ɵɵnextContext();
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("currentPage", ctx_r3.currentPage)("theme", ctx_r3.theme)("fullDataMode", true)("data", ctx_r3.mgData)("perPage", ctx_r3.paginate.perPage);
-    }
-}
-const _c0$a = function (a0) { return { order: a0 }; };
-function TableComponent_th_23_Template(rf, ctx) {
-    if (rf & 1) {
-        const _r20 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementStart(0, "th");
-        i0.ɵɵelementStart(1, "span", 27);
-        i0.ɵɵlistener("click", function TableComponent_th_23_Template_span_click_1_listener() { const restoredCtx = i0.ɵɵrestoreView(_r20); const head_r17 = restoredCtx.$implicit; const ctx_r19 = i0.ɵɵnextContext(); return ctx_r19.sort(head_r17); });
-        i0.ɵɵelementStart(2, "mg-dropable", 28);
-        i0.ɵɵlistener("dataRecieved", function TableComponent_th_23_Template_mg_dropable_dataRecieved_2_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r20); const k_r18 = restoredCtx.index; const ctx_r21 = i0.ɵɵnextContext(); return ctx_r21.recieveData($event, k_r18); });
-        i0.ɵɵelementStart(3, "mg-dragable", 29);
-        i0.ɵɵtext(4);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    }
-    if (rf & 2) {
-        const head_r17 = ctx.$implicit;
-        const k_r18 = ctx.index;
-        const ctx_r4 = i0.ɵɵnextContext();
-        i0.ɵɵadvance(3);
-        i0.ɵɵproperty("data", i0.ɵɵpureFunction1(3, _c0$a, k_r18))("dragable", ctx_r4.dragableSort);
-        i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", head_r17, " ");
-    }
-}
-function TableComponent_tr_26_td_1_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelement(0, "td", 17);
-    }
-    if (rf & 2) {
-        const col_r24 = ctx.$implicit;
-        i0.ɵɵproperty("innerHtml", col_r24, i0.ɵɵsanitizeHtml);
-    }
-}
-function TableComponent_tr_26_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementStart(0, "tr");
-        i0.ɵɵtemplate(1, TableComponent_tr_26_td_1_Template, 1, 1, "td", 30);
-        i0.ɵɵelementEnd();
-    }
-    if (rf & 2) {
-        const data_r22 = ctx.$implicit;
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngForOf", data_r22);
-    }
-}
-function TableComponent_div_27_Template(rf, ctx) {
-    if (rf & 1) {
-        const _r26 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementStart(0, "div", 25);
-        i0.ɵɵelementStart(1, "mg-pagination", 26);
-        i0.ɵɵlistener("page", function TableComponent_div_27_Template_mg_pagination_page_1_listener($event) { i0.ɵɵrestoreView(_r26); const ctx_r25 = i0.ɵɵnextContext(); return ctx_r25.setCurrentPage($event); })("getdata", function TableComponent_div_27_Template_mg_pagination_getdata_1_listener($event) { i0.ɵɵrestoreView(_r26); const ctx_r27 = i0.ɵɵnextContext(); return ctx_r27.updatePaginatedData($event); });
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    }
-    if (rf & 2) {
-        const ctx_r6 = i0.ɵɵnextContext();
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("currentPage", ctx_r6.currentPage)("theme", ctx_r6.theme)("fullDataMode", true)("data", ctx_r6.mgData)("perPage", ctx_r6.paginate.perPage);
-    }
-}
 class TableComponent {
     constructor(cdref) {
         this.cdref = cdref;
@@ -4078,89 +2721,12 @@ class TableComponent {
             this.refactorData(this.paginatedData);
     }
 }
-TableComponent.ɵfac = function TableComponent_Factory(t) { return new (t || TableComponent)(i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
-TableComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TableComponent, selectors: [["mg-table"]], inputs: { theme: "theme", mgData: "mgData", ignoredColumns: "ignoredColumns", sortBy: "sortBy", sortDirection: "sortDirection", tableTitle: "tableTitle", fixedHeader: "fixedHeader", dragableSort: "dragableSort", paginate: "paginate", pagingPosition: "pagingPosition", columnsOrder: "columnsOrder", showOptions: "showOptions" }, features: [i0.ɵɵNgOnChangesFeature], decls: 28, vars: 14, consts: [[1, "pad-10"], [1, "pad-5"], [3, "innerHtml", 4, "ngIf"], ["class", "right", 4, "ngIf"], ["widgetId", "1", 3, "show"], [1, "pad-10", "collapse-filter-box"], ["theme", "success", "btnSize", "sm", 3, "clicked"], [1, "fas", "fa-search", "padR-5"], [1, "row"], ["class", "col m3 l3 s6", 4, "ngFor", "ngForOf"], ["widgetId", "2", 3, "show"], [1, "pad-10", "collapse-sorter-box"], [2, "margin-bottom", "5px"], [3, "options", "value"], ["class", "padV-5", 4, "ngIf"], [3, "ngClass"], [4, "ngFor", "ngForOf"], [3, "innerHtml"], [1, "right"], ["class", "fas fa-list-ol padL-5 pointer", 3, "click", 4, "ngIf"], ["class", "fas fa-filter padL-5 font-16 pointer", 3, "click", 4, "ngIf"], [1, "fas", "fa-list-ol", "padL-5", "pointer", 3, "click"], [1, "fas", "fa-filter", "padL-5", "font-16", "pointer", 3, "click"], [1, "col", "m3", "l3", "s6"], [3, "control", "label"], [1, "padV-5"], [3, "currentPage", "theme", "fullDataMode", "data", "perPage", "page", "getdata"], [3, "click"], [3, "dataRecieved"], [3, "data", "dragable"], [3, "innerHtml", 4, "ngFor", "ngForOf"]], template: function TableComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelementStart(0, "div", 0);
-            i0.ɵɵelementStart(1, "div", 1);
-            i0.ɵɵelementStart(2, "h3");
-            i0.ɵɵtemplate(3, TableComponent_span_3_Template, 2, 1, "span", 2);
-            i0.ɵɵtemplate(4, TableComponent_small_4_Template, 4, 3, "small", 3);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(5, "mg-collapse", 4);
-            i0.ɵɵelementStart(6, "div", 5);
-            i0.ɵɵelementStart(7, "h4");
-            i0.ɵɵtext(8, "Filter ");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(9, "mg-button", 6);
-            i0.ɵɵlistener("clicked", function TableComponent_Template_mg_button_clicked_9_listener($event) { return ctx.search($event); });
-            i0.ɵɵelement(10, "i", 7);
-            i0.ɵɵtext(11, " Search ");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(12, "div", 8);
-            i0.ɵɵtemplate(13, TableComponent_div_13_Template, 2, 2, "div", 9);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(14, "mg-collapse", 10);
-            i0.ɵɵelementStart(15, "div", 11);
-            i0.ɵɵelementStart(16, "h4", 12);
-            i0.ɵɵtext(17, "Sort");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(18, "mg-select", 13);
-            i0.ɵɵlistener("value", function TableComponent_Template_mg_select_value_18_listener($event) { return ctx.sort($event); });
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵtemplate(19, TableComponent_div_19_Template, 2, 5, "div", 14);
-            i0.ɵɵelementStart(20, "table");
-            i0.ɵɵelementStart(21, "thead", 15);
-            i0.ɵɵelementContainerStart(22);
-            i0.ɵɵtemplate(23, TableComponent_th_23_Template, 5, 5, "th", 16);
-            i0.ɵɵelementContainerEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(24, "tbody");
-            i0.ɵɵelementContainerStart(25);
-            i0.ɵɵtemplate(26, TableComponent_tr_26_Template, 2, 1, "tr", 16);
-            i0.ɵɵelementContainerEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵtemplate(27, TableComponent_div_27_Template, 2, 5, "div", 14);
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵadvance(3);
-            i0.ɵɵproperty("ngIf", ctx.showOptions.title);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", ctx.showOptions.count);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("show", ctx.openFilterBox);
-            i0.ɵɵadvance(8);
-            i0.ɵɵproperty("ngForOf", ctx.filterQuery);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("show", ctx.openSortBox);
-            i0.ɵɵadvance(4);
-            i0.ɵɵproperty("options", ctx.sortOptions);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", ctx.paginate.status && ctx.pagingPosition.top);
-            i0.ɵɵadvance(1);
-            i0.ɵɵclassMap(ctx.theme);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngClass", ctx.fixedHeader ? "fixed-header" : "");
-            i0.ɵɵadvance(2);
-            i0.ɵɵproperty("ngForOf", ctx.headings);
-            i0.ɵɵadvance(3);
-            i0.ɵɵproperty("ngForOf", ctx.reformedData);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", ctx.paginate.status && ctx.pagingPosition.bottom);
-        }
-    }, directives: [i1.NgIf, CollapseComponent, ButtonComponent, i1.NgForOf, SelectComponent, i1.NgClass, InputComponent, PaginationComponent, DropableComponent, DragableComponent], styles: [".fixed-header[_ngcontent-%COMP%]{position:sticky;top:45px}"] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TableComponent, [{
+TableComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: TableComponent, deps: [{ token: i0.ChangeDetectorRef }], target: i0.ɵɵFactoryTarget.Component });
+TableComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: TableComponent, selector: "mg-table", inputs: { theme: "theme", mgData: "mgData", ignoredColumns: "ignoredColumns", sortBy: "sortBy", sortDirection: "sortDirection", tableTitle: "tableTitle", fixedHeader: "fixedHeader", dragableSort: "dragableSort", paginate: "paginate", pagingPosition: "pagingPosition", columnsOrder: "columnsOrder", showOptions: "showOptions" }, usesOnChanges: true, ngImport: i0, template: "<div class=\"pad-10\">\n  <div class=\"pad-5\">\n    <h3><span [innerHtml]=\"tableTitle\" *ngIf=\"showOptions.title\">Table</span> <small class=\"right\" *ngIf=\"showOptions.count\">{{count}} <i\n          class=\"fas fa-list-ol padL-5 pointer\" (click)=\"openSorter()\" *ngIf=\"showOptions.sort\"></i> <i\n          class=\"fas fa-filter padL-5 font-16 pointer\" (click)=\"openFilter()\" *ngIf=\"showOptions.filter\"></i></small></h3>\n    <mg-collapse widgetId=\"1\" [show]=\"openFilterBox\">\n      <div class=\"pad-10 collapse-filter-box\">\n        <h4>Filter </h4>\n        <mg-button (clicked)=\"search($event)\" theme=\"success\" btnSize=\"sm\"><i class=\"fas fa-search padR-5\"></i> Search\n        </mg-button>\n        <div class=\"row\">\n          <div class=\"col m3 l3 s6\" *ngFor=\"let filter of filterQuery\">\n            <mg-input [control]=\"filter.val\" [label]=\"filter.name\"></mg-input>\n          </div>\n        </div>\n      </div>\n    </mg-collapse>\n\n    <mg-collapse widgetId=\"2\" [show]=\"openSortBox\">\n      <div class=\"pad-10 collapse-sorter-box\">\n        <h4 style=\"margin-bottom: 5px;\">Sort</h4>\n        <mg-select [options]=\"sortOptions\" (value)=\"sort($event)\"></mg-select>\n      </div>\n    </mg-collapse>\n  </div>\n  <div class=\"padV-5\" *ngIf=\"paginate.status && pagingPosition.top\">\n    <mg-pagination (page)=\"setCurrentPage($event)\" [currentPage]=\"currentPage\" [theme]=\"theme\" [fullDataMode]=\"true\" [data]=\"mgData\" [perPage]=\"paginate.perPage\" (getdata)=\"updatePaginatedData($event)\"></mg-pagination>\n  </div>\n  <table class=\"{{theme}}\">\n    <thead [ngClass]=\"fixedHeader ? 'fixed-header' : ''\">\n      <ng-container>\n        \n        <th *ngFor=\"let head of headings; let k = index\"><span (click)=\"sort(head)\">\n          <mg-dropable (dataRecieved)=\"recieveData($event, k)\">\n            <mg-dragable [data]=\"{order: k}\" [dragable]=\"dragableSort\">\n              {{head}}\n            </mg-dragable>\n          </mg-dropable>\n          </span></th>\n      </ng-container>\n      \n    </thead>\n    <tbody>\n      <ng-container>\n        <tr *ngFor=\"let data of reformedData\">\n          <td *ngFor=\"let col of data\" [innerHtml]=\"col\"></td>\n        </tr>\n      </ng-container>\n      \n    </tbody>\n  </table>\n  <div class=\"padV-5\" *ngIf=\"paginate.status && pagingPosition.bottom\">\n    <mg-pagination (page)=\"setCurrentPage($event)\" [currentPage]=\"currentPage\" [theme]=\"theme\" [fullDataMode]=\"true\" [data]=\"mgData\" [perPage]=\"paginate.perPage\" (getdata)=\"updatePaginatedData($event)\"></mg-pagination>\n  </div>\n</div>\n", styles: [".fixed-header{position:sticky;top:45px}\n"], components: [{ type: CollapseComponent, selector: "mg-collapse", inputs: ["id", "show", "class"], outputs: ["active"] }, { type: ButtonComponent, selector: "mg-button", inputs: ["taskType", "btnStyle", "task", "target", "theme", "class", "btnSize", "isBlock", "round", "allowMargin", "link", "allowShrink", "options", "isExternalLink", "newTab"], outputs: ["clicked", "active"] }, { type: InputComponent, selector: "mg-input", inputs: ["theme", "fStyle", "label", "placeholder", "control", "type", "onDark", "class", "textValue", "rounded"], outputs: ["value", "isFocused", "keyup"] }, { type: SelectComponent, selector: "mg-select", inputs: ["searchOpt", "theme", "selectTitle", "selectType", "enableSearch", "options"], outputs: ["value"] }, { type: PaginationComponent, selector: "mg-pagination", inputs: ["theme", "data", "fullDataMode", "perPage", "currentPage", "icons", "max"], outputs: ["page", "getdata"] }, { type: DropableComponent, selector: "mg-dropable", inputs: ["dropFiles", "class"], outputs: ["onEvent", "dataRecieved"] }, { type: DragableComponent, selector: "mg-dragable", inputs: ["dragable", "data", "class"], outputs: ["onEvent"] }], directives: [{ type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: TableComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-table', template: "<div class=\"pad-10\">\n  <div class=\"pad-5\">\n    <h3><span [innerHtml]=\"tableTitle\" *ngIf=\"showOptions.title\">Table</span> <small class=\"right\" *ngIf=\"showOptions.count\">{{count}} <i\n          class=\"fas fa-list-ol padL-5 pointer\" (click)=\"openSorter()\" *ngIf=\"showOptions.sort\"></i> <i\n          class=\"fas fa-filter padL-5 font-16 pointer\" (click)=\"openFilter()\" *ngIf=\"showOptions.filter\"></i></small></h3>\n    <mg-collapse widgetId=\"1\" [show]=\"openFilterBox\">\n      <div class=\"pad-10 collapse-filter-box\">\n        <h4>Filter </h4>\n        <mg-button (clicked)=\"search($event)\" theme=\"success\" btnSize=\"sm\"><i class=\"fas fa-search padR-5\"></i> Search\n        </mg-button>\n        <div class=\"row\">\n          <div class=\"col m3 l3 s6\" *ngFor=\"let filter of filterQuery\">\n            <mg-input [control]=\"filter.val\" [label]=\"filter.name\"></mg-input>\n          </div>\n        </div>\n      </div>\n    </mg-collapse>\n\n    <mg-collapse widgetId=\"2\" [show]=\"openSortBox\">\n      <div class=\"pad-10 collapse-sorter-box\">\n        <h4 style=\"margin-bottom: 5px;\">Sort</h4>\n        <mg-select [options]=\"sortOptions\" (value)=\"sort($event)\"></mg-select>\n      </div>\n    </mg-collapse>\n  </div>\n  <div class=\"padV-5\" *ngIf=\"paginate.status && pagingPosition.top\">\n    <mg-pagination (page)=\"setCurrentPage($event)\" [currentPage]=\"currentPage\" [theme]=\"theme\" [fullDataMode]=\"true\" [data]=\"mgData\" [perPage]=\"paginate.perPage\" (getdata)=\"updatePaginatedData($event)\"></mg-pagination>\n  </div>\n  <table class=\"{{theme}}\">\n    <thead [ngClass]=\"fixedHeader ? 'fixed-header' : ''\">\n      <ng-container>\n        \n        <th *ngFor=\"let head of headings; let k = index\"><span (click)=\"sort(head)\">\n          <mg-dropable (dataRecieved)=\"recieveData($event, k)\">\n            <mg-dragable [data]=\"{order: k}\" [dragable]=\"dragableSort\">\n              {{head}}\n            </mg-dragable>\n          </mg-dropable>\n          </span></th>\n      </ng-container>\n      \n    </thead>\n    <tbody>\n      <ng-container>\n        <tr *ngFor=\"let data of reformedData\">\n          <td *ngFor=\"let col of data\" [innerHtml]=\"col\"></td>\n        </tr>\n      </ng-container>\n      \n    </tbody>\n  </table>\n  <div class=\"padV-5\" *ngIf=\"paginate.status && pagingPosition.bottom\">\n    <mg-pagination (page)=\"setCurrentPage($event)\" [currentPage]=\"currentPage\" [theme]=\"theme\" [fullDataMode]=\"true\" [data]=\"mgData\" [perPage]=\"paginate.perPage\" (getdata)=\"updatePaginatedData($event)\"></mg-pagination>\n  </div>\n</div>\n", styles: [".fixed-header{position:sticky;top:45px}\n"] }]
-        }], function () { return [{ type: i0.ChangeDetectorRef }]; }, { theme: [{
+        }], ctorParameters: function () { return [{ type: i0.ChangeDetectorRef }]; }, propDecorators: { theme: [{
                 type: Input
             }], mgData: [{
                 type: Input
@@ -4184,10 +2750,8 @@ TableComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TableCompone
                 type: Input
             }], showOptions: [{
                 type: Input
-            }] });
-})();
+            }] } });
 
-const _c0$9 = ["*"];
 class ToastComponent {
     constructor() {
         this.show = true;
@@ -4217,27 +2781,12 @@ class ToastComponent {
         }
     }
 }
-ToastComponent.ɵfac = function ToastComponent_Factory(t) { return new (t || ToastComponent)(); };
-ToastComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ToastComponent, selectors: [["mg-toast"]], inputs: { show: "show", position: "position", theme: "theme", timeout: "timeout" }, features: [i0.ɵɵNgOnChangesFeature], ngContentSelectors: _c0$9, decls: 4, vars: 1, consts: [[1, "toast", 3, "ngClass"], [1, "close-btn", 3, "click"], [1, "fas", "fa-times"]], template: function ToastComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵprojectionDef();
-            i0.ɵɵelementStart(0, "div", 0);
-            i0.ɵɵelementStart(1, "a", 1);
-            i0.ɵɵlistener("click", function ToastComponent_Template_a_click_1_listener() { return ctx.close(); });
-            i0.ɵɵelement(2, "i", 2);
-            i0.ɵɵelementEnd();
-            i0.ɵɵprojection(3);
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("ngClass", ctx.showToast());
-        }
-    }, directives: [i1.NgClass], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ToastComponent, [{
+ToastComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: ToastComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+ToastComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: ToastComponent, selector: "mg-toast", inputs: { show: "show", position: "position", theme: "theme", timeout: "timeout" }, usesOnChanges: true, ngImport: i0, template: "<div class=\"toast\" [ngClass]=\"showToast()\">\n  <a class=\"close-btn\" (click)=\"close()\"><i class=\"fas fa-times\"></i></a>\n  <ng-content></ng-content>\n</div>\n", styles: [""], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: ToastComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-toast', template: "<div class=\"toast\" [ngClass]=\"showToast()\">\n  <a class=\"close-btn\" (click)=\"close()\"><i class=\"fas fa-times\"></i></a>\n  <ng-content></ng-content>\n</div>\n", styles: [""] }]
-        }], function () { return []; }, { show: [{
+        }], ctorParameters: function () { return []; }, propDecorators: { show: [{
                 type: Input
             }], position: [{
                 type: Input
@@ -4245,83 +2794,8 @@ ToastComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ToastCompone
                 type: Input
             }], timeout: [{
                 type: Input
-            }] });
-})();
+            }] } });
 
-const _c0$8 = ["scrollMe"];
-function ChatComponent_div_0_div_12_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 17);
-        i0.ɵɵelementStart(1, "p", 18);
-        i0.ɵɵelementStart(2, "span", 19);
-        i0.ɵɵtext(3);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(4, "span", 20);
-        i0.ɵɵtext(5);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(6, "p", 21);
-        i0.ɵɵelement(7, "span", 22);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    }
-    if (rf & 2) {
-        const msg_r3 = ctx.$implicit;
-        i0.ɵɵproperty("ngClass", msg_r3.isSender ? "is-sender" : "is-reciever");
-        i0.ɵɵadvance(3);
-        i0.ɵɵtextInterpolate1(" ", msg_r3.sender, " ");
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1(" ", msg_r3.time, " ");
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("innerHtml", msg_r3.description, i0.ɵɵsanitizeHtml);
-    }
-}
-function ChatComponent_div_0_Template(rf, ctx) {
-    if (rf & 1) {
-        const _r5 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementStart(0, "div", 1);
-        i0.ɵɵelementStart(1, "div", 2);
-        i0.ɵɵelementStart(2, "div", 3);
-        i0.ɵɵelementStart(3, "div", 4);
-        i0.ɵɵlistener("click", function ChatComponent_div_0_Template_div_click_3_listener() { i0.ɵɵrestoreView(_r5); const ctx_r4 = i0.ɵɵnextContext(); return ctx_r4.minimizeToggle(); });
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(4, "div", 5);
-        i0.ɵɵelementStart(5, "p", 6);
-        i0.ɵɵelementStart(6, "a", 7);
-        i0.ɵɵlistener("click", function ChatComponent_div_0_Template_a_click_6_listener() { i0.ɵɵrestoreView(_r5); const ctx_r6 = i0.ɵɵnextContext(); return ctx_r6.minimizeToggle(); });
-        i0.ɵɵelement(7, "i", 8);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(8, "a", 9);
-        i0.ɵɵlistener("click", function ChatComponent_div_0_Template_a_click_8_listener() { i0.ɵɵrestoreView(_r5); const ctx_r7 = i0.ɵɵnextContext(); return ctx_r7.closeChat(); });
-        i0.ɵɵelement(9, "i", 10);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(10, "div", 11, 12);
-        i0.ɵɵtemplate(12, ChatComponent_div_0_div_12_Template, 8, 4, "div", 13);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(13, "div", 14);
-        i0.ɵɵelementStart(14, "input", 15);
-        i0.ɵɵlistener("keyup", function ChatComponent_div_0_Template_input_keyup_14_listener($event) { i0.ɵɵrestoreView(_r5); const ctx_r8 = i0.ɵɵnextContext(); return ctx_r8.storeMessage($event); });
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(15, "a", 9);
-        i0.ɵɵlistener("click", function ChatComponent_div_0_Template_a_click_15_listener() { i0.ɵɵrestoreView(_r5); const ctx_r9 = i0.ɵɵnextContext(); return ctx_r9.sendMessage(); });
-        i0.ɵɵelement(16, "i", 16);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    }
-    if (rf & 2) {
-        const ctx_r0 = i0.ɵɵnextContext();
-        i0.ɵɵproperty("ngClass", ctx_r0.mainChatClasses() + " " + ctx_r0.class);
-        i0.ɵɵadvance(3);
-        i0.ɵɵproperty("innerHtml", ctx_r0.header, i0.ɵɵsanitizeHtml);
-        i0.ɵɵadvance(9);
-        i0.ɵɵproperty("ngForOf", ctx_r0.messages);
-    }
-}
 class ChatComponent {
     constructor() {
         this.header = `Chat box`;
@@ -4410,28 +2884,12 @@ class ChatComponent {
         this.chatInput.emit(this.inputMessage);
     }
 }
-ChatComponent.ɵfac = function ChatComponent_Factory(t) { return new (t || ChatComponent)(); };
-ChatComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ChatComponent, selectors: [["mg-chat"]], viewQuery: function ChatComponent_Query(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵviewQuery(_c0$8, 5);
-        }
-        if (rf & 2) {
-            let _t;
-            i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.myScrollContainer = _t.first);
-        }
-    }, inputs: { header: "header", show: "show", openBody: "openBody", messages: "messages", class: "class" }, outputs: { chatInput: "chatInput" }, features: [i0.ɵɵNgOnChangesFeature], decls: 1, vars: 1, consts: [["class", "chat-wrapper", 3, "ngClass", 4, "ngIf"], [1, "chat-wrapper", 3, "ngClass"], [1, "chat-header"], [1, "row"], [1, "col", "m8", "l8", "s8", 3, "innerHtml", "click"], [1, "col", "m4", "l4", "s4"], [1, "text-right"], [1, "padR-10", 3, "click"], [1, "fas", "fa-minus"], [3, "click"], [1, "fas", "fa-times"], [1, "chat-body"], ["scrollMe", ""], ["class", "chat-message", 3, "ngClass", 4, "ngFor", "ngForOf"], [1, "chat-footer"], ["type", "text", "placeholder", "your message", 3, "keyup"], [1, "fas", "fa-paper-plane"], [1, "chat-message", 3, "ngClass"], [1, "message-info"], [1, "by"], [1, "time"], [1, "message-description"], [3, "innerHtml"]], template: function ChatComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵtemplate(0, ChatComponent_div_0_Template, 17, 3, "div", 0);
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("ngIf", ctx.show);
-        }
-    }, directives: [i1.NgIf, i1.NgClass, i1.NgForOf], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ChatComponent, [{
+ChatComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: ChatComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+ChatComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: ChatComponent, selector: "mg-chat", inputs: { header: "header", show: "show", openBody: "openBody", messages: "messages", class: "class" }, outputs: { chatInput: "chatInput" }, viewQueries: [{ propertyName: "myScrollContainer", first: true, predicate: ["scrollMe"], descendants: true }], usesOnChanges: true, ngImport: i0, template: "<div class=\"chat-wrapper\" *ngIf=\"show\" [ngClass]=\"mainChatClasses() + ' ' + class\">\n  <div class=\"chat-header\">\n    <div class=\"row\">\n      <div class=\"col m8 l8 s8\" [innerHtml]=\"header\" (click)=\"minimizeToggle()\"></div>\n      <div class=\"col m4 l4 s4\">\n        <p class=\"text-right\"><a class=\"padR-10\" (click)=\"minimizeToggle()\"><i class=\"fas fa-minus\"></i></a><a (click)=\"closeChat()\"><i class=\"fas fa-times\"></i></a></p>\n      </div>\n    </div>\n  </div>\n  <div class=\"chat-body\"  #scrollMe>\n    <div class=\"chat-message\" *ngFor=\"let msg of messages\" [ngClass]=\"msg.isSender ? 'is-sender' : 'is-reciever'\">\n      <p class=\"message-info\">\n        <span class=\"by\">\n          {{msg.sender}}\n        </span>\n        <span class=\"time\">\n          {{msg.time}}\n        </span>\n      </p>\n      <p class=\"message-description\">\n        <span [innerHtml]=\"msg.description\"></span>\n      </p>\n    </div>\n  </div>\n  <div class=\"chat-footer\">\n    <input type=\"text\" placeholder=\"your message\" (keyup)=\"storeMessage($event)\"/>\n    <a (click)=\"sendMessage()\"><i class=\"fas fa-paper-plane\"></i></a>\n  </div>\n</div>\n", styles: [""], directives: [{ type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: ChatComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-chat', template: "<div class=\"chat-wrapper\" *ngIf=\"show\" [ngClass]=\"mainChatClasses() + ' ' + class\">\n  <div class=\"chat-header\">\n    <div class=\"row\">\n      <div class=\"col m8 l8 s8\" [innerHtml]=\"header\" (click)=\"minimizeToggle()\"></div>\n      <div class=\"col m4 l4 s4\">\n        <p class=\"text-right\"><a class=\"padR-10\" (click)=\"minimizeToggle()\"><i class=\"fas fa-minus\"></i></a><a (click)=\"closeChat()\"><i class=\"fas fa-times\"></i></a></p>\n      </div>\n    </div>\n  </div>\n  <div class=\"chat-body\"  #scrollMe>\n    <div class=\"chat-message\" *ngFor=\"let msg of messages\" [ngClass]=\"msg.isSender ? 'is-sender' : 'is-reciever'\">\n      <p class=\"message-info\">\n        <span class=\"by\">\n          {{msg.sender}}\n        </span>\n        <span class=\"time\">\n          {{msg.time}}\n        </span>\n      </p>\n      <p class=\"message-description\">\n        <span [innerHtml]=\"msg.description\"></span>\n      </p>\n    </div>\n  </div>\n  <div class=\"chat-footer\">\n    <input type=\"text\" placeholder=\"your message\" (keyup)=\"storeMessage($event)\"/>\n    <a (click)=\"sendMessage()\"><i class=\"fas fa-paper-plane\"></i></a>\n  </div>\n</div>\n", styles: [""] }]
-        }], function () { return []; }, { header: [{
+        }], ctorParameters: function () { return []; }, propDecorators: { header: [{
                 type: Input
             }], show: [{
                 type: Input
@@ -4446,10 +2904,8 @@ ChatComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ChatComponent
                 args: ['scrollMe']
             }], chatInput: [{
                 type: Output
-            }] });
-})();
+            }] } });
 
-const _c0$7 = ["*"];
 class DropdownComponent {
     constructor(service) {
         this.service = service;
@@ -4487,30 +2943,12 @@ class DropdownComponent {
         return results;
     }
 }
-DropdownComponent.ɵfac = function DropdownComponent_Factory(t) { return new (t || DropdownComponent)(i0.ɵɵdirectiveInject(MaterialgrammiService)); };
-DropdownComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DropdownComponent, selectors: [["mg-dropdown"]], inputs: { id: "id", active: "active", position: "position", class: "class" }, ngContentSelectors: _c0$7, decls: 4, vars: 2, consts: [[1, "main", 2, "position", "relative", 3, "ngClass"], [1, "dropdown-container", 3, "ngClass", "mouseover", "mouseleave"], [1, "dropdown-content"]], template: function DropdownComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵprojectionDef();
-            i0.ɵɵelementStart(0, "div", 0);
-            i0.ɵɵelementStart(1, "div", 1);
-            i0.ɵɵlistener("mouseover", function DropdownComponent_Template_div_mouseover_1_listener() { return ctx.openDropDown(); })("mouseleave", function DropdownComponent_Template_div_mouseleave_1_listener() { return ctx.closeDropDown(); });
-            i0.ɵɵelementStart(2, "div", 2);
-            i0.ɵɵprojection(3);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("ngClass", ctx.class);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngClass", ctx.dropdownClasses());
-        }
-    }, directives: [i1.NgClass], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DropdownComponent, [{
+DropdownComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: DropdownComponent, deps: [{ token: MaterialgrammiService }], target: i0.ɵɵFactoryTarget.Component });
+DropdownComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: DropdownComponent, selector: "mg-dropdown", inputs: { id: "id", active: "active", position: "position", class: "class" }, ngImport: i0, template: "<div class=\"main\" style=\"position: relative;\" [ngClass]=\"class\">\n  <div class=\"dropdown-container\" [ngClass]=\"dropdownClasses()\" (mouseover)=\"openDropDown()\"\n    (mouseleave)=\"closeDropDown()\">\n    <div class=\"dropdown-content\">\n      <ng-content></ng-content>\n    </div>\n  </div>\n</div>\n", styles: [""], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: DropdownComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-dropdown', template: "<div class=\"main\" style=\"position: relative;\" [ngClass]=\"class\">\n  <div class=\"dropdown-container\" [ngClass]=\"dropdownClasses()\" (mouseover)=\"openDropDown()\"\n    (mouseleave)=\"closeDropDown()\">\n    <div class=\"dropdown-content\">\n      <ng-content></ng-content>\n    </div>\n  </div>\n</div>\n", styles: [""] }]
-        }], function () { return [{ type: MaterialgrammiService }]; }, { id: [{
+        }], ctorParameters: function () { return [{ type: MaterialgrammiService }]; }, propDecorators: { id: [{
                 type: Input
             }], active: [{
                 type: Input
@@ -4518,26 +2956,8 @@ DropdownComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DropdownC
                 type: Input
             }], class: [{
                 type: Input
-            }] });
-})();
+            }] } });
 
-function MegamenuComponent_ng_container_2_Template(rf, ctx) {
-    if (rf & 1) {
-        const _r3 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelementStart(1, "a", 4);
-        i0.ɵɵlistener("mouseover", function MegamenuComponent_ng_container_2_Template_a_mouseover_1_listener() { const restoredCtx = i0.ɵɵrestoreView(_r3); const m_r1 = restoredCtx.$implicit; const ctx_r2 = i0.ɵɵnextContext(); return ctx_r2.openMenu(m_r1.id); });
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementContainerEnd();
-    }
-    if (rf & 2) {
-        const m_r1 = ctx.$implicit;
-        const ctx_r0 = i0.ɵɵnextContext();
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("innerHtml", m_r1.name, i0.ɵɵsanitizeHtml)("ngClass", ctx_r0.menuBtnClass(m_r1.id));
-    }
-}
-const _c0$6 = ["*"];
 class MegamenuComponent {
     constructor(service) {
         this.service = service;
@@ -4590,71 +3010,19 @@ class MegamenuComponent {
         return classes;
     }
 }
-MegamenuComponent.ɵfac = function MegamenuComponent_Factory(t) { return new (t || MegamenuComponent)(i0.ɵɵdirectiveInject(MaterialgrammiService)); };
-MegamenuComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: MegamenuComponent, selectors: [["mg-megamenu"]], inputs: { id: "id", theme: "theme", menu: "menu" }, ngContentSelectors: _c0$6, decls: 5, vars: 2, consts: [[1, "megamenu-wrapper", 3, "mouseleave"], [1, "megamenu-links"], [4, "ngFor", "ngForOf"], [1, "megamenu-content", 3, "ngClass", "mouseover"], [1, "btn", 3, "innerHtml", "ngClass", "mouseover"]], template: function MegamenuComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵprojectionDef();
-            i0.ɵɵelementStart(0, "div", 0);
-            i0.ɵɵlistener("mouseleave", function MegamenuComponent_Template_div_mouseleave_0_listener() { return ctx.closeMenu(); });
-            i0.ɵɵelementStart(1, "div", 1);
-            i0.ɵɵtemplate(2, MegamenuComponent_ng_container_2_Template, 2, 2, "ng-container", 2);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(3, "div", 3);
-            i0.ɵɵlistener("mouseover", function MegamenuComponent_Template_div_mouseover_3_listener() { return ctx.active = true; });
-            i0.ɵɵprojection(4);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵadvance(2);
-            i0.ɵɵproperty("ngForOf", ctx.menu);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngClass", ctx.megamenuContentClass());
-        }
-    }, directives: [i1.NgForOf, i1.NgClass], styles: ["megamenu-wrapper[_ngcontent-%COMP%]{display:block;position:relative;width:100%}.megamenu-content[_ngcontent-%COMP%]{display:none;position:absolute;width:95%}.megamenu-content.active[_ngcontent-%COMP%]{display:block}.megamenu-wrapper[_ngcontent-%COMP%]   .megamenu-links[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]{display:inline-block;padding:10px}"] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MegamenuComponent, [{
+MegamenuComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MegamenuComponent, deps: [{ token: MaterialgrammiService }], target: i0.ɵɵFactoryTarget.Component });
+MegamenuComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: MegamenuComponent, selector: "mg-megamenu", inputs: { id: "id", theme: "theme", menu: "menu" }, ngImport: i0, template: "<div class=\"megamenu-wrapper\"  (mouseleave)=\"closeMenu()\">\n  <div class=\"megamenu-links\">\n    <ng-container *ngFor=\"let m of menu\">\n      <a class=\"btn\" [innerHtml]=\"m.name\" [ngClass]=\"menuBtnClass(m.id)\" (mouseover)=\"openMenu(m.id)\"></a>\n    </ng-container>\n  </div>\n  <div class=\"megamenu-content\" (mouseover)=\"active = true\" [ngClass]=\"megamenuContentClass()\">\n    <ng-content></ng-content>\n  </div>\n</div>", styles: ["megamenu-wrapper{display:block;position:relative;width:100%}.megamenu-content{display:none;position:absolute;width:95%}.megamenu-content.active{display:block}.megamenu-wrapper .megamenu-links a{display:inline-block;padding:10px}\n"], directives: [{ type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MegamenuComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-megamenu', template: "<div class=\"megamenu-wrapper\"  (mouseleave)=\"closeMenu()\">\n  <div class=\"megamenu-links\">\n    <ng-container *ngFor=\"let m of menu\">\n      <a class=\"btn\" [innerHtml]=\"m.name\" [ngClass]=\"menuBtnClass(m.id)\" (mouseover)=\"openMenu(m.id)\"></a>\n    </ng-container>\n  </div>\n  <div class=\"megamenu-content\" (mouseover)=\"active = true\" [ngClass]=\"megamenuContentClass()\">\n    <ng-content></ng-content>\n  </div>\n</div>", styles: ["megamenu-wrapper{display:block;position:relative;width:100%}.megamenu-content{display:none;position:absolute;width:95%}.megamenu-content.active{display:block}.megamenu-wrapper .megamenu-links a{display:inline-block;padding:10px}\n"] }]
-        }], function () { return [{ type: MaterialgrammiService }]; }, { id: [{
+        }], ctorParameters: function () { return [{ type: MaterialgrammiService }]; }, propDecorators: { id: [{
                 type: Input
             }], theme: [{
                 type: Input
             }], menu: [{
                 type: Input
-            }] });
-})();
+            }] } });
 
-function SlideshowComponent_ng_container_3_Template(rf, ctx) {
-    if (rf & 1) {
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelementStart(1, "div", 5);
-        i0.ɵɵelement(2, "div", 6);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementContainerEnd();
-    }
-    if (rf & 2) {
-        const item_r3 = ctx.$implicit;
-        const ctx_r1 = i0.ɵɵnextContext();
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("innerHtml", item_r3, i0.ɵɵsanitizeHtml)("ngClass", ctx_r1.slideClasses());
-    }
-}
-function SlideshowComponent_div_4_Template(rf, ctx) {
-    if (rf & 1) {
-        const _r6 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementStart(0, "div", 7);
-        i0.ɵɵelementStart(1, "a", 8);
-        i0.ɵɵlistener("click", function SlideshowComponent_div_4_Template_a_click_1_listener() { i0.ɵɵrestoreView(_r6); const ctx_r5 = i0.ɵɵnextContext(); return ctx_r5.previousPage(); });
-        i0.ɵɵelement(2, "i", 9);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(3, "a", 10);
-        i0.ɵɵlistener("click", function SlideshowComponent_div_4_Template_a_click_3_listener() { i0.ɵɵrestoreView(_r6); const ctx_r7 = i0.ɵɵnextContext(); return ctx_r7.nextPage(); });
-        i0.ɵɵelement(4, "i", 11);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    }
-}
 class SlideshowComponent {
     constructor(renderer, elem, service) {
         this.renderer = renderer;
@@ -4883,33 +3251,12 @@ class SlideshowComponent {
         }
     }
 }
-SlideshowComponent.ɵfac = function SlideshowComponent_Factory(t) { return new (t || SlideshowComponent)(i0.ɵɵdirectiveInject(i0.Renderer2), i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(MaterialgrammiService)); };
-SlideshowComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SlideshowComponent, selectors: [["mg-slideshow"]], hostBindings: function SlideshowComponent_HostBindings(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵlistener("resize", function SlideshowComponent_resize_HostBindingHandler($event) { return ctx.onResize($event); }, false, i0.ɵɵresolveWindow);
-        }
-    }, inputs: { perPage: "perPage", id: "id", activePage: "activePage", fullWidthSlide: "fullWidthSlide", play: "play", timer: "timer", items: "items", heightAdjustment: "heightAdjustment", maxHeight: "maxHeight", showControls: "showControls", gap: "gap", class: "class" }, features: [i0.ɵɵNgOnChangesFeature], decls: 5, vars: 3, consts: [[1, "slideshow-wrapper", 3, "ngClass"], ["slideshowWrapper", ""], [1, "slideshow"], [4, "ngFor", "ngForOf"], ["class", "controls", 4, "ngIf"], [1, "slide-wrapper"], [1, "slide", 3, "innerHtml", "ngClass"], [1, "controls"], [1, "control-previous", 3, "click"], [1, "fas", "fa-chevron-left"], [1, "control-next", 3, "click"], [1, "fas", "fa-chevron-right"]], template: function SlideshowComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelementStart(0, "div", 0, 1);
-            i0.ɵɵelementStart(2, "div", 2);
-            i0.ɵɵtemplate(3, SlideshowComponent_ng_container_3_Template, 3, 2, "ng-container", 3);
-            i0.ɵɵelementEnd();
-            i0.ɵɵtemplate(4, SlideshowComponent_div_4_Template, 5, 0, "div", 4);
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("ngClass", ctx.class);
-            i0.ɵɵadvance(3);
-            i0.ɵɵproperty("ngForOf", ctx.items);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", ctx.showControls);
-        }
-    }, directives: [i1.NgClass, i1.NgForOf, i1.NgIf], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SlideshowComponent, [{
+SlideshowComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: SlideshowComponent, deps: [{ token: i0.Renderer2 }, { token: i0.ElementRef }, { token: MaterialgrammiService }], target: i0.ɵɵFactoryTarget.Component });
+SlideshowComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: SlideshowComponent, selector: "mg-slideshow", inputs: { perPage: "perPage", id: "id", activePage: "activePage", fullWidthSlide: "fullWidthSlide", play: "play", timer: "timer", items: "items", heightAdjustment: "heightAdjustment", maxHeight: "maxHeight", showControls: "showControls", gap: "gap", class: "class" }, host: { listeners: { "window:resize": "onResize($event)" } }, usesOnChanges: true, ngImport: i0, template: "<div class=\"slideshow-wrapper\" #slideshowWrapper [ngClass]=\"class\">\n  <div class=\"slideshow\">\n    <ng-container *ngFor=\"let item of items; let i = index;\">\n      <div class=\"slide-wrapper\">\n        <div class=\"slide\" [innerHtml]=\"item\" [ngClass]=\"slideClasses()\"></div>\n      </div>\n    </ng-container>\n  </div>\n  <div class=\"controls\" *ngIf=\"showControls\">\n    <a class=\"control-previous\" (click)=\"previousPage()\"><i class=\"fas fa-chevron-left\"></i></a>\n    <a class=\"control-next\" (click)=\"nextPage()\"><i class=\"fas fa-chevron-right\"></i></a>\n  </div>\n</div>\n", styles: [""], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: SlideshowComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-slideshow', template: "<div class=\"slideshow-wrapper\" #slideshowWrapper [ngClass]=\"class\">\n  <div class=\"slideshow\">\n    <ng-container *ngFor=\"let item of items; let i = index;\">\n      <div class=\"slide-wrapper\">\n        <div class=\"slide\" [innerHtml]=\"item\" [ngClass]=\"slideClasses()\"></div>\n      </div>\n    </ng-container>\n  </div>\n  <div class=\"controls\" *ngIf=\"showControls\">\n    <a class=\"control-previous\" (click)=\"previousPage()\"><i class=\"fas fa-chevron-left\"></i></a>\n    <a class=\"control-next\" (click)=\"nextPage()\"><i class=\"fas fa-chevron-right\"></i></a>\n  </div>\n</div>\n", styles: [""] }]
-        }], function () { return [{ type: i0.Renderer2 }, { type: i0.ElementRef }, { type: MaterialgrammiService }]; }, { perPage: [{
+        }], ctorParameters: function () { return [{ type: i0.Renderer2 }, { type: i0.ElementRef }, { type: MaterialgrammiService }]; }, propDecorators: { perPage: [{
                 type: Input
             }], id: [{
                 type: Input
@@ -4936,10 +3283,8 @@ SlideshowComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Slidesho
             }], onResize: [{
                 type: HostListener,
                 args: ['window:resize', ['$event']]
-            }] });
-})();
+            }] } });
 
-const _c0$5 = ["*"];
 class ModalComponent {
     constructor(service) {
         this.service = service;
@@ -4973,33 +3318,12 @@ class ModalComponent {
         return classes;
     }
 }
-ModalComponent.ɵfac = function ModalComponent_Factory(t) { return new (t || ModalComponent)(i0.ɵɵdirectiveInject(MaterialgrammiService)); };
-ModalComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ModalComponent, selectors: [["mg-modal"]], inputs: { show: "show", id: "id", position: "position", modalSize: "modalSize", overlayClass: "overlayClass" }, ngContentSelectors: _c0$5, decls: 4, vars: 7, consts: [[1, "modal", 3, "ngClass"], [3, "ngClass"], [1, "overlay", "blur", 3, "ngClass", "click"]], template: function ModalComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵprojectionDef();
-            i0.ɵɵelementStart(0, "div", 0);
-            i0.ɵɵelementStart(1, "div", 1);
-            i0.ɵɵprojection(2);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(3, "div", 2);
-            i0.ɵɵlistener("click", function ModalComponent_Template_div_click_3_listener() { return ctx.close(); });
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("ngClass", ctx.mainModelClasses());
-            i0.ɵɵadvance(1);
-            i0.ɵɵclassMapInterpolate2("content on-", ctx.position, " ", ctx.modalSize, "");
-            i0.ɵɵproperty("ngClass", ctx.mainModelClasses());
-            i0.ɵɵadvance(2);
-            i0.ɵɵproperty("ngClass", ctx.overlayClasses());
-        }
-    }, directives: [i1.NgClass], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ModalComponent, [{
+ModalComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: ModalComponent, deps: [{ token: MaterialgrammiService }], target: i0.ɵɵFactoryTarget.Component });
+ModalComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: ModalComponent, selector: "mg-modal", inputs: { show: "show", id: "id", position: "position", modalSize: "modalSize", overlayClass: "overlayClass" }, ngImport: i0, template: "<div class=\"modal\" [ngClass]=\"mainModelClasses()\">\n  <div class=\"content on-{{position}} {{modalSize}}\" [ngClass]=\"mainModelClasses()\">\n    <ng-content></ng-content>\n  </div>\n  <div (click)=\"close()\" class=\"overlay blur\" [ngClass]=\"overlayClasses()\"></div>\n</div>\n", styles: [""], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: ModalComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-modal', template: "<div class=\"modal\" [ngClass]=\"mainModelClasses()\">\n  <div class=\"content on-{{position}} {{modalSize}}\" [ngClass]=\"mainModelClasses()\">\n    <ng-content></ng-content>\n  </div>\n  <div (click)=\"close()\" class=\"overlay blur\" [ngClass]=\"overlayClasses()\"></div>\n</div>\n", styles: [""] }]
-        }], function () { return [{ type: MaterialgrammiService }]; }, { show: [{
+        }], ctorParameters: function () { return [{ type: MaterialgrammiService }]; }, propDecorators: { show: [{
                 type: Input
             }], id: [{
                 type: Input
@@ -5009,31 +3333,20 @@ ModalComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ModalCompone
                 type: Input
             }], overlayClass: [{
                 type: Input
-            }] });
-})();
+            }] } });
 
 class SidebarComponent {
     constructor() { }
     ngOnInit() {
     }
 }
-SidebarComponent.ɵfac = function SidebarComponent_Factory(t) { return new (t || SidebarComponent)(); };
-SidebarComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SidebarComponent, selectors: [["mg-sidebar"]], decls: 2, vars: 0, template: function SidebarComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelementStart(0, "p");
-            i0.ɵɵtext(1, "sidebar works!");
-            i0.ɵɵelementEnd();
-        }
-    }, styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SidebarComponent, [{
+SidebarComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: SidebarComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+SidebarComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: SidebarComponent, selector: "mg-sidebar", ngImport: i0, template: "<p>sidebar works!</p>\n", styles: [""] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: SidebarComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-sidebar', template: "<p>sidebar works!</p>\n", styles: [""] }]
-        }], function () { return []; }, null);
-})();
+        }], ctorParameters: function () { return []; } });
 
-const _c0$4 = [[["", "mg-data", "sidebar"]], "*"];
-const _c1 = ["[mg-data=sidebar]", "*"];
 class OffcanvasComponent {
     constructor(service) {
         this.service = service;
@@ -5062,48 +3375,17 @@ class OffcanvasComponent {
         });
     }
 }
-OffcanvasComponent.ɵfac = function OffcanvasComponent_Factory(t) { return new (t || OffcanvasComponent)(i0.ɵɵdirectiveInject(MaterialgrammiService)); };
-OffcanvasComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: OffcanvasComponent, selectors: [["mg-offcanvas"]], inputs: { active: "active", id: "id" }, ngContentSelectors: _c1, decls: 5, vars: 1, consts: [[1, "offcanvas", 3, "ngClass"], [1, "sidebar-wrapper"], [1, "content-wrapper"]], template: function OffcanvasComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵprojectionDef(_c0$4);
-            i0.ɵɵelementStart(0, "div", 0);
-            i0.ɵɵelementStart(1, "div", 1);
-            i0.ɵɵprojection(2);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(3, "div", 2);
-            i0.ɵɵprojection(4, 1);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("ngClass", ctx.mainClasses());
-        }
-    }, directives: [i1.NgClass], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(OffcanvasComponent, [{
+OffcanvasComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: OffcanvasComponent, deps: [{ token: MaterialgrammiService }], target: i0.ɵɵFactoryTarget.Component });
+OffcanvasComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: OffcanvasComponent, selector: "mg-offcanvas", inputs: { active: "active", id: "id" }, ngImport: i0, template: "<div class=\"offcanvas\" [ngClass]=\"mainClasses()\">\n  <div class=\"sidebar-wrapper\">\n    <ng-content select=\"[mg-data=sidebar]\"></ng-content>\n  </div>\n  <div class=\"content-wrapper\">\n    <ng-content></ng-content>\n  </div>\n</div>\n", styles: [""], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: OffcanvasComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-offcanvas', template: "<div class=\"offcanvas\" [ngClass]=\"mainClasses()\">\n  <div class=\"sidebar-wrapper\">\n    <ng-content select=\"[mg-data=sidebar]\"></ng-content>\n  </div>\n  <div class=\"content-wrapper\">\n    <ng-content></ng-content>\n  </div>\n</div>\n", styles: [""] }]
-        }], function () { return [{ type: MaterialgrammiService }]; }, { active: [{
+        }], ctorParameters: function () { return [{ type: MaterialgrammiService }]; }, propDecorators: { active: [{
                 type: Input
             }], id: [{
                 type: Input
-            }] });
-})();
+            }] } });
 
-function TabComponent_a_3_Template(rf, ctx) {
-    if (rf & 1) {
-        const _r3 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementStart(0, "a", 5);
-        i0.ɵɵlistener("click", function TabComponent_a_3_Template_a_click_0_listener() { const restoredCtx = i0.ɵɵrestoreView(_r3); const tb_r1 = restoredCtx.$implicit; const ctx_r2 = i0.ɵɵnextContext(); return ctx_r2.activateWidget(tb_r1.widget); });
-        i0.ɵɵelementEnd();
-    }
-    if (rf & 2) {
-        const tb_r1 = ctx.$implicit;
-        const ctx_r0 = i0.ɵɵnextContext();
-        i0.ɵɵproperty("innerHtml", tb_r1.name, i0.ɵɵsanitizeHtml)("ngClass", ctx_r0.buttonClass(tb_r1.widget));
-    }
-}
-const _c0$3 = ["*"];
 class TabComponent {
     constructor(service) {
         this.service = service;
@@ -5153,34 +3435,12 @@ class TabComponent {
         return this.activeComponent == componentId ? "active" : "";
     }
 }
-TabComponent.ɵfac = function TabComponent_Factory(t) { return new (t || TabComponent)(i0.ɵɵdirectiveInject(MaterialgrammiService)); };
-TabComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TabComponent, selectors: [["mg-tab"]], inputs: { options: "options", isVertical: "isVertical", bg: "bg", active: "active", id: "id", theme: "theme" }, ngContentSelectors: _c0$3, decls: 6, vars: 3, consts: [[1, "tab-wrapper", 3, "ngClass"], [1, "tab-links", 3, "ngClass"], [1, "tabs"], [3, "innerHtml", "ngClass", "click", 4, "ngFor", "ngForOf"], [1, "tab-content"], [3, "innerHtml", "ngClass", "click"]], template: function TabComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵprojectionDef();
-            i0.ɵɵelementStart(0, "div", 0);
-            i0.ɵɵelementStart(1, "div", 1);
-            i0.ɵɵelementStart(2, "div", 2);
-            i0.ɵɵtemplate(3, TabComponent_a_3_Template, 1, 2, "a", 3);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(4, "div", 4);
-            i0.ɵɵprojection(5);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("ngClass", ctx.mainClasses());
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngClass", ctx.bg);
-            i0.ɵɵadvance(2);
-            i0.ɵɵproperty("ngForOf", ctx.options);
-        }
-    }, directives: [i1.NgClass, i1.NgForOf], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabComponent, [{
+TabComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: TabComponent, deps: [{ token: MaterialgrammiService }], target: i0.ɵɵFactoryTarget.Component });
+TabComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: TabComponent, selector: "mg-tab", inputs: { options: "options", isVertical: "isVertical", bg: "bg", active: "active", id: "id", theme: "theme" }, ngImport: i0, template: "<div class=\"tab-wrapper\" [ngClass]=\"mainClasses()\">\n    <div class=\"tab-links\" [ngClass]=\"bg\">\n        <div class=\"tabs\">\n            <a *ngFor=\"let tb of options\" [innerHtml]=\"tb.name\" (click)=\"activateWidget(tb.widget)\" [ngClass]=\"buttonClass(tb.widget)\"></a>\n        </div>\n    </div>\n    <div class=\"tab-content\">\n        <ng-content></ng-content>\n    </div>\n</div>", styles: [""], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: TabComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-tab', template: "<div class=\"tab-wrapper\" [ngClass]=\"mainClasses()\">\n    <div class=\"tab-links\" [ngClass]=\"bg\">\n        <div class=\"tabs\">\n            <a *ngFor=\"let tb of options\" [innerHtml]=\"tb.name\" (click)=\"activateWidget(tb.widget)\" [ngClass]=\"buttonClass(tb.widget)\"></a>\n        </div>\n    </div>\n    <div class=\"tab-content\">\n        <ng-content></ng-content>\n    </div>\n</div>", styles: [""] }]
-        }], function () { return [{ type: MaterialgrammiService }]; }, { options: [{
+        }], ctorParameters: function () { return [{ type: MaterialgrammiService }]; }, propDecorators: { options: [{
                 type: Input
             }], isVertical: [{
                 type: Input
@@ -5192,10 +3452,8 @@ TabComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TabComponent, 
                 type: Input
             }], theme: [{
                 type: Input
-            }] });
-})();
+            }] } });
 
-const _c0$2 = ["*"];
 class WizardComponent {
     constructor(service) {
         this.service = service;
@@ -5227,20 +3485,12 @@ class WizardComponent {
         });
     }
 }
-WizardComponent.ɵfac = function WizardComponent_Factory(t) { return new (t || WizardComponent)(i0.ɵɵdirectiveInject(MaterialgrammiService)); };
-WizardComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: WizardComponent, selectors: [["mg-wizard"]], inputs: { active: "active", id: "id", widgets: "widgets" }, outputs: { step: "step", isCompleted: "isCompleted" }, features: [i0.ɵɵNgOnChangesFeature], ngContentSelectors: _c0$2, decls: 2, vars: 0, consts: [[1, "wizard"]], template: function WizardComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵprojectionDef();
-            i0.ɵɵelementStart(0, "div", 0);
-            i0.ɵɵprojection(1);
-            i0.ɵɵelementEnd();
-        }
-    }, styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(WizardComponent, [{
+WizardComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: WizardComponent, deps: [{ token: MaterialgrammiService }], target: i0.ɵɵFactoryTarget.Component });
+WizardComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: WizardComponent, selector: "mg-wizard", inputs: { active: "active", id: "id", widgets: "widgets" }, outputs: { step: "step", isCompleted: "isCompleted" }, usesOnChanges: true, ngImport: i0, template: "<div class=\"wizard\">\n  <ng-content></ng-content>\n</div>\n", styles: [""] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: WizardComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-wizard', template: "<div class=\"wizard\">\n  <ng-content></ng-content>\n</div>\n", styles: [""] }]
-        }], function () { return [{ type: MaterialgrammiService }]; }, { active: [{
+        }], ctorParameters: function () { return [{ type: MaterialgrammiService }]; }, propDecorators: { active: [{
                 type: Input
             }], id: [{
                 type: Input
@@ -5250,8 +3500,7 @@ WizardComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: WizardCompo
                 type: Output
             }], isCompleted: [{
                 type: Output
-            }] });
-})();
+            }] } });
 
 class NotificationsComponent {
     constructor(service) {
@@ -5264,19 +3513,12 @@ class NotificationsComponent {
     ngOnInit() {
     }
 }
-NotificationsComponent.ɵfac = function NotificationsComponent_Factory(t) { return new (t || NotificationsComponent)(i0.ɵɵdirectiveInject(MaterialgrammiService)); };
-NotificationsComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: NotificationsComponent, selectors: [["mg-notifications"]], inputs: { theme: "theme", id: "id", position: "position", timer: "timer" }, decls: 2, vars: 0, template: function NotificationsComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelementStart(0, "p");
-            i0.ɵɵtext(1, "notifications works!");
-            i0.ɵɵelementEnd();
-        }
-    }, styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(NotificationsComponent, [{
+NotificationsComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: NotificationsComponent, deps: [{ token: MaterialgrammiService }], target: i0.ɵɵFactoryTarget.Component });
+NotificationsComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: NotificationsComponent, selector: "mg-notifications", inputs: { theme: "theme", id: "id", position: "position", timer: "timer" }, ngImport: i0, template: "<p>notifications works!</p>\n", styles: [""] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: NotificationsComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-notifications', template: "<p>notifications works!</p>\n", styles: [""] }]
-        }], function () { return [{ type: MaterialgrammiService }]; }, { theme: [{
+        }], ctorParameters: function () { return [{ type: MaterialgrammiService }]; }, propDecorators: { theme: [{
                 type: Input
             }], id: [{
                 type: Input
@@ -5284,8 +3526,7 @@ NotificationsComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Noti
                 type: Input
             }], timer: [{
                 type: Input
-            }] });
-})();
+            }] } });
 
 class CountdownComponent {
     constructor() {
@@ -5359,23 +3600,12 @@ class CountdownComponent {
         return "";
     }
 }
-CountdownComponent.ɵfac = function CountdownComponent_Factory(t) { return new (t || CountdownComponent)(); };
-CountdownComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: CountdownComponent, selectors: [["mg-countdown"]], inputs: { till: "till", expiredText: "expiredText", parseProperties: "parseProperties", class: "class" }, outputs: { timeover: "timeover" }, decls: 2, vars: 2, consts: [[3, "innerHtml", "ngClass"]], template: function CountdownComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelementContainerStart(0);
-            i0.ɵɵelement(1, "span", 0);
-            i0.ɵɵelementContainerEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("innerHtml", ctx.display, i0.ɵɵsanitizeHtml)("ngClass", ctx.class);
-        }
-    }, directives: [i1.NgClass], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CountdownComponent, [{
+CountdownComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: CountdownComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+CountdownComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: CountdownComponent, selector: "mg-countdown", inputs: { till: "till", expiredText: "expiredText", parseProperties: "parseProperties", class: "class" }, outputs: { timeover: "timeover" }, ngImport: i0, template: "<ng-container><span [innerHtml]=\"display\" [ngClass]=\"class\"></span></ng-container>\n", styles: [""], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: CountdownComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-countdown', template: "<ng-container><span [innerHtml]=\"display\" [ngClass]=\"class\"></span></ng-container>\n", styles: [""] }]
-        }], function () { return []; }, { till: [{
+        }], ctorParameters: function () { return []; }, propDecorators: { till: [{
                 type: Input
             }], expiredText: [{
                 type: Input
@@ -5385,10 +3615,8 @@ CountdownComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Countdow
                 type: Input
             }], timeover: [{
                 type: Output
-            }] });
-})();
+            }] } });
 
-const _c0$1 = ["myImage"];
 class ImageComponent {
     constructor(renderer) {
         this.renderer = renderer;
@@ -5443,28 +3671,12 @@ class ImageComponent {
         return filter;
     }
 }
-ImageComponent.ɵfac = function ImageComponent_Factory(t) { return new (t || ImageComponent)(i0.ɵɵdirectiveInject(i0.Renderer2)); };
-ImageComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ImageComponent, selectors: [["mg-image"]], viewQuery: function ImageComponent_Query(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵviewQuery(_c0$1, 5);
-        }
-        if (rf & 2) {
-            let _t;
-            i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.image = _t.first);
-        }
-    }, inputs: { src: "src", responsive: "responsive", rounded: "rounded", circled: "circled", shadowed: "shadowed", class: "class", filters: "filters" }, decls: 2, vars: 2, consts: [[3, "src", "ngClass"], ["myImage", ""]], template: function ImageComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelement(0, "img", 0, 1);
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("src", ctx.src, i0.ɵɵsanitizeUrl)("ngClass", ctx.imageClasses());
-        }
-    }, directives: [i1.NgClass], styles: [".img.rounded[_ngcontent-%COMP%]{border-radius:5px}.img.circled[_ngcontent-%COMP%]{border-radius:50%}"] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ImageComponent, [{
+ImageComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: ImageComponent, deps: [{ token: i0.Renderer2 }], target: i0.ɵɵFactoryTarget.Component });
+ImageComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: ImageComponent, selector: "mg-image", inputs: { src: "src", responsive: "responsive", rounded: "rounded", circled: "circled", shadowed: "shadowed", class: "class", filters: "filters" }, viewQueries: [{ propertyName: "image", first: true, predicate: ["myImage"], descendants: true }], ngImport: i0, template: "<img [src]=\"src\" [ngClass]=\"imageClasses()\" #myImage/>\n", styles: [".img.rounded{border-radius:5px}.img.circled{border-radius:50%}\n"], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: ImageComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-image', template: "<img [src]=\"src\" [ngClass]=\"imageClasses()\" #myImage/>\n", styles: [".img.rounded{border-radius:5px}.img.circled{border-radius:50%}\n"] }]
-        }], function () { return [{ type: i0.Renderer2 }]; }, { src: [{
+        }], ctorParameters: function () { return [{ type: i0.Renderer2 }]; }, propDecorators: { src: [{
                 type: Input
             }], responsive: [{
                 type: Input
@@ -5481,8 +3693,7 @@ ImageComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ImageCompone
             }], image: [{
                 type: ViewChild,
                 args: ['myImage']
-            }] });
-})();
+            }] } });
 
 class DateRangeComponent {
     constructor() {
@@ -5542,39 +3753,12 @@ class DateRangeComponent {
         this.range.emit(this.selected);
     }
 }
-DateRangeComponent.ɵfac = function DateRangeComponent_Factory(t) { return new (t || DateRangeComponent)(); };
-DateRangeComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DateRangeComponent, selectors: [["mg-daterange"]], inputs: { labels: "labels", style: "style", class: "class" }, outputs: { range: "range" }, features: [i0.ɵɵNgOnChangesFeature], decls: 7, vars: 7, consts: [[1, "row", 3, "ngClass"], [1, "col", "m6", "l6", "s12"], [1, "padR-3"], [3, "input", "label", "disabledRange", "getdate"], [1, "padL-3"], [3, "input", "disabledRange", "label", "getdate"]], template: function DateRangeComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelementStart(0, "div", 0);
-            i0.ɵɵelementStart(1, "div", 1);
-            i0.ɵɵelementStart(2, "div", 2);
-            i0.ɵɵelementStart(3, "mg-date", 3);
-            i0.ɵɵlistener("getdate", function DateRangeComponent_Template_mg_date_getdate_3_listener($event) { return ctx.selectedStartDate($event); });
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(4, "div", 1);
-            i0.ɵɵelementStart(5, "div", 4);
-            i0.ɵɵelementStart(6, "mg-date", 5);
-            i0.ɵɵlistener("getdate", function DateRangeComponent_Template_mg_date_getdate_6_listener($event) { return ctx.selectedEndDate($event); });
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("ngClass", ctx.class);
-            i0.ɵɵadvance(3);
-            i0.ɵɵproperty("input", ctx.formattedInput.one)("label", ctx.labels.start)("disabledRange", ctx.disable_range_start);
-            i0.ɵɵadvance(3);
-            i0.ɵɵproperty("input", ctx.formattedInput.two)("disabledRange", ctx.disable_range_end)("label", ctx.labels.end);
-        }
-    }, directives: [i1.NgClass, DateInputComponent], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DateRangeComponent, [{
+DateRangeComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: DateRangeComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+DateRangeComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: DateRangeComponent, selector: "mg-daterange", inputs: { labels: "labels", style: "style", class: "class" }, outputs: { range: "range" }, usesOnChanges: true, ngImport: i0, template: "<div class=\"row\" [ngClass]=\"class\">\n    <div class=\"col m6 l6 s12\">\n        <div class=\"padR-3\">\n            <mg-date [input]=\"formattedInput.one\" [label]=\"labels.start\" \n            [disabledRange] = \"disable_range_start\"\n            (getdate)=\"selectedStartDate($event)\"></mg-date>\n        </div>\n    </div>\n    <div class=\"col m6 l6 s12\">\n        <div class=\"padL-3\">\n            <mg-date [input]=\"formattedInput.two\" \n            [disabledRange] = \"disable_range_end\"\n            [label]=\"labels.end\" (getdate)=\"selectedEndDate($event)\"></mg-date>\n        </div>\n    </div>\n</div>", styles: [""], components: [{ type: DateInputComponent, selector: "mg-date", inputs: ["input", "label", "class", "calendar", "disabledRange", "icons", "format"], outputs: ["getdate"] }], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: DateRangeComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-daterange', template: "<div class=\"row\" [ngClass]=\"class\">\n    <div class=\"col m6 l6 s12\">\n        <div class=\"padR-3\">\n            <mg-date [input]=\"formattedInput.one\" [label]=\"labels.start\" \n            [disabledRange] = \"disable_range_start\"\n            (getdate)=\"selectedStartDate($event)\"></mg-date>\n        </div>\n    </div>\n    <div class=\"col m6 l6 s12\">\n        <div class=\"padL-3\">\n            <mg-date [input]=\"formattedInput.two\" \n            [disabledRange] = \"disable_range_end\"\n            [label]=\"labels.end\" (getdate)=\"selectedEndDate($event)\"></mg-date>\n        </div>\n    </div>\n</div>", styles: [""] }]
-        }], function () { return []; }, { labels: [{
+        }], ctorParameters: function () { return []; }, propDecorators: { labels: [{
                 type: Input
             }], style: [{
                 type: Input
@@ -5582,10 +3766,8 @@ DateRangeComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DateRang
                 type: Input
             }], range: [{
                 type: Output
-            }] });
-})();
+            }] } });
 
-const _c0 = ["*"];
 class ComponentComponent {
     constructor() {
         this.size = "n";
@@ -5602,59 +3784,125 @@ class ComponentComponent {
         return results;
     }
 }
-ComponentComponent.ɵfac = function ComponentComponent_Factory(t) { return new (t || ComponentComponent)(); };
-ComponentComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ComponentComponent, selectors: [["mg-component"]], inputs: { size: "size", class: "class" }, ngContentSelectors: _c0, decls: 2, vars: 1, consts: [[1, "container", 3, "ngClass"]], template: function ComponentComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵprojectionDef();
-            i0.ɵɵelementStart(0, "div", 0);
-            i0.ɵɵprojection(1);
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            i0.ɵɵproperty("ngClass", ctx.containerClass() + " " + ctx.class);
-        }
-    }, directives: [i1.NgClass], styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ComponentComponent, [{
+ComponentComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: ComponentComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+ComponentComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: ComponentComponent, selector: "mg-component", inputs: { size: "size", class: "class" }, ngImport: i0, template: "<div class=\"container\" [ngClass]=\"containerClass() + ' ' + class\">\n  <ng-content></ng-content>\n</div>\n", styles: [""], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: ComponentComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-component', template: "<div class=\"container\" [ngClass]=\"containerClass() + ' ' + class\">\n  <ng-content></ng-content>\n</div>\n", styles: [""] }]
-        }], function () { return []; }, { size: [{
+        }], ctorParameters: function () { return []; }, propDecorators: { size: [{
                 type: Input
             }], class: [{
                 type: Input
-            }] });
-})();
+            }] } });
 
 class SliderComponent {
     constructor() { }
     ngOnInit() {
     }
 }
-SliderComponent.ɵfac = function SliderComponent_Factory(t) { return new (t || SliderComponent)(); };
-SliderComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SliderComponent, selectors: [["mg-slider"]], decls: 2, vars: 0, template: function SliderComponent_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelementStart(0, "p");
-            i0.ɵɵtext(1, "slider works!");
-            i0.ɵɵelementEnd();
-        }
-    }, styles: [""] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SliderComponent, [{
+SliderComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: SliderComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+SliderComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: SliderComponent, selector: "mg-slider", ngImport: i0, template: "<p>slider works!</p>\n", styles: [""] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: SliderComponent, decorators: [{
             type: Component,
             args: [{ selector: 'mg-slider', template: "<p>slider works!</p>\n", styles: [""] }]
-        }], function () { return []; }, null);
-})();
+        }], ctorParameters: function () { return []; } });
 
 class MaterialgrammiModule {
 }
-MaterialgrammiModule.ɵfac = function MaterialgrammiModule_Factory(t) { return new (t || MaterialgrammiModule)(); };
-MaterialgrammiModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: MaterialgrammiModule });
-MaterialgrammiModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
+MaterialgrammiModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MaterialgrammiModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+MaterialgrammiModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MaterialgrammiModule, declarations: [MaterialgrammiComponent,
+        TestComponentComponent,
+        AccordionComponent,
+        WidgetComponent,
+        AccordionItemComponent,
+        AlertComponent,
+        BreadcrumbComponent,
+        CardComponent,
+        ChipComponent,
+        DragableComponent,
+        DropableComponent,
+        FooterComponent,
+        CheckboxComponent,
+        DateInputComponent,
+        InputComponent,
+        RadioComponent,
+        SelectComponent,
+        SwitchComponent,
+        TextInputComponent,
+        ListComponent,
+        LoaderComponent,
+        NavbarComponent,
+        NoteComponent,
+        PaginationComponent,
+        TableComponent,
+        ToastComponent,
+        ChatComponent,
+        CollapseComponent,
+        DropdownComponent,
+        MegamenuComponent,
+        ButtonComponent,
+        SlideshowComponent,
+        ModalComponent,
+        SidebarComponent,
+        OverlayComponent,
+        OffcanvasComponent,
+        TabComponent,
+        WizardComponent,
+        NotificationsComponent,
+        CalendarComponent,
+        CountdownComponent,
+        ImageComponent,
+        DateRangeComponent,
+        ComponentComponent,
+        SliderComponent], imports: [CommonModule,
+        RouterModule], exports: [MaterialgrammiComponent,
+        TestComponentComponent,
+        AccordionComponent,
+        WidgetComponent,
+        AlertComponent,
+        BreadcrumbComponent,
+        CardComponent,
+        ChipComponent,
+        DragableComponent,
+        DropableComponent,
+        FooterComponent,
+        CheckboxComponent,
+        DateInputComponent,
+        InputComponent,
+        RadioComponent,
+        SelectComponent,
+        SwitchComponent,
+        TextInputComponent,
+        ListComponent,
+        LoaderComponent,
+        NavbarComponent,
+        NoteComponent,
+        PaginationComponent,
+        TableComponent,
+        ToastComponent,
+        ChatComponent,
+        CollapseComponent,
+        DropdownComponent,
+        MegamenuComponent,
+        ButtonComponent,
+        SlideshowComponent,
+        ModalComponent,
+        SidebarComponent,
+        OverlayComponent,
+        OffcanvasComponent,
+        TabComponent,
+        WizardComponent,
+        NotificationsComponent,
+        CalendarComponent,
+        CountdownComponent,
+        ImageComponent,
+        DateRangeComponent,
+        ComponentComponent] });
+MaterialgrammiModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MaterialgrammiModule, imports: [[
             CommonModule,
             RouterModule
         ]] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MaterialgrammiModule, [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MaterialgrammiModule, decorators: [{
             type: NgModule,
             args: [{
                     declarations: [
@@ -5754,98 +4002,7 @@ MaterialgrammiModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
                         ComponentComponent
                     ]
                 }]
-        }], null, null);
-})();
-(function () {
-    (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(MaterialgrammiModule, { declarations: [MaterialgrammiComponent,
-            TestComponentComponent,
-            AccordionComponent,
-            WidgetComponent,
-            AccordionItemComponent,
-            AlertComponent,
-            BreadcrumbComponent,
-            CardComponent,
-            ChipComponent,
-            DragableComponent,
-            DropableComponent,
-            FooterComponent,
-            CheckboxComponent,
-            DateInputComponent,
-            InputComponent,
-            RadioComponent,
-            SelectComponent,
-            SwitchComponent,
-            TextInputComponent,
-            ListComponent,
-            LoaderComponent,
-            NavbarComponent,
-            NoteComponent,
-            PaginationComponent,
-            TableComponent,
-            ToastComponent,
-            ChatComponent,
-            CollapseComponent,
-            DropdownComponent,
-            MegamenuComponent,
-            ButtonComponent,
-            SlideshowComponent,
-            ModalComponent,
-            SidebarComponent,
-            OverlayComponent,
-            OffcanvasComponent,
-            TabComponent,
-            WizardComponent,
-            NotificationsComponent,
-            CalendarComponent,
-            CountdownComponent,
-            ImageComponent,
-            DateRangeComponent,
-            ComponentComponent,
-            SliderComponent], imports: [CommonModule,
-            RouterModule], exports: [MaterialgrammiComponent,
-            TestComponentComponent,
-            AccordionComponent,
-            WidgetComponent,
-            AlertComponent,
-            BreadcrumbComponent,
-            CardComponent,
-            ChipComponent,
-            DragableComponent,
-            DropableComponent,
-            FooterComponent,
-            CheckboxComponent,
-            DateInputComponent,
-            InputComponent,
-            RadioComponent,
-            SelectComponent,
-            SwitchComponent,
-            TextInputComponent,
-            ListComponent,
-            LoaderComponent,
-            NavbarComponent,
-            NoteComponent,
-            PaginationComponent,
-            TableComponent,
-            ToastComponent,
-            ChatComponent,
-            CollapseComponent,
-            DropdownComponent,
-            MegamenuComponent,
-            ButtonComponent,
-            SlideshowComponent,
-            ModalComponent,
-            SidebarComponent,
-            OverlayComponent,
-            OffcanvasComponent,
-            TabComponent,
-            WizardComponent,
-            NotificationsComponent,
-            CalendarComponent,
-            CountdownComponent,
-            ImageComponent,
-            DateRangeComponent,
-            ComponentComponent] });
-})();
+        }] });
 
 /*
  * Public API Surface of materialgrammi

@@ -58,4 +58,3 @@ export declare class SlideshowComponent implements OnInit, AfterViewInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<SlideshowComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SlideshowComponent, "mg-slideshow", never, { "perPage": "perPage"; "id": "id"; "activePage": "activePage"; "fullWidthSlide": "fullWidthSlide"; "play": "play"; "timer": "timer"; "items": "items"; "heightAdjustment": "heightAdjustment"; "maxHeight": "maxHeight"; "showControls": "showControls"; "gap": "gap"; "class": "class"; }, {}, never, never>;
 }
-//# sourceMappingURL=slideshow.component.d.ts.map

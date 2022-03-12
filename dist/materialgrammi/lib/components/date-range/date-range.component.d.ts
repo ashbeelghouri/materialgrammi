@@ -37,4 +37,3 @@ export declare class DateRangeComponent implements OnInit, OnChanges {
     static ɵfac: i0.ɵɵFactoryDeclaration<DateRangeComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DateRangeComponent, "mg-daterange", never, { "labels": "labels"; "style": "style"; "class": "class"; }, { "range": "range"; }, never, never>;
 }
-//# sourceMappingURL=date-range.component.d.ts.map

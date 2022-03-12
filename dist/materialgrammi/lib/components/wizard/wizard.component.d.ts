@@ -16,4 +16,3 @@ export declare class WizardComponent implements OnInit, OnChanges {
     static ɵfac: i0.ɵɵFactoryDeclaration<WizardComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<WizardComponent, "mg-wizard", never, { "active": "active"; "id": "id"; "widgets": "widgets"; }, { "step": "step"; "isCompleted": "isCompleted"; }, never, ["*"]>;
 }
-//# sourceMappingURL=wizard.component.d.ts.map

@@ -6,4 +6,3 @@ export declare class MaterialgrammiComponent implements OnInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<MaterialgrammiComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<MaterialgrammiComponent, "lib-materialgrammi", never, {}, {}, never, never>;
 }
-//# sourceMappingURL=materialgrammi.component.d.ts.map

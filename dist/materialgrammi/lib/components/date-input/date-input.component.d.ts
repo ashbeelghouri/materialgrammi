@@ -30,4 +30,3 @@ export declare class DateInputComponent implements OnInit, OnChanges {
     static ɵfac: i0.ɵɵFactoryDeclaration<DateInputComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DateInputComponent, "mg-date", never, { "input": "input"; "label": "label"; "class": "class"; "calendar": "calendar"; "disabledRange": "disabledRange"; "icons": "icons"; "format": "format"; }, { "getdate": "getdate"; }, never, never>;
 }
-//# sourceMappingURL=date-input.component.d.ts.map

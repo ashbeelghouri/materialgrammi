@@ -29,4 +29,3 @@ export declare class InputComponent implements OnInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<InputComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<InputComponent, "mg-input", never, { "theme": "theme"; "fStyle": "fStyle"; "label": "label"; "placeholder": "placeholder"; "control": "control"; "type": "type"; "onDark": "onDark"; "class": "class"; "textValue": "textValue"; "rounded": "rounded"; }, { "value": "value"; "isFocused": "isFocused"; "keyup": "keyup"; }, never, never>;
 }
-//# sourceMappingURL=input.component.d.ts.map

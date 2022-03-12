@@ -12,4 +12,3 @@ export declare class NotificationsComponent implements OnInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<NotificationsComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<NotificationsComponent, "mg-notifications", never, { "theme": "theme"; "id": "id"; "position": "position"; "timer": "timer"; }, {}, never, never>;
 }
-//# sourceMappingURL=notifications.component.d.ts.map

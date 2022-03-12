@@ -6,4 +6,3 @@ export declare class SliderComponent implements OnInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<SliderComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SliderComponent, "mg-slider", never, {}, {}, never, never>;
 }
-//# sourceMappingURL=slider.component.d.ts.map

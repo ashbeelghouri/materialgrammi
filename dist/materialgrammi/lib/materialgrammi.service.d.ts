@@ -140,4 +140,3 @@ export declare class MaterialgrammiService {
     static ɵfac: i0.ɵɵFactoryDeclaration<MaterialgrammiService, never>;
     static ɵprov: i0.ɵɵInjectableDeclaration<MaterialgrammiService>;
 }
-//# sourceMappingURL=materialgrammi.service.d.ts.map

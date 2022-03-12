@@ -12,7 +12,7 @@ export declare class OverlayComponent implements OnInit {
     isClosed: EventEmitter<any>;
     constructor(service: MaterialgrammiService);
     ngOnInit(): void;
-    activator(): "active" | "";
+    activator(): "" | "active";
     subscribe(): void;
     mainClasses(): string;
     overlayClasses(): string;
@@ -20,4 +20,3 @@ export declare class OverlayComponent implements OnInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<OverlayComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<OverlayComponent, "mg-overlay", never, { "bgClass": "bgClass"; "overlayClass": "overlayClass"; "offSize": "offSize"; "canvasPosition": "canvasPosition"; "id": "id"; "active": "active"; }, { "isClosed": "isClosed"; }, never, ["*"]>;
 }
-//# sourceMappingURL=overlay.component.d.ts.map

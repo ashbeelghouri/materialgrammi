@@ -41,4 +41,3 @@ export declare class ButtonComponent implements OnInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<ButtonComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ButtonComponent, "mg-button", never, { "taskType": "taskType"; "btnStyle": "btnStyle"; "task": "task"; "target": "target"; "theme": "theme"; "class": "class"; "btnSize": "btnSize"; "isBlock": "isBlock"; "round": "round"; "allowMargin": "allowMargin"; "link": "link"; "allowShrink": "allowShrink"; "options": "options"; "isExternalLink": "isExternalLink"; "newTab": "newTab"; }, { "clicked": "clicked"; "active": "active"; }, never, ["*"]>;
 }
-//# sourceMappingURL=button.component.d.ts.map

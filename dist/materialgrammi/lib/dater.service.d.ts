@@ -47,4 +47,3 @@ export declare class DaterService {
     static ɵfac: i0.ɵɵFactoryDeclaration<DaterService, never>;
     static ɵprov: i0.ɵɵInjectableDeclaration<DaterService>;
 }
-//# sourceMappingURL=dater.service.d.ts.map

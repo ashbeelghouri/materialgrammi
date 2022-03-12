@@ -25,4 +25,3 @@ export declare class CountdownComponent implements AfterContentInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<CountdownComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CountdownComponent, "mg-countdown", never, { "till": "till"; "expiredText": "expiredText"; "parseProperties": "parseProperties"; "class": "class"; }, { "timeover": "timeover"; }, never, never>;
 }
-//# sourceMappingURL=countdown.component.d.ts.map

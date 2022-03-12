@@ -16,4 +16,3 @@ export declare class CollapseComponent implements OnInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<CollapseComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CollapseComponent, "mg-collapse", never, { "id": "id"; "show": "show"; "class": "class"; }, { "active": "active"; }, never, ["*"]>;
 }
-//# sourceMappingURL=collapse.component.d.ts.map

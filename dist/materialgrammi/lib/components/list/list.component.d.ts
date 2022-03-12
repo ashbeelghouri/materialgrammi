@@ -9,4 +9,3 @@ export declare class ListComponent implements OnInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<ListComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ListComponent, "mg-list", never, { "items": "items"; "theme": "theme"; "class": "class"; }, {}, never, never>;
 }
-//# sourceMappingURL=list.component.d.ts.map

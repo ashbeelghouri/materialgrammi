@@ -18,4 +18,3 @@ export declare class RadioComponent implements OnInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<RadioComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<RadioComponent, "mg-radio", never, { "options": "options"; "name": "name"; "size": "size"; "isInline": "isInline"; "theme": "theme"; "onDark": "onDark"; }, { "value": "value"; }, never, never>;
 }
-//# sourceMappingURL=radio.component.d.ts.map

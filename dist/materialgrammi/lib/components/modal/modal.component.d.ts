@@ -17,4 +17,3 @@ export declare class ModalComponent implements OnInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<ModalComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ModalComponent, "mg-modal", never, { "show": "show"; "id": "id"; "position": "position"; "modalSize": "modalSize"; "overlayClass": "overlayClass"; }, {}, never, ["*"]>;
 }
-//# sourceMappingURL=modal.component.d.ts.map

@@ -22,4 +22,3 @@ export declare class MegamenuComponent implements OnInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<MegamenuComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<MegamenuComponent, "mg-megamenu", never, { "id": "id"; "theme": "theme"; "menu": "menu"; }, {}, never, ["*"]>;
 }
-//# sourceMappingURL=megamenu.component.d.ts.map

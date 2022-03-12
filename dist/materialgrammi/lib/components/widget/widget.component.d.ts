@@ -31,4 +31,3 @@ export declare class WidgetComponent implements OnInit, OnChanges {
     static ɵfac: i0.ɵɵFactoryDeclaration<WidgetComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<WidgetComponent, "mg-widget", never, { "id": "id"; "parent": "parent"; "type": "type"; "options": "options"; "status": "status"; "standalone": "standalone"; }, { "triggered": "triggered"; }, never, ["[mg-data=header]", "*", "[mg-data=footer]"]>;
 }
-//# sourceMappingURL=widget.component.d.ts.map

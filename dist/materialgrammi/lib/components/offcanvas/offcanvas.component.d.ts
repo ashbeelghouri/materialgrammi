@@ -15,4 +15,3 @@ export declare class OffcanvasComponent implements OnInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<OffcanvasComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<OffcanvasComponent, "mg-offcanvas", never, { "active": "active"; "id": "id"; }, {}, never, ["[mg-data=sidebar]", "*"]>;
 }
-//# sourceMappingURL=offcanvas.component.d.ts.map

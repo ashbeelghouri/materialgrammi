@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import * as i0 from "@angular/core";
 import * as i1 from "@angular/common";
-const _c0 = ["*"];
 export class DragableComponent {
     constructor() {
         this.dragable = true;
@@ -24,32 +23,18 @@ export class DragableComponent {
         this.onEvent.emit(this.eventProperties);
     }
 }
-DragableComponent.ɵfac = function DragableComponent_Factory(t) { return new (t || DragableComponent)(); };
-DragableComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DragableComponent, selectors: [["mg-dragable"]], inputs: { dragable: "dragable", data: "data", class: "class" }, outputs: { onEvent: "onEvent" }, ngContentSelectors: _c0, decls: 4, vars: 2, consts: [[3, "ngClass"], [1, "is-draggable", 3, "draggable", "drag", "dragstart"], [1, "drag-element"]], template: function DragableComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵprojectionDef();
-        i0.ɵɵelementStart(0, "div", 0);
-        i0.ɵɵelementStart(1, "div", 1);
-        i0.ɵɵlistener("drag", function DragableComponent_Template_div_drag_1_listener($event) { return ctx.onDrag($event); })("dragstart", function DragableComponent_Template_div_dragstart_1_listener($event) { return ctx.onDrag($event); });
-        i0.ɵɵelementStart(2, "div", 2);
-        i0.ɵɵprojection(3);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        i0.ɵɵproperty("ngClass", ctx.class);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("draggable", ctx.dragable);
-    } }, directives: [i1.NgClass], styles: [".is-draggable[_ngcontent-%COMP%]{opacity:1!important;cursor:pointer}"] });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DragableComponent, [{
-        type: Component,
-        args: [{ selector: 'mg-dragable', template: "<div [ngClass]=\"class\">\n  <div class=\"is-draggable\" (drag)=\"onDrag($event)\" (dragstart)=\"onDrag($event)\" [draggable]=\"dragable\">\n    <div class=\"drag-element\">\n      <ng-content></ng-content>\n    </div>\n  </div>\n</div>\n", styles: [".is-draggable{opacity:1!important;cursor:pointer}\n"] }]
-    }], function () { return []; }, { dragable: [{
-            type: Input
-        }], data: [{
-            type: Input
-        }], class: [{
-            type: Input
-        }], onEvent: [{
-            type: Output
-        }] }); })();
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZHJhZ2FibGUuY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vcHJvamVjdHMvbWF0ZXJpYWxncmFtbWkvc3JjL2xpYi9jb21wb25lbnRzL2RyYWdhYmxlL2RyYWdhYmxlLmNvbXBvbmVudC50cyIsIi4uLy4uLy4uLy4uLy4uLy4uL3Byb2plY3RzL21hdGVyaWFsZ3JhbW1pL3NyYy9saWIvY29tcG9uZW50cy9kcmFnYWJsZS9kcmFnYWJsZS5jb21wb25lbnQuaHRtbCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUUsU0FBUyxFQUFFLFlBQVksRUFBRSxLQUFLLEVBQVUsTUFBTSxFQUFFLE1BQU0sZUFBZSxDQUFDOzs7O0FBTy9FLE1BQU0sT0FBTyxpQkFBaUI7SUFhNUI7UUFaUyxhQUFRLEdBQUcsSUFBSSxDQUFDO1FBQ2hCLFNBQUksR0FBUTtZQUNuQixJQUFJLEVBQUUsU0FBUztZQUNmLFVBQVUsRUFBRSxtQkFBbUI7U0FDaEMsQ0FBQztRQUNPLFVBQUssR0FBRyxFQUFFLENBQUM7UUFFVixZQUFPLEdBQUcsSUFBSSxZQUFZLEVBQUUsQ0FBQztRQUV2QyxvQkFBZSxHQUFHO1lBQ2hCLFlBQVksRUFBRSxLQUFLO1NBQ3BCLENBQUM7SUFDYyxDQUFDO0lBRWpCLFFBQVE7SUFDUixDQUFDO0lBRUQsTUFBTSxDQUFDLEtBQVU7UUFDZixLQUFLLENBQUMsWUFBWSxDQUFDLE9BQU8sQ0FBQyxNQUFNLEVBQUUsSUFBSSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLENBQUMsQ0FBQztRQUM5RCxLQUFLLENBQUMsWUFBWSxDQUFDLGFBQWEsR0FBRyxLQUFLLENBQUM7UUFDekMsS0FBSyxDQUFDLGVBQWUsRUFBRSxDQUFDO1FBQ3hCLElBQUksQ0FBQyxPQUFPLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxlQUFlLENBQUMsQ0FBQztJQUMxQyxDQUFDOztrRkF2QlUsaUJBQWlCO29FQUFqQixpQkFBaUI7O1FDUDlCLDhCQUF1QjtRQUNyQiw4QkFBc0c7UUFBNUUsK0ZBQVEsa0JBQWMsSUFBQyw0RkFBYyxrQkFBYyxJQUE1QjtRQUMvQyw4QkFBMEI7UUFDeEIsa0JBQXlCO1FBQzNCLGlCQUFNO1FBQ1IsaUJBQU07UUFDUixpQkFBTTs7UUFORCxtQ0FBaUI7UUFDMkQsZUFBc0I7UUFBdEIsd0NBQXNCOzt1RkRNMUYsaUJBQWlCO2NBTDdCLFNBQVM7MkJBQ0UsYUFBYTtzQ0FLZCxRQUFRO2tCQUFoQixLQUFLO1lBQ0csSUFBSTtrQkFBWixLQUFLO1lBSUcsS0FBSztrQkFBYixLQUFLO1lBRUksT0FBTztrQkFBaEIsTUFBTSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbXBvbmVudCwgRXZlbnRFbWl0dGVyLCBJbnB1dCwgT25Jbml0LCBPdXRwdXQgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcblxuQENvbXBvbmVudCh7XG4gIHNlbGVjdG9yOiAnbWctZHJhZ2FibGUnLFxuICB0ZW1wbGF0ZVVybDogJy4vZHJhZ2FibGUuY29tcG9uZW50Lmh0bWwnLFxuICBzdHlsZVVybHM6IFsnLi9kcmFnYWJsZS5jb21wb25lbnQuY3NzJ11cbn0pXG5leHBvcnQgY2xhc3MgRHJhZ2FibGVDb21wb25lbnQgaW1wbGVtZW50cyBPbkluaXQge1xuICBASW5wdXQoKSBkcmFnYWJsZSA9IHRydWU7XG4gIEBJbnB1dCgpIGRhdGE6IGFueSA9IHtcbiAgICBuYW1lOiBcIkFzaGJlZWxcIixcbiAgICBwcm9mZXNzaW9uOiBcIlNvZnR3YXJlIEVuZ2luZWVyXCJcbiAgfTtcbiAgQElucHV0KCkgY2xhc3MgPSBcIlwiO1xuXG4gIEBPdXRwdXQoKSBvbkV2ZW50ID0gbmV3IEV2ZW50RW1pdHRlcigpO1xuXG4gIGV2ZW50UHJvcGVydGllcyA9IHtcbiAgICBpc0luRHJhZ01vZGU6IGZhbHNlXG4gIH07XG4gIGNvbnN0cnVjdG9yKCkgeyB9XG5cbiAgbmdPbkluaXQoKTogdm9pZCB7XG4gIH1cblxuICBvbkRyYWcoZXZlbnQ6IGFueSkge1xuICAgIGV2ZW50LmRhdGFUcmFuc2Zlci5zZXREYXRhKFwidGV4dFwiLCBKU09OLnN0cmluZ2lmeSh0aGlzLmRhdGEpKTtcbiAgICBldmVudC5kYXRhVHJhbnNmZXIuZWZmZWN0QWxsb3dlZCA9IFwiYWxsXCI7XG4gICAgZXZlbnQuc3RvcFByb3BhZ2F0aW9uKCk7XG4gICAgdGhpcy5vbkV2ZW50LmVtaXQodGhpcy5ldmVudFByb3BlcnRpZXMpO1xuICB9XG5cbn1cbiIsIjxkaXYgW25nQ2xhc3NdPVwiY2xhc3NcIj5cbiAgPGRpdiBjbGFzcz1cImlzLWRyYWdnYWJsZVwiIChkcmFnKT1cIm9uRHJhZygkZXZlbnQpXCIgKGRyYWdzdGFydCk9XCJvbkRyYWcoJGV2ZW50KVwiIFtkcmFnZ2FibGVdPVwiZHJhZ2FibGVcIj5cbiAgICA8ZGl2IGNsYXNzPVwiZHJhZy1lbGVtZW50XCI+XG4gICAgICA8bmctY29udGVudD48L25nLWNvbnRlbnQ+XG4gICAgPC9kaXY+XG4gIDwvZGl2PlxuPC9kaXY+XG4iXX0=
+DragableComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: DragableComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+DragableComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: DragableComponent, selector: "mg-dragable", inputs: { dragable: "dragable", data: "data", class: "class" }, outputs: { onEvent: "onEvent" }, ngImport: i0, template: "<div [ngClass]=\"class\">\n  <div class=\"is-draggable\" (drag)=\"onDrag($event)\" (dragstart)=\"onDrag($event)\" [draggable]=\"dragable\">\n    <div class=\"drag-element\">\n      <ng-content></ng-content>\n    </div>\n  </div>\n</div>\n", styles: [".is-draggable{opacity:1!important;cursor:pointer}\n"], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: DragableComponent, decorators: [{
+            type: Component,
+            args: [{ selector: 'mg-dragable', template: "<div [ngClass]=\"class\">\n  <div class=\"is-draggable\" (drag)=\"onDrag($event)\" (dragstart)=\"onDrag($event)\" [draggable]=\"dragable\">\n    <div class=\"drag-element\">\n      <ng-content></ng-content>\n    </div>\n  </div>\n</div>\n", styles: [".is-draggable{opacity:1!important;cursor:pointer}\n"] }]
+        }], ctorParameters: function () { return []; }, propDecorators: { dragable: [{
+                type: Input
+            }], data: [{
+                type: Input
+            }], class: [{
+                type: Input
+            }], onEvent: [{
+                type: Output
+            }] } });
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZHJhZ2FibGUuY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vcHJvamVjdHMvbWF0ZXJpYWxncmFtbWkvc3JjL2xpYi9jb21wb25lbnRzL2RyYWdhYmxlL2RyYWdhYmxlLmNvbXBvbmVudC50cyIsIi4uLy4uLy4uLy4uLy4uLy4uL3Byb2plY3RzL21hdGVyaWFsZ3JhbW1pL3NyYy9saWIvY29tcG9uZW50cy9kcmFnYWJsZS9kcmFnYWJsZS5jb21wb25lbnQuaHRtbCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUUsU0FBUyxFQUFFLFlBQVksRUFBRSxLQUFLLEVBQVUsTUFBTSxFQUFFLE1BQU0sZUFBZSxDQUFDOzs7QUFPL0UsTUFBTSxPQUFPLGlCQUFpQjtJQWE1QjtRQVpTLGFBQVEsR0FBRyxJQUFJLENBQUM7UUFDaEIsU0FBSSxHQUFRO1lBQ25CLElBQUksRUFBRSxTQUFTO1lBQ2YsVUFBVSxFQUFFLG1CQUFtQjtTQUNoQyxDQUFDO1FBQ08sVUFBSyxHQUFHLEVBQUUsQ0FBQztRQUVWLFlBQU8sR0FBRyxJQUFJLFlBQVksRUFBRSxDQUFDO1FBRXZDLG9CQUFlLEdBQUc7WUFDaEIsWUFBWSxFQUFFLEtBQUs7U0FDcEIsQ0FBQztJQUNjLENBQUM7SUFFakIsUUFBUTtJQUNSLENBQUM7SUFFRCxNQUFNLENBQUMsS0FBVTtRQUNmLEtBQUssQ0FBQyxZQUFZLENBQUMsT0FBTyxDQUFDLE1BQU0sRUFBRSxJQUFJLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsQ0FBQyxDQUFDO1FBQzlELEtBQUssQ0FBQyxZQUFZLENBQUMsYUFBYSxHQUFHLEtBQUssQ0FBQztRQUN6QyxLQUFLLENBQUMsZUFBZSxFQUFFLENBQUM7UUFDeEIsSUFBSSxDQUFDLE9BQU8sQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLGVBQWUsQ0FBQyxDQUFDO0lBQzFDLENBQUM7OzhHQXZCVSxpQkFBaUI7a0dBQWpCLGlCQUFpQixvSkNQOUIsZ1BBT0E7MkZEQWEsaUJBQWlCO2tCQUw3QixTQUFTOytCQUNFLGFBQWE7MEVBS2QsUUFBUTtzQkFBaEIsS0FBSztnQkFDRyxJQUFJO3NCQUFaLEtBQUs7Z0JBSUcsS0FBSztzQkFBYixLQUFLO2dCQUVJLE9BQU87c0JBQWhCLE1BQU0iLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBDb21wb25lbnQsIEV2ZW50RW1pdHRlciwgSW5wdXQsIE9uSW5pdCwgT3V0cHV0IH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ21nLWRyYWdhYmxlJyxcbiAgdGVtcGxhdGVVcmw6ICcuL2RyYWdhYmxlLmNvbXBvbmVudC5odG1sJyxcbiAgc3R5bGVVcmxzOiBbJy4vZHJhZ2FibGUuY29tcG9uZW50LmNzcyddXG59KVxuZXhwb3J0IGNsYXNzIERyYWdhYmxlQ29tcG9uZW50IGltcGxlbWVudHMgT25Jbml0IHtcbiAgQElucHV0KCkgZHJhZ2FibGUgPSB0cnVlO1xuICBASW5wdXQoKSBkYXRhOiBhbnkgPSB7XG4gICAgbmFtZTogXCJBc2hiZWVsXCIsXG4gICAgcHJvZmVzc2lvbjogXCJTb2Z0d2FyZSBFbmdpbmVlclwiXG4gIH07XG4gIEBJbnB1dCgpIGNsYXNzID0gXCJcIjtcblxuICBAT3V0cHV0KCkgb25FdmVudCA9IG5ldyBFdmVudEVtaXR0ZXIoKTtcblxuICBldmVudFByb3BlcnRpZXMgPSB7XG4gICAgaXNJbkRyYWdNb2RlOiBmYWxzZVxuICB9O1xuICBjb25zdHJ1Y3RvcigpIHsgfVxuXG4gIG5nT25Jbml0KCk6IHZvaWQge1xuICB9XG5cbiAgb25EcmFnKGV2ZW50OiBhbnkpIHtcbiAgICBldmVudC5kYXRhVHJhbnNmZXIuc2V0RGF0YShcInRleHRcIiwgSlNPTi5zdHJpbmdpZnkodGhpcy5kYXRhKSk7XG4gICAgZXZlbnQuZGF0YVRyYW5zZmVyLmVmZmVjdEFsbG93ZWQgPSBcImFsbFwiO1xuICAgIGV2ZW50LnN0b3BQcm9wYWdhdGlvbigpO1xuICAgIHRoaXMub25FdmVudC5lbWl0KHRoaXMuZXZlbnRQcm9wZXJ0aWVzKTtcbiAgfVxuXG59XG4iLCI8ZGl2IFtuZ0NsYXNzXT1cImNsYXNzXCI+XG4gIDxkaXYgY2xhc3M9XCJpcy1kcmFnZ2FibGVcIiAoZHJhZyk9XCJvbkRyYWcoJGV2ZW50KVwiIChkcmFnc3RhcnQpPVwib25EcmFnKCRldmVudClcIiBbZHJhZ2dhYmxlXT1cImRyYWdhYmxlXCI+XG4gICAgPGRpdiBjbGFzcz1cImRyYWctZWxlbWVudFwiPlxuICAgICAgPG5nLWNvbnRlbnQ+PC9uZy1jb250ZW50PlxuICAgIDwvZGl2PlxuICA8L2Rpdj5cbjwvZGl2PlxuIl19

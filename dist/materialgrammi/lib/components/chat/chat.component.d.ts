@@ -27,4 +27,3 @@ export declare class ChatComponent implements OnInit, OnChanges, AfterViewChecke
     static ɵfac: i0.ɵɵFactoryDeclaration<ChatComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ChatComponent, "mg-chat", never, { "header": "header"; "show": "show"; "openBody": "openBody"; "messages": "messages"; "class": "class"; }, { "chatInput": "chatInput"; }, never, never>;
 }
-//# sourceMappingURL=chat.component.d.ts.map

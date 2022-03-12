@@ -23,4 +23,3 @@ export declare class DropableComponent implements OnInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<DropableComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DropableComponent, "mg-dropable", never, { "dropFiles": "dropFiles"; "class": "class"; }, { "onEvent": "onEvent"; "dataRecieved": "dataRecieved"; }, never, ["*"]>;
 }
-//# sourceMappingURL=dropable.component.d.ts.map

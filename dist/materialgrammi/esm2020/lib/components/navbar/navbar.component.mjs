@@ -2,131 +2,6 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import * as i0 from "@angular/core";
 import * as i1 from "@angular/common";
 import * as i2 from "@angular/router";
-function NavbarComponent_ng_container_6_a_2_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "a", 10);
-} if (rf & 2) {
-    const ctx_r3 = i0.ɵɵnextContext(2);
-    i0.ɵɵproperty("innerHtml", ctx_r3.navData.left.data.name, i0.ɵɵsanitizeHtml);
-} }
-function NavbarComponent_ng_container_6_Template(rf, ctx) { if (rf & 1) {
-    const _r5 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementContainerStart(0);
-    i0.ɵɵelementStart(1, "input", 8);
-    i0.ɵɵlistener("keyup", function NavbarComponent_ng_container_6_Template_input_keyup_1_listener($event) { i0.ɵɵrestoreView(_r5); const ctx_r4 = i0.ɵɵnextContext(); return ctx_r4.onEnterSearchQuery($event); });
-    i0.ɵɵelementEnd();
-    i0.ɵɵtemplate(2, NavbarComponent_ng_container_6_a_2_Template, 1, 1, "a", 9);
-    i0.ɵɵelementContainerEnd();
-} if (rf & 2) {
-    const ctx_r0 = i0.ɵɵnextContext();
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("placeholder", ctx_r0.navData.left.data.placeholder);
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngIf", ctx_r0.navData.left.data.btn);
-} }
-function NavbarComponent_ng_container_7_ng_container_1_ng_container_1_a_4_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "a", 16);
-} if (rf & 2) {
-    const droplink_r11 = ctx.$implicit;
-    i0.ɵɵproperty("innerHtml", droplink_r11.name, i0.ɵɵsanitizeHtml);
-} }
-function NavbarComponent_ng_container_7_ng_container_1_ng_container_1_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementContainerStart(0);
-    i0.ɵɵelementStart(1, "div", 12);
-    i0.ɵɵelement(2, "a", 13);
-    i0.ɵɵelementStart(3, "div", 14);
-    i0.ɵɵtemplate(4, NavbarComponent_ng_container_7_ng_container_1_ng_container_1_a_4_Template, 1, 1, "a", 15);
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementContainerEnd();
-} if (rf & 2) {
-    const ndata_r7 = i0.ɵɵnextContext().$implicit;
-    i0.ɵɵadvance(2);
-    i0.ɵɵproperty("innerHtml", ndata_r7.name, i0.ɵɵsanitizeHtml)("routerLink", ndata_r7.link);
-    i0.ɵɵadvance(2);
-    i0.ɵɵproperty("ngForOf", ndata_r7.links);
-} }
-function NavbarComponent_ng_container_7_ng_container_1_ng_container_2_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementContainerStart(0);
-    i0.ɵɵelement(1, "a", 3);
-    i0.ɵɵelementContainerEnd();
-} if (rf & 2) {
-    const ndata_r7 = i0.ɵɵnextContext().$implicit;
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("innerHtml", ndata_r7.name, i0.ɵɵsanitizeHtml)("routerLink", ndata_r7.link);
-} }
-function NavbarComponent_ng_container_7_ng_container_1_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementContainerStart(0);
-    i0.ɵɵtemplate(1, NavbarComponent_ng_container_7_ng_container_1_ng_container_1_Template, 5, 3, "ng-container", 6);
-    i0.ɵɵtemplate(2, NavbarComponent_ng_container_7_ng_container_1_ng_container_2_Template, 2, 2, "ng-container", 6);
-    i0.ɵɵelementContainerEnd();
-} if (rf & 2) {
-    const ndata_r7 = ctx.$implicit;
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngIf", ndata_r7.type && ndata_r7.type == "dropdown");
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngIf", !ndata_r7.type);
-} }
-function NavbarComponent_ng_container_7_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementContainerStart(0);
-    i0.ɵɵtemplate(1, NavbarComponent_ng_container_7_ng_container_1_Template, 3, 2, "ng-container", 11);
-    i0.ɵɵelementContainerEnd();
-} if (rf & 2) {
-    const ctx_r1 = i0.ɵɵnextContext();
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngForOf", ctx_r1.navData.left.data);
-} }
-function NavbarComponent_ng_container_9_ng_container_1_ng_container_1_a_4_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "a", 16);
-} if (rf & 2) {
-    const droplink_r19 = ctx.$implicit;
-    i0.ɵɵproperty("innerHtml", droplink_r19.name, i0.ɵɵsanitizeHtml);
-} }
-function NavbarComponent_ng_container_9_ng_container_1_ng_container_1_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementContainerStart(0);
-    i0.ɵɵelementStart(1, "div", 12);
-    i0.ɵɵelement(2, "a", 13);
-    i0.ɵɵelementStart(3, "div", 14);
-    i0.ɵɵtemplate(4, NavbarComponent_ng_container_9_ng_container_1_ng_container_1_a_4_Template, 1, 1, "a", 15);
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementContainerEnd();
-} if (rf & 2) {
-    const ndata_r15 = i0.ɵɵnextContext().$implicit;
-    i0.ɵɵadvance(2);
-    i0.ɵɵproperty("innerHtml", ndata_r15.name, i0.ɵɵsanitizeHtml)("routerLink", ndata_r15.link);
-    i0.ɵɵadvance(2);
-    i0.ɵɵproperty("ngForOf", ndata_r15.links);
-} }
-function NavbarComponent_ng_container_9_ng_container_1_ng_container_2_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementContainerStart(0);
-    i0.ɵɵelement(1, "a", 3);
-    i0.ɵɵelementContainerEnd();
-} if (rf & 2) {
-    const ndata_r15 = i0.ɵɵnextContext().$implicit;
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("innerHtml", ndata_r15.name, i0.ɵɵsanitizeHtml)("routerLink", ndata_r15.link);
-} }
-function NavbarComponent_ng_container_9_ng_container_1_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementContainerStart(0);
-    i0.ɵɵtemplate(1, NavbarComponent_ng_container_9_ng_container_1_ng_container_1_Template, 5, 3, "ng-container", 6);
-    i0.ɵɵtemplate(2, NavbarComponent_ng_container_9_ng_container_1_ng_container_2_Template, 2, 2, "ng-container", 6);
-    i0.ɵɵelementContainerEnd();
-} if (rf & 2) {
-    const ndata_r15 = ctx.$implicit;
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngIf", ndata_r15.type && ndata_r15.type == "dropdown");
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngIf", !ndata_r15.type);
-} }
-function NavbarComponent_ng_container_9_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementContainerStart(0);
-    i0.ɵɵtemplate(1, NavbarComponent_ng_container_9_ng_container_1_Template, 3, 2, "ng-container", 11);
-    i0.ɵɵelementContainerEnd();
-} if (rf & 2) {
-    const ctx_r2 = i0.ɵɵnextContext();
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngForOf", ctx_r2.navData.right.data);
-} }
 export class NavbarComponent {
     constructor() {
         this.searchedText = new EventEmitter();
@@ -220,56 +95,24 @@ export class NavbarComponent {
         this.searchedText.emit(this.searchQuery);
     }
 }
-NavbarComponent.ɵfac = function NavbarComponent_Factory(t) { return new (t || NavbarComponent)(); };
-NavbarComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: NavbarComponent, selectors: [["mg-navbar"]], inputs: { spaceAround: "spaceAround", theme: "theme", onSmallMenuButton: "onSmallMenuButton", isFixed: "isFixed", partitionType: "partitionType", navData: "navData" }, outputs: { searchedText: "searchedText" }, decls: 10, vars: 10, consts: [[1, "navbar-wrapper"], [3, "ngClass"], [1, "section", "brand"], [3, "innerHtml", "routerLink"], [1, "small-only-open-nav", 3, "innerHtml", "click"], [1, "section", "left-nav"], [4, "ngIf"], [1, "section", "right-nav"], ["type", "text", 1, "input", 3, "placeholder", "keyup"], ["class", "input-button", 3, "innerHtml", 4, "ngIf"], [1, "input-button", 3, "innerHtml"], [4, "ngFor", "ngForOf"], [1, "dropdown"], [1, "trigger-dropdown", 3, "innerHtml", "routerLink"], [1, "drop-menu"], [3, "innerHtml", 4, "ngFor", "ngForOf"], [3, "innerHtml"]], template: function NavbarComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 0);
-        i0.ɵɵelementStart(1, "div", 1);
-        i0.ɵɵelementStart(2, "div", 2);
-        i0.ɵɵelement(3, "a", 3);
-        i0.ɵɵelementStart(4, "a", 4);
-        i0.ɵɵlistener("click", function NavbarComponent_Template_a_click_4_listener() { return ctx.toggleNav(); });
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(5, "div", 5);
-        i0.ɵɵtemplate(6, NavbarComponent_ng_container_6_Template, 3, 2, "ng-container", 6);
-        i0.ɵɵtemplate(7, NavbarComponent_ng_container_7_Template, 2, 1, "ng-container", 6);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(8, "div", 7);
-        i0.ɵɵtemplate(9, NavbarComponent_ng_container_9_Template, 2, 1, "ng-container", 6);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        i0.ɵɵadvance(1);
-        i0.ɵɵclassMapInterpolate1("navbar ", ctx.theme, "");
-        i0.ɵɵproperty("ngClass", ctx.mainNavClasses());
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("innerHtml", ctx.navData.brand.name, i0.ɵɵsanitizeHtml)("routerLink", ctx.navData.brand.link);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("innerHtml", ctx.onSmallMenuButton, i0.ɵɵsanitizeHtml);
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("ngIf", ctx.navData && ctx.navData.left && ctx.navData.left.navType == "input");
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", ctx.navData && ctx.navData.left && ctx.navData.left.navType == "links");
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("ngIf", ctx.navData && ctx.navData.right && ctx.navData.right.navType == "links");
-    } }, directives: [i1.NgClass, i2.RouterLinkWithHref, i1.NgIf, i1.NgForOf], styles: [""] });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(NavbarComponent, [{
-        type: Component,
-        args: [{ selector: 'mg-navbar', template: "<div class=\"navbar-wrapper\">\n  <div class=\"navbar {{theme}}\" [ngClass]=\"mainNavClasses()\">\n    <div class=\"section brand\">\n      <a [innerHtml]=\"navData.brand.name\" [routerLink]=\"navData.brand.link\"></a>\n      <a (click)=\"toggleNav()\" class=\"small-only-open-nav\" [innerHtml]=\"onSmallMenuButton\"></a>\n    </div>\n\n    <div class=\"section left-nav\">\n      <ng-container *ngIf=\"navData && navData.left && navData.left.navType == 'input'\">\n        <input type=\"text\" (keyup) = \"onEnterSearchQuery($event)\" class=\"input\" [placeholder]=\"navData.left.data.placeholder\" />\n        <a class=\"input-button\" *ngIf=\"navData.left.data.btn\" [innerHtml]=\"navData.left.data.name\"></a>\n      </ng-container>\n      <ng-container *ngIf=\"navData && navData.left && navData.left.navType == 'links'\">\n        <ng-container *ngFor=\"let ndata of navData.left.data\">\n          <!-- dropdown -->\n          <ng-container *ngIf=\"ndata.type && ndata.type == 'dropdown'\">\n            <div class=\"dropdown\">\n              <a [innerHtml]=\"ndata.name\" [routerLink]=\"ndata.link\" class=\"trigger-dropdown\"></a>\n              <div class=\"drop-menu\">\n                <a *ngFor=\"let droplink of ndata.links\" [innerHtml]=\"droplink.name\"></a>\n              </div>\n            </div>\n          </ng-container>\n          <ng-container *ngIf=\"!ndata.type\">\n            <a [innerHtml]=\"ndata.name\" [routerLink]=\"ndata.link\"></a>\n          </ng-container>\n        </ng-container>\n      </ng-container>\n    </div>\n    <div class=\"section right-nav\">\n      <ng-container *ngIf=\"navData && navData.right && navData.right.navType == 'links'\">\n        <ng-container *ngFor=\"let ndata of navData.right.data\">\n          <!-- dropdown -->\n          <ng-container *ngIf=\"ndata.type && ndata.type == 'dropdown'\">\n            <div class=\"dropdown\">\n              <a [innerHtml]=\"ndata.name\" [routerLink]=\"ndata.link\" class=\"trigger-dropdown\"></a>\n              <div class=\"drop-menu\">\n                <a *ngFor=\"let droplink of ndata.links\" [innerHtml]=\"droplink.name\"></a>\n              </div>\n            </div>\n          </ng-container>\n          <ng-container *ngIf=\"!ndata.type\">\n            <a [innerHtml]=\"ndata.name\" [routerLink]=\"ndata.link\"></a>\n          </ng-container>\n        </ng-container>\n      </ng-container>\n    </div>\n  </div>\n</div>\n", styles: [""] }]
-    }], function () { return []; }, { searchedText: [{
-            type: Output
-        }], spaceAround: [{
-            type: Input
-        }], theme: [{
-            type: Input
-        }], onSmallMenuButton: [{
-            type: Input
-        }], isFixed: [{
-            type: Input
-        }], partitionType: [{
-            type: Input
-        }], navData: [{
-            type: Input
-        }] }); })();
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibmF2YmFyLmNvbXBvbmVudC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uL3Byb2plY3RzL21hdGVyaWFsZ3JhbW1pL3NyYy9saWIvY29tcG9uZW50cy9uYXZiYXIvbmF2YmFyLmNvbXBvbmVudC50cyIsIi4uLy4uLy4uLy4uLy4uLy4uL3Byb2plY3RzL21hdGVyaWFsZ3JhbW1pL3NyYy9saWIvY29tcG9uZW50cy9uYXZiYXIvbmF2YmFyLmNvbXBvbmVudC5odG1sIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sRUFBRSxTQUFTLEVBQUUsWUFBWSxFQUFFLEtBQUssRUFBVSxNQUFNLEVBQUUsTUFBTSxlQUFlLENBQUM7Ozs7O0lDVXZFLHdCQUErRjs7O0lBQXpDLDRFQUFvQzs7OztJQUY1Riw2QkFBaUY7SUFDL0UsZ0NBQXdIO0lBQXJHLDBLQUFXLGlDQUEwQixJQUFDO0lBQXpELGlCQUF3SDtJQUN4SCwyRUFBK0Y7SUFDakcsMEJBQWU7OztJQUYyRCxlQUE2QztJQUE3QyxrRUFBNkM7SUFDNUYsZUFBMkI7SUFBM0IsbURBQTJCOzs7SUFTNUMsd0JBQXdFOzs7SUFBaEMsZ0VBQTJCOzs7SUFKekUsNkJBQTZEO0lBQzNELCtCQUFzQjtJQUNwQix3QkFBbUY7SUFDbkYsK0JBQXVCO0lBQ3JCLDBHQUF3RTtJQUMxRSxpQkFBTTtJQUNSLGlCQUFNO0lBQ1IsMEJBQWU7OztJQUxSLGVBQXdCO0lBQXhCLDREQUF3Qiw2QkFBQTtJQUVELGVBQWM7SUFBZCx3Q0FBYzs7O0lBSTVDLDZCQUFrQztJQUNoQyx1QkFBMEQ7SUFDNUQsMEJBQWU7OztJQURWLGVBQXdCO0lBQXhCLDREQUF3Qiw2QkFBQTs7O0lBWC9CLDZCQUFzRDtJQUVwRCxnSEFPZTtJQUNmLGdIQUVlO0lBQ2pCLDBCQUFlOzs7SUFYRSxlQUE0QztJQUE1QyxtRUFBNEM7SUFRNUMsZUFBaUI7SUFBakIscUNBQWlCOzs7SUFYcEMsNkJBQWlGO0lBQy9FLGtHQWFlO0lBQ2pCLDBCQUFlOzs7SUFkbUIsZUFBb0I7SUFBcEIsa0RBQW9COzs7SUF3QjVDLHdCQUF3RTs7O0lBQWhDLGdFQUEyQjs7O0lBSnpFLDZCQUE2RDtJQUMzRCwrQkFBc0I7SUFDcEIsd0JBQW1GO0lBQ25GLCtCQUF1QjtJQUNyQiwwR0FBd0U7SUFDMUUsaUJBQU07SUFDUixpQkFBTTtJQUNSLDBCQUFlOzs7SUFMUixlQUF3QjtJQUF4Qiw2REFBd0IsOEJBQUE7SUFFRCxlQUFjO0lBQWQseUNBQWM7OztJQUk1Qyw2QkFBa0M7SUFDaEMsdUJBQTBEO0lBQzVELDBCQUFlOzs7SUFEVixlQUF3QjtJQUF4Qiw2REFBd0IsOEJBQUE7OztJQVgvQiw2QkFBdUQ7SUFFckQsZ0hBT2U7SUFDZixnSEFFZTtJQUNqQiwwQkFBZTs7O0lBWEUsZUFBNEM7SUFBNUMscUVBQTRDO0lBUTVDLGVBQWlCO0lBQWpCLHNDQUFpQjs7O0lBWHBDLDZCQUFtRjtJQUNqRixrR0FhZTtJQUNqQiwwQkFBZTs7O0lBZG1CLGVBQXFCO0lBQXJCLG1EQUFxQjs7QUR4QjdELE1BQU0sT0FBTyxlQUFlO0lBeUQxQjtRQXhEVSxpQkFBWSxHQUFHLElBQUksWUFBWSxFQUFFLENBQUM7UUFDbkMsZ0JBQVcsR0FBRyxJQUFJLENBQUM7UUFDbkIsVUFBSyxHQUFHLE1BQU0sQ0FBQztRQUNmLHNCQUFpQixHQUFHLEdBQUcsQ0FBQztRQUN4QixZQUFPLEdBQUcsS0FBSyxDQUFDO1FBQ2hCLGtCQUFhLEdBQUcsS0FBSyxDQUFDO1FBQy9CLE1BQU07UUFDTixNQUFNO1FBQ04sTUFBTTtRQUNHLFlBQU8sR0FBUTtZQUN0QixLQUFLLEVBQUU7Z0JBQ0wsSUFBSSxFQUFFLHdCQUF3QjtnQkFDOUIsSUFBSSxFQUFFLEdBQUc7YUFDUjtZQUNELElBQUksRUFBRTtnQkFDSixPQUFPLEVBQUUsT0FBTztnQkFDaEIsSUFBSSxFQUFFO29CQUNKLEdBQUcsRUFBRSxJQUFJO29CQUNULElBQUksRUFBRSwrQkFBK0I7b0JBQ3JDLFdBQVcsRUFBRSxRQUFRO29CQUNyQixFQUFFLEVBQUUsR0FBRztpQkFDUjthQUNGO1lBQ0gsS0FBSyxFQUFFO2dCQUNMLE9BQU8sRUFBRSxPQUFPO2dCQUNoQixJQUFJLEVBQUUsQ0FBQzt3QkFDTCxJQUFJLEVBQUUsNkJBQTZCO3dCQUNuQyxJQUFJLEVBQUUsR0FBRzt3QkFDVCxNQUFNLEVBQUUsS0FBSztxQkFDZCxFQUFFO3dCQUNELElBQUksRUFBRSw2QkFBNkI7d0JBQ25DLElBQUksRUFBRSxHQUFHO3dCQUNULE1BQU0sRUFBRSxLQUFLO3FCQUNkLEVBQUU7d0JBQ0QsSUFBSSxFQUFFLFVBQVU7d0JBQ2hCLElBQUksRUFBRSw2QkFBNkI7d0JBQ25DLEtBQUssRUFBRSxDQUFDO2dDQUNOLElBQUksRUFBRSxjQUFjO2dDQUNwQixJQUFJLEVBQUUsR0FBRzs2QkFDVixFQUFFO2dDQUNELElBQUksRUFBRSxpQkFBaUI7Z0NBQ3ZCLElBQUksRUFBRSxHQUFHOzZCQUNWLENBQUM7d0JBQ0YsTUFBTSxFQUFFLEtBQUs7cUJBQ2QsRUFBRTt3QkFDRCxJQUFJLEVBQUUsaUNBQWlDO3dCQUN2QyxJQUFJLEVBQUUsR0FBRzt3QkFDVCxNQUFNLEVBQUUsS0FBSztxQkFDZCxDQUFDO2FBQ0g7U0FDRixDQUFDO1FBRUYsa0JBQWEsR0FBRyxLQUFLLENBQUM7UUFFdEIsZ0JBQVcsR0FBRyxFQUFFLENBQUM7SUFFRCxDQUFDO0lBRWpCLFFBQVE7SUFDUixDQUFDO0lBRUQsWUFBWTtRQUNWLE9BQU8sSUFBSSxDQUFDLGFBQWEsQ0FBQyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxFQUFFLENBQUM7SUFDNUMsQ0FBQztJQUVELFNBQVM7UUFDUCxJQUFJLENBQUMsYUFBYSxHQUFHLENBQUMsSUFBSSxDQUFDLGFBQWEsQ0FBQztJQUMzQyxDQUFDO0lBRUQsY0FBYztRQUNaLElBQUksT0FBTyxHQUFHLElBQUksQ0FBQyxZQUFZLEVBQUUsQ0FBQztRQUVsQyxJQUFJLElBQUksQ0FBQyxPQUFPLEVBQUU7WUFDaEIsT0FBTyxJQUFJLFFBQVEsQ0FBQztTQUNyQjtRQUVELE9BQU8sSUFBSSxJQUFJLENBQUMsV0FBVyxDQUFDLENBQUMsQ0FBQyxlQUFlLENBQUMsQ0FBQyxDQUFDLEVBQUUsQ0FBQztRQUVuRCxJQUFJLElBQUksQ0FBQyxhQUFhLElBQUksS0FBSyxFQUFFO1lBQy9CLE9BQU8sSUFBSSxlQUFlLENBQUM7U0FDNUI7YUFBTSxJQUFJLElBQUksQ0FBQyxhQUFhLElBQUksS0FBSyxFQUFFO1lBQ3RDLE9BQU8sSUFBSSxlQUFlLENBQUM7U0FDNUI7YUFBTSxJQUFJLElBQUksQ0FBQyxhQUFhLElBQUksS0FBSyxFQUFFO1lBQ3RDLE9BQU8sSUFBSSxlQUFlLENBQUM7U0FDNUI7UUFFRCxPQUFPLE9BQU8sQ0FBQztJQUNqQixDQUFDO0lBRUQsa0JBQWtCLENBQUMsS0FBVTtRQUMzQixJQUFJLEtBQUssQ0FBQyxHQUFHLElBQUksT0FBTyxFQUFFO1lBQ3hCLElBQUksQ0FBQyxVQUFVLEVBQUUsQ0FBQztTQUNuQjthQUFNO1lBQ0wsSUFBSSxDQUFDLFdBQVcsR0FBRyxLQUFLLENBQUMsTUFBTSxDQUFDLEtBQUssQ0FBQztTQUN2QztJQUNILENBQUM7SUFFRCxVQUFVO1FBQ1IsSUFBSSxDQUFDLFlBQVksQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLFdBQVcsQ0FBQyxDQUFDO0lBQzNDLENBQUM7OzhFQXBHVSxlQUFlO2tFQUFmLGVBQWU7UUNQNUIsOEJBQTRCO1FBQzFCLDhCQUEyRDtRQUN6RCw4QkFBMkI7UUFDekIsdUJBQTBFO1FBQzFFLDRCQUFxRjtRQUFsRix1RkFBUyxlQUFXLElBQUM7UUFBNkQsaUJBQUk7UUFDM0YsaUJBQU07UUFFTiw4QkFBOEI7UUFDNUIsa0ZBR2U7UUFDZixrRkFlZTtRQUNqQixpQkFBTTtRQUNOLDhCQUErQjtRQUM3QixrRkFlZTtRQUNqQixpQkFBTTtRQUNSLGlCQUFNO1FBQ1IsaUJBQU07O1FBL0NDLGVBQXdCO1FBQXhCLG1EQUF3QjtRQUFDLDhDQUE0QjtRQUVuRCxlQUFnQztRQUFoQyxxRUFBZ0Msc0NBQUE7UUFDa0IsZUFBK0I7UUFBL0Isb0VBQStCO1FBSXJFLGVBQWdFO1FBQWhFLDZGQUFnRTtRQUloRSxlQUFnRTtRQUFoRSw2RkFBZ0U7UUFrQmhFLGVBQWtFO1FBQWxFLCtGQUFrRTs7dUZEdkIxRSxlQUFlO2NBTDNCLFNBQVM7MkJBQ0UsV0FBVztzQ0FLWCxZQUFZO2tCQUFyQixNQUFNO1lBQ0UsV0FBVztrQkFBbkIsS0FBSztZQUNHLEtBQUs7a0JBQWIsS0FBSztZQUNHLGlCQUFpQjtrQkFBekIsS0FBSztZQUNHLE9BQU87a0JBQWYsS0FBSztZQUNHLGFBQWE7a0JBQXJCLEtBQUs7WUFJRyxPQUFPO2tCQUFmLEtBQUsiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBDb21wb25lbnQsIEV2ZW50RW1pdHRlciwgSW5wdXQsIE9uSW5pdCwgT3V0cHV0IH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ21nLW5hdmJhcicsXG4gIHRlbXBsYXRlVXJsOiAnLi9uYXZiYXIuY29tcG9uZW50Lmh0bWwnLFxuICBzdHlsZVVybHM6IFsnLi9uYXZiYXIuY29tcG9uZW50LmNzcyddXG59KVxuZXhwb3J0IGNsYXNzIE5hdmJhckNvbXBvbmVudCBpbXBsZW1lbnRzIE9uSW5pdCB7XG4gIEBPdXRwdXQoKSBzZWFyY2hlZFRleHQgPSBuZXcgRXZlbnRFbWl0dGVyKCk7XG4gIEBJbnB1dCgpIHNwYWNlQXJvdW5kID0gdHJ1ZTtcbiAgQElucHV0KCkgdGhlbWUgPSBcImRhcmtcIjtcbiAgQElucHV0KCkgb25TbWFsbE1lbnVCdXR0b24gPSBcIj1cIjtcbiAgQElucHV0KCkgaXNGaXhlZCA9IGZhbHNlO1xuICBASW5wdXQoKSBwYXJ0aXRpb25UeXBlID0gXCIyOjFcIjtcbiAgLy8gMjoxXG4gIC8vIDE6MlxuICAvLyAxOjFcbiAgQElucHV0KCkgbmF2RGF0YTogYW55ID0ge1xuICAgIGJyYW5kOiB7XG4gICAgICBuYW1lOiBgTWF0ZXJpYWwgPEI+R3JhbW1pPC9CPmAsXG4gICAgICBsaW5rOiAnLydcbiAgICAgIH0sXG4gICAgICBsZWZ0OiB7XG4gICAgICAgIG5hdlR5cGU6IFwiaW5wdXRcIixcbiAgICAgICAgZGF0YToge1xuICAgICAgICAgIGJ0bjogdHJ1ZSxcbiAgICAgICAgICBuYW1lOiBgPGkgY2xhc3M9XCJmYXMgZmEtc2VhcmNoXCI+PC9pPmAsXG4gICAgICAgICAgcGxhY2Vob2xkZXI6IFwic2VhcmNoXCIsXG4gICAgICAgICAgaWQ6IFwiMVwiXG4gICAgICAgIH1cbiAgICAgIH0sXG4gICAgcmlnaHQ6IHtcbiAgICAgIG5hdlR5cGU6IFwibGlua3NcIixcbiAgICAgIGRhdGE6IFt7XG4gICAgICAgIG5hbWU6IGA8aSBjbGFzcz1cImZhcyBmYS1ob21lXCI+PC9pPmAsXG4gICAgICAgIGxpbms6IFwiL1wiLFxuICAgICAgICBhY3RpdmU6IGZhbHNlXG4gICAgICB9LCB7XG4gICAgICAgIG5hbWU6IGA8aSBjbGFzcz1cImZhciBmYS1iZWxsXCI+PC9pPmAsXG4gICAgICAgIGxpbms6IFwiL1wiLFxuICAgICAgICBhY3RpdmU6IGZhbHNlXG4gICAgICB9LCB7XG4gICAgICAgIHR5cGU6IFwiZHJvcGRvd25cIixcbiAgICAgICAgbmFtZTogYDxpIGNsYXNzPVwiZmFzIGZhLXVzZXJcIj48L2k+YCxcbiAgICAgICAgbGlua3M6IFt7XG4gICAgICAgICAgbmFtZTogYDxwPkxvZ2luPC9wPmAsXG4gICAgICAgICAgbGluazogXCIvXCJcbiAgICAgICAgfSwge1xuICAgICAgICAgIG5hbWU6IGA8cD5SZWdpc3RlcjwvcD5gLFxuICAgICAgICAgIGxpbms6IFwiL1wiXG4gICAgICAgIH1dLFxuICAgICAgICBhY3RpdmU6IGZhbHNlXG4gICAgICB9LCB7XG4gICAgICAgIG5hbWU6IGA8aSBjbGFzcz1cImZhciBmYS1lbnZlbG9wZVwiPjwvaT5gLFxuICAgICAgICBsaW5rOiBcIi9cIixcbiAgICAgICAgYWN0aXZlOiBmYWxzZVxuICAgICAgfV1cbiAgICB9XG4gIH07XG5cbiAgb25TbWFsbEFjdGl2ZSA9IGZhbHNlO1xuXG4gIHNlYXJjaFF1ZXJ5ID0gXCJcIjtcblxuICBjb25zdHJ1Y3RvcigpIHsgfVxuXG4gIG5nT25Jbml0KCk6IHZvaWQge1xuICB9XG5cbiAgb25TbWFsbENsYXNzKCkge1xuICAgIHJldHVybiB0aGlzLm9uU21hbGxBY3RpdmUgPyAnYWN0aXZlJyA6ICcnO1xuICB9XG5cbiAgdG9nZ2xlTmF2KCkge1xuICAgIHRoaXMub25TbWFsbEFjdGl2ZSA9ICF0aGlzLm9uU21hbGxBY3RpdmU7XG4gIH1cblxuICBtYWluTmF2Q2xhc3NlcygpIHtcbiAgICBsZXQgY2xhc3NlcyA9IHRoaXMub25TbWFsbENsYXNzKCk7XG5cbiAgICBpZiAodGhpcy5pc0ZpeGVkKSB7XG4gICAgICBjbGFzc2VzICs9IGAgZml4ZWRgO1xuICAgIH1cblxuICAgIGNsYXNzZXMgKz0gdGhpcy5zcGFjZUFyb3VuZCA/IFwiIHNwYWNlLWFyb3VuZFwiIDogXCJcIjtcblxuICAgIGlmICh0aGlzLnBhcnRpdGlvblR5cGUgPT0gXCIyOjFcIikge1xuICAgICAgY2xhc3NlcyArPSBgIHBvc2l0aW9uLTItMWA7XG4gICAgfSBlbHNlIGlmICh0aGlzLnBhcnRpdGlvblR5cGUgPT0gXCIxOjJcIikge1xuICAgICAgY2xhc3NlcyArPSBgIHBvc2l0aW9uLTEtMmA7XG4gICAgfSBlbHNlIGlmICh0aGlzLnBhcnRpdGlvblR5cGUgPT0gXCIxOjFcIikge1xuICAgICAgY2xhc3NlcyArPSBgIHBvc2l0aW9uLTEtMWA7XG4gICAgfVxuXG4gICAgcmV0dXJuIGNsYXNzZXM7XG4gIH1cblxuICBvbkVudGVyU2VhcmNoUXVlcnkoZXZlbnQ6IGFueSk6IHZvaWQge1xuICAgIGlmIChldmVudC5rZXkgPT0gXCJFbnRlclwiKSB7XG4gICAgICB0aGlzLnNlbmRTZWFyY2goKTtcbiAgICB9IGVsc2Uge1xuICAgICAgdGhpcy5zZWFyY2hRdWVyeSA9IGV2ZW50LnRhcmdldC52YWx1ZTtcbiAgICB9XG4gIH1cblxuICBzZW5kU2VhcmNoKCkge1xuICAgIHRoaXMuc2VhcmNoZWRUZXh0LmVtaXQodGhpcy5zZWFyY2hRdWVyeSk7XG4gIH1cblxufVxuIiwiPGRpdiBjbGFzcz1cIm5hdmJhci13cmFwcGVyXCI+XG4gIDxkaXYgY2xhc3M9XCJuYXZiYXIge3t0aGVtZX19XCIgW25nQ2xhc3NdPVwibWFpbk5hdkNsYXNzZXMoKVwiPlxuICAgIDxkaXYgY2xhc3M9XCJzZWN0aW9uIGJyYW5kXCI+XG4gICAgICA8YSBbaW5uZXJIdG1sXT1cIm5hdkRhdGEuYnJhbmQubmFtZVwiIFtyb3V0ZXJMaW5rXT1cIm5hdkRhdGEuYnJhbmQubGlua1wiPjwvYT5cbiAgICAgIDxhIChjbGljayk9XCJ0b2dnbGVOYXYoKVwiIGNsYXNzPVwic21hbGwtb25seS1vcGVuLW5hdlwiIFtpbm5lckh0bWxdPVwib25TbWFsbE1lbnVCdXR0b25cIj48L2E+XG4gICAgPC9kaXY+XG5cbiAgICA8ZGl2IGNsYXNzPVwic2VjdGlvbiBsZWZ0LW5hdlwiPlxuICAgICAgPG5nLWNvbnRhaW5lciAqbmdJZj1cIm5hdkRhdGEgJiYgbmF2RGF0YS5sZWZ0ICYmIG5hdkRhdGEubGVmdC5uYXZUeXBlID09ICdpbnB1dCdcIj5cbiAgICAgICAgPGlucHV0IHR5cGU9XCJ0ZXh0XCIgKGtleXVwKSA9IFwib25FbnRlclNlYXJjaFF1ZXJ5KCRldmVudClcIiBjbGFzcz1cImlucHV0XCIgW3BsYWNlaG9sZGVyXT1cIm5hdkRhdGEubGVmdC5kYXRhLnBsYWNlaG9sZGVyXCIgLz5cbiAgICAgICAgPGEgY2xhc3M9XCJpbnB1dC1idXR0b25cIiAqbmdJZj1cIm5hdkRhdGEubGVmdC5kYXRhLmJ0blwiIFtpbm5lckh0bWxdPVwibmF2RGF0YS5sZWZ0LmRhdGEubmFtZVwiPjwvYT5cbiAgICAgIDwvbmctY29udGFpbmVyPlxuICAgICAgPG5nLWNvbnRhaW5lciAqbmdJZj1cIm5hdkRhdGEgJiYgbmF2RGF0YS5sZWZ0ICYmIG5hdkRhdGEubGVmdC5uYXZUeXBlID09ICdsaW5rcydcIj5cbiAgICAgICAgPG5nLWNvbnRhaW5lciAqbmdGb3I9XCJsZXQgbmRhdGEgb2YgbmF2RGF0YS5sZWZ0LmRhdGFcIj5cbiAgICAgICAgICA8IS0tIGRyb3Bkb3duIC0tPlxuICAgICAgICAgIDxuZy1jb250YWluZXIgKm5nSWY9XCJuZGF0YS50eXBlICYmIG5kYXRhLnR5cGUgPT0gJ2Ryb3Bkb3duJ1wiPlxuICAgICAgICAgICAgPGRpdiBjbGFzcz1cImRyb3Bkb3duXCI+XG4gICAgICAgICAgICAgIDxhIFtpbm5lckh0bWxdPVwibmRhdGEubmFtZVwiIFtyb3V0ZXJMaW5rXT1cIm5kYXRhLmxpbmtcIiBjbGFzcz1cInRyaWdnZXItZHJvcGRvd25cIj48L2E+XG4gICAgICAgICAgICAgIDxkaXYgY2xhc3M9XCJkcm9wLW1lbnVcIj5cbiAgICAgICAgICAgICAgICA8YSAqbmdGb3I9XCJsZXQgZHJvcGxpbmsgb2YgbmRhdGEubGlua3NcIiBbaW5uZXJIdG1sXT1cImRyb3BsaW5rLm5hbWVcIj48L2E+XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9uZy1jb250YWluZXI+XG4gICAgICAgICAgPG5nLWNvbnRhaW5lciAqbmdJZj1cIiFuZGF0YS50eXBlXCI+XG4gICAgICAgICAgICA8YSBbaW5uZXJIdG1sXT1cIm5kYXRhLm5hbWVcIiBbcm91dGVyTGlua109XCJuZGF0YS5saW5rXCI+PC9hPlxuICAgICAgICAgIDwvbmctY29udGFpbmVyPlxuICAgICAgICA8L25nLWNvbnRhaW5lcj5cbiAgICAgIDwvbmctY29udGFpbmVyPlxuICAgIDwvZGl2PlxuICAgIDxkaXYgY2xhc3M9XCJzZWN0aW9uIHJpZ2h0LW5hdlwiPlxuICAgICAgPG5nLWNvbnRhaW5lciAqbmdJZj1cIm5hdkRhdGEgJiYgbmF2RGF0YS5yaWdodCAmJiBuYXZEYXRhLnJpZ2h0Lm5hdlR5cGUgPT0gJ2xpbmtzJ1wiPlxuICAgICAgICA8bmctY29udGFpbmVyICpuZ0Zvcj1cImxldCBuZGF0YSBvZiBuYXZEYXRhLnJpZ2h0LmRhdGFcIj5cbiAgICAgICAgICA8IS0tIGRyb3Bkb3duIC0tPlxuICAgICAgICAgIDxuZy1jb250YWluZXIgKm5nSWY9XCJuZGF0YS50eXBlICYmIG5kYXRhLnR5cGUgPT0gJ2Ryb3Bkb3duJ1wiPlxuICAgICAgICAgICAgPGRpdiBjbGFzcz1cImRyb3Bkb3duXCI+XG4gICAgICAgICAgICAgIDxhIFtpbm5lckh0bWxdPVwibmRhdGEubmFtZVwiIFtyb3V0ZXJMaW5rXT1cIm5kYXRhLmxpbmtcIiBjbGFzcz1cInRyaWdnZXItZHJvcGRvd25cIj48L2E+XG4gICAgICAgICAgICAgIDxkaXYgY2xhc3M9XCJkcm9wLW1lbnVcIj5cbiAgICAgICAgICAgICAgICA8YSAqbmdGb3I9XCJsZXQgZHJvcGxpbmsgb2YgbmRhdGEubGlua3NcIiBbaW5uZXJIdG1sXT1cImRyb3BsaW5rLm5hbWVcIj48L2E+XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9uZy1jb250YWluZXI+XG4gICAgICAgICAgPG5nLWNvbnRhaW5lciAqbmdJZj1cIiFuZGF0YS50eXBlXCI+XG4gICAgICAgICAgICA8YSBbaW5uZXJIdG1sXT1cIm5kYXRhLm5hbWVcIiBbcm91dGVyTGlua109XCJuZGF0YS5saW5rXCI+PC9hPlxuICAgICAgICAgIDwvbmctY29udGFpbmVyPlxuICAgICAgICA8L25nLWNvbnRhaW5lcj5cbiAgICAgIDwvbmctY29udGFpbmVyPlxuICAgIDwvZGl2PlxuICA8L2Rpdj5cbjwvZGl2PlxuIl19
+NavbarComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: NavbarComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+NavbarComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.3", type: NavbarComponent, selector: "mg-navbar", inputs: { spaceAround: "spaceAround", theme: "theme", onSmallMenuButton: "onSmallMenuButton", isFixed: "isFixed", partitionType: "partitionType", navData: "navData" }, outputs: { searchedText: "searchedText" }, ngImport: i0, template: "<div class=\"navbar-wrapper\">\n  <div class=\"navbar {{theme}}\" [ngClass]=\"mainNavClasses()\">\n    <div class=\"section brand\">\n      <a [innerHtml]=\"navData.brand.name\" [routerLink]=\"navData.brand.link\"></a>\n      <a (click)=\"toggleNav()\" class=\"small-only-open-nav\" [innerHtml]=\"onSmallMenuButton\"></a>\n    </div>\n\n    <div class=\"section left-nav\">\n      <ng-container *ngIf=\"navData && navData.left && navData.left.navType == 'input'\">\n        <input type=\"text\" (keyup) = \"onEnterSearchQuery($event)\" class=\"input\" [placeholder]=\"navData.left.data.placeholder\" />\n        <a class=\"input-button\" *ngIf=\"navData.left.data.btn\" [innerHtml]=\"navData.left.data.name\"></a>\n      </ng-container>\n      <ng-container *ngIf=\"navData && navData.left && navData.left.navType == 'links'\">\n        <ng-container *ngFor=\"let ndata of navData.left.data\">\n          <!-- dropdown -->\n          <ng-container *ngIf=\"ndata.type && ndata.type == 'dropdown'\">\n            <div class=\"dropdown\">\n              <a [innerHtml]=\"ndata.name\" [routerLink]=\"ndata.link\" class=\"trigger-dropdown\"></a>\n              <div class=\"drop-menu\">\n                <a *ngFor=\"let droplink of ndata.links\" [innerHtml]=\"droplink.name\"></a>\n              </div>\n            </div>\n          </ng-container>\n          <ng-container *ngIf=\"!ndata.type\">\n            <a [innerHtml]=\"ndata.name\" [routerLink]=\"ndata.link\"></a>\n          </ng-container>\n        </ng-container>\n      </ng-container>\n    </div>\n    <div class=\"section right-nav\">\n      <ng-container *ngIf=\"navData && navData.right && navData.right.navType == 'links'\">\n        <ng-container *ngFor=\"let ndata of navData.right.data\">\n          <!-- dropdown -->\n          <ng-container *ngIf=\"ndata.type && ndata.type == 'dropdown'\">\n            <div class=\"dropdown\">\n              <a [innerHtml]=\"ndata.name\" [routerLink]=\"ndata.link\" class=\"trigger-dropdown\"></a>\n              <div class=\"drop-menu\">\n                <a *ngFor=\"let droplink of ndata.links\" [innerHtml]=\"droplink.name\"></a>\n              </div>\n            </div>\n          </ng-container>\n          <ng-container *ngIf=\"!ndata.type\">\n            <a [innerHtml]=\"ndata.name\" [routerLink]=\"ndata.link\"></a>\n          </ng-container>\n        </ng-container>\n      </ng-container>\n    </div>\n  </div>\n</div>\n", styles: [""], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { type: i2.RouterLinkWithHref, selector: "a[routerLink],area[routerLink]", inputs: ["target", "queryParams", "fragment", "queryParamsHandling", "preserveFragment", "skipLocationChange", "replaceUrl", "state", "relativeTo", "routerLink"] }, { type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: NavbarComponent, decorators: [{
+            type: Component,
+            args: [{ selector: 'mg-navbar', template: "<div class=\"navbar-wrapper\">\n  <div class=\"navbar {{theme}}\" [ngClass]=\"mainNavClasses()\">\n    <div class=\"section brand\">\n      <a [innerHtml]=\"navData.brand.name\" [routerLink]=\"navData.brand.link\"></a>\n      <a (click)=\"toggleNav()\" class=\"small-only-open-nav\" [innerHtml]=\"onSmallMenuButton\"></a>\n    </div>\n\n    <div class=\"section left-nav\">\n      <ng-container *ngIf=\"navData && navData.left && navData.left.navType == 'input'\">\n        <input type=\"text\" (keyup) = \"onEnterSearchQuery($event)\" class=\"input\" [placeholder]=\"navData.left.data.placeholder\" />\n        <a class=\"input-button\" *ngIf=\"navData.left.data.btn\" [innerHtml]=\"navData.left.data.name\"></a>\n      </ng-container>\n      <ng-container *ngIf=\"navData && navData.left && navData.left.navType == 'links'\">\n        <ng-container *ngFor=\"let ndata of navData.left.data\">\n          <!-- dropdown -->\n          <ng-container *ngIf=\"ndata.type && ndata.type == 'dropdown'\">\n            <div class=\"dropdown\">\n              <a [innerHtml]=\"ndata.name\" [routerLink]=\"ndata.link\" class=\"trigger-dropdown\"></a>\n              <div class=\"drop-menu\">\n                <a *ngFor=\"let droplink of ndata.links\" [innerHtml]=\"droplink.name\"></a>\n              </div>\n            </div>\n          </ng-container>\n          <ng-container *ngIf=\"!ndata.type\">\n            <a [innerHtml]=\"ndata.name\" [routerLink]=\"ndata.link\"></a>\n          </ng-container>\n        </ng-container>\n      </ng-container>\n    </div>\n    <div class=\"section right-nav\">\n      <ng-container *ngIf=\"navData && navData.right && navData.right.navType == 'links'\">\n        <ng-container *ngFor=\"let ndata of navData.right.data\">\n          <!-- dropdown -->\n          <ng-container *ngIf=\"ndata.type && ndata.type == 'dropdown'\">\n            <div class=\"dropdown\">\n              <a [innerHtml]=\"ndata.name\" [routerLink]=\"ndata.link\" class=\"trigger-dropdown\"></a>\n              <div class=\"drop-menu\">\n                <a *ngFor=\"let droplink of ndata.links\" [innerHtml]=\"droplink.name\"></a>\n              </div>\n            </div>\n          </ng-container>\n          <ng-container *ngIf=\"!ndata.type\">\n            <a [innerHtml]=\"ndata.name\" [routerLink]=\"ndata.link\"></a>\n          </ng-container>\n        </ng-container>\n      </ng-container>\n    </div>\n  </div>\n</div>\n", styles: [""] }]
+        }], ctorParameters: function () { return []; }, propDecorators: { searchedText: [{
+                type: Output
+            }], spaceAround: [{
+                type: Input
+            }], theme: [{
+                type: Input
+            }], onSmallMenuButton: [{
+                type: Input
+            }], isFixed: [{
+                type: Input
+            }], partitionType: [{
+                type: Input
+            }], navData: [{
+                type: Input
+            }] } });
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibmF2YmFyLmNvbXBvbmVudC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uL3Byb2plY3RzL21hdGVyaWFsZ3JhbW1pL3NyYy9saWIvY29tcG9uZW50cy9uYXZiYXIvbmF2YmFyLmNvbXBvbmVudC50cyIsIi4uLy4uLy4uLy4uLy4uLy4uL3Byb2plY3RzL21hdGVyaWFsZ3JhbW1pL3NyYy9saWIvY29tcG9uZW50cy9uYXZiYXIvbmF2YmFyLmNvbXBvbmVudC5odG1sIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sRUFBRSxTQUFTLEVBQUUsWUFBWSxFQUFFLEtBQUssRUFBVSxNQUFNLEVBQUUsTUFBTSxlQUFlLENBQUM7Ozs7QUFPL0UsTUFBTSxPQUFPLGVBQWU7SUF5RDFCO1FBeERVLGlCQUFZLEdBQUcsSUFBSSxZQUFZLEVBQUUsQ0FBQztRQUNuQyxnQkFBVyxHQUFHLElBQUksQ0FBQztRQUNuQixVQUFLLEdBQUcsTUFBTSxDQUFDO1FBQ2Ysc0JBQWlCLEdBQUcsR0FBRyxDQUFDO1FBQ3hCLFlBQU8sR0FBRyxLQUFLLENBQUM7UUFDaEIsa0JBQWEsR0FBRyxLQUFLLENBQUM7UUFDL0IsTUFBTTtRQUNOLE1BQU07UUFDTixNQUFNO1FBQ0csWUFBTyxHQUFRO1lBQ3RCLEtBQUssRUFBRTtnQkFDTCxJQUFJLEVBQUUsd0JBQXdCO2dCQUM5QixJQUFJLEVBQUUsR0FBRzthQUNSO1lBQ0QsSUFBSSxFQUFFO2dCQUNKLE9BQU8sRUFBRSxPQUFPO2dCQUNoQixJQUFJLEVBQUU7b0JBQ0osR0FBRyxFQUFFLElBQUk7b0JBQ1QsSUFBSSxFQUFFLCtCQUErQjtvQkFDckMsV0FBVyxFQUFFLFFBQVE7b0JBQ3JCLEVBQUUsRUFBRSxHQUFHO2lCQUNSO2FBQ0Y7WUFDSCxLQUFLLEVBQUU7Z0JBQ0wsT0FBTyxFQUFFLE9BQU87Z0JBQ2hCLElBQUksRUFBRSxDQUFDO3dCQUNMLElBQUksRUFBRSw2QkFBNkI7d0JBQ25DLElBQUksRUFBRSxHQUFHO3dCQUNULE1BQU0sRUFBRSxLQUFLO3FCQUNkLEVBQUU7d0JBQ0QsSUFBSSxFQUFFLDZCQUE2Qjt3QkFDbkMsSUFBSSxFQUFFLEdBQUc7d0JBQ1QsTUFBTSxFQUFFLEtBQUs7cUJBQ2QsRUFBRTt3QkFDRCxJQUFJLEVBQUUsVUFBVTt3QkFDaEIsSUFBSSxFQUFFLDZCQUE2Qjt3QkFDbkMsS0FBSyxFQUFFLENBQUM7Z0NBQ04sSUFBSSxFQUFFLGNBQWM7Z0NBQ3BCLElBQUksRUFBRSxHQUFHOzZCQUNWLEVBQUU7Z0NBQ0QsSUFBSSxFQUFFLGlCQUFpQjtnQ0FDdkIsSUFBSSxFQUFFLEdBQUc7NkJBQ1YsQ0FBQzt3QkFDRixNQUFNLEVBQUUsS0FBSztxQkFDZCxFQUFFO3dCQUNELElBQUksRUFBRSxpQ0FBaUM7d0JBQ3ZDLElBQUksRUFBRSxHQUFHO3dCQUNULE1BQU0sRUFBRSxLQUFLO3FCQUNkLENBQUM7YUFDSDtTQUNGLENBQUM7UUFFRixrQkFBYSxHQUFHLEtBQUssQ0FBQztRQUV0QixnQkFBVyxHQUFHLEVBQUUsQ0FBQztJQUVELENBQUM7SUFFakIsUUFBUTtJQUNSLENBQUM7SUFFRCxZQUFZO1FBQ1YsT0FBTyxJQUFJLENBQUMsYUFBYSxDQUFDLENBQUMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLEVBQUUsQ0FBQztJQUM1QyxDQUFDO0lBRUQsU0FBUztRQUNQLElBQUksQ0FBQyxhQUFhLEdBQUcsQ0FBQyxJQUFJLENBQUMsYUFBYSxDQUFDO0lBQzNDLENBQUM7SUFFRCxjQUFjO1FBQ1osSUFBSSxPQUFPLEdBQUcsSUFBSSxDQUFDLFlBQVksRUFBRSxDQUFDO1FBRWxDLElBQUksSUFBSSxDQUFDLE9BQU8sRUFBRTtZQUNoQixPQUFPLElBQUksUUFBUSxDQUFDO1NBQ3JCO1FBRUQsT0FBTyxJQUFJLElBQUksQ0FBQyxXQUFXLENBQUMsQ0FBQyxDQUFDLGVBQWUsQ0FBQyxDQUFDLENBQUMsRUFBRSxDQUFDO1FBRW5ELElBQUksSUFBSSxDQUFDLGFBQWEsSUFBSSxLQUFLLEVBQUU7WUFDL0IsT0FBTyxJQUFJLGVBQWUsQ0FBQztTQUM1QjthQUFNLElBQUksSUFBSSxDQUFDLGFBQWEsSUFBSSxLQUFLLEVBQUU7WUFDdEMsT0FBTyxJQUFJLGVBQWUsQ0FBQztTQUM1QjthQUFNLElBQUksSUFBSSxDQUFDLGFBQWEsSUFBSSxLQUFLLEVBQUU7WUFDdEMsT0FBTyxJQUFJLGVBQWUsQ0FBQztTQUM1QjtRQUVELE9BQU8sT0FBTyxDQUFDO0lBQ2pCLENBQUM7SUFFRCxrQkFBa0IsQ0FBQyxLQUFVO1FBQzNCLElBQUksS0FBSyxDQUFDLEdBQUcsSUFBSSxPQUFPLEVBQUU7WUFDeEIsSUFBSSxDQUFDLFVBQVUsRUFBRSxDQUFDO1NBQ25CO2FBQU07WUFDTCxJQUFJLENBQUMsV0FBVyxHQUFHLEtBQUssQ0FBQyxNQUFNLENBQUMsS0FBSyxDQUFDO1NBQ3ZDO0lBQ0gsQ0FBQztJQUVELFVBQVU7UUFDUixJQUFJLENBQUMsWUFBWSxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsV0FBVyxDQUFDLENBQUM7SUFDM0MsQ0FBQzs7NEdBcEdVLGVBQWU7Z0dBQWYsZUFBZSxvUUNQNUIsczRFQWlEQTsyRkQxQ2EsZUFBZTtrQkFMM0IsU0FBUzsrQkFDRSxXQUFXOzBFQUtYLFlBQVk7c0JBQXJCLE1BQU07Z0JBQ0UsV0FBVztzQkFBbkIsS0FBSztnQkFDRyxLQUFLO3NCQUFiLEtBQUs7Z0JBQ0csaUJBQWlCO3NCQUF6QixLQUFLO2dCQUNHLE9BQU87c0JBQWYsS0FBSztnQkFDRyxhQUFhO3NCQUFyQixLQUFLO2dCQUlHLE9BQU87c0JBQWYsS0FBSyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbXBvbmVudCwgRXZlbnRFbWl0dGVyLCBJbnB1dCwgT25Jbml0LCBPdXRwdXQgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcblxuQENvbXBvbmVudCh7XG4gIHNlbGVjdG9yOiAnbWctbmF2YmFyJyxcbiAgdGVtcGxhdGVVcmw6ICcuL25hdmJhci5jb21wb25lbnQuaHRtbCcsXG4gIHN0eWxlVXJsczogWycuL25hdmJhci5jb21wb25lbnQuY3NzJ11cbn0pXG5leHBvcnQgY2xhc3MgTmF2YmFyQ29tcG9uZW50IGltcGxlbWVudHMgT25Jbml0IHtcbiAgQE91dHB1dCgpIHNlYXJjaGVkVGV4dCA9IG5ldyBFdmVudEVtaXR0ZXIoKTtcbiAgQElucHV0KCkgc3BhY2VBcm91bmQgPSB0cnVlO1xuICBASW5wdXQoKSB0aGVtZSA9IFwiZGFya1wiO1xuICBASW5wdXQoKSBvblNtYWxsTWVudUJ1dHRvbiA9IFwiPVwiO1xuICBASW5wdXQoKSBpc0ZpeGVkID0gZmFsc2U7XG4gIEBJbnB1dCgpIHBhcnRpdGlvblR5cGUgPSBcIjI6MVwiO1xuICAvLyAyOjFcbiAgLy8gMToyXG4gIC8vIDE6MVxuICBASW5wdXQoKSBuYXZEYXRhOiBhbnkgPSB7XG4gICAgYnJhbmQ6IHtcbiAgICAgIG5hbWU6IGBNYXRlcmlhbCA8Qj5HcmFtbWk8L0I+YCxcbiAgICAgIGxpbms6ICcvJ1xuICAgICAgfSxcbiAgICAgIGxlZnQ6IHtcbiAgICAgICAgbmF2VHlwZTogXCJpbnB1dFwiLFxuICAgICAgICBkYXRhOiB7XG4gICAgICAgICAgYnRuOiB0cnVlLFxuICAgICAgICAgIG5hbWU6IGA8aSBjbGFzcz1cImZhcyBmYS1zZWFyY2hcIj48L2k+YCxcbiAgICAgICAgICBwbGFjZWhvbGRlcjogXCJzZWFyY2hcIixcbiAgICAgICAgICBpZDogXCIxXCJcbiAgICAgICAgfVxuICAgICAgfSxcbiAgICByaWdodDoge1xuICAgICAgbmF2VHlwZTogXCJsaW5rc1wiLFxuICAgICAgZGF0YTogW3tcbiAgICAgICAgbmFtZTogYDxpIGNsYXNzPVwiZmFzIGZhLWhvbWVcIj48L2k+YCxcbiAgICAgICAgbGluazogXCIvXCIsXG4gICAgICAgIGFjdGl2ZTogZmFsc2VcbiAgICAgIH0sIHtcbiAgICAgICAgbmFtZTogYDxpIGNsYXNzPVwiZmFyIGZhLWJlbGxcIj48L2k+YCxcbiAgICAgICAgbGluazogXCIvXCIsXG4gICAgICAgIGFjdGl2ZTogZmFsc2VcbiAgICAgIH0sIHtcbiAgICAgICAgdHlwZTogXCJkcm9wZG93blwiLFxuICAgICAgICBuYW1lOiBgPGkgY2xhc3M9XCJmYXMgZmEtdXNlclwiPjwvaT5gLFxuICAgICAgICBsaW5rczogW3tcbiAgICAgICAgICBuYW1lOiBgPHA+TG9naW48L3A+YCxcbiAgICAgICAgICBsaW5rOiBcIi9cIlxuICAgICAgICB9LCB7XG4gICAgICAgICAgbmFtZTogYDxwPlJlZ2lzdGVyPC9wPmAsXG4gICAgICAgICAgbGluazogXCIvXCJcbiAgICAgICAgfV0sXG4gICAgICAgIGFjdGl2ZTogZmFsc2VcbiAgICAgIH0sIHtcbiAgICAgICAgbmFtZTogYDxpIGNsYXNzPVwiZmFyIGZhLWVudmVsb3BlXCI+PC9pPmAsXG4gICAgICAgIGxpbms6IFwiL1wiLFxuICAgICAgICBhY3RpdmU6IGZhbHNlXG4gICAgICB9XVxuICAgIH1cbiAgfTtcblxuICBvblNtYWxsQWN0aXZlID0gZmFsc2U7XG5cbiAgc2VhcmNoUXVlcnkgPSBcIlwiO1xuXG4gIGNvbnN0cnVjdG9yKCkgeyB9XG5cbiAgbmdPbkluaXQoKTogdm9pZCB7XG4gIH1cblxuICBvblNtYWxsQ2xhc3MoKSB7XG4gICAgcmV0dXJuIHRoaXMub25TbWFsbEFjdGl2ZSA/ICdhY3RpdmUnIDogJyc7XG4gIH1cblxuICB0b2dnbGVOYXYoKSB7XG4gICAgdGhpcy5vblNtYWxsQWN0aXZlID0gIXRoaXMub25TbWFsbEFjdGl2ZTtcbiAgfVxuXG4gIG1haW5OYXZDbGFzc2VzKCkge1xuICAgIGxldCBjbGFzc2VzID0gdGhpcy5vblNtYWxsQ2xhc3MoKTtcblxuICAgIGlmICh0aGlzLmlzRml4ZWQpIHtcbiAgICAgIGNsYXNzZXMgKz0gYCBmaXhlZGA7XG4gICAgfVxuXG4gICAgY2xhc3NlcyArPSB0aGlzLnNwYWNlQXJvdW5kID8gXCIgc3BhY2UtYXJvdW5kXCIgOiBcIlwiO1xuXG4gICAgaWYgKHRoaXMucGFydGl0aW9uVHlwZSA9PSBcIjI6MVwiKSB7XG4gICAgICBjbGFzc2VzICs9IGAgcG9zaXRpb24tMi0xYDtcbiAgICB9IGVsc2UgaWYgKHRoaXMucGFydGl0aW9uVHlwZSA9PSBcIjE6MlwiKSB7XG4gICAgICBjbGFzc2VzICs9IGAgcG9zaXRpb24tMS0yYDtcbiAgICB9IGVsc2UgaWYgKHRoaXMucGFydGl0aW9uVHlwZSA9PSBcIjE6MVwiKSB7XG4gICAgICBjbGFzc2VzICs9IGAgcG9zaXRpb24tMS0xYDtcbiAgICB9XG5cbiAgICByZXR1cm4gY2xhc3NlcztcbiAgfVxuXG4gIG9uRW50ZXJTZWFyY2hRdWVyeShldmVudDogYW55KTogdm9pZCB7XG4gICAgaWYgKGV2ZW50LmtleSA9PSBcIkVudGVyXCIpIHtcbiAgICAgIHRoaXMuc2VuZFNlYXJjaCgpO1xuICAgIH0gZWxzZSB7XG4gICAgICB0aGlzLnNlYXJjaFF1ZXJ5ID0gZXZlbnQudGFyZ2V0LnZhbHVlO1xuICAgIH1cbiAgfVxuXG4gIHNlbmRTZWFyY2goKSB7XG4gICAgdGhpcy5zZWFyY2hlZFRleHQuZW1pdCh0aGlzLnNlYXJjaFF1ZXJ5KTtcbiAgfVxuXG59XG4iLCI8ZGl2IGNsYXNzPVwibmF2YmFyLXdyYXBwZXJcIj5cbiAgPGRpdiBjbGFzcz1cIm5hdmJhciB7e3RoZW1lfX1cIiBbbmdDbGFzc109XCJtYWluTmF2Q2xhc3NlcygpXCI+XG4gICAgPGRpdiBjbGFzcz1cInNlY3Rpb24gYnJhbmRcIj5cbiAgICAgIDxhIFtpbm5lckh0bWxdPVwibmF2RGF0YS5icmFuZC5uYW1lXCIgW3JvdXRlckxpbmtdPVwibmF2RGF0YS5icmFuZC5saW5rXCI+PC9hPlxuICAgICAgPGEgKGNsaWNrKT1cInRvZ2dsZU5hdigpXCIgY2xhc3M9XCJzbWFsbC1vbmx5LW9wZW4tbmF2XCIgW2lubmVySHRtbF09XCJvblNtYWxsTWVudUJ1dHRvblwiPjwvYT5cbiAgICA8L2Rpdj5cblxuICAgIDxkaXYgY2xhc3M9XCJzZWN0aW9uIGxlZnQtbmF2XCI+XG4gICAgICA8bmctY29udGFpbmVyICpuZ0lmPVwibmF2RGF0YSAmJiBuYXZEYXRhLmxlZnQgJiYgbmF2RGF0YS5sZWZ0Lm5hdlR5cGUgPT0gJ2lucHV0J1wiPlxuICAgICAgICA8aW5wdXQgdHlwZT1cInRleHRcIiAoa2V5dXApID0gXCJvbkVudGVyU2VhcmNoUXVlcnkoJGV2ZW50KVwiIGNsYXNzPVwiaW5wdXRcIiBbcGxhY2Vob2xkZXJdPVwibmF2RGF0YS5sZWZ0LmRhdGEucGxhY2Vob2xkZXJcIiAvPlxuICAgICAgICA8YSBjbGFzcz1cImlucHV0LWJ1dHRvblwiICpuZ0lmPVwibmF2RGF0YS5sZWZ0LmRhdGEuYnRuXCIgW2lubmVySHRtbF09XCJuYXZEYXRhLmxlZnQuZGF0YS5uYW1lXCI+PC9hPlxuICAgICAgPC9uZy1jb250YWluZXI+XG4gICAgICA8bmctY29udGFpbmVyICpuZ0lmPVwibmF2RGF0YSAmJiBuYXZEYXRhLmxlZnQgJiYgbmF2RGF0YS5sZWZ0Lm5hdlR5cGUgPT0gJ2xpbmtzJ1wiPlxuICAgICAgICA8bmctY29udGFpbmVyICpuZ0Zvcj1cImxldCBuZGF0YSBvZiBuYXZEYXRhLmxlZnQuZGF0YVwiPlxuICAgICAgICAgIDwhLS0gZHJvcGRvd24gLS0+XG4gICAgICAgICAgPG5nLWNvbnRhaW5lciAqbmdJZj1cIm5kYXRhLnR5cGUgJiYgbmRhdGEudHlwZSA9PSAnZHJvcGRvd24nXCI+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzPVwiZHJvcGRvd25cIj5cbiAgICAgICAgICAgICAgPGEgW2lubmVySHRtbF09XCJuZGF0YS5uYW1lXCIgW3JvdXRlckxpbmtdPVwibmRhdGEubGlua1wiIGNsYXNzPVwidHJpZ2dlci1kcm9wZG93blwiPjwvYT5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzcz1cImRyb3AtbWVudVwiPlxuICAgICAgICAgICAgICAgIDxhICpuZ0Zvcj1cImxldCBkcm9wbGluayBvZiBuZGF0YS5saW5rc1wiIFtpbm5lckh0bWxdPVwiZHJvcGxpbmsubmFtZVwiPjwvYT5cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8L25nLWNvbnRhaW5lcj5cbiAgICAgICAgICA8bmctY29udGFpbmVyICpuZ0lmPVwiIW5kYXRhLnR5cGVcIj5cbiAgICAgICAgICAgIDxhIFtpbm5lckh0bWxdPVwibmRhdGEubmFtZVwiIFtyb3V0ZXJMaW5rXT1cIm5kYXRhLmxpbmtcIj48L2E+XG4gICAgICAgICAgPC9uZy1jb250YWluZXI+XG4gICAgICAgIDwvbmctY29udGFpbmVyPlxuICAgICAgPC9uZy1jb250YWluZXI+XG4gICAgPC9kaXY+XG4gICAgPGRpdiBjbGFzcz1cInNlY3Rpb24gcmlnaHQtbmF2XCI+XG4gICAgICA8bmctY29udGFpbmVyICpuZ0lmPVwibmF2RGF0YSAmJiBuYXZEYXRhLnJpZ2h0ICYmIG5hdkRhdGEucmlnaHQubmF2VHlwZSA9PSAnbGlua3MnXCI+XG4gICAgICAgIDxuZy1jb250YWluZXIgKm5nRm9yPVwibGV0IG5kYXRhIG9mIG5hdkRhdGEucmlnaHQuZGF0YVwiPlxuICAgICAgICAgIDwhLS0gZHJvcGRvd24gLS0+XG4gICAgICAgICAgPG5nLWNvbnRhaW5lciAqbmdJZj1cIm5kYXRhLnR5cGUgJiYgbmRhdGEudHlwZSA9PSAnZHJvcGRvd24nXCI+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzPVwiZHJvcGRvd25cIj5cbiAgICAgICAgICAgICAgPGEgW2lubmVySHRtbF09XCJuZGF0YS5uYW1lXCIgW3JvdXRlckxpbmtdPVwibmRhdGEubGlua1wiIGNsYXNzPVwidHJpZ2dlci1kcm9wZG93blwiPjwvYT5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzcz1cImRyb3AtbWVudVwiPlxuICAgICAgICAgICAgICAgIDxhICpuZ0Zvcj1cImxldCBkcm9wbGluayBvZiBuZGF0YS5saW5rc1wiIFtpbm5lckh0bWxdPVwiZHJvcGxpbmsubmFtZVwiPjwvYT5cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8L25nLWNvbnRhaW5lcj5cbiAgICAgICAgICA8bmctY29udGFpbmVyICpuZ0lmPVwiIW5kYXRhLnR5cGVcIj5cbiAgICAgICAgICAgIDxhIFtpbm5lckh0bWxdPVwibmRhdGEubmFtZVwiIFtyb3V0ZXJMaW5rXT1cIm5kYXRhLmxpbmtcIj48L2E+XG4gICAgICAgICAgPC9uZy1jb250YWluZXI+XG4gICAgICAgIDwvbmctY29udGFpbmVyPlxuICAgICAgPC9uZy1jb250YWluZXI+XG4gICAgPC9kaXY+XG4gIDwvZGl2PlxuPC9kaXY+XG4iXX0=

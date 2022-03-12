@@ -11,4 +11,3 @@ export declare class AccordionComponent implements OnInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<AccordionComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<AccordionComponent, "mg-accordion", never, { "theme": "theme"; "items": "items"; "class": "class"; }, {}, never, never>;
 }
-//# sourceMappingURL=accordion.component.d.ts.map

@@ -6,4 +6,3 @@ export declare class LoaderComponent implements OnInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<LoaderComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<LoaderComponent, "mg-loader", never, {}, {}, never, never>;
 }
-//# sourceMappingURL=loader.component.d.ts.map

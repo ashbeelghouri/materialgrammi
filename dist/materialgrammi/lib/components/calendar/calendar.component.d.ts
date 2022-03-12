@@ -78,4 +78,3 @@ export declare class CalendarComponent implements OnInit, OnChanges {
     static ɵfac: i0.ɵɵFactoryDeclaration<CalendarComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CalendarComponent, "mg-calendar", never, { "abbreviation": "abbreviation"; "bookEvents": "bookEvents"; "theme": "theme"; "disabled": "disabled"; "size": "size"; "disabledRange": "disabledRange"; "events": "events"; "format": "format"; "icons": "icons"; "controls": "controls"; "class": "class"; }, { "dayIsClicked": "dayIsClicked"; "dayDrop": "dayDrop"; "newEvent": "newEvent"; }, never, never>;
 }
-//# sourceMappingURL=calendar.component.d.ts.map

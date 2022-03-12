@@ -9,4 +9,3 @@ export declare class ComponentComponent implements OnInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<ComponentComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ComponentComponent, "mg-component", never, { "size": "size"; "class": "class"; }, {}, never, ["*"]>;
 }
-//# sourceMappingURL=component.component.d.ts.map

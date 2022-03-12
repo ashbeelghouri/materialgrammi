@@ -9,4 +9,3 @@ export declare class TestComponentComponent implements OnInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<TestComponentComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TestComponentComponent, "lib-test", never, {}, {}, never, ["*"]>;
 }
-//# sourceMappingURL=test-component.component.d.ts.map

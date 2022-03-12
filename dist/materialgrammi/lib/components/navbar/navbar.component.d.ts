@@ -12,7 +12,7 @@ export declare class NavbarComponent implements OnInit {
     searchQuery: string;
     constructor();
     ngOnInit(): void;
-    onSmallClass(): "active" | "";
+    onSmallClass(): "" | "active";
     toggleNav(): void;
     mainNavClasses(): string;
     onEnterSearchQuery(event: any): void;
@@ -20,4 +20,3 @@ export declare class NavbarComponent implements OnInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<NavbarComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<NavbarComponent, "mg-navbar", never, { "spaceAround": "spaceAround"; "theme": "theme"; "onSmallMenuButton": "onSmallMenuButton"; "isFixed": "isFixed"; "partitionType": "partitionType"; "navData": "navData"; }, { "searchedText": "searchedText"; }, never, never>;
 }
-//# sourceMappingURL=navbar.component.d.ts.map

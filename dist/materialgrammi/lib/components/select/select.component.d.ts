@@ -33,4 +33,3 @@ export declare class SelectComponent implements OnInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SelectComponent, "mg-select", never, { "searchOpt": "searchOpt"; "theme": "theme"; "selectTitle": "selectTitle"; "selectType": "selectType"; "enableSearch": "enableSearch"; "options": "options"; }, { "value": "value"; }, never, never>;
 }
-//# sourceMappingURL=select.component.d.ts.map

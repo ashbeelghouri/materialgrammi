@@ -1,6 +1,6 @@
 {
   "name": "ng-materialgrammi",
-  "version": "0.0.0-watch+1647107067758",
+  "version": "0.0.8",
   "description": "An Angular framework which follows",
   "author": "Ashbeel Ghouri",
   "homepage": "www.materialgrammi.com",
@@ -44,8 +44,5 @@
       "default": "./fesm2020/ng-materialgrammi.mjs"
     }
   },
-  "sideEffects": false,
-  "scripts": {
-    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy in full compilation mode. This is not allowed.\\nPlease delete and rebuild the package with Ivy partial compilation mode, before attempting to publish.\\n')\" && exit 1"
-  }
+  "sideEffects": false
 }

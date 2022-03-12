@@ -19,4 +19,3 @@ export declare class CheckboxComponent implements OnInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<CheckboxComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CheckboxComponent, "mg-checkbox", never, { "size": "size"; "theme": "theme"; "onDark": "onDark"; "isSelected": "isSelected"; "class": "class"; }, { "isChecked": "isChecked"; }, never, ["*"]>;
 }
-//# sourceMappingURL=checkbox.component.d.ts.map
