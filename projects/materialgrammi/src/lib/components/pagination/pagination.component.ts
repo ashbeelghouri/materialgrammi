@@ -18,10 +18,12 @@ export class PaginationComponent implements OnInit, OnChanges {
     previous: `<i class="fas fa-chevron-left"></i>`
   }
 
+  @Input() max = 22;
+
   totalPages = 0;
   totalCount = 0;
   pages: any = [];
-
+  startFrom = 1;
   _data:any = [];
 
 
@@ -35,10 +37,8 @@ export class PaginationComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(): void {
-    console.log("changed", this._data);
     this.calculatePage();
     this.sendData();
-    console.log("Pages", this.pages);
   }
 
   calculatePage() {
@@ -49,8 +49,10 @@ export class PaginationComponent implements OnInit, OnChanges {
       this.totalCount = this.data;
     }
     this.totalPages = Math.ceil(this.totalCount / this.perPage);
-    for (let i = 1; i <= this.totalPages; i++) {
-      this.pages.push(i);
+    for (let i = this.startFrom; i <= this.totalPages; i++) {
+      if(this.pages.length < (this.max+1)) {
+        this.pages.push(i);
+      }
     }
   }
 
@@ -68,6 +70,11 @@ export class PaginationComponent implements OnInit, OnChanges {
     }
   }
 
+  removePages(){
+    this.startFrom = (this.currentPage > 1) && 
+    (this.currentPage < this.totalPages - this.max || (this.currentPage > this.max - this.max/2)) ? this.currentPage - 1 : this.startFrom;
+  }
+
   onPageClick(pageNumber: any) {
     if (typeof pageNumber != "number") {
       pageNumber = parseInt(pageNumber);
@@ -75,6 +82,8 @@ export class PaginationComponent implements OnInit, OnChanges {
     this.currentPage = pageNumber;
     this.page.emit(this.currentPage);
     this.sendData();
+    this.removePages();
+    this.calculatePage();
   }
 
   isActivePage(pageNumber: any) {
@@ -86,12 +95,18 @@ export class PaginationComponent implements OnInit, OnChanges {
 
   onNext() {
     this.currentPage = this.currentPage < this.totalPages ? this.currentPage + 1 : this.currentPage;
+    this.page.emit(this.currentPage);
     this.sendData();
+    this.removePages();
+    this.calculatePage();
   }
 
   onPrevious() {
     this.currentPage = this.currentPage > 1 ? this.currentPage - 1 : this.currentPage;
+    this.page.emit(this.currentPage);
     this.sendData();
+    this.removePages();
+    this.calculatePage();
   }
 
 }

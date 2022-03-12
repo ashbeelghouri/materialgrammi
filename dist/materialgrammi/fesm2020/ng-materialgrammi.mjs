@@ -3298,9 +3298,11 @@ class PaginationComponent {
             next: `<i class="fas fa-chevron-right"></i>`,
             previous: `<i class="fas fa-chevron-left"></i>`
         };
+        this.max = 22;
         this.totalPages = 0;
         this.totalCount = 0;
         this.pages = [];
+        this.startFrom = 1;
         this._data = [];
     }
     ngOnInit() {
@@ -3309,10 +3311,8 @@ class PaginationComponent {
         this.sendData();
     }
     ngOnChanges() {
-        console.log("changed", this._data);
         this.calculatePage();
         this.sendData();
-        console.log("Pages", this.pages);
     }
     calculatePage() {
         this.pages = [];
@@ -3323,8 +3323,10 @@ class PaginationComponent {
             this.totalCount = this.data;
         }
         this.totalPages = Math.ceil(this.totalCount / this.perPage);
-        for (let i = 1; i <= this.totalPages; i++) {
-            this.pages.push(i);
+        for (let i = this.startFrom; i <= this.totalPages; i++) {
+            if (this.pages.length < (this.max + 1)) {
+                this.pages.push(i);
+            }
         }
     }
     sendData() {
@@ -3341,6 +3343,10 @@ class PaginationComponent {
             this.getdata.emit((this.currentPage - 1) * this.perPage);
         }
     }
+    removePages() {
+        this.startFrom = (this.currentPage > 1) &&
+            (this.currentPage < this.totalPages - this.max || (this.currentPage > this.max - this.max / 2)) ? this.currentPage - 1 : this.startFrom;
+    }
     onPageClick(pageNumber) {
         if (typeof pageNumber != "number") {
             pageNumber = parseInt(pageNumber);
@@ -3348,6 +3354,8 @@ class PaginationComponent {
         this.currentPage = pageNumber;
         this.page.emit(this.currentPage);
         this.sendData();
+        this.removePages();
+        this.calculatePage();
     }
     isActivePage(pageNumber) {
         if (typeof pageNumber != "number") {
@@ -3357,15 +3365,21 @@ class PaginationComponent {
     }
     onNext() {
         this.currentPage = this.currentPage < this.totalPages ? this.currentPage + 1 : this.currentPage;
+        this.page.emit(this.currentPage);
         this.sendData();
+        this.removePages();
+        this.calculatePage();
     }
     onPrevious() {
         this.currentPage = this.currentPage > 1 ? this.currentPage - 1 : this.currentPage;
+        this.page.emit(this.currentPage);
         this.sendData();
+        this.removePages();
+        this.calculatePage();
     }
 }
 PaginationComponent.ɵfac = function PaginationComponent_Factory(t) { return new (t || PaginationComponent)(); };
-PaginationComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: PaginationComponent, selectors: [["mg-pagination"]], inputs: { theme: "theme", data: "data", fullDataMode: "fullDataMode", perPage: "perPage", currentPage: "currentPage", icons: "icons" }, outputs: { page: "page", getdata: "getdata" }, features: [i0.ɵɵNgOnChangesFeature], decls: 4, vars: 6, consts: [[1, "page", "page-previous", 3, "innerHtml", "click"], ["class", "page", 3, "ngClass", "click", 4, "ngFor", "ngForOf"], [1, "page", "page-next", 3, "innerHtml", "click"], [1, "page", 3, "ngClass", "click"]], template: function PaginationComponent_Template(rf, ctx) { if (rf & 1) {
+PaginationComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: PaginationComponent, selectors: [["mg-pagination"]], inputs: { theme: "theme", data: "data", fullDataMode: "fullDataMode", perPage: "perPage", currentPage: "currentPage", icons: "icons", max: "max" }, outputs: { page: "page", getdata: "getdata" }, features: [i0.ɵɵNgOnChangesFeature], decls: 4, vars: 6, consts: [[1, "page", "page-previous", "not-selectable", 3, "innerHtml", "click"], ["class", "page not-selectable", 3, "ngClass", "click", 4, "ngFor", "ngForOf"], [1, "page", "page-next", "not-selectable", 3, "innerHtml", "click"], [1, "page", "not-selectable", 3, "ngClass", "click"]], template: function PaginationComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div");
         i0.ɵɵelementStart(1, "div", 0);
         i0.ɵɵlistener("click", function PaginationComponent_Template_div_click_1_listener() { return ctx.onPrevious(); });
@@ -3386,7 +3400,7 @@ PaginationComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Paginat
     } }, directives: [i1.NgForOf, i1.NgClass], styles: [""] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PaginationComponent, [{
         type: Component,
-        args: [{ selector: 'mg-pagination', template: "<div class=\"pagination-wrapper pagination-{{theme}}\">\n  <div class=\"page page-previous\" [innerHtml]=\"icons.previous\" (click)=\"onPrevious()\"></div>\n  <div class=\"page\" *ngFor=\"let page of pages\" [ngClass]=\"isActivePage(page)\" (click)=\"onPageClick(page)\">\n    {{page}}\n  </div>\n  <div class=\"page page-next\" [innerHtml]=\"icons.next\" (click)=\"onNext()\"></div>\n</div>\n", styles: [""] }]
+        args: [{ selector: 'mg-pagination', template: "<div class=\"pagination-wrapper pagination-{{theme}}\">\n  <div class=\"page page-previous not-selectable\" [innerHtml]=\"icons.previous\" (click)=\"onPrevious()\"></div>\n  <div class=\"page not-selectable\" *ngFor=\"let page of pages\" [ngClass]=\"isActivePage(page)\" (click)=\"onPageClick(page)\">\n    {{page}}\n  </div>\n  <div class=\"page page-next not-selectable\" [innerHtml]=\"icons.next\" (click)=\"onNext()\"></div>\n</div>\n", styles: [""] }]
     }], function () { return []; }, { page: [{
             type: Output
         }], getdata: [{
@@ -3402,6 +3416,8 @@ PaginationComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Paginat
         }], currentPage: [{
             type: Input
         }], icons: [{
+            type: Input
+        }], max: [{
             type: Input
         }] }); })();
 

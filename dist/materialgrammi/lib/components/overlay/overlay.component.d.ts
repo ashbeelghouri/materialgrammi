@@ -12,7 +12,7 @@ export declare class OverlayComponent implements OnInit {
     isClosed: EventEmitter<any>;
     constructor(service: MaterialgrammiService);
     ngOnInit(): void;
-    activator(): "" | "active";
+    activator(): "active" | "";
     subscribe(): void;
     mainClasses(): string;
     overlayClasses(): string;

@@ -17,7 +17,7 @@ export declare class TabComponent implements OnInit {
     watchActive(): void;
     activateWidget(widgetID: string): void;
     mainClasses(): string;
-    buttonClass(componentId: string): "" | "active";
+    buttonClass(componentId: string): "active" | "";
     static ɵfac: i0.ɵɵFactoryDeclaration<TabComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TabComponent, "mg-tab", never, { "options": "options"; "isVertical": "isVertical"; "bg": "bg"; "active": "active"; "id": "id"; "theme": "theme"; }, {}, never, ["*"]>;
 }

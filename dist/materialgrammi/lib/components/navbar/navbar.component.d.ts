@@ -12,7 +12,7 @@ export declare class NavbarComponent implements OnInit {
     searchQuery: string;
     constructor();
     ngOnInit(): void;
-    onSmallClass(): "" | "active";
+    onSmallClass(): "active" | "";
     toggleNav(): void;
     mainNavClasses(): string;
     onEnterSearchQuery(event: any): void;
