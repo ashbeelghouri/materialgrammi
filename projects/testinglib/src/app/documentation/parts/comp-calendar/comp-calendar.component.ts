@@ -62,6 +62,7 @@ export class CompCalendarComponent implements OnInit {
     events: JSON.parse(JSON.stringify(this.events)),
     theme: "primary",
     disabled: JSON.parse(JSON.stringify(this.disabledDates)),
+    bookEvents: true
   }
 
   outputOptions = [{

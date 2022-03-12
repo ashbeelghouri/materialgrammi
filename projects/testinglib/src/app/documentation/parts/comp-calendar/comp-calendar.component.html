@@ -6,6 +6,7 @@
 <app-output-options [options]="outputOptions"></app-output-options>
 <div class="pad-10">
     <app-examples [name]="title" [code] = "code" [optionsApplied]="optionsApplied">
-        <mg-calendar [events]="events" [theme]="optionsApplied.theme" [disabled]="disabledDates" ></mg-calendar>
+        <mg-calendar [events]="events" [theme]="optionsApplied.theme" 
+        [disabled]="disabledDates" [bookEvents]="optionsApplied.bookEvents"></mg-calendar>
     </app-examples>
 </div>
