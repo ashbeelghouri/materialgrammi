@@ -1,6 +1,7 @@
-import { OnChanges, OnInit } from '@angular/core';
+import { AfterContentChecked, ChangeDetectorRef, OnChanges, OnInit } from '@angular/core';
 import * as i0 from "@angular/core";
-export declare class TableComponent implements OnInit, OnChanges {
+export declare class TableComponent implements OnInit, OnChanges, AfterContentChecked {
+    private cdref;
     theme: string;
     mgData: any;
     ignoredColumns: any;
@@ -31,9 +32,10 @@ export declare class TableComponent implements OnInit, OnChanges {
     openFilterBox: boolean;
     openSortBox: boolean;
     sortOptions: any;
-    constructor();
+    constructor(cdref: ChangeDetectorRef);
     ngOnInit(): void;
     ngOnChanges(): void;
+    ngAfterContentChecked(): void;
     init(): void;
     concatHeads(headObj: any): void;
     sortColumns(): void;

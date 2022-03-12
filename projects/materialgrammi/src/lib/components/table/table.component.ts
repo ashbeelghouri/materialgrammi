@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { AfterContentChecked, ChangeDetectorRef, Component, Input, OnChanges, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -6,7 +6,7 @@ import { FormControl } from '@angular/forms';
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css']
 })
-export class TableComponent implements OnInit, OnChanges {
+export class TableComponent implements OnInit, OnChanges, AfterContentChecked {
   @Input() theme = "dark";
   @Input() mgData: any = [];
   @Input() ignoredColumns: any = ["id"];
@@ -49,7 +49,9 @@ export class TableComponent implements OnInit, OnChanges {
   openFilterBox = false;
   openSortBox = false;
   sortOptions: any = [];
-  constructor() { }
+
+
+  constructor(private cdref: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     this.init();
@@ -58,6 +60,10 @@ export class TableComponent implements OnInit, OnChanges {
 
   ngOnChanges(): void {
     this.init();
+  }
+
+  ngAfterContentChecked(){
+    this.cdref.detectChanges();
   }
 
   init() {
@@ -109,9 +115,11 @@ export class TableComponent implements OnInit, OnChanges {
       let data: any = [];
 
       for (let j = 0; j < this.headings.length; j++) {
-
-        let d = dataToUpdate[i][this.headings[j]] != undefined ? dataToUpdate[i][this.headings[j]] : "-";
-        data.push(d);
+        if(dataToUpdate[i]){
+          let d = dataToUpdate[i][this.headings[j]] != undefined ? dataToUpdate[i][this.headings[j]] : "-";
+          data.push(d);
+        }
+        
       }
 
       this.reformedData.push(data);
@@ -208,7 +216,6 @@ export class TableComponent implements OnInit, OnChanges {
   }
 
   updatePaginatedData(data:any){
-    
     this.paginatedData = data;
     if(this.paginate.status) this.refactorData(this.paginatedData);
   }

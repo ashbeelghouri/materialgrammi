@@ -7,7 +7,7 @@
             <ng-content></ng-content>
         </div>
     </mg-widget>
-    <ng-container *ngIf="code || optionsApplied.length > 0">
+    <ng-container *ngIf="code || optionsProvided">
         <mg-widget [id]="options[1].widget" [parent]="id" type="tab">
             <div class="pad-20 padV-30 outline-grey2">
                 <ng-container *ngIf="code">
@@ -18,8 +18,7 @@
                         <pre class="example-font spacing-2">{{code}}</pre>
                     </div>
                 </ng-container>
-                
-                <ng-container *ngIf="optionsApplied.length > 0">
+                <ng-container *ngIf="optionsProvided">
                     <div class="marginT-20">
                         <span class="pad-5 green text-grey1 shadow-2">OPTIONS SELECTED</span>
                     </div>

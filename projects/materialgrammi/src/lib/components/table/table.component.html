@@ -47,6 +47,6 @@
     </tbody>
   </table>
   <div class="padV-5" *ngIf="paginate.status">
-    <mg-pagination [theme]="theme" [fullDataMode]="true" [data]="mgData" [perPage]="paginate.perPage" getdata="updatePaginatedData($event)"></mg-pagination>
+    <mg-pagination [theme]="theme" [fullDataMode]="true" [data]="mgData" [perPage]="paginate.perPage" (getdata)="updatePaginatedData($event)"></mg-pagination>
   </div>
 </div>
