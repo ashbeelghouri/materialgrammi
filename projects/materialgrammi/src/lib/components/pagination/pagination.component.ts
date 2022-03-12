@@ -37,6 +37,7 @@ export class PaginationComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(): void {
+    this.removePages();
     this.calculatePage();
     this.sendData();
   }
@@ -108,5 +109,4 @@ export class PaginationComponent implements OnInit, OnChanges {
     this.removePages();
     this.calculatePage();
   }
-
 }

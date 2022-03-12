@@ -23,6 +23,9 @@
       </div>
     </mg-collapse>
   </div>
+  <div class="padV-5" *ngIf="paginate.status && pagingPosition.top">
+    <mg-pagination (page)="setCurrentPage($event)" [currentPage]="currentPage" [theme]="theme" [fullDataMode]="true" [data]="mgData" [perPage]="paginate.perPage" (getdata)="updatePaginatedData($event)"></mg-pagination>
+  </div>
   <table class="{{theme}}">
     <thead [ngClass]="fixedHeader ? 'fixed-header' : ''">
       <ng-container>
@@ -46,7 +49,7 @@
       
     </tbody>
   </table>
-  <div class="padV-5" *ngIf="paginate.status">
-    <mg-pagination [theme]="theme" [fullDataMode]="true" [data]="mgData" [perPage]="paginate.perPage" (getdata)="updatePaginatedData($event)"></mg-pagination>
+  <div class="padV-5" *ngIf="paginate.status && pagingPosition.bottom">
+    <mg-pagination (page)="setCurrentPage($event)" [currentPage]="currentPage" [theme]="theme" [fullDataMode]="true" [data]="mgData" [perPage]="paginate.perPage" (getdata)="updatePaginatedData($event)"></mg-pagination>
   </div>
 </div>

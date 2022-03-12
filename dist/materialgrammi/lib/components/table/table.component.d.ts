@@ -10,9 +10,10 @@ export declare class TableComponent implements OnInit, OnChanges, AfterContentCh
     tableTitle: string;
     fixedHeader: boolean;
     dragableSort: boolean;
-    paginate: {
-        status: boolean;
-        perPage: number;
+    paginate?: any;
+    pagingPosition: {
+        top: boolean;
+        bottom: boolean;
     };
     columnsOrder: any;
     showOptions: {
@@ -21,7 +22,9 @@ export declare class TableComponent implements OnInit, OnChanges, AfterContentCh
         sort: boolean;
         count: boolean;
     };
+    currentPage: number;
     show: boolean;
+    setCurrentPage(event: number): void;
     setShowTimer(): any;
     reformedData: any;
     reformedHeads: any;
@@ -51,6 +54,6 @@ export declare class TableComponent implements OnInit, OnChanges, AfterContentCh
     recieveData(event: any, k: number): void;
     updatePaginatedData(data: any): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableComponent, "mg-table", never, { "theme": "theme"; "mgData": "mgData"; "ignoredColumns": "ignoredColumns"; "sortBy": "sortBy"; "sortDirection": "sortDirection"; "tableTitle": "tableTitle"; "fixedHeader": "fixedHeader"; "dragableSort": "dragableSort"; "paginate": "paginate"; "columnsOrder": "columnsOrder"; "showOptions": "showOptions"; }, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableComponent, "mg-table", never, { "theme": "theme"; "mgData": "mgData"; "ignoredColumns": "ignoredColumns"; "sortBy": "sortBy"; "sortDirection": "sortDirection"; "tableTitle": "tableTitle"; "fixedHeader": "fixedHeader"; "dragableSort": "dragableSort"; "paginate": "paginate"; "pagingPosition": "pagingPosition"; "columnsOrder": "columnsOrder"; "showOptions": "showOptions"; }, {}, never, never>;
 }
 //# sourceMappingURL=table.component.d.ts.map

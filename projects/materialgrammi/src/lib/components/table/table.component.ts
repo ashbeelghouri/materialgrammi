@@ -15,10 +15,16 @@ export class TableComponent implements OnInit, OnChanges, AfterContentChecked {
   @Input() tableTitle = "Table";
   @Input() fixedHeader = false;
   @Input() dragableSort = false;
-  @Input() paginate = {
+  @Input() paginate?:any = {
     status: false, 
     perPage: 5
   };
+
+  @Input() pagingPosition = {
+    top: true,
+    bottom: true
+  }
+
   @Input() columnsOrder:any = [];
 
   @Input() showOptions = {
@@ -27,8 +33,13 @@ export class TableComponent implements OnInit, OnChanges, AfterContentChecked {
     sort: false,
     count: false
   };
-
+  currentPage = 1;
   show = false;
+  
+  setCurrentPage(event:number){
+    this.currentPage = event;
+  }
+
   setShowTimer(): any {
     var $this = this;
     setTimeout(function () {

@@ -3311,6 +3311,7 @@ class PaginationComponent {
         this.sendData();
     }
     ngOnChanges() {
+        this.removePages();
         this.calculatePage();
         this.sendData();
     }
@@ -3483,15 +3484,15 @@ function TableComponent_span_3_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵproperty("innerHtml", ctx_r0.tableTitle, i0.ɵɵsanitizeHtml);
 } }
 function TableComponent_small_4_i_2_Template(rf, ctx) { if (rf & 1) {
-    const _r9 = i0.ɵɵgetCurrentView();
+    const _r10 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "i", 21);
-    i0.ɵɵlistener("click", function TableComponent_small_4_i_2_Template_i_click_0_listener() { i0.ɵɵrestoreView(_r9); const ctx_r8 = i0.ɵɵnextContext(2); return ctx_r8.openSorter(); });
+    i0.ɵɵlistener("click", function TableComponent_small_4_i_2_Template_i_click_0_listener() { i0.ɵɵrestoreView(_r10); const ctx_r9 = i0.ɵɵnextContext(2); return ctx_r9.openSorter(); });
     i0.ɵɵelementEnd();
 } }
 function TableComponent_small_4_i_3_Template(rf, ctx) { if (rf & 1) {
-    const _r11 = i0.ɵɵgetCurrentView();
+    const _r12 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "i", 22);
-    i0.ɵɵlistener("click", function TableComponent_small_4_i_3_Template_i_click_0_listener() { i0.ɵɵrestoreView(_r11); const ctx_r10 = i0.ɵɵnextContext(2); return ctx_r10.openFilter(); });
+    i0.ɵɵlistener("click", function TableComponent_small_4_i_3_Template_i_click_0_listener() { i0.ɵɵrestoreView(_r12); const ctx_r11 = i0.ɵɵnextContext(2); return ctx_r11.openFilter(); });
     i0.ɵɵelementEnd();
 } }
 function TableComponent_small_4_Template(rf, ctx) { if (rf & 1) {
@@ -3514,59 +3515,71 @@ function TableComponent_div_13_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(1, "mg-input", 24);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const filter_r12 = ctx.$implicit;
+    const filter_r13 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("control", filter_r12.val)("label", filter_r12.name);
+    i0.ɵɵproperty("control", filter_r13.val)("label", filter_r13.name);
+} }
+function TableComponent_div_19_Template(rf, ctx) { if (rf & 1) {
+    const _r15 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "div", 25);
+    i0.ɵɵelementStart(1, "mg-pagination", 26);
+    i0.ɵɵlistener("page", function TableComponent_div_19_Template_mg_pagination_page_1_listener($event) { i0.ɵɵrestoreView(_r15); const ctx_r14 = i0.ɵɵnextContext(); return ctx_r14.setCurrentPage($event); })("getdata", function TableComponent_div_19_Template_mg_pagination_getdata_1_listener($event) { i0.ɵɵrestoreView(_r15); const ctx_r16 = i0.ɵɵnextContext(); return ctx_r16.updatePaginatedData($event); });
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r3 = i0.ɵɵnextContext();
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("currentPage", ctx_r3.currentPage)("theme", ctx_r3.theme)("fullDataMode", true)("data", ctx_r3.mgData)("perPage", ctx_r3.paginate.perPage);
 } }
 const _c0$a = function (a0) { return { order: a0 }; };
-function TableComponent_th_22_Template(rf, ctx) { if (rf & 1) {
-    const _r16 = i0.ɵɵgetCurrentView();
+function TableComponent_th_23_Template(rf, ctx) { if (rf & 1) {
+    const _r20 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "th");
-    i0.ɵɵelementStart(1, "span", 25);
-    i0.ɵɵlistener("click", function TableComponent_th_22_Template_span_click_1_listener() { const restoredCtx = i0.ɵɵrestoreView(_r16); const head_r13 = restoredCtx.$implicit; const ctx_r15 = i0.ɵɵnextContext(); return ctx_r15.sort(head_r13); });
-    i0.ɵɵelementStart(2, "mg-dropable", 26);
-    i0.ɵɵlistener("dataRecieved", function TableComponent_th_22_Template_mg_dropable_dataRecieved_2_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r16); const k_r14 = restoredCtx.index; const ctx_r17 = i0.ɵɵnextContext(); return ctx_r17.recieveData($event, k_r14); });
-    i0.ɵɵelementStart(3, "mg-dragable", 27);
+    i0.ɵɵelementStart(1, "span", 27);
+    i0.ɵɵlistener("click", function TableComponent_th_23_Template_span_click_1_listener() { const restoredCtx = i0.ɵɵrestoreView(_r20); const head_r17 = restoredCtx.$implicit; const ctx_r19 = i0.ɵɵnextContext(); return ctx_r19.sort(head_r17); });
+    i0.ɵɵelementStart(2, "mg-dropable", 28);
+    i0.ɵɵlistener("dataRecieved", function TableComponent_th_23_Template_mg_dropable_dataRecieved_2_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r20); const k_r18 = restoredCtx.index; const ctx_r21 = i0.ɵɵnextContext(); return ctx_r21.recieveData($event, k_r18); });
+    i0.ɵɵelementStart(3, "mg-dragable", 29);
     i0.ɵɵtext(4);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const head_r13 = ctx.$implicit;
-    const k_r14 = ctx.index;
-    const ctx_r3 = i0.ɵɵnextContext();
+    const head_r17 = ctx.$implicit;
+    const k_r18 = ctx.index;
+    const ctx_r4 = i0.ɵɵnextContext();
     i0.ɵɵadvance(3);
-    i0.ɵɵproperty("data", i0.ɵɵpureFunction1(3, _c0$a, k_r14))("dragable", ctx_r3.dragableSort);
+    i0.ɵɵproperty("data", i0.ɵɵpureFunction1(3, _c0$a, k_r18))("dragable", ctx_r4.dragableSort);
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", head_r13, " ");
+    i0.ɵɵtextInterpolate1(" ", head_r17, " ");
 } }
-function TableComponent_tr_25_td_1_Template(rf, ctx) { if (rf & 1) {
+function TableComponent_tr_26_td_1_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(0, "td", 17);
 } if (rf & 2) {
-    const col_r20 = ctx.$implicit;
-    i0.ɵɵproperty("innerHtml", col_r20, i0.ɵɵsanitizeHtml);
+    const col_r24 = ctx.$implicit;
+    i0.ɵɵproperty("innerHtml", col_r24, i0.ɵɵsanitizeHtml);
 } }
-function TableComponent_tr_25_Template(rf, ctx) { if (rf & 1) {
+function TableComponent_tr_26_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "tr");
-    i0.ɵɵtemplate(1, TableComponent_tr_25_td_1_Template, 1, 1, "td", 28);
+    i0.ɵɵtemplate(1, TableComponent_tr_26_td_1_Template, 1, 1, "td", 30);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const data_r18 = ctx.$implicit;
+    const data_r22 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngForOf", data_r18);
+    i0.ɵɵproperty("ngForOf", data_r22);
 } }
-function TableComponent_div_26_Template(rf, ctx) { if (rf & 1) {
-    const _r22 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "div", 29);
-    i0.ɵɵelementStart(1, "mg-pagination", 30);
-    i0.ɵɵlistener("getdata", function TableComponent_div_26_Template_mg_pagination_getdata_1_listener($event) { i0.ɵɵrestoreView(_r22); const ctx_r21 = i0.ɵɵnextContext(); return ctx_r21.updatePaginatedData($event); });
+function TableComponent_div_27_Template(rf, ctx) { if (rf & 1) {
+    const _r26 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "div", 25);
+    i0.ɵɵelementStart(1, "mg-pagination", 26);
+    i0.ɵɵlistener("page", function TableComponent_div_27_Template_mg_pagination_page_1_listener($event) { i0.ɵɵrestoreView(_r26); const ctx_r25 = i0.ɵɵnextContext(); return ctx_r25.setCurrentPage($event); })("getdata", function TableComponent_div_27_Template_mg_pagination_getdata_1_listener($event) { i0.ɵɵrestoreView(_r26); const ctx_r27 = i0.ɵɵnextContext(); return ctx_r27.updatePaginatedData($event); });
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const ctx_r5 = i0.ɵɵnextContext();
+    const ctx_r6 = i0.ɵɵnextContext();
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("theme", ctx_r5.theme)("fullDataMode", true)("data", ctx_r5.mgData)("perPage", ctx_r5.paginate.perPage);
+    i0.ɵɵproperty("currentPage", ctx_r6.currentPage)("theme", ctx_r6.theme)("fullDataMode", true)("data", ctx_r6.mgData)("perPage", ctx_r6.paginate.perPage);
 } }
 class TableComponent {
     constructor(cdref) {
@@ -3583,6 +3596,10 @@ class TableComponent {
             status: false,
             perPage: 5
         };
+        this.pagingPosition = {
+            top: true,
+            bottom: true
+        };
         this.columnsOrder = [];
         this.showOptions = {
             title: false,
@@ -3590,6 +3607,7 @@ class TableComponent {
             sort: false,
             count: false
         };
+        this.currentPage = 1;
         this.show = false;
         this.reformedData = [];
         this.reformedHeads = {};
@@ -3600,6 +3618,9 @@ class TableComponent {
         this.openFilterBox = false;
         this.openSortBox = false;
         this.sortOptions = [];
+    }
+    setCurrentPage(event) {
+        this.currentPage = event;
     }
     setShowTimer() {
         var $this = this;
@@ -3752,7 +3773,7 @@ class TableComponent {
     }
 }
 TableComponent.ɵfac = function TableComponent_Factory(t) { return new (t || TableComponent)(i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
-TableComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TableComponent, selectors: [["mg-table"]], inputs: { theme: "theme", mgData: "mgData", ignoredColumns: "ignoredColumns", sortBy: "sortBy", sortDirection: "sortDirection", tableTitle: "tableTitle", fixedHeader: "fixedHeader", dragableSort: "dragableSort", paginate: "paginate", columnsOrder: "columnsOrder", showOptions: "showOptions" }, features: [i0.ɵɵNgOnChangesFeature], decls: 27, vars: 13, consts: [[1, "pad-10"], [1, "pad-5"], [3, "innerHtml", 4, "ngIf"], ["class", "right", 4, "ngIf"], ["widgetId", "1", 3, "show"], [1, "pad-10", "collapse-filter-box"], ["theme", "success", "btnSize", "sm", 3, "clicked"], [1, "fas", "fa-search", "padR-5"], [1, "row"], ["class", "col m3 l3 s6", 4, "ngFor", "ngForOf"], ["widgetId", "2", 3, "show"], [1, "pad-10", "collapse-sorter-box"], [2, "margin-bottom", "5px"], [3, "options", "value"], [3, "ngClass"], [4, "ngFor", "ngForOf"], ["class", "padV-5", 4, "ngIf"], [3, "innerHtml"], [1, "right"], ["class", "fas fa-list-ol padL-5 pointer", 3, "click", 4, "ngIf"], ["class", "fas fa-filter padL-5 font-16 pointer", 3, "click", 4, "ngIf"], [1, "fas", "fa-list-ol", "padL-5", "pointer", 3, "click"], [1, "fas", "fa-filter", "padL-5", "font-16", "pointer", 3, "click"], [1, "col", "m3", "l3", "s6"], [3, "control", "label"], [3, "click"], [3, "dataRecieved"], [3, "data", "dragable"], [3, "innerHtml", 4, "ngFor", "ngForOf"], [1, "padV-5"], [3, "theme", "fullDataMode", "data", "perPage", "getdata"]], template: function TableComponent_Template(rf, ctx) { if (rf & 1) {
+TableComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TableComponent, selectors: [["mg-table"]], inputs: { theme: "theme", mgData: "mgData", ignoredColumns: "ignoredColumns", sortBy: "sortBy", sortDirection: "sortDirection", tableTitle: "tableTitle", fixedHeader: "fixedHeader", dragableSort: "dragableSort", paginate: "paginate", pagingPosition: "pagingPosition", columnsOrder: "columnsOrder", showOptions: "showOptions" }, features: [i0.ɵɵNgOnChangesFeature], decls: 28, vars: 14, consts: [[1, "pad-10"], [1, "pad-5"], [3, "innerHtml", 4, "ngIf"], ["class", "right", 4, "ngIf"], ["widgetId", "1", 3, "show"], [1, "pad-10", "collapse-filter-box"], ["theme", "success", "btnSize", "sm", 3, "clicked"], [1, "fas", "fa-search", "padR-5"], [1, "row"], ["class", "col m3 l3 s6", 4, "ngFor", "ngForOf"], ["widgetId", "2", 3, "show"], [1, "pad-10", "collapse-sorter-box"], [2, "margin-bottom", "5px"], [3, "options", "value"], ["class", "padV-5", 4, "ngIf"], [3, "ngClass"], [4, "ngFor", "ngForOf"], [3, "innerHtml"], [1, "right"], ["class", "fas fa-list-ol padL-5 pointer", 3, "click", 4, "ngIf"], ["class", "fas fa-filter padL-5 font-16 pointer", 3, "click", 4, "ngIf"], [1, "fas", "fa-list-ol", "padL-5", "pointer", 3, "click"], [1, "fas", "fa-filter", "padL-5", "font-16", "pointer", 3, "click"], [1, "col", "m3", "l3", "s6"], [3, "control", "label"], [1, "padV-5"], [3, "currentPage", "theme", "fullDataMode", "data", "perPage", "page", "getdata"], [3, "click"], [3, "dataRecieved"], [3, "data", "dragable"], [3, "innerHtml", 4, "ngFor", "ngForOf"]], template: function TableComponent_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelementStart(1, "div", 1);
         i0.ɵɵelementStart(2, "h3");
@@ -3785,19 +3806,20 @@ TableComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TableCompone
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(19, "table");
-        i0.ɵɵelementStart(20, "thead", 14);
-        i0.ɵɵelementContainerStart(21);
-        i0.ɵɵtemplate(22, TableComponent_th_22_Template, 5, 5, "th", 15);
+        i0.ɵɵtemplate(19, TableComponent_div_19_Template, 2, 5, "div", 14);
+        i0.ɵɵelementStart(20, "table");
+        i0.ɵɵelementStart(21, "thead", 15);
+        i0.ɵɵelementContainerStart(22);
+        i0.ɵɵtemplate(23, TableComponent_th_23_Template, 5, 5, "th", 16);
         i0.ɵɵelementContainerEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(23, "tbody");
-        i0.ɵɵelementContainerStart(24);
-        i0.ɵɵtemplate(25, TableComponent_tr_25_Template, 2, 1, "tr", 15);
+        i0.ɵɵelementStart(24, "tbody");
+        i0.ɵɵelementContainerStart(25);
+        i0.ɵɵtemplate(26, TableComponent_tr_26_Template, 2, 1, "tr", 16);
         i0.ɵɵelementContainerEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵtemplate(26, TableComponent_div_26_Template, 2, 4, "div", 16);
+        i0.ɵɵtemplate(27, TableComponent_div_27_Template, 2, 5, "div", 14);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
         i0.ɵɵadvance(3);
@@ -3813,6 +3835,8 @@ TableComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TableCompone
         i0.ɵɵadvance(4);
         i0.ɵɵproperty("options", ctx.sortOptions);
         i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx.paginate.status && ctx.pagingPosition.top);
+        i0.ɵɵadvance(1);
         i0.ɵɵclassMap(ctx.theme);
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngClass", ctx.fixedHeader ? "fixed-header" : "");
@@ -3821,11 +3845,11 @@ TableComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TableCompone
         i0.ɵɵadvance(3);
         i0.ɵɵproperty("ngForOf", ctx.reformedData);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", ctx.paginate.status);
-    } }, directives: [i1.NgIf, CollapseComponent, ButtonComponent, i1.NgForOf, SelectComponent, i1.NgClass, InputComponent, DropableComponent, DragableComponent, PaginationComponent], styles: [".fixed-header[_ngcontent-%COMP%]{position:sticky;top:45px}"] });
+        i0.ɵɵproperty("ngIf", ctx.paginate.status && ctx.pagingPosition.bottom);
+    } }, directives: [i1.NgIf, CollapseComponent, ButtonComponent, i1.NgForOf, SelectComponent, i1.NgClass, InputComponent, PaginationComponent, DropableComponent, DragableComponent], styles: [".fixed-header[_ngcontent-%COMP%]{position:sticky;top:45px}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TableComponent, [{
         type: Component,
-        args: [{ selector: 'mg-table', template: "<div class=\"pad-10\">\n  <div class=\"pad-5\">\n    <h3><span [innerHtml]=\"tableTitle\" *ngIf=\"showOptions.title\">Table</span> <small class=\"right\" *ngIf=\"showOptions.count\">{{count}} <i\n          class=\"fas fa-list-ol padL-5 pointer\" (click)=\"openSorter()\" *ngIf=\"showOptions.sort\"></i> <i\n          class=\"fas fa-filter padL-5 font-16 pointer\" (click)=\"openFilter()\" *ngIf=\"showOptions.filter\"></i></small></h3>\n    <mg-collapse widgetId=\"1\" [show]=\"openFilterBox\">\n      <div class=\"pad-10 collapse-filter-box\">\n        <h4>Filter </h4>\n        <mg-button (clicked)=\"search($event)\" theme=\"success\" btnSize=\"sm\"><i class=\"fas fa-search padR-5\"></i> Search\n        </mg-button>\n        <div class=\"row\">\n          <div class=\"col m3 l3 s6\" *ngFor=\"let filter of filterQuery\">\n            <mg-input [control]=\"filter.val\" [label]=\"filter.name\"></mg-input>\n          </div>\n        </div>\n      </div>\n    </mg-collapse>\n\n    <mg-collapse widgetId=\"2\" [show]=\"openSortBox\">\n      <div class=\"pad-10 collapse-sorter-box\">\n        <h4 style=\"margin-bottom: 5px;\">Sort</h4>\n        <mg-select [options]=\"sortOptions\" (value)=\"sort($event)\"></mg-select>\n      </div>\n    </mg-collapse>\n  </div>\n  <table class=\"{{theme}}\">\n    <thead [ngClass]=\"fixedHeader ? 'fixed-header' : ''\">\n      <ng-container>\n        \n        <th *ngFor=\"let head of headings; let k = index\"><span (click)=\"sort(head)\">\n          <mg-dropable (dataRecieved)=\"recieveData($event, k)\">\n            <mg-dragable [data]=\"{order: k}\" [dragable]=\"dragableSort\">\n              {{head}}\n            </mg-dragable>\n          </mg-dropable>\n          </span></th>\n      </ng-container>\n      \n    </thead>\n    <tbody>\n      <ng-container>\n        <tr *ngFor=\"let data of reformedData\">\n          <td *ngFor=\"let col of data\" [innerHtml]=\"col\"></td>\n        </tr>\n      </ng-container>\n      \n    </tbody>\n  </table>\n  <div class=\"padV-5\" *ngIf=\"paginate.status\">\n    <mg-pagination [theme]=\"theme\" [fullDataMode]=\"true\" [data]=\"mgData\" [perPage]=\"paginate.perPage\" (getdata)=\"updatePaginatedData($event)\"></mg-pagination>\n  </div>\n</div>\n", styles: [".fixed-header{position:sticky;top:45px}\n"] }]
+        args: [{ selector: 'mg-table', template: "<div class=\"pad-10\">\n  <div class=\"pad-5\">\n    <h3><span [innerHtml]=\"tableTitle\" *ngIf=\"showOptions.title\">Table</span> <small class=\"right\" *ngIf=\"showOptions.count\">{{count}} <i\n          class=\"fas fa-list-ol padL-5 pointer\" (click)=\"openSorter()\" *ngIf=\"showOptions.sort\"></i> <i\n          class=\"fas fa-filter padL-5 font-16 pointer\" (click)=\"openFilter()\" *ngIf=\"showOptions.filter\"></i></small></h3>\n    <mg-collapse widgetId=\"1\" [show]=\"openFilterBox\">\n      <div class=\"pad-10 collapse-filter-box\">\n        <h4>Filter </h4>\n        <mg-button (clicked)=\"search($event)\" theme=\"success\" btnSize=\"sm\"><i class=\"fas fa-search padR-5\"></i> Search\n        </mg-button>\n        <div class=\"row\">\n          <div class=\"col m3 l3 s6\" *ngFor=\"let filter of filterQuery\">\n            <mg-input [control]=\"filter.val\" [label]=\"filter.name\"></mg-input>\n          </div>\n        </div>\n      </div>\n    </mg-collapse>\n\n    <mg-collapse widgetId=\"2\" [show]=\"openSortBox\">\n      <div class=\"pad-10 collapse-sorter-box\">\n        <h4 style=\"margin-bottom: 5px;\">Sort</h4>\n        <mg-select [options]=\"sortOptions\" (value)=\"sort($event)\"></mg-select>\n      </div>\n    </mg-collapse>\n  </div>\n  <div class=\"padV-5\" *ngIf=\"paginate.status && pagingPosition.top\">\n    <mg-pagination (page)=\"setCurrentPage($event)\" [currentPage]=\"currentPage\" [theme]=\"theme\" [fullDataMode]=\"true\" [data]=\"mgData\" [perPage]=\"paginate.perPage\" (getdata)=\"updatePaginatedData($event)\"></mg-pagination>\n  </div>\n  <table class=\"{{theme}}\">\n    <thead [ngClass]=\"fixedHeader ? 'fixed-header' : ''\">\n      <ng-container>\n        \n        <th *ngFor=\"let head of headings; let k = index\"><span (click)=\"sort(head)\">\n          <mg-dropable (dataRecieved)=\"recieveData($event, k)\">\n            <mg-dragable [data]=\"{order: k}\" [dragable]=\"dragableSort\">\n              {{head}}\n            </mg-dragable>\n          </mg-dropable>\n          </span></th>\n      </ng-container>\n      \n    </thead>\n    <tbody>\n      <ng-container>\n        <tr *ngFor=\"let data of reformedData\">\n          <td *ngFor=\"let col of data\" [innerHtml]=\"col\"></td>\n        </tr>\n      </ng-container>\n      \n    </tbody>\n  </table>\n  <div class=\"padV-5\" *ngIf=\"paginate.status && pagingPosition.bottom\">\n    <mg-pagination (page)=\"setCurrentPage($event)\" [currentPage]=\"currentPage\" [theme]=\"theme\" [fullDataMode]=\"true\" [data]=\"mgData\" [perPage]=\"paginate.perPage\" (getdata)=\"updatePaginatedData($event)\"></mg-pagination>\n  </div>\n</div>\n", styles: [".fixed-header{position:sticky;top:45px}\n"] }]
     }], function () { return [{ type: i0.ChangeDetectorRef }]; }, { theme: [{
             type: Input
         }], mgData: [{
@@ -3843,6 +3867,8 @@ TableComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TableCompone
         }], dragableSort: [{
             type: Input
         }], paginate: [{
+            type: Input
+        }], pagingPosition: [{
             type: Input
         }], columnsOrder: [{
             type: Input
