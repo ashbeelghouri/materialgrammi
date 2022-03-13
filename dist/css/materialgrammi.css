@@ -793,10 +793,8 @@ small,
     column-count: 3;
   }
   .row.masonary.col-m-4 {
-    display: inline-block;
-    border: 2px solid #000;
     -webkit-column-count: 4;
-            column-count: 4;
+    column-count: 4;
   }
   .row.masonary.col-m-5 {
     -webkit-column-count: 5;
