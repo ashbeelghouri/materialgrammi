@@ -64,6 +64,8 @@ export class ButtonComponent implements OnInit {
       this.collapse();
     } else if (this.taskType == "overlay") {
       this.overlay();
+    }else if(this.taskType == "slideshowV2") {
+      this.slideshowV2();
     }
   }
 
@@ -124,13 +126,25 @@ export class ButtonComponent implements OnInit {
 
   slideShow() {
     if (this.task == "play") {
+      this.service.playSlideShow(this.target);
       // this.slideShowService.play(this.target);
     } else if (this.task == "next") {
+      this.service.nextSlide(this.target);
       // this.slideShowService.next(this.target);
     } else if (this.task == "previous") {
+      this.service.previousSlide(this.target);
       // this.slideShowService.previous(this.target);
     } else {
+      this.service.pauseSlideshow(this.target);
       // this.slideShowService.pause(this.target);
+    }
+  }
+
+  slideshowV2(){
+    if (this.task === "next") {
+      this.service.nextSlideV2(this.target);
+    } else if(this.task === "previous" || this.task === "prev") {
+      this.service.prevSlideV2(this.target);
     }
   }
 

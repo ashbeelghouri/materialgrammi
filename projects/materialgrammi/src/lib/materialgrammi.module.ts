@@ -46,6 +46,7 @@ import { ImageComponent } from './components/image/image.component';
 import { DateRangeComponent } from './components/date-range/date-range.component';
 import { ComponentComponent } from './components/component/component.component';
 import { SliderComponent } from './components/slider/slider.component';
+import { SlideshowV2Component } from './components/slideshow-v2/slideshow-v2.component';
 
 @NgModule({
   declarations: [
@@ -93,7 +94,8 @@ import { SliderComponent } from './components/slider/slider.component';
     ImageComponent,
     DateRangeComponent,
     ComponentComponent,
-    SliderComponent
+    SliderComponent,
+    SlideshowV2Component
   ],
   imports: [
     CommonModule,
@@ -142,7 +144,8 @@ import { SliderComponent } from './components/slider/slider.component';
     CountdownComponent,
     ImageComponent,
     DateRangeComponent,
-    ComponentComponent
+    ComponentComponent,
+    SlideshowV2Component
   ]
 })
 export class MaterialgrammiModule { }

@@ -1,9 +1,12 @@
-<ng-container *ngIf="settings.header.always || status">
-  <ng-content select="[mg-data=header]"></ng-content>
-</ng-container>
-<ng-container *ngIf="status">
-  <ng-content></ng-content>
-</ng-container>
-<ng-container *ngIf="settings.footer.always || status">
-  <ng-content select="[mg-data=footer]"></ng-content>
-</ng-container>
+<div [ngClass]="myClasses">
+  <ng-container *ngIf="settings.header.always || status">
+    <ng-content select="[mg-data=header]"></ng-content>
+  </ng-container>
+  <ng-container *ngIf="status">
+    <ng-content></ng-content>
+  </ng-container>
+  <ng-container *ngIf="settings.footer.always || status">
+    <ng-content select="[mg-data=footer]"></ng-content>
+  </ng-container>
+</div>
+

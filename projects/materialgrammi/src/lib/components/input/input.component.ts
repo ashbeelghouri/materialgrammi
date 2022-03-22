@@ -20,7 +20,7 @@ export class InputComponent implements OnInit {
   @Output() isFocused = new EventEmitter();
   @Output() keyup = new EventEmitter();
   @Input() textValue = "";
-  @Input() rounded = true;
+  @Input() rounded = false;
   @ViewChild('inputElement') private inputElem!: ElementRef;
 
   active = false;

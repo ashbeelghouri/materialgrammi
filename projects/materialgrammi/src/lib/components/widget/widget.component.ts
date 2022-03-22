@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, ChangeDetectorRef, Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
 import { MaterialgrammiService } from '../../materialgrammi.service';
 
 @Component({
@@ -6,13 +6,14 @@ import { MaterialgrammiService } from '../../materialgrammi.service';
   templateUrl: './widget.component.html',
   styleUrls: ['./widget.component.css']
 })
-export class WidgetComponent implements OnInit, OnChanges {
+export class WidgetComponent implements OnInit, OnChanges, AfterContentChecked {
   @Input() id = "general-widget-1";
   @Input() parent = "general-parent-1";
   @Input() type = "general";
   @Input() options: any = false;
   @Input() status = false;
   @Input() standalone = false;
+  @Input() class="";
   @Output() triggered = new EventEmitter();
 
   settings = {
@@ -24,14 +25,23 @@ export class WidgetComponent implements OnInit, OnChanges {
     }
   };
 
-  constructor(private mainService: MaterialgrammiService) { }
+  myClasses = "";
+  constructor(private mainService: MaterialgrammiService, private cd: ChangeDetectorRef) { }
+
+
 
   ngOnInit(): void {
     this.init();
+    this.myClasses = this.class;
   }
 
   ngOnChanges(): void {
     this.init();
+    this.myClasses = this.class;
+  }
+
+  ngAfterContentChecked(): void {
+    this.myClasses = this.class;
   }
 
   init() {
