@@ -16,5 +16,5 @@ logs
 .vscode/
 *.sw*
 dist/**
-.angular/**
+/.angular/**
 projects/.DS_Store
