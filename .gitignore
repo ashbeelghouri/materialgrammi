@@ -111,3 +111,6 @@ baseline.json
 
 # Cache files
 .angular/
+
+*/.DS_STORE
+*/.DS_Store
