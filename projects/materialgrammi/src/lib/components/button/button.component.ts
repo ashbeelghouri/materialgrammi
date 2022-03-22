@@ -8,7 +8,7 @@ import { MaterialgrammiService } from '../../materialgrammi.service';
 })
 export class ButtonComponent implements OnInit {
   @Output() clicked = new EventEmitter();
-  @Input() taskType = "link";
+  @Input() taskType = "none";
   @Input() btnStyle = "solid";
   @Input() task = "open";
   @Input() target: any = "/";
@@ -21,8 +21,6 @@ export class ButtonComponent implements OnInit {
   @Input() link = "";
   @Input() allowShrink = true;
   @Input() options: any = {};
-
-
   @Input() isExternalLink = false;
   @Input() newTab = false;
 
