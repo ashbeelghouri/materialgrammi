@@ -98,6 +98,8 @@ export class MaterialgrammiService {
   private offcanvas: [OffCanvas] | any = [];
   private tab: [Tab] | any = [];
 
+  private slideshowv2:any = [];
+
   constructor() { }
 
   makeid(length: number, str: string | number) {
@@ -110,6 +112,52 @@ export class MaterialgrammiService {
         charactersLength));
     }
     return result + '-' + str;
+  }
+
+  registerSlideShowv2(id: string, items: any, active: string = items[0]){
+    id = id === "" ? this.makeid(10, "slideshowv2") : id;
+    this.slideshowv2[id] = {
+      items, 
+      current: active,
+      active: new BehaviorSubject(active)
+    };
+    for(let i = 0; i < items.length; i++){
+      this.registerWidget(items[i], "slideshowv2", id);
+    }
+    this.openWidget(active, "slideshowv2", id);
+    return id;
+  }
+
+  watchSlideShowv2(id:string){
+    return this.slideshowv2[id].active.asObservable();
+  }
+
+  nextSlideV2(id: string){
+    let current = this.slideshowv2[id].current;
+    let next = "";
+    for(let i = 0; i < this.slideshowv2[id].items.length; i++) {
+      if(this.slideshowv2[id].items[i] === current) {
+        next = this.slideshowv2[id].items[i + 1] ? this.slideshowv2[id].items[i + 1] : this.slideshowv2[id].items[0];
+      }
+      this.closeWidget(this.slideshowv2[id].items[i], "slideshowv2", id);
+    }
+    this.slideshowv2[id].current = next;
+    this.openWidget(next, "slideshowv2", id);
+    this.slideshowv2[id].active.next(next);
+  }
+
+  prevSlideV2(id: string){
+    let current = this.slideshowv2[id].current;
+    let next = "";
+    for(let i = 0; i < this.slideshowv2[id].items.length; i++) {
+      if(this.slideshowv2[id].items[i] === current) {
+        next = this.slideshowv2[id].items[i - 1] ? this.slideshowv2[id].items[i - 1] : this.slideshowv2[id].items[this.slideshowv2[id].items.length - 1];
+        this.closeWidget(this.slideshowv2[id].items[i], "slideshowv2", id);
+      }
+    }
+    this.slideshowv2[id].current = next;
+    this.openWidget(next, "slideshowv2", id);
+    this.slideshowv2[id].active.next(next);
   }
 
   registerTab(id: string, components: any, active: string) {
@@ -153,7 +201,6 @@ export class MaterialgrammiService {
   }
 
   closeCanvas(id: string) {
-    console.log("ID to be closed? ", id, "canvas ==> ", this.offcanvas[id]);
     this.offcanvas[id].status.next(false);
   }
 
@@ -339,7 +386,6 @@ export class MaterialgrammiService {
   }
 
   openOverlay(id: string) {
-    console.log("Overlay?", this.overlay);
     this.overlay[id].status.next(true);
   }
 
@@ -417,6 +463,9 @@ export class MaterialgrammiService {
   }
 
   registerWidget(id: string, parent_type: string, parent_id: string, options: any = {}) {
+    
+    
+    
     let mywidgetid = this.getWidgetId(id, parent_type, parent_id);
     this.widgets[mywidgetid] = {
       id,
@@ -428,6 +477,7 @@ export class MaterialgrammiService {
   }
 
   openWidget(id: string, parent_type: string, parent_id: string): void {
+    
     let mywidgetid = this.getWidgetId(id, parent_type, parent_id);
     if (this.widgets && this.widgets[mywidgetid]) {
       this.widgets[mywidgetid].status.next(true);

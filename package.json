@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "library": "ng build --watch --configuration development",
-    "app": "ng serve testinglib"
+    "app": "ng serve testinglib --port 7200"
   },
   "private": true,
   "dependencies": {

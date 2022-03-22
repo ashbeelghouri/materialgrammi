@@ -49,3 +49,4 @@ export * from './lib/components/text-input/text-input.component';
 export * from './lib/components/toast/toast.component';
 export * from './lib/components/widget/widget.component';
 export * from './lib/components/wizard/wizard.component';
+export * from './lib/components/slideshow-v2/slideshow-v2.component';
