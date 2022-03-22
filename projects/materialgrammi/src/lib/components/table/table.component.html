@@ -37,13 +37,28 @@
             </mg-dragable>
           </mg-dropable>
           </span></th>
+          <ng-container *ngIf="buttons && buttons.length > 0">
+            <th *ngFor="let btn of buttons">
+              <span *ngIf = "btn && btn.title" [innerHtml]="btn.title"></span>
+            </th>
+          </ng-container>
       </ng-container>
       
     </thead>
     <tbody>
       <ng-container>
-        <tr *ngFor="let data of reformedData">
+        <tr *ngFor="let data of reformedData; let ind=index;">
           <td *ngFor="let col of data" [innerHtml]="col"></td>
+          <ng-container *ngIf="buttons && buttons.length > 0">
+            <td *ngFor="let btn of buttons">
+              <ng-container *ngIf="btn.data && btn.data.length > 0">
+                <ng-container *ngFor="let d of btn.data">
+                  <span (click)="buttonIsClicked(d.id, ind)" [innerHtml]="d.text" style="cursor: pointer; padding-left: 5px; padding-right: 5px;"></span>
+                </ng-container>
+              </ng-container>
+            </td>
+          </ng-container>
+          
         </tr>
       </ng-container>
       

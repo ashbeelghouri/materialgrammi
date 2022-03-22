@@ -4,3 +4,33 @@
 <h3 class="padH-10">Input Options</h3>
 <app-input-options [options]="inputOptions"></app-input-options>
 <app-output-options [options]="outputOptions"></app-output-options>
+
+<div class="pad-10">
+    <app-examples [name]="title" [code] = "code" [optionsApplied]="optionsApplied">
+        <h4>Solid</h4>
+        <div class="padY-10">
+            <mg-button theme="primary">Primary button</mg-button>
+            <mg-button theme="success">Success button</mg-button>
+            <mg-button theme="danger">Danger button</mg-button>
+            <mg-button theme="warning">Warning button</mg-button>
+            <mg-button theme="lite">Lite button</mg-button>
+            <mg-button theme="dark">Dark button</mg-button>
+        </div>
+        <div class="padY-10">
+            <mg-button btnStyle="outline" theme="primary">Primary button</mg-button>
+            <mg-button btnStyle="outline" theme="success">Success button</mg-button>
+            <mg-button btnStyle="outline" theme="danger">Danger button</mg-button>
+            <mg-button btnStyle="outline" theme="warning">Warning button</mg-button>
+            <mg-button btnStyle="outline" theme="lite">Lite button</mg-button>
+            <mg-button btnStyle="outline" theme="dark">Dark button</mg-button>
+        </div>
+        <div class="padY-10">
+            <mg-button btnStyle="link" theme="primary">Primary button</mg-button>
+            <mg-button btnStyle="link" theme="success">Success button</mg-button>
+            <mg-button btnStyle="link" theme="danger">Danger button</mg-button>
+            <mg-button btnStyle="link" theme="warning">Warning button</mg-button>
+            <mg-button btnStyle="link" theme="lite">Lite button</mg-button>
+            <mg-button btnStyle="link" theme="dark">Dark button</mg-button>
+        </div>
+    </app-examples>
+</div>

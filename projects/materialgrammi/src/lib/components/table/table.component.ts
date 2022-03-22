@@ -1,4 +1,4 @@
-import { AfterContentChecked, ChangeDetectorRef, Component, Input, OnChanges, OnInit } from '@angular/core';
+import { AfterContentChecked, ChangeDetectorRef, Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -33,6 +33,21 @@ export class TableComponent implements OnInit, OnChanges, AfterContentChecked {
     sort: false,
     count: false
   };
+
+  @Input() buttons:any = [];
+
+  /* 
+  [{
+    title: "options",
+    data: [{
+      id: "btn1",
+      text: `<i class="fas fa-hammer"></i>`
+    }]
+  }]
+  */
+
+  @Output() clicked = new EventEmitter();
+
   currentPage = 1;
   show = false;
   
@@ -75,6 +90,13 @@ export class TableComponent implements OnInit, OnChanges, AfterContentChecked {
 
   ngAfterContentChecked(){
     this.cdref.detectChanges();
+  }
+
+  buttonIsClicked(btnId: string, rowNum: number){
+    this.clicked.emit({
+      id: btnId,
+      data: this.reformedData[rowNum]
+    });
   }
 
   init() {

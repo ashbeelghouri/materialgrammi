@@ -95,6 +95,10 @@ export class CompButtonComponent implements OnInit {
     type: "boolean"
   }];
 
+  code = `<mg-card>
+            <p class="blue pad-10 text-grey1">Lorem Ipsum</p>
+          </mg-card>`;
+  optionsApplied = {}
   constructor() { }
 
   ngOnInit(): void {
