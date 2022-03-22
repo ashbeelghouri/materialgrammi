@@ -114,3 +114,5 @@ baseline.json
 
 */.DS_STORE
 */.DS_Store
+
+.package-lock.json
