@@ -17,3 +17,4 @@ logs
 *.sw*
 dist/**
 .angular/**
+projects/.DS_Store
