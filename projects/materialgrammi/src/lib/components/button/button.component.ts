@@ -21,8 +21,6 @@ export class ButtonComponent implements OnInit {
   @Input() link = "";
   @Input() allowShrink = true;
   @Input() options: any = {};
-
-
   @Input() isExternalLink = false;
   @Input() newTab = false;
 
