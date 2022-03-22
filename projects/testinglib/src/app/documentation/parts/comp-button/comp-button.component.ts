@@ -95,9 +95,31 @@ export class CompButtonComponent implements OnInit {
     type: "boolean"
   }];
 
-  code = `<mg-card>
-            <p class="blue pad-10 text-grey1">Lorem Ipsum</p>
-          </mg-card>`;
+  code = `<h4>Solid</h4>
+  <div class="padY-10">
+      <mg-button theme="primary">Primary button</mg-button>
+      <mg-button theme="success">Success button</mg-button>
+      <mg-button theme="danger">Danger button</mg-button>
+      <mg-button theme="warning">Warning button</mg-button>
+      <mg-button theme="lite">Lite button</mg-button>
+      <mg-button theme="dark">Dark button</mg-button>
+  </div>
+  <div class="padY-10">
+      <mg-button btnStyle="outline" theme="primary">Primary button</mg-button>
+      <mg-button btnStyle="outline" theme="success">Success button</mg-button>
+      <mg-button btnStyle="outline" theme="danger">Danger button</mg-button>
+      <mg-button btnStyle="outline" theme="warning">Warning button</mg-button>
+      <mg-button btnStyle="outline" theme="lite">Lite button</mg-button>
+      <mg-button btnStyle="outline" theme="dark">Dark button</mg-button>
+  </div>
+  <div class="padY-10">
+      <mg-button btnStyle="link" theme="primary">Primary button</mg-button>
+      <mg-button btnStyle="link" theme="success">Success button</mg-button>
+      <mg-button btnStyle="link" theme="danger">Danger button</mg-button>
+      <mg-button btnStyle="link" theme="warning">Warning button</mg-button>
+      <mg-button btnStyle="link" theme="lite">Lite button</mg-button>
+      <mg-button btnStyle="link" theme="dark">Dark button</mg-button>
+  </div>`;
   optionsApplied = {}
   constructor() { }
 
