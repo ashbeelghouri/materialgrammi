@@ -9,7 +9,7 @@ import { FormControl } from '@angular/forms';
 export class SelectComponent implements OnInit {
   @Output() value = new EventEmitter();
   @Input() searchOpt: FormControl = new FormControl('');
-  @Input() theme = "lite";
+  @Input() theme = "primary";
   @Input() selectTitle = "Select";
   @Input() selectType = "control";
   @Input() enableSearch = false;

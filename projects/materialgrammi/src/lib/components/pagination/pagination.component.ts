@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angu
 export class PaginationComponent implements OnInit, OnChanges {
   @Output() page = new EventEmitter();
   @Output() getdata = new EventEmitter();
-  @Input() theme = "text-on-dark";
+  @Input() theme = "primary";
   @Input() data: any = [];
   @Input() fullDataMode = true;
   @Input() perPage = 10;

@@ -12,7 +12,7 @@ export class ButtonComponent implements OnInit {
   @Input() btnStyle = "solid";
   @Input() task = "open";
   @Input() target: any = "/";
-  @Input() theme = "default";
+  @Input() theme = "primary";
   @Input() class = "";
   @Input() btnSize = "md";
   @Input() isBlock = false;

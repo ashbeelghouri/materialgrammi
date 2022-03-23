@@ -9,7 +9,7 @@ import { CalendarForDateInput, DisabledRange } from '../../interfaces';
 })
 export class DateInputComponent implements OnInit, OnChanges {
   @Input() input = {
-    theme: "success",
+    theme: "primary",
     style: "control",
     control: new FormControl(''),
     darkmode: false,

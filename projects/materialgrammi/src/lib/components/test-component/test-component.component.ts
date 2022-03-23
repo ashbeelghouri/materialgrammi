@@ -7,7 +7,7 @@ import { MaterialgrammiService } from '../../materialgrammi.service';
   styleUrls: ['./test-component.component.css']
 })
 export class TestComponentComponent implements OnInit {
-  widgetID = "widget";
+  id = "widget";
   constructor(private myservice: MaterialgrammiService) {   }
 
   ngOnInit(): void {

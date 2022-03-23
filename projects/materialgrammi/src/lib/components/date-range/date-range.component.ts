@@ -20,7 +20,7 @@ export class DateRangeComponent implements OnInit, OnChanges {
 
   @Input() style = {
     input: {
-      theme: "success",
+      theme: "primary",
       style: "control",
       darkmode: false,
       class: ""

@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./accordion.component.css']
 })
 export class AccordionComponent implements OnInit {
-  @Input() theme = "dark";
+  @Input() theme = "primary";
 
   @Input() items: any = [{
     title: "Panel 1",

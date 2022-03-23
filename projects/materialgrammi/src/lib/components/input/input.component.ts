@@ -7,7 +7,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./input.component.css']
 })
 export class InputComponent implements OnInit {
-  @Input() theme = "success";
+  @Input() theme = "primary";
   @Input() fStyle = "control";
   // control | material
   @Input() label = "Input Value";

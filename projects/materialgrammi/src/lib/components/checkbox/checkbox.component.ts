@@ -8,7 +8,7 @@ import { MaterialgrammiService } from '../../materialgrammi.service';
 })
 export class CheckboxComponent implements OnInit {
   @Input() size = "m";
-  @Input() theme = "info";
+  @Input() theme = "primary";
   @Input() onDark = false;
   @Input() isSelected = false;
   @Input() class = "";

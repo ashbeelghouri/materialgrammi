@@ -7,7 +7,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./text-input.component.css']
 })
 export class TextInputComponent implements OnInit {
-  @Input() theme = "dark";
+  @Input() theme = "primary";
   @Input() fStyle = "control";
   @Input() on_dark = false;
   @Input() label = "textarea input";
