@@ -159,10 +159,10 @@ export class LandingComponent implements OnInit {
       name: "Notes",
       link: "/documentation/components/note"
     }, 
-    // {
-    //   name: "Notifications",
-    //   link: "/documentation/components/notifications"
-    // }, 
+    {
+      name: "Notifications",
+      link: "/documentation/components/notifications"
+    }, 
     {
       name: "Offcanvas",
       link: "/documentation/components/offcanvas"

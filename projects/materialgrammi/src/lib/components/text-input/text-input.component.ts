@@ -17,7 +17,7 @@ export class TextInputComponent implements OnInit {
   @Output() keyup = new EventEmitter<string>();
   @Input() info = {
     type: "success",
-    msg: "example message"
+    msg: ""
   };
   @ViewChild('inputElementText') private inputElem!: ElementRef;
   active = false;

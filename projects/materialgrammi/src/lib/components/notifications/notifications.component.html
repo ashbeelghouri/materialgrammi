@@ -1,1 +1,8 @@
-<p>notifications works!</p>
+<ng-container *ngIf="notificationData.length">
+    <div class="notifications-wrapper" [ngClass]="mainClass()">
+        <div class="notification" *ngFor="let data of notificationData" [ngClass]="(data && data.options) ? ((data.options.class ? data.options.class : '') + (data.options.size ? ' ' + data.options.size : '')) : ''">
+            <a class="text-center" [innerHtml] = "close" (click)="closeNotification(data.id)"></a>
+            <p [innerHtml]="data && data.message ? data.message : ''"></p>
+        </div>
+    </div>
+</ng-container>

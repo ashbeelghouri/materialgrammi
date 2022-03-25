@@ -97,10 +97,105 @@ export class MaterialgrammiService {
   private slideshow: [Slideshow] | any = [];
   private offcanvas: [OffCanvas] | any = [];
   private tab: [Tab] | any = [];
+  private notifications: any = {
+    topRight: {
+      status: new BehaviorSubject([]),
+      data: []
+    },
+    topLeft:{
+      status: new BehaviorSubject([]),
+      data: []
+    },
+    topCenter: {
+      status: new BehaviorSubject([]),
+      data: []
+    },
+    bottomRight: {
+      status: new BehaviorSubject([]),
+      data: []
+    },
+    bottomLeft: {
+      status: new BehaviorSubject([]),
+      data: []
+    },
+    bottomCenter: {
+      status: new BehaviorSubject([]),
+      data: []
+    },
+    centerRight: {
+      status: new BehaviorSubject([]),
+      data: []
+    },
+    centerLeft: {
+      status: new BehaviorSubject([]),
+      data: []
+    },
+    centerCenter: {
+      status: new BehaviorSubject([]),
+      data: []
+    }
+  };
 
   private slideshowv2:any = [];
 
   constructor() { }
+
+  /*
+    options: {
+      timer: 0 | 1-any-number,
+      class: "",
+      size: "s | m | l"
+    }
+  */
+
+  notificationOptionsDefaults = {
+      timer: 2000,
+      class: "blueGrey8 text-grey2 radius-5 pad-10 marginT-10 outline-grey7 shadow-1",
+      size: "m"
+    };
+
+  addNotification(position = "topRight", message = "demo notification", options:any = {}){
+    
+    options.timer = !options.timer ? this.notificationOptionsDefaults.timer : options.timer;
+    options.class = !options.class ? this.notificationOptionsDefaults.class : options.class;
+    options.size = !options.size ? this.notificationOptionsDefaults.size : options.size;
+
+    let notify = {
+      message,
+      options,
+      id: this.makeid(10, this.makeid(3, "notification"))
+    };
+
+    const allowedPositions = Object.keys(this.notifications);
+    
+    if(allowedPositions.includes(position)){
+      this.notifications[position].data = [notify, ...this.notifications[position].data];
+      this.notifications[position].status.next(this.notifications[position].data);
+    }
+
+    if(notify.options.timer !== 0) {
+      var $this = this;
+      setTimeout(function(){
+        $this.deleteNotification(position, notify.id);
+      }, notify.options.timer);
+    }
+    
+  }
+
+  watchNotification(position = "topRight"){
+    return Object.keys(this.notifications).includes(position) ? this.notifications[position].status.asObservable() : false;
+  }
+
+  deleteNotification(position = "topRight", id: string){
+    if(Object.keys(this.notifications).includes(position)){
+      this.notifications[position].data = this.notifications[position].data.filter((d:any) => {
+        return d.id != id;
+      });
+    }
+    this.notifications[position].status.next(this.notifications[position].data);
+  }
+
+  
 
   makeid(length: number, str: string | number) {
     str = typeof str == "string" ? str.split(" ").join("") : str;
@@ -570,6 +665,8 @@ export class MaterialgrammiService {
       console.error('Async: Could not copy text: ', err);
     });
   }
+
+  
 
 
 

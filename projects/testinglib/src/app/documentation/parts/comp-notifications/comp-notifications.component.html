@@ -4,8 +4,76 @@
 <h3 class="padH-10">Input Options</h3>
 <app-input-options [options]="inputOptions"></app-input-options>
 <app-output-options [options]="outputOptions"></app-output-options>
+
+<h3 class="pad-10">Add a notification</h3>
+
+<div class="padX-10">
+    <div class="">
+        <span class="pad-5 red text-grey1 shadow-2">Function</span>
+    </div>
+    <div class="pad-10 padV-20 grey3" style="overflow-x: scroll;">
+        <pre class="example-font spacing-2">
+            constructor( private mgService : MaterialgrammiService ) {{ '{}' }}
+            this.mgService.addNotification(
+                "topLeft", 
+                "Simple Message", 
+                {{ ' { '}}
+                    size: "m",
+                    timer: 1000
+                {{ '}' }},
+                class: "blueGrey8 text-grey2 radius-5 pad-10 marginT-10 outline-grey7 shadow-1"
+            );
+        </pre>
+    </div>
+</div>
+
+
 <div class="pad-10">
     <app-examples [name]="title" [code] = "code" [optionsApplied]="optionsApplied">
-        <mg-notifications></mg-notifications>
+        <div class="row">
+            <div class="col m4 l4 s12">
+                <div class="pad-5">
+                    <mg-input label="message" textValue="Simple Message" (keyup)="setMessage($event)"></mg-input>
+                </div>
+            </div>
+            <div class="col m2 l2 s12">
+                <div class="pad-5">
+                    <mg-input label="timeout" type="number" textValue="1000" (keyup)="setTimeout($event)"></mg-input>
+                </div>
+            </div>
+            <div class="col m3 l3 s12">
+                <div class="pad-5">
+                    <p>position</p>
+                    <mg-select [options]="selectOptions.position" (value)="setPosition($event)"></mg-select>
+                </div>
+            </div>
+            <div class="col m2 l2 s12">
+                <div class="pad-5">
+                    <p>size</p>
+                    <mg-select [options]="selectOptions.size"></mg-select>
+                </div>
+            </div>
+            <div class="col m1 l1 s12">
+                <div class="pad-5">
+                    <br/>
+                    <mg-button (clicked)="generateNotification()">Generate</mg-button>
+                </div>
+            </div>
+        </div>
+
+        <ng-container *ngFor="let pos of selectOptions.position">
+            <mg-notifications [position]="pos.val"></mg-notifications>
+        </ng-container>
+        
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
     </app-examples>
 </div>

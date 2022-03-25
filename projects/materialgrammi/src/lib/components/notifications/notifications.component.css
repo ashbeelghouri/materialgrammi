@@ -1,0 +1,86 @@
+@keyframes notificationAnim {
+    0%{
+        opacity: 0;
+        margin-top: -5px;
+        transform: scale(0.1);
+    }
+    50%{
+        opacity: 1;
+        margin-top: 5px;
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.notifications-wrapper{
+    display: block;
+    position: fixed;
+    z-index: 9999;
+    padding: 10px;
+    overflow-y: auto;
+    transition: all .20s ease-in-out;
+}
+
+.notifications-wrapper .notification {
+    animation:0.30s notificationAnim both;
+    transition: all .30s ease-in-out;
+}
+
+.notifications-wrapper .notification.s{
+    padding: 5px;
+}
+
+.notifications-wrapper .notification.m{
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.notifications-wrapper .notification.l{
+    padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.notifications-wrapper .notification a{
+    display: block;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+}
+
+.notifications-wrapper.top {
+    top: 0;
+}
+
+.notifications-wrapper.right {
+    right: 0;
+}
+
+.notifications-wrapper.left {
+    left: 0;
+}
+
+.notifications-wrapper.bottom {
+    bottom: 0;
+}
+
+.notifications-wrapper.top.center, .notifications-wrapper.bottom.center {
+    left: 50%;
+}
+
+.notifications-wrapper.left.center, .notifications-wrapper.right.center {
+    top: 50%;
+}
+
+.notifications-wrapper.center-center {
+    left: 50%;
+    top: 50%;
+}

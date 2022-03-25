@@ -24,9 +24,9 @@ export class InputComponent implements OnInit {
 
   @Input() info = {
     type: "success",
-    msg: "example message"
+    msg: ""
   };
-  
+
   @ViewChild('inputElement') private inputElem!: ElementRef;
 
   active = false;

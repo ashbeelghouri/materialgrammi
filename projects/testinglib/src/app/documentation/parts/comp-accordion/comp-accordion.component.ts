@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MaterialgrammiService } from 'projects/materialgrammi/src/public-api';
 
 @Component({
   selector: 'app-comp-accordion',
@@ -52,9 +53,33 @@ export class CompAccordionComponent implements OnInit {
 
   outputOptions = [];
 
-  constructor() { }
+  constructor(private mgService: MaterialgrammiService) { }
 
   ngOnInit(): void {
+    this.mgService.addNotification("topRight", "Demo Message from Accordion", {
+      size: "m",
+      class: "grey2 pad-10 marginB-5",
+      timer: 2000
+    });
+
+    var $this = this;
+
+    var img = `<img src="https://picsum.photos/300/300?random=${Math.ceil(Math.random() * 10)}" class="img img-response"/>`;
+
+    setInterval(function () {
+      $this.sendNotification(`Hello I am notification ${Math.ceil(Math.random() * 10)}`);
+    }, 3000);
+  }
+
+  nPos = "topLeft";
+
+  closeBtn = `<i class="fas fa-times"></i>`;
+
+  sendNotification(msg:string){
+    this.mgService.addNotification(this.nPos, msg, {
+      size: "s",
+      timer: 8000
+    });
   }
 
 }
