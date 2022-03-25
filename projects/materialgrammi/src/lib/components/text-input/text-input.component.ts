@@ -15,6 +15,10 @@ export class TextInputComponent implements OnInit {
   @Output() value = new EventEmitter<FormControl>();
   @Output() isFocused = new EventEmitter<boolean>();
   @Output() keyup = new EventEmitter<string>();
+  @Input() info = {
+    type: "success",
+    msg: "example message"
+  };
   @ViewChild('inputElementText') private inputElem!: ElementRef;
   active = false;
   textValue = "";
@@ -53,5 +57,21 @@ export class TextInputComponent implements OnInit {
 
   labelClick(){
     this.inputElem.nativeElement.focus();
+  }
+
+  infoClasses(){
+    let classes = "";
+    if(this.info.type === "error"){
+      classes += "text-red";
+    }else if(this.info.type === "success"){
+      classes += "text-green";
+    }else if(this.info.type === "info"){
+      classes += "text-blue";
+    }else if(this.info.type === "lite"){
+      classes += "text-grey2";
+    }else if(this.info.type === "dark"){
+      classes += "text-grey8";
+    }
+    return classes;
   }
 }

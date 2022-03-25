@@ -26,6 +26,11 @@ export class DateInputComponent implements OnInit, OnChanges {
     abbreviation: true
   };
 
+  @Input() info = {
+    type: "success",
+    msg: ""
+  };
+
   
 
   @Input() disabledRange: DisabledRange = {

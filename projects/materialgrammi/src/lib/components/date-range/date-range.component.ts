@@ -33,6 +33,11 @@ export class DateRangeComponent implements OnInit, OnChanges {
 
   @Input() class = "";
 
+  @Input() info = {
+    type: "success",
+    msg: ""
+  };
+
   formattedInput?:any;
 
 

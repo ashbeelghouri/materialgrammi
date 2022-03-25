@@ -1,6 +1,13 @@
 <div class="form-{{fStyle}} {{theme}}" [ngClass]="mainClasses()">
+
   <ng-container *ngIf="label && label!=''">
-    <label [innerHtml]="label" (click)="labelClick()" [ngClass]="fStyle == 'control' && active ? 'marginL-10' : ''"></label>
+    <label [innerHtml]="label" (click)="labelClick()"></label>
   </ng-container>
+
   <input #inputElement [type]="type" (focus)="onFocusIn()" (focusout)="onFocusOut()" (keyup)="onKeyUp($event)" [value]="textValue" [ngClass]="class + (rounded ? 'radius-5' : '')" [placeholder] = "input_placeholder"/>
+
+  <ng-container *ngIf="info && info.msg && info.msg.length > 0">
+    <p [innerHtml]="info.msg" [ngClass]="infoClasses()"></p>
+  </ng-container>
+
 </div>

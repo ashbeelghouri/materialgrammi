@@ -1,7 +1,7 @@
 <div (click)="active = true"  (focusin)="inputFocused(true)" (mouseleave)="inputFocused(false)" [ngClass]="class">
     <mg-input [theme]="input.theme" [style]="input.style" [label]="label" 
     [placeholder] = "format" [control]="input.control" type="text" 
-    [textValue]="textValue" [onDark]="input.darkmode" [class]="input.class"></mg-input>
+    [textValue]="textValue" [onDark]="input.darkmode" [class]="input.class" [info]="info"></mg-input>
     <div class="calendar-input pad-10" [ngClass]="calendarClass()">
         <p class="text-right">
             <a [innerHtml]="icons.close" 
