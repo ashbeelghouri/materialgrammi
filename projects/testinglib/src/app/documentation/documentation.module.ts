@@ -63,6 +63,7 @@ import { SelectorsComponent } from './tools/selectors/selectors.component';
 import { ExamplesComponent } from './tools/examples/examples.component';
 import { OutputComponent } from './tools/output/output.component';
 import { ColorPillComponent } from './tools/color-pill/color-pill.component';
+import { FixerComponent } from './parts/fixer/fixer.component';
 
 
 @NgModule({
@@ -126,7 +127,8 @@ import { ColorPillComponent } from './tools/color-pill/color-pill.component';
     SelectorsComponent,
     ExamplesComponent,
     OutputComponent,
-    ColorPillComponent
+    ColorPillComponent,
+    FixerComponent
   ],
   imports: [
     CommonModule,

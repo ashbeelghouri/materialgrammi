@@ -49,6 +49,7 @@ import { CssColorsComponent } from './parts/css-colors/css-colors.component';
 import { CssGridComponent } from './parts/css-grid/css-grid.component';
 import { CssHelperComponent } from './parts/css-helper/css-helper.component';
 import { CssTypographyComponent } from './parts/css-typography/css-typography.component';
+import { FixerComponent } from './parts/fixer/fixer.component';
 import { GettingStartedComponent } from './parts/getting-started/getting-started.component';
 import { GsIntroductionComponent } from './parts/gs-introduction/gs-introduction.component';
 import { TemplatesComponent } from './parts/templates/templates.component';
@@ -137,6 +138,9 @@ const routes: Routes = [{
   }, {
     path: "components/dropdown",
     component: CompDropDownComponent
+  }, {
+    path: "components/fixer",
+    component: FixerComponent
   }, {
     path: "components/footer",
     component: CompFooterComponent

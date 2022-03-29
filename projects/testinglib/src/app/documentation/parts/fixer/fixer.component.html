@@ -1,0 +1,35 @@
+<app-headers>Fixer</app-headers>
+<app-description></app-description>
+<app-selectors>{{selector}}</app-selectors>
+<h3 class="padH-10">Input Options</h3>
+<app-input-options [options]="inputOptions"></app-input-options>
+<app-output-options [options]="outputOptions"></app-output-options>
+<div class="pad-10">
+    <app-examples [name]="title" [code]="code" [optionsApplied]="optionsApplied">
+        <div class="row">
+            <div class="col m4 l4 s12">
+                <div class="pad-5">
+                    <p>Position X</p>
+                    <mg-select theme="lite" [options]="otherOptions.x" (value)="handleInput($event, 'x')"></mg-select>
+                </div>
+
+            </div>
+            <div class="col m4 l4 s12">
+                <div class="pad-5">
+                    <p>Position Y</p>
+                    <mg-select theme="lite" [options]="otherOptions.y" (value)="handleInput($event, 'y')"></mg-select>
+                </div>
+            </div>
+            <div class="col m4 l4 s12">
+                <div class="pad-5">
+                    <p>Status</p>
+                    <mg-select theme="lite" [options]="otherOptions.active" (value)="handleInput($event, 'active')"></mg-select>
+                </div>
+            </div>
+        </div>
+        <mg-fixer [class]="optionsApplied.class" [x]="optionsApplied.x" [y]="optionsApplied.y"
+            [active]="optionsApplied.active">
+            <p>I am fixed</p>
+        </mg-fixer>
+    </app-examples>
+</div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MaterialgrammiService } from 'projects/materialgrammi/src/public-api';
+import { MaterialgrammiService, SeoService } from 'projects/materialgrammi/src/public-api';
 
 @Component({
   selector: 'app-comp-accordion',
@@ -53,9 +53,12 @@ export class CompAccordionComponent implements OnInit {
 
   outputOptions = [];
 
-  constructor(private mgService: MaterialgrammiService) { }
+  constructor(private mgService: MaterialgrammiService, private seo: SeoService) { }
 
   ngOnInit(): void {
+
+    this.seo.setTitle("Materialgrammi | Accordion");
+
     this.mgService.addNotification("topRight", "Demo Message from Accordion", {
       size: "m",
       class: "grey2 pad-10 marginB-5",

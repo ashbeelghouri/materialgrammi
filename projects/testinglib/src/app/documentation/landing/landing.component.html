@@ -3,9 +3,9 @@
     <div mg-data="sidebar" class="grey2" style="position: fixed; height: 100%; width: 20%; overflow-y: scroll;">
         <div class="padV-10 padH-20 marginT-40" style="display: block; position: absolute;">
             <ng-container *ngFor="let cat of categories">
-                <mg-button class="w-100 text-right bold font-16" btnStyle="link" [allowShrink]="false"><span [innerHtml]="cat.name"></span></mg-button>
+                <mg-button theme="success" class="w-100 text-right bold font-16" btnStyle="link" [allowShrink]="false"><span [innerHtml]="cat.name"></span></mg-button>
                 <ng-container *ngFor="let link of cat.links">
-                    <mg-button class="w-100 text-right font-13" btnStyle="link" taskType="link" [target]="link.link" [allowShrink]="false"><span [innerHtml]="link.name"></span></mg-button>
+                    <mg-button theme="dark" class="w-100 text-right font-13" btnStyle="link" taskType="link" [target]="link.link" [allowShrink]="false"><span [innerHtml]="link.name"></span></mg-button>
                 </ng-container>
             </ng-container>
         </div>

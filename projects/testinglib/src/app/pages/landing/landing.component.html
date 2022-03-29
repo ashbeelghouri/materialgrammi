@@ -4,9 +4,9 @@
             <div class="pad-20 padV-50 amber shadow-1 text-center radius-5">
                 <h1 class="text-grey8"><span class="bold">M</span>aterial <span class="bold">G</span>rammi <small class="font-10 text-grey2 radius-5 pad-3 blue">angular</small></h1>
                 <div class="padV-10">
-                    <mg-button class="padH-5" taskType="link" btnStyle="link" target="/documentation"><i class="fas fa-book"></i> Documentation</mg-button>
-                    <mg-button class="padH-5" taskType="link" btnStyle="link" target="/themes"><i class="fas fa-paint-brush"></i> Themes</mg-button>
-                    <mg-button class="padH-5" taskType="link" btnStyle="link" target="/templates"><i class="fab fa-html5"></i> Templates</mg-button>
+                    <mg-button theme="dark" class="padH-5" taskType="link" btnStyle="link" target="/documentation"><i class="fas fa-book"></i> Documentation</mg-button>
+                    <!-- <mg-button theme="dark" class="padH-5" taskType="link" btnStyle="link" target="/themes"><i class="fas fa-paint-brush"></i> Themes</mg-button>
+                    <mg-button theme="dark" class="padH-5" taskType="link" btnStyle="link" target="/templates"><i class="fab fa-html5"></i> Templates</mg-button> -->
                 </div>
             </div>
         </div>
@@ -16,22 +16,19 @@
         <div class="col m6 l6 s12">
             <div class="pad-10 padV-30">
                 <h2 class="text-green marginB-10">About me</h2>
-                <p class="text-grey8 text-justify marginB-10">Materialgrammi is very innovative library for developing responsive, mobile first projects on the web. This library is relaunched with Angular integration on component level. This library is inspired from google's Material Design and can be use to design with independent classes and angular components. We intend to evolve the library with new design trends and practices that makes it fast and innovative.</p>
+                <p class="text-grey8 text-justify marginB-10">Materialgrammi is an innovative open-source library for developing responsive, mobile first projects on the web. This library is relaunched with Angular integration on component level. This library is inspired from google's Material Design and can be use to design with independent classes and angular components. We intend to evolve the library with new design trends and practices that makes it fast and innovative.</p>
                 <p class="text-grey8 text-justify marginT-5">Library can be downloaded with the below steps</p>
                 <div class="padV-10">
-                    <h5 class="marginB-2">1. Install via npm</h5>
+                    <h5 class="marginB-2 font-20 text-green5">Install via npm</h5>
                     <app-code class="grey3 radius-5" [code]="installNpm"></app-code>
                 </div>
                 <div class="padV-10">
-                    <h5 class="marginB-5">2. Import the css file</h5>
-                    <app-code class="grey3 radius-5" [code]="installNpm"></app-code>
+                    <h5 class="marginB-5 font-20 text-green5">Import the css file</h5>
+                    <app-code class="grey3 radius-5" [code]="importCss"></app-code>
                 </div> 
                 <div class="padV-10">
-                    <h5 class="marginB-5">3. Add Materialgrammi to the list of imports in your module</h5>
-                    <app-code class="grey3 radius-5" [code]="installNpm"></app-code>
-                </div>
-                <div class="padV-10">
-                    <p>You can directly download the css files too, <mg-button class="padH-5" taskType="link" btnStyle="link" [target]="mgcss" [isExternalLink]="true" theme="primary">click here.</mg-button></p>
+                    <h5 class="marginB-5 font-20 text-green5">Import the Module</h5>
+                    <app-code class="grey3 radius-5" [code]="listOfImports"></app-code>
                 </div>
             </div>
         </div>
@@ -43,19 +40,7 @@
             <div class="pad-10">
                 <h2 class="text-green marginB-10">Feedback <small class="font-12">is important</small></h2>
                 <div class="padV-10">
-                    <div class="padV-5">
-                        <mg-input label="Your Name" theme="dark"></mg-input>
-                    </div>
-                    <div class="padV-5">
-                        <mg-input label="Subject" theme="dark"></mg-input>
-                    </div>
-                    <div class="padV-5">
-                        <mg-text label="Message" theme="dark"></mg-text>
-                    </div>
-                    <div class="padV-5 text-right">
-                        <mg-button class="padH-5" [allowMargin]="false" taskType="link" [round]="true" theme="warning" >Send Message</mg-button>
-                    </div>
-                    
+                    <p>Please do send your feedback at <a [href]="'mailto:' + feedbackEmail" class="text-blue">{{feedbackEmail}}</a></p>
                 </div>
             </div>
             
