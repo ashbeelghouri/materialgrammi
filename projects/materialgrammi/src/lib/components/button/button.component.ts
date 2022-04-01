@@ -18,7 +18,6 @@ export class ButtonComponent implements OnInit {
   @Input() isBlock = false;
   @Input() round = false;
   @Input() allowMargin = true;
-  @Input() link = "";
   @Input() allowShrink = true;
   @Input() options: any = {};
   @Input() isExternalLink = false;

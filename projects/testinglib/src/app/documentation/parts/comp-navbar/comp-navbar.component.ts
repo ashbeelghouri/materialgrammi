@@ -41,11 +41,38 @@ export class CompNavbarComponent implements OnInit {
   selector = "mg-navbar";
 
   title = "Navbar";
-  code = `<mg-card>
-            <p class="blue pad-10 text-grey1">Lorem Ipsum</p>
-          </mg-card>`;
+  code = `<mg-navbar [navData]="optionsApplied.navData" [theme]="optionsApplied.theme"></mg-navbar>`;
 
-  optionsApplied = {}
+  optionsApplied = {
+    navData: {
+      brand: {
+        name: `Simple <B>Navbar</B>`,
+        link: '/'
+      },
+      left: {
+        navType: "input",
+        data: {
+          btn: true,
+          name: `<i class="fas fa-search"></i>`,
+          placeholder: "search",
+          id: "navbar-search"
+        }
+      },
+      right: {
+        navType: "links",
+        data: [{
+          name: `<i class="fas fa-home"></i>`,
+          link: "/",
+          active: false
+        }, {
+          name: `<i class="fas fa-book"></i>`,
+          link: "/documentation",
+          active: true
+        }]
+      }
+    },
+    theme: "dark"
+  }
 
   outputOptions = [{
     name: "searchedText",

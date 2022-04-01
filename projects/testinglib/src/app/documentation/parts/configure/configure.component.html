@@ -1,3 +1,22 @@
 <app-headers>Configure</app-headers>
-<app-description></app-description>
+<app-description>
+    <div class="">
+        <p class="text-grey8 text-justify marginT-5">Library can be used with the below steps</p>
+        <div class="padV-10">
+            <h5 class="marginB-2 font-20 text-grey8">Install via npm</h5>
+            <p>npm i materialgrammi ng-materialgrammi -s</p>
+        </div>
+        <div class="padV-10">
+            <h5 class="marginB-5 font-20 text-grey8">Import the css file</h5>
+            <p>Edit angular.json, find the styles array and add materialgrammi to your styles</p>
+            <pre>"styles": [ "src/styles.css", "materialgrammi/materialgrammi.min.css"]</pre>
+        </div> 
+        <div class="padV-10">
+            <h5 class="marginB-5 font-20 text-grey8">Import the Module</h5>
+            <p>Edit your module, import Materitalgrammi's module to your imports</p>
+            <pre>import {{'{ MaterialgrammiModule }'}} from 'ng-materialgrammi';</pre>
+            <pre>imports: [MaterialgrammiModule]</pre>
+        </div>
+    </div>
+</app-description>
 

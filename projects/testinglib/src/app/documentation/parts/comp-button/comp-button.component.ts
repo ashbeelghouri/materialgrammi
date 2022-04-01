@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SeoService } from 'projects/materialgrammi/src/public-api';
 
 @Component({
   selector: 'app-comp-button',
@@ -13,7 +14,7 @@ export class CompButtonComponent implements OnInit {
     default: "default"
   }, {
     name: "taskType",
-    allowed: "",
+    allowed: "link | modal | offCanvas | slideShow | wizard | collapse | overlay | slideshowV2",
     type: "string",
     default: "none"
   }, {
@@ -56,11 +57,6 @@ export class CompButtonComponent implements OnInit {
     allowed: "true | false",
     type: "boolean",
     default: "true"
-  }, {
-    name: "link",
-    allowed: "",
-    type: "string",
-    default: ""
   }, {
     name: "allowShrink",
     allowed: "true | false",
@@ -121,9 +117,10 @@ export class CompButtonComponent implements OnInit {
       <mg-button btnStyle="link" theme="dark">Dark button</mg-button>
   </div>`;
   optionsApplied = {}
-  constructor() { }
+  constructor(private seo: SeoService) { }
 
   ngOnInit(): void {
+    this.seo.setTitle("Materialgrammi | Button");
   }
 
 }

@@ -1,3 +1,14 @@
 <app-headers>Introduction</app-headers>
-<app-description></app-description>
+<app-description>
+    <p class="text-grey8 text-justify marginB-10">Materialgrammi is an innovative open-source library for developing responsive, mobile first projects on the web. This library is relaunched with Angular integration on component level. This library is inspired from google's Material Design and can be use to design with independent classes and angular components. We intend to evolve the library with new design trends and practices that makes it fast and innovative.</p>
+    <p>Materialgrammi is developed in such a way that would increase your ease of programming and improve the design on the same time. It can be scale-able, there are alot of ways in which any work can be made more special with Materialgrammi. Just think of what you really want to design and you can take Materialgrammi on your path of success.</p>
+    <ng-container *ngFor="let cat of categories">
+        <ng-container *ngIf="cat.name !== 'Getting Started'">
+            <h3 [innerText]="cat.name" class="marginT-10"></h3>
+            <ng-container *ngFor="let link of cat.links">
+                <mg-button btnStyle="outline" taskType="link" theme="success" class="marginY-5" [target]="link.link">{{link.name}}</mg-button>
+            </ng-container>
+        </ng-container>
+    </ng-container>
+</app-description>
 

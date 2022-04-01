@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DocServiceService } from '../../../doc-service.service';
 
 @Component({
   selector: 'app-gs-introduction',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./gs-introduction.component.css']
 })
 export class GsIntroductionComponent implements OnInit {
-
-  constructor() { }
+  categories:any = [];
+  constructor(private docService: DocServiceService) { }
 
   ngOnInit(): void {
+    this.categories = this.docService.categories;
   }
 
 }
