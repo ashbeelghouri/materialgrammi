@@ -6,8 +6,6 @@
 <app-output-options [options]="outputOptions"></app-output-options>
 <div class="pad-10">
     <app-examples [name]="title" [code] = "code" [optionsApplied]="optionsApplied">
-        <mg-card>
-           <p class="blue pad-10 text-grey1">Lorem Ipsum</p>
-        </mg-card>
+        <mg-navbar [navData]="optionsApplied.navData" [theme]="optionsApplied.theme"></mg-navbar>
     </app-examples>
 </div>
