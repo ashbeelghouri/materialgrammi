@@ -8,7 +8,7 @@ import { Component, Input, OnChanges, OnInit } from '@angular/core';
 export class ToastComponent implements OnInit, OnChanges {
   @Input() show = true;
   @Input() position = "bottom";
-  @Input() theme = "dark";
+  @Input() theme = "primary";
   @Input() timeout = 4000;
   constructor() { }
 

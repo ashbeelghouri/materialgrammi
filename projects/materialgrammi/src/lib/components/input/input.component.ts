@@ -7,7 +7,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./input.component.css']
 })
 export class InputComponent implements OnInit {
-  @Input() theme = "success";
+  @Input() theme = "primary";
   @Input() fStyle = "control";
   // control | material
   @Input() label = "Input Value";
@@ -21,11 +21,18 @@ export class InputComponent implements OnInit {
   @Output() keyup = new EventEmitter();
   @Input() textValue = "";
   @Input() rounded = false;
+
+  @Input() info = {
+    type: "success",
+    msg: ""
+  };
+
   @ViewChild('inputElement') private inputElem!: ElementRef;
 
   active = false;
   focused = false;
   input_placeholder = this.fStyle == "control" && this.placeholder != "" ? this.placeholder : "";
+  
   constructor() { }
 
   ngOnInit(): void {
@@ -65,6 +72,22 @@ export class InputComponent implements OnInit {
 
   labelClick(){
     this.inputElem.nativeElement.focus();
+  }
+
+  infoClasses(){
+    let classes = "";
+    if(this.info.type === "error"){
+      classes += "text-red";
+    }else if(this.info.type === "success"){
+      classes += "text-green";
+    }else if(this.info.type === "info"){
+      classes += "text-blue";
+    }else if(this.info.type === "lite"){
+      classes += "text-grey2";
+    }else if(this.info.type === "dark"){
+      classes += "text-grey8";
+    }
+    return classes;
   }
 
 }

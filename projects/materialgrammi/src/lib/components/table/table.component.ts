@@ -7,7 +7,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit, OnChanges, AfterContentChecked {
-  @Input() theme = "dark";
+  @Input() theme = "primary";
   @Input() mgData: any = [];
   @Input() ignoredColumns: any = ["id"];
   @Input() sortBy: any = "";

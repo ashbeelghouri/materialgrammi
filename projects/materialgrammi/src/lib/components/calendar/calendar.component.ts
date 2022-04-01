@@ -12,7 +12,7 @@ export class CalendarComponent implements OnInit, OnChanges {
 
   @Input() abbreviation = false;
   @Input() bookEvents = false;
-  @Input() theme = "dark";
+  @Input() theme = "primary";
   @Input() disabled: string[] = [];
   @Input() size = 1;
   @Input() disabledRange: DisabledRange = {

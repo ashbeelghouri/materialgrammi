@@ -20,7 +20,7 @@ export class DateRangeComponent implements OnInit, OnChanges {
 
   @Input() style = {
     input: {
-      theme: "success",
+      theme: "primary",
       style: "control",
       darkmode: false,
       class: ""
@@ -32,6 +32,11 @@ export class DateRangeComponent implements OnInit, OnChanges {
   };
 
   @Input() class = "";
+
+  @Input() info = {
+    type: "success",
+    msg: ""
+  };
 
   formattedInput?:any;
 

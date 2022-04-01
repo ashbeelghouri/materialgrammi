@@ -1,6 +1,11 @@
 import { Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
+export interface Option {
+  name: string,
+  val: any
+};
+
 @Component({
   selector: 'mg-select',
   templateUrl: './select.component.html',
@@ -9,11 +14,11 @@ import { FormControl } from '@angular/forms';
 export class SelectComponent implements OnInit {
   @Output() value = new EventEmitter();
   @Input() searchOpt: FormControl = new FormControl('');
-  @Input() theme = "lite";
+  @Input() theme = "dark";
   @Input() selectTitle = "Select";
   @Input() selectType = "control";
   @Input() enableSearch = false;
-  @Input() options = [{
+  @Input() options: Option[] = [{
     name: "Option 01",
     val: "option_1"
   }, {

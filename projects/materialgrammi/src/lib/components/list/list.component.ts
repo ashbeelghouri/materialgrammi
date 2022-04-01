@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
   @Input() items: any = [];
-  @Input() theme: string = "dark";
+  @Input() theme: string = "primary";
   @Input() class = "";
   constructor() { }
 

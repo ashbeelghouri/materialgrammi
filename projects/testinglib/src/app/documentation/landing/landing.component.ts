@@ -47,10 +47,12 @@ export class LandingComponent implements OnInit {
     }, {
       name: "Configure",
       link: "/documentation/getting-started/configure"
-    }, {
-      name: "Templates",
-      link: "/documentation/getting-started/templates"
-    }]
+    }
+    // , {
+    //   name: "Templates",
+    //   link: "/documentation/getting-started/templates"
+    // }
+  ]
   }, {
     name: "Css",
     links: [
@@ -130,6 +132,9 @@ export class LandingComponent implements OnInit {
       name: "Dropdown",
       link: "/documentation/components/dropdown"
     }, {
+      name: "Fixer",
+      link: "/documentation/components/fixer"
+    }, {
       name: "Footer",
       link: "/documentation/components/footer"
     }, {
@@ -159,10 +164,10 @@ export class LandingComponent implements OnInit {
       name: "Notes",
       link: "/documentation/components/note"
     }, 
-    // {
-    //   name: "Notifications",
-    //   link: "/documentation/components/notifications"
-    // }, 
+    {
+      name: "Notifications",
+      link: "/documentation/components/notifications"
+    }, 
     {
       name: "Offcanvas",
       link: "/documentation/components/offcanvas"

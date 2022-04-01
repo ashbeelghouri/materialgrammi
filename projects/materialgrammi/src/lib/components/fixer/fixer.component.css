@@ -1,0 +1,34 @@
+.fixer {
+    display: block;
+    position: fixed;
+    z-index: 99999;
+}
+
+.fixer.left {
+    left: 0;
+}
+
+.fixer.right {
+    right: 0;
+}
+
+.fixer.top {
+    top: 0;
+}
+
+.fixer.bottom {
+    bottom: 0;
+}
+
+.fixer.left.center, .fixer.right.center {
+    top: 50%;
+}
+
+.fixer.top.center, .fixer.bottom.center {
+    left: 50%;
+}
+
+.fixer.center-center {
+    top: 50%;
+    left: 50%;
+}

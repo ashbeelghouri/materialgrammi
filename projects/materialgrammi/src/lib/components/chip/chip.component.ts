@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./chip.component.css']
 })
 export class ChipComponent implements OnInit {
-  @Input() theme = "dark";
+  @Input() theme = "primary";
   @Input() outline = false;
   @Input() class = "";
   constructor() { }

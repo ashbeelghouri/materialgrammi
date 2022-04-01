@@ -8,7 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CodeComponent implements OnInit {
   @Input() code:any = [];
   @Input() class = "";
-  @Input() numbering = false;
+  @Input() numbering = true;
+  
   constructor() { }
 
   ngOnInit(): void {

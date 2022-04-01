@@ -5,7 +5,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./alert.component.css']
 })
 export class AlertComponent implements OnInit {
-  @Input() theme = "danger";
+  @Input() theme = "primary";
   @Input() show = true;
   @Input() alignCenter = false;
   @Input() closeBtn = true;

@@ -3,6 +3,7 @@
  */
 
 export * from './lib/materialgrammi.service';
+export * from './lib/seo.service';
 export * from './lib/materialgrammi.component';
 export * from './lib/materialgrammi.module';
 
@@ -50,3 +51,4 @@ export * from './lib/components/toast/toast.component';
 export * from './lib/components/widget/widget.component';
 export * from './lib/components/wizard/wizard.component';
 export * from './lib/components/slideshow-v2/slideshow-v2.component';
+export * from './lib/components/fixer/fixer.component';

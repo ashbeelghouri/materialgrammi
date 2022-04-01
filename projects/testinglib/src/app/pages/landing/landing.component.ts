@@ -7,7 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
   installNpm = ["npm i materialgrammi ng-materialgrammi -s"];
-  mgcss = "www.downloadlinkhere.com";
+  importCss = ["Edit angular.json, find the styles array and add materialgrammi to your styles", 
+              `"styles": [
+                "src/styles.css",
+                "materialgrammi/materialgrammi.min.css"]`];
+  listOfImports = ["Edit your module, import Materitalgrammi's module to your imports", "import { MaterialgrammiModule } from 'ng-materialgrammi';",
+                  `imports: [MaterialgrammiModule]`];
+
+
+  feedbackEmail = "ashbeelghouri@protonmail.com";
+
   constructor() { }
 
   ngOnInit(): void {

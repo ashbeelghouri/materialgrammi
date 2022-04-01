@@ -12,7 +12,7 @@ export class TabComponent implements OnInit {
   @Input() bg = "";
   @Input() active = "";
   @Input() id = "";
-  @Input() theme = "success";
+  @Input() theme = "primary";
   components: any = [];
   activeComponent = "";
   constructor(private service: MaterialgrammiService) { }

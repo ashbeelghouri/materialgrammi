@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class NavbarComponent implements OnInit {
   @Output() searchedText = new EventEmitter();
   @Input() spaceAround = true;
-  @Input() theme = "dark";
+  @Input() theme = "primary";
   @Input() onSmallMenuButton = "=";
   @Input() isFixed = false;
   @Input() partitionType = "2:1";
