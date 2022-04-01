@@ -85,6 +85,7 @@ Ready to contribute? Here's how to set up `chartify` for local development.
     $ git push origin name-of-your-bugfix-or-feature
 
 6. Submit a pull request through the GitHub website.
+7. Email your pull request to ashbeelghouri@protonmail.com
 
 
 
