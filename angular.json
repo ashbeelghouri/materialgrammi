@@ -63,7 +63,8 @@
               "projects/testinglib/src/assets"
             ],
             "styles": [
-              "projects/testinglib/src/styles.scss"
+              "projects/testinglib/src/styles.scss",
+              "materialgrammi/materialgrammi.min.css"
             ],
             "scripts": []
           },
@@ -72,8 +73,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "4mb"
                 },
                 {
                   "type": "anyComponentStyle",

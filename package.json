@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "library": "ng build --watch --configuration development",
-    "app": "ng serve testinglib --port 7200"
+    "app": "ng serve testinglib --port 7200",
+    "website": "ng build testinglib --prod"
   },
   "private": true,
   "dependencies": {
@@ -20,13 +21,14 @@
     "@angular/platform-browser": "~13.0.0",
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
+    "materialgrammi": "^2.0.6",
     "ng-materialgrammi": "^0.0.7",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~13.0.4",
+    "@angular-devkit/build-angular": "^13.3.1",
     "@angular/cli": "~13.0.3",
     "@angular/compiler-cli": "~13.0.0",
     "@types/jasmine": "~3.10.0",
