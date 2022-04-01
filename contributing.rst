@@ -43,9 +43,8 @@ and "help wanted" is open to whoever wants to implement it.
 Write Documentation
 ~~~~~~~~~~~~~~~~~~~
 
-chartify could always use more documentation, whether as part of the
-official chartify docs, in docstrings, or even on the web in blog posts,
-articles, and such.
+materialgrammi could always use more documentation, whether as part of the
+official materialgrammi docs, a new component of library or a whole new service to enhance the user expirience.
 
 Submit Feedback
 ~~~~~~~~~~~~~~~
@@ -64,16 +63,14 @@ Get Started!
 
 Ready to contribute? Here's how to set up `chartify` for local development.
 
-1. Fork the `chartify` repo on GitHub.
+1. Fork the `materialgrammi` repo on GitHub.
 2. Clone your fork locally::
 
-    $ git clone git@github.com:your_name_here/chartify.git
+    $ git clone git@github.com:your_name_here/materialgrammi.git
 
-3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
+3. Install the node modules
 
-    $ mkvirtualenv chartify
-    $ cd chartify/
-    $ pip3 install -r requirements_dev.txt
+    $ npm i
 
 4. Create a branch for local development::
 
