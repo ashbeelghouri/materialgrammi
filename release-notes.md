@@ -26,7 +26,7 @@ ng-materialgrammi - angular => 0.1.2
 
 
 # ![version 1.0](https://img.shields.io/badge/version-1.0-green)
-02 April 2022
+25 March 2022
 
 ```
 materialgrammi - css => 2.0.0
