@@ -1,3 +1,28 @@
+# Release ![version 1.1](https://img.shields.io/badge/version-1.1-green) (3rd April 2022)
+```
+materialgrammi - css => 2.0.7
+ng-materialgrammi - angular => 0.1.2
+```
+## Features
+- Notifications
+- Slideshow v2
+
+## Bug Fixes
+- Pagination
+- buttons
+- offcanvas
+
+## Improvement
+- table
+- calendar
+- navbar
+- date
+- date range
+- input
+- text input
+
+
+
 # Release 1.0 (20 March 2022)
 ```
 materialgrammi - css => 2.0.0
@@ -5,7 +30,7 @@ ng-materialgrammi - angular => 0.0.1
 ```
 ## Features
 - Everything started here
-## Bugs
+## Bug Fixes
 - No
 ## Improvement
 - No
