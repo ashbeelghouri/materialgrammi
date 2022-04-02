@@ -64,32 +64,12 @@ export class CompSlideShowComponent implements OnInit {
     default: "[ ]"
   }];
 
-  selector = "mg-slideshow";
+  selector = "mg-slideshow, mg-slideshow-v2";
 
   title = "Slideshow";
   code = `<mg-slideshow [perPage]="optionsApplied.perPage" id="example-slideshow" [gap]="optionsApplied.gap"
   [items]="optionsApplied.items" [heightAdjustment]="false" [maxHeight]="optionsApplied.maxHeight"
-  [showControls]="optionsApplied.showControls"></mg-slideshow>
-
-<mg-slideshow-v2 id="id">
-  <mg-widget type="slideshowv2" id="wid-1-slide" parent="id">
-      <h1 class="blue text-white">Slide 1</h1>
-  </mg-widget>
-  <mg-widget type="slideshowv2" id="wid-2-slide" parent="id">
-      <h1 class="blue text-white">Slide 2</h1>
-  </mg-widget>
-  <mg-widget type="slideshowv2" id="wid-3-slide" parent="id">
-      <h1 class="blue text-white">Slide 3</h1>
-  </mg-widget>
-  <mg-widget type="slideshowv2" id="wid-4-slide" parent="id">
-      <h1 class="blue text-white">Slide 4</h1>
-  </mg-widget>
-  <mg-widget type="slideshowv2" id="wid-5-slide" parent="id">
-      <h1 class="blue text-white">Slide 5</h1>
-  </mg-widget>
-</mg-slideshow-v2>
-<mg-button taskType="slideshowV2" task="prev" target="id">Previous</mg-button>
-<mg-button taskType="slideshowV2" task="next" target="id">Next</mg-button>`;
+  [showControls]="optionsApplied.showControls"></mg-slideshow>`;
 
   optionsApplied = {
     items: [
@@ -239,8 +219,8 @@ export class CompSlideShowComponent implements OnInit {
   </mg-widget>
 </mg-slideshow-v2>
 <br/>
-<mg-button taskType="slideshowV2" task="prev" target="id">Previous</mg-button>
-<mg-button taskType="slideshowV2" task="next" target="id">Next</mg-button> `;
+<mg-button btnStyle="outline" taskType="slideshowV2" task="prev" target="id" theme="danger">Previous</mg-button>
+<mg-button theme="success" taskType="slideshowV2" task="next" target="id">Next</mg-button> `;
 
   outputOptions = [];
 
