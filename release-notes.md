@@ -1,4 +1,4 @@
-# Release ![version 1.1](https://img.shields.io/badge/version-1.1-green) (3rd April 2022)
+# ![version 1.1](https://img.shields.io/badge/version-1.1-green) ==3rd April 2022==
 ```
 materialgrammi - css => 2.0.7
 ng-materialgrammi - angular => 0.1.2
