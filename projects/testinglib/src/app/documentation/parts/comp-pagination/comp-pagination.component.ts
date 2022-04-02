@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SeoService } from 'projects/materialgrammi/src/public-api';
 
 @Component({
   selector: 'app-comp-pagination',
@@ -99,9 +100,10 @@ export class CompPaginationComponent implements OnInit {
     type: "any"
   }];
 
-  constructor() { }
+  constructor(private seo: SeoService) { }
 
   ngOnInit(): void {
+    this.seo.setTitle("Materialgrammi | Pagination");
   }
 
 }

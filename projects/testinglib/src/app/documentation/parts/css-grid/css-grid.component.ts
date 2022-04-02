@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SeoService } from 'projects/materialgrammi/src/public-api';
 
 @Component({
   selector: 'app-css-grid',
@@ -63,13 +64,14 @@ export class CssGridComponent implements OnInit {
   </div>
 </div>`;
 
-  constructor() { }
+  constructor(private seo: SeoService) { }
 
   rndm(min:number, max:number) { // min and max included 
     return Math.floor(Math.random() * (max - min + 1) + min)
   }
 
   ngOnInit(): void {
+    this.seo.setTitle("Materialgrammi | Grid");
     let size = "300x300";
     for(let i = 0; i < 20; i++){
       this.images.push(`https://source.unsplash.com/random/${size}`);

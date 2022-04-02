@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SeoService } from 'projects/materialgrammi/src/public-api';
 
 @Component({
   selector: 'app-fixer',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FixerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private seo: SeoService) { }
 
   ngOnInit(): void {
+    this.seo.setTitle("Materialgrammi | Fixer");
   }
 
   inputOptions = [{

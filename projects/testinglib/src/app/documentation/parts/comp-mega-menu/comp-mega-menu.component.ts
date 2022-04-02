@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SeoService } from 'projects/materialgrammi/src/public-api';
 
 @Component({
   selector: 'app-comp-mega-menu',
@@ -65,9 +66,10 @@ export class CompMegaMenuComponent implements OnInit {
 
   outputOptions = [];
 
-  constructor() { }
+  constructor(private seo: SeoService) { }
 
   ngOnInit(): void {
+    this.seo.setTitle("Materialgrammi | Megamenu");
   }
 
 }

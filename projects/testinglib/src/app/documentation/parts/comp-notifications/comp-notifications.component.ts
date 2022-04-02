@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MaterialgrammiComponent, MaterialgrammiService } from 'projects/materialgrammi/src/public-api';
+import { MaterialgrammiComponent, MaterialgrammiService, SeoService } from 'projects/materialgrammi/src/public-api';
 
 @Component({
   selector: 'app-comp-notifications',
@@ -141,9 +141,10 @@ export class CompNotificationsComponent implements OnInit {
     this.size = event;
   }
 
-  constructor(private mgService: MaterialgrammiService) { }
+  constructor(private mgService: MaterialgrammiService, private seo: SeoService) { }
 
   ngOnInit(): void {
+    this.seo.setTitle("Materialgrammi | Notifications");
   }
 
 }

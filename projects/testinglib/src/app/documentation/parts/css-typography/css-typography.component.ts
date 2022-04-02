@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SeoService } from 'projects/materialgrammi/src/public-api';
 
 @Component({
   selector: 'app-css-typography',
@@ -71,9 +72,10 @@ export class CssTypographyComponent implements OnInit {
     <p class="heading-5">Heading 5</p>
     <p class="heading-6">Heading 6</p>`
   };
-  constructor() { }
+  constructor(private seo: SeoService) { }
 
   ngOnInit(): void {
+    this.seo.setTitle("Materialgrammi | Typography");
   }
 
 }

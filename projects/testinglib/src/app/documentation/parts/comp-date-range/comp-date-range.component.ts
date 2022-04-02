@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RangeSelected } from 'projects/materialgrammi/src/lib/interfaces';
+import { SeoService } from 'projects/materialgrammi/src/public-api';
 
 @Component({
   selector: 'app-comp-date-range',
@@ -64,9 +65,10 @@ export class CompDateRangeComponent implements OnInit {
   }
 
   
-  constructor() { }
+  constructor(private seo: SeoService) { }
 
   ngOnInit(): void {
+    this.seo.setTitle("Materialgrammi | Date Range");
   }
 
 }

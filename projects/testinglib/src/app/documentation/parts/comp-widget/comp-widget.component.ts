@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SeoService } from 'projects/materialgrammi/src/public-api';
 
 @Component({
   selector: 'app-comp-widget',
@@ -52,9 +53,10 @@ export class CompWidgetComponent implements OnInit {
     value: "{ status: boolean, options: object }"
   }];
 
-  constructor() { }
+  constructor(private seo: SeoService) { }
 
   ngOnInit(): void {
+    this.seo.setTitle("Materialgrammi | Widget");
   }
 
 }

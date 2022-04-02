@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SeoService } from 'projects/materialgrammi/src/public-api';
 
 @Component({
   selector: 'app-comp-cowntdown',
@@ -37,9 +38,10 @@ export class CompCowntdownComponent implements OnInit {
     type: "boolean"
   }];
 
-  constructor() { }
+  constructor(private seo: SeoService) { }
 
   ngOnInit(): void {
+    this.seo.setTitle("Materialgrammi | Countdown");
   }
 
 }

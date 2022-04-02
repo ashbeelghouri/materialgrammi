@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SeoService } from 'projects/materialgrammi/src/public-api';
 
 @Component({
   selector: 'app-comp-navbar',
@@ -62,11 +63,11 @@ export class CompNavbarComponent implements OnInit {
         navType: "links",
         data: [{
           name: `<i class="fas fa-home"></i>`,
-          link: "/",
+          link: "",
           active: false
         }, {
           name: `<i class="fas fa-book"></i>`,
-          link: "/documentation",
+          link: "",
           active: true
         }]
       }
@@ -79,9 +80,10 @@ export class CompNavbarComponent implements OnInit {
     type: "string"
   }];
 
-  constructor() { }
+  constructor(private seo: SeoService) { }
 
   ngOnInit(): void {
+    this.seo.setTitle("Materialgrammi | Navbar");
   }
 
 }
