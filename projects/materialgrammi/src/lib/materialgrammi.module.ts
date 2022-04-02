@@ -48,6 +48,7 @@ import { ComponentComponent } from './components/component/component.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { SlideshowV2Component } from './components/slideshow-v2/slideshow-v2.component';
 import { FixerComponent } from './components/fixer/fixer.component';
+import { MuliselectComponent } from './components/muliselect/muliselect.component';
 
 @NgModule({
   declarations: [
@@ -97,7 +98,8 @@ import { FixerComponent } from './components/fixer/fixer.component';
     ComponentComponent,
     SliderComponent,
     SlideshowV2Component,
-    FixerComponent
+    FixerComponent,
+    MuliselectComponent
   ],
   imports: [
     CommonModule,

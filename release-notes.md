@@ -1,4 +1,20 @@
-# ![version 1.1](https://img.shields.io/badge/version-1.1-green)
+# ![version 0.1.3](https://img.shields.io/badge/version-1.3-green)
+> 02 April 2022
+
+```
+materialgrammi - css => 2.0.8
+ng-materialgrammi - angular => 0.1.3
+```
+## Features
+- Multi Select
+
+## Bug Fixes
+- No
+
+## Improvement
+- No
+
+# ![version 0.1.0](https://img.shields.io/badge/version-1.1-green)
 > 02 April 2022
 
 ```
@@ -25,7 +41,7 @@ ng-materialgrammi - angular => 0.1.2
 
 
 
-# ![version 1.0](https://img.shields.io/badge/version-1.0-green)
+# ![version 0.0.0](https://img.shields.io/badge/version-1.0-green)
 > 25 March 2022
 
 ```
