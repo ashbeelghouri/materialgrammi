@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SeoService } from 'projects/materialgrammi/src/public-api';
 
 @Component({
   selector: 'app-comp-image',
@@ -75,9 +76,10 @@ export class CompImageComponent implements OnInit {
 
   outputOptions = [];
 
-  constructor() { }
+  constructor(private seo: SeoService) { }
 
   ngOnInit(): void {
+    this.seo.setTitle("Materialgrammi | Image");
   }
 
 }
