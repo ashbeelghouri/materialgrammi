@@ -10,4 +10,10 @@ npm install materialgrammi
 ```
 
 ### ANGULAR
+```bash:js
+npm install ng-materialgrammi
+```
 install the components package as well, which can be found [here](https://www.npmjs.com/package/ng-materialgrammi)
+
+
+ng cli version: 13.0.4 

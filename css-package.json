@@ -1,6 +1,6 @@
 {
     "name": "materialgrammi",
-    "version": "2.0.6",
+    "version": "2.0.7",
     "description": "Css Classes for the scale-able templates creation",
     "style": "materialgrammi.css",
     "main": "materialgrammi.min.css",

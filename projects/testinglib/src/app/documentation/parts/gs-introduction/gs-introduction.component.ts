@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SeoService } from 'dist/materialgrammi/public-api';
+import { SeoService } from 'projects/materialgrammi/src/public-api';
 import { DocServiceService } from '../../../doc-service.service';
 
 @Component({

@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "library": "ng build --watch --configuration development",
+    "library": "ng build --watch --configuration production",
     "app": "ng serve testinglib --port 7200",
     "website": "ng build testinglib --prod"
   },
