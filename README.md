@@ -17,8 +17,7 @@ npm install ng-materialgrammi
 install the components package, which can be found [here](https://www.npmjs.com/package/ng-materialgrammi)
 
 ### Important Links
-- [code of conduct](https://github.com/ashbeelghouri/materialgrammi/blob/master/code_of_conduct.md)
-- [contributing](https://github.com/ashbeelghouri/materialgrammi/blob/master/contributing.rst)
-- [documentation](https://www.materialgrammi.com)
-
+- [![code_of_conduct](https://img.shields.io/badge/see-code&nbsp;of&nbsp;conduct-blue)](https://github.com/ashbeelghouri/materialgrammi/blob/master/code_of_conduct.md)
+- [![contributing_doc](https://img.shields.io/badge/see-contributing&nbsp;documentation-blue)](https://github.com/ashbeelghouri/materialgrammi/blob/master/contributing.rst)
+- [![documentation](https://img.shields.io/badge/visit-documentation&nbsp;website-blue)](https://www.materialgrammi.com)
 [![release_notes](https://img.shields.io/badge/see-release&nbsp;notes-blue)](https://github.com/ashbeelghouri/materialgrammi/blob/master/release-notes.md)
