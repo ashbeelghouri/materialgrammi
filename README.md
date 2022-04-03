@@ -1,4 +1,4 @@
-# Materialgrammi ![version 0.1.3](https://img.shields.io/badge/version-1.3-yellow)
+# Materialgrammi ![version 0.1.3](https://img.shields.io/badge/version-0.1.3-purple)
 Materialgrammi is very innovative library for developing responsive, mobile first projects on the web. This library is relaunched with Angular integration on component level. This library is inspired from google's Material Design and can be use to design with independent classes and angular components. We intend to evolve the library with new design trends and practices that makes it fast and innovative.
 
 ## Installation
