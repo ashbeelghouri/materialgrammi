@@ -28,6 +28,8 @@ ng-materialgrammi - angular => 0.1.3
     - introduced the slots "left", "right", "brand" > so navbar works with ng-content
 - Type Theme
     - introduced new type = Theme for constant values of theme.
+- Input themes
+    - updated themes with filled and outlined for control style of input
 
 # ![version 0.1.0](https://img.shields.io/badge/version-1.1-green)
 > 02 April 2022
