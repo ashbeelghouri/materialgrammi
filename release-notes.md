@@ -15,7 +15,13 @@ ng-materialgrammi - angular => 0.1.3
     - removed label input paramter and added it as ng-content
     - changed input onDark to dark
     - changed textValue input to value
+    - changed fStyle to form whose value can be "control" or "material"
     - placeholder reflecting according to the theme: [issue-11](https://github.com/ashbeelghouri/materialgrammi/issues/11)
+- Text Input
+    - removed label input paramter and added it as ng-content
+    - changed input onDark to dark
+    - changed textValue input to value
+    - changed fStyle to form whose value can be "control" or "material"
 - Date Input
     - removed label input paramter and added it as ng-content
     - changed input darkmode to dark

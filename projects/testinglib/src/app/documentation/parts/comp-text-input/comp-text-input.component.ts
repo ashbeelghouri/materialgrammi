@@ -13,38 +13,33 @@ export class CompTextInputComponent implements OnInit {
     type: "string",
     default: "dark"
   }, {
-    name: "style",
+    name: "form",
     allowed: "control | material",
     type: "string",
     default: "control"
   }, {
-    name: "on_dark",
+    name: "dark",
     allowed: "true | false",
     type: "boolean",
     default: "false"
-  }, {
-    name: "label",
-    allowed: "string",
-    type: "string",
-    default: "true"
   }, {
     name: "control",
     allowed: "FormControl",
     type: "FormControl",
     default: "new FormControl('')"
   }, {
-    name: "label",
-    allowed: "string",
-    type: "string",
-    default: "text area input"
+    name: "filled",
+    allowed: "Boolean",
+    type: "boolean",
+    default: "true"
   }];
 
   selector = "mg-text";
 
   title = "Text Input";
-  code = `  <mg-text></mg-text>
+  code = `  <mg-text form="control">TEXT AREA</mg-text>
   <br/>
-  <mg-text fStyle="material"></mg-text>`;
+  <mg-text form="material">TEXT AREA</mg-text>`;
 
   optionsApplied = {}
 

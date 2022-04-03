@@ -9,7 +9,7 @@ import { InputStyle, Theme } from '../../types';
 })
 export class InputComponent implements OnInit {
   @Input() theme:Theme = "primary";
-  @Input() style: InputStyle = "control";
+  @Input() form: InputStyle = "control";
   @Input() placeholder = "";
   @Input() control: FormControl = new FormControl('');
   @Input() type = "text";
@@ -31,12 +31,12 @@ export class InputComponent implements OnInit {
 
   active = false;
   focused = false;
-  input_placeholder = this.style == "control" && this.placeholder != "" ? this.placeholder : "";
+  input_placeholder = this.form == "control" && this.placeholder != "" ? this.placeholder : "";
   
   constructor() { }
 
   ngOnInit(): void {
-    this.input_placeholder = this.style == "control" && this.placeholder != "" ? this.placeholder : "";
+    this.input_placeholder = this.form == "control" && this.placeholder != "" ? this.placeholder : "";
     if (this.value != "") {
       this.active = true;
     }
@@ -67,7 +67,7 @@ export class InputComponent implements OnInit {
     let classes = ``;
     classes += ` ${this.active ? 'active' : ''}`;
     classes += this.dark ? " on-dark" : " on-lite";
-    classes += this.style === "control" ? (this.filled ? " filled" : " outline") : "";
+    classes += this.form === "control" ? (this.filled ? " filled" : " outline") : "";
     return classes;
   }
 
