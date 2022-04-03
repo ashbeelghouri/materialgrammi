@@ -2,8 +2,8 @@
 > 03 April 2022
 
 ```
-materialgrammi - css => 2.0.8
-ng-materialgrammi - angular => 0.1.3
+materialgrammi - ![version 2.0.8](https://img.shields.io/badge/version-2.0.8-blue)
+ng-materialgrammi - ![version 0.1.3](https://img.shields.io/badge/version-0.1.3-blue)
 ```
 ## New Features
 - No
