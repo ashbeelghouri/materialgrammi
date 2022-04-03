@@ -9,15 +9,14 @@ Use npm to install the packages for css and angular components
 npm install materialgrammi
 ```
 
+install the css package, which can be found [here](https://www.npmjs.com/package/materialgrammi)
+
 ### ANGULAR ![cli 13.0.3](https://img.shields.io/badge/cli-13.0.3-blue)
 ```bash:js
 npm install ng-materialgrammi
 ```
 
-
-
-
-install the components package as well, which can be found [here](https://www.npmjs.com/package/ng-materialgrammi)
+install the components package, which can be found [here](https://www.npmjs.com/package/ng-materialgrammi)
 
 ### Release Notes
 https://github.com/ashbeelghouri/materialgrammi/blob/master/release-notes.md
