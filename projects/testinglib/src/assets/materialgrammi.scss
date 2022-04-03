@@ -16613,6 +16613,20 @@ $alertTextSize: $p + 0.3em;
     color: $clr_dark_lite;
 }
 
+
+.form-control.warning input::placeholder, 
+.form-control.lite input::placeholder {
+    color: $clr_dark_lite;
+}
+
+.form-control.primary input::placeholder, 
+.form-control.success input::placeholder, 
+.form-control.danger input::placeholder,
+.form-control.dark input::placeholder,
+.form-control.info input::placeholder {
+    color: $clr_lite_dark;
+}
+
 .form-control.active input,
 .form-control.dark.active input,
 .form-control.active textarea,
@@ -16623,6 +16637,7 @@ $alertTextSize: $p + 0.3em;
 .form-control.primary input,
 .form-control.primary textarea {
     border: 1px solid #{$clr_primary};
+    color: $clr_lite;
 }
 .form-control.primary label {
     color: $clr_primary;
