@@ -12,6 +12,7 @@ export interface multiOption {
 })
 export class MuliselectComponent implements OnInit {
   @Input() theme = "primary";
+  @Input() title = "";
   @Input() options: multiOption[] = [];
   @Input() allowDuplicates: boolean = false;
   @Input() deleteIcon = `<i class="fas fa-times"></i>`;

@@ -9,7 +9,7 @@
     "test": "ng test",
     "library": "ng build --watch --configuration production",
     "app": "ng serve testinglib --port 7200",
-    "website": "ng build testinglib --prod"
+    "website": "ng build testinglib --configuration production"
   },
   "private": true,
   "dependencies": {

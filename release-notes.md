@@ -12,7 +12,8 @@ ng-materialgrammi - angular => 0.1.3
 - No
 
 ## Improvement
-- No
+- Navbar
+    - introduced the slots "left", "right", "brand" > so navbar works with ng-content
 
 # ![version 0.1.0](https://img.shields.io/badge/version-1.1-green)
 > 02 April 2022
