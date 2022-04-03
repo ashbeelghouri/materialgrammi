@@ -19,6 +19,7 @@ install the components package, which can be found [here](https://www.npmjs.com/
 ### Important Links
 - [code of conduct](https://github.com/ashbeelghouri/materialgrammi/blob/master/code_of_conduct.md)
 - [contributing](https://github.com/ashbeelghouri/materialgrammi/blob/master/contributing.rst)
+- [documentation](https://www.materialgrammi.com)
 
 ### Release Notes
 https://github.com/ashbeelghouri/materialgrammi/blob/master/release-notes.md
