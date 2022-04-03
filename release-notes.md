@@ -6,7 +6,7 @@ materialgrammi - css => 2.0.8
 ng-materialgrammi - angular => 0.1.3
 ```
 ## New Features
-- Multi Select
+- No
 
 ## Bug Fixes
 - Select
