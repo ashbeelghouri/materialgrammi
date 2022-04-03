@@ -16973,32 +16973,102 @@ $alertTextSize: $p + 0.3em;
 .select-option:nth-last-child(1) {
     border: none;
 }
-.select-wrapper.select-control.select-lite .select-title {
+.select-wrapper.select-control.lite .select-title {
     background-color: $clr_lite;
     color: $clr_dark_lite;
 }
-.select-wrapper.select-control.select-lite .select-options .select-option,
-.select-wrapper.select-control.select-lite .select-options {
+.select-wrapper.select-control.lite .select-options .select-option,
+.select-wrapper.select-control.lite .select-options {
     background-color: $clr_lite;
     color: $clr_dark_lite;
 }
-.select-wrapper.select-control.select-lite .select-options .select-option:hover,
-.select-wrapper.select-control.select-lite .select-options .select-option.highlighted {
+.select-wrapper.select-control.lite .select-options .select-option:hover,
+.select-wrapper.select-control.lite .select-options .select-option.highlighted {
     color: $clr_dark_dark;
 }
 
-.select-wrapper.select-control.select-dark .select-title {
+.select-wrapper.select-control.dark .select-title {
     background-color: $clr_dark;
     color: $clr_lite_dark;
 }
-.select-wrapper.select-control.select-dark .select-options .select-option,
-.select-wrapper.select-control.select-dark .select-options {
+.select-wrapper.select-control.dark .select-options .select-option,
+.select-wrapper.select-control.dark .select-options {
     background-color: $clr_dark;
     color: $clr_lite_dark;
 }
-.select-wrapper.select-control.select-dark .select-options .select-option:hover,
-.select-wrapper.select-control.select-dark .select-options .select-option.highlighted {
+.select-wrapper.select-control.dark .select-options .select-option:hover,
+.select-wrapper.select-control.dark .select-options .select-option.highlighted {
     color: $clr_lite_lite;
+}
+
+.select-wrapper.select-control.primary .select-title {
+    background-color: $clr_primary;
+    color: $clr_lite_dark;
+}
+.select-wrapper.select-control.primary .select-options .select-option,
+.select-wrapper.select-control.primary .select-options {
+    background-color: $clr_primary;
+    color: $clr_lite_dark;
+}
+.select-wrapper.select-control.primary .select-options .select-option:hover,
+.select-wrapper.select-control.primary .select-options .select-option.highlighted {
+    color: $clr_lite_lite;
+}
+
+.select-wrapper.select-control.success .select-title {
+    background-color: $clr_success;
+    color: $clr_lite_dark;
+}
+.select-wrapper.select-control.success .select-options .select-option,
+.select-wrapper.select-control.success .select-options {
+    background-color: $clr_success;
+    color: $clr_lite_dark;
+}
+.select-wrapper.select-control.success .select-options .select-option:hover,
+.select-wrapper.select-control.success .select-options .select-option.highlighted {
+    color: $clr_lite_lite;
+}
+
+.select-wrapper.select-control.danger .select-title {
+    background-color: $clr_danger;
+    color: $clr_lite_dark;
+}
+.select-wrapper.select-control.danger .select-options .select-option,
+.select-wrapper.select-control.danger .select-options {
+    background-color: $clr_danger;
+    color: $clr_lite_dark;
+}
+.select-wrapper.select-control.danger .select-options .select-option:hover,
+.select-wrapper.select-control.danger .select-options .select-option.highlighted {
+    color: $clr_lite_lite;
+}
+
+.select-wrapper.select-control.info .select-title {
+    background-color: $clr_info;
+    color: $clr_lite_dark;
+}
+.select-wrapper.select-control.info .select-options .select-option,
+.select-wrapper.select-control.info .select-options {
+    background-color: $clr_info;
+    color: $clr_lite_dark;
+}
+.select-wrapper.select-control.info .select-options .select-option:hover,
+.select-wrapper.select-control.info .select-options .select-option.highlighted {
+    color: $clr_lite_lite;
+}
+
+.select-wrapper.select-control.warning .select-title {
+    background-color: $clr_warning;
+    color: $clr_dark_lite;
+}
+.select-wrapper.select-control.warning .select-options .select-option,
+.select-wrapper.select-control.warning .select-options {
+    background-color: $clr_warning;
+    color: $clr_dark_lite;
+}
+.select-wrapper.select-control.warning .select-options .select-option:hover,
+.select-wrapper.select-control.warning .select-options .select-option.highlighted {
+    color: $clr_dark_dark;
 }
 
 // switches

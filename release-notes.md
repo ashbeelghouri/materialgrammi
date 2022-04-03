@@ -9,6 +9,8 @@ ng-materialgrammi - angular => 0.1.3
 - Multi Select
 
 ## Bug Fixes
+- Select
+    - updated the themes as they were not reflecting any color except dark and lite.
 - Input
     - removed label input paramter and added it as ng-content
     - changed input onDark to dark

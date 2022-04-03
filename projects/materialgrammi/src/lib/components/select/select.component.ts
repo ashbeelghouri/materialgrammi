@@ -1,5 +1,6 @@
 import { Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Theme } from '../../types';
 
 export interface Option {
   name: string,
@@ -14,7 +15,7 @@ export interface Option {
 export class SelectComponent implements OnInit {
   @Output() value = new EventEmitter();
   @Input() searchOpt: FormControl = new FormControl('');
-  @Input() theme = "dark";
+  @Input() theme: Theme = "dark";
   @Input() selectTitle = "Select";
   @Input() selectType = "control";
   @Input() enableSearch = false;
