@@ -15,7 +15,7 @@ export interface Option {
 export class SelectComponent implements OnInit {
   @Output() value = new EventEmitter();
   @Input() searchOpt: FormControl = new FormControl('');
-  @Input() theme: Theme = "dark";
+  @Input() theme: Theme | string = "dark";
   @Input() selectTitle = "Select";
   @Input() selectType = "control";
   @Input() enableSearch = false;
@@ -116,6 +116,14 @@ export class SelectComponent implements OnInit {
     if(enterPressed && this.highlighted.length > 0){
       this.searchOpt.setValue("");
       this.selectOption(opt);
+    }
+  }
+
+  inputTheme(){
+    if(["primary", "success", "danger", "dark", "info"].includes(this.theme)){
+      return "lite";
+    }else{
+      return "dark";
     }
   }
 

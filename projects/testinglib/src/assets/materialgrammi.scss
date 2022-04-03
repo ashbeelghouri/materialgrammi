@@ -16805,11 +16805,11 @@ $alertTextSize: $p + 0.3em;
 .form-control.filled.lite input,
 .form-control.filled.lite textarea {
     background-color: $clr_lite;
-    color: $clr_lite !important;
+    color: $clr_dark !important;
 }
 .form-control.filled.lite input::placeholder,
 .form-control.filled.lite textarea::placeholder {
-    color: $clr_lite_dark !important;
+    color: $clr_dark_lite !important;
 }
 .form-control.filled.lite.active input,
 .form-control.filled.lite.active textarea {
