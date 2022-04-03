@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { NavPartition, Theme } from '../../types';
 
 @Component({
   selector: 'mg-navbar',
@@ -8,55 +9,11 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class NavbarComponent implements OnInit {
   @Output() searchedText = new EventEmitter();
   @Input() spaceAround = true;
-  @Input() theme = "primary";
-  @Input() onSmallMenuButton = "=";
+  @Input() theme: Theme = "primary";
+  @Input() onSmallMenuButton:string = "=";
   @Input() isFixed = false;
-  @Input() partitionType = "2:1";
-  // 2:1
-  // 1:2
-  // 1:1
-  @Input() navData: any = {
-    brand: {
-      name: `Material <B>Grammi</B>`,
-      link: '/'
-      },
-      left: {
-        navType: "input",
-        data: {
-          btn: true,
-          name: `<i class="fas fa-search"></i>`,
-          placeholder: "search",
-          id: "1"
-        }
-      },
-    right: {
-      navType: "links",
-      data: [{
-        name: `<i class="fas fa-home"></i>`,
-        link: "/",
-        active: false
-      }, {
-        name: `<i class="far fa-bell"></i>`,
-        link: "/",
-        active: false
-      }, {
-        type: "dropdown",
-        name: `<i class="fas fa-user"></i>`,
-        links: [{
-          name: `<p>Login</p>`,
-          link: "/"
-        }, {
-          name: `<p>Register</p>`,
-          link: "/"
-        }],
-        active: false
-      }, {
-        name: `<i class="far fa-envelope"></i>`,
-        link: "/",
-        active: false
-      }]
-    }
-  };
+  @Input() partitionType: NavPartition = "2:1";
+  @Input() navData:any = {};
 
   onSmallActive = false;
 

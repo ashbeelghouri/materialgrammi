@@ -1,5 +1,6 @@
 import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { InputStyle, Theme } from '../../types';
 
 @Component({
   selector: 'mg-input',
@@ -7,20 +8,19 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./input.component.css']
 })
 export class InputComponent implements OnInit {
-  @Input() theme = "primary";
-  @Input() fStyle = "control";
-  // control | material
-  @Input() label = "Input Value";
+  @Input() theme:Theme = "primary";
+  @Input() form: InputStyle = "control";
   @Input() placeholder = "";
   @Input() control: FormControl = new FormControl('');
   @Input() type = "text";
-  @Input() onDark = false;
+  @Input() dark = false;
   @Input() class = "";
-  @Output() value = new EventEmitter<FormControl>();
+  @Output() data = new EventEmitter<FormControl>();
   @Output() isFocused = new EventEmitter();
   @Output() keyup = new EventEmitter();
-  @Input() textValue = "";
+  @Input() value = "";
   @Input() rounded = false;
+  @Input() filled = false;
 
   @Input() info = {
     type: "success",
@@ -31,13 +31,13 @@ export class InputComponent implements OnInit {
 
   active = false;
   focused = false;
-  input_placeholder = this.fStyle == "control" && this.placeholder != "" ? this.placeholder : "";
+  input_placeholder = this.form == "control" && this.placeholder != "" ? this.placeholder : "";
   
   constructor() { }
 
   ngOnInit(): void {
-    this.input_placeholder = this.fStyle == "control" && this.placeholder != "" ? this.placeholder : "";
-    if (this.textValue != "") {
+    this.input_placeholder = this.form == "control" && this.placeholder != "" ? this.placeholder : "";
+    if (this.value != "") {
       this.active = true;
     }
   }
@@ -50,23 +50,24 @@ export class InputComponent implements OnInit {
 
   onFocusOut() {
     this.focused = false;
-    if (!(this.textValue.length > 0)) {
+    if (!(this.value.length > 0)) {
       this.active = false;
     }
     this.isFocused.emit(false);
   }
 
   onKeyUp(event: any) {
-    this.textValue = event.target.value;
+    this.value = event.target.value;
     this.control.setValue(event.target.value);
     this.keyup.emit(event);
-    this.value.emit(this.control);
+    this.data.emit(this.control);
   }
 
   mainClasses() {
     let classes = ``;
     classes += ` ${this.active ? 'active' : ''}`;
-    classes += this.onDark ? " on-dark" : " on-lite";
+    classes += this.dark ? " on-dark" : " on-lite";
+    classes += this.form === "control" ? (this.filled ? " filled" : " outline") : "";
     return classes;
   }
 

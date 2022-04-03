@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChange
 import { DaterService } from '../../dater.service';
 import { DisabledRange } from '../../interfaces';
 import { MaterialgrammiService } from '../../materialgrammi.service';
+import { Theme } from '../../types';
 
 @Component({
   selector: 'mg-calendar',
@@ -12,7 +13,7 @@ export class CalendarComponent implements OnInit, OnChanges {
 
   @Input() abbreviation = false;
   @Input() bookEvents = false;
-  @Input() theme = "primary";
+  @Input() theme: Theme = "primary";
   @Input() disabled: string[] = [];
   @Input() size = 1;
   @Input() disabledRange: DisabledRange = {

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MaterialgrammiService } from '../../materialgrammi.service';
+import { Theme } from '../../types';
 
 @Component({
   selector: 'mg-button',
@@ -12,7 +13,7 @@ export class ButtonComponent implements OnInit {
   @Input() btnStyle = "solid";
   @Input() task = "open";
   @Input() target: any = "/";
-  @Input() theme = "primary";
+  @Input() theme: Theme = "primary";
   @Input() class = "";
   @Input() btnSize = "md";
   @Input() isBlock = false;

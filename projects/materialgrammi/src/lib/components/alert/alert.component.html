@@ -1,5 +1,5 @@
 <div class="alert {{theme}}" *ngIf="show" [ngClass]="class">
-  <a class="closealert" (click)="hide()" *ngIf="closeBtn">x</a>
+  <a class="closealert" (click)="hide()" *ngIf="closeBtn!= ''" [innerHtml]="closeBtn"></a>
   <span [ngClass]="{'text-center block' : alignCenter === true}">
     <ng-content></ng-content>
   </span>

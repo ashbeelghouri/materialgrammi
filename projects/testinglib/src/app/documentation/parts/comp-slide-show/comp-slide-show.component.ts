@@ -64,32 +64,12 @@ export class CompSlideShowComponent implements OnInit {
     default: "[ ]"
   }];
 
-  selector = "mg-slideshow";
+  selector = "mg-slideshow, mg-slideshow-v2";
 
   title = "Slideshow";
   code = `<mg-slideshow [perPage]="optionsApplied.perPage" id="example-slideshow" [gap]="optionsApplied.gap"
   [items]="optionsApplied.items" [heightAdjustment]="false" [maxHeight]="optionsApplied.maxHeight"
-  [showControls]="optionsApplied.showControls"></mg-slideshow>
-
-<mg-slideshow-v2 id="id">
-  <mg-widget type="slideshowv2" id="wid-1-slide" parent="id">
-      <h1 class="blue text-white">Slide 1</h1>
-  </mg-widget>
-  <mg-widget type="slideshowv2" id="wid-2-slide" parent="id">
-      <h1 class="blue text-white">Slide 2</h1>
-  </mg-widget>
-  <mg-widget type="slideshowv2" id="wid-3-slide" parent="id">
-      <h1 class="blue text-white">Slide 3</h1>
-  </mg-widget>
-  <mg-widget type="slideshowv2" id="wid-4-slide" parent="id">
-      <h1 class="blue text-white">Slide 4</h1>
-  </mg-widget>
-  <mg-widget type="slideshowv2" id="wid-5-slide" parent="id">
-      <h1 class="blue text-white">Slide 5</h1>
-  </mg-widget>
-</mg-slideshow-v2>
-<mg-button taskType="slideshowV2" task="prev" target="id">Previous</mg-button>
-<mg-button taskType="slideshowV2" task="next" target="id">Next</mg-button>`;
+  [showControls]="optionsApplied.showControls"></mg-slideshow>`;
 
   optionsApplied = {
     items: [
@@ -126,6 +106,121 @@ export class CompSlideShowComponent implements OnInit {
       "wid-5-slide"
     ]
   }
+
+  code2 = `<mg-slideshow-v2 id="id" [items]="optionsApplied.slideV2Items">
+  <mg-widget type="slideshowv2" id="wid-1-slide" parent="id">
+      <div class="blue text-white pad-10 padY-20">
+          <div class="row">
+              <div class="col m3 l3 s12">
+                  <div class="pad-20">
+                      <mg-image [circled]="true" src="https://picsum.photos/300/300?random=16"></mg-image>
+                  </div>
+              </div>
+              <div class="col m9 l9 s12">
+                  <div class="pad-10">
+                      <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.</p>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+  </mg-widget>
+  <mg-widget type="slideshowv2" id="wid-2-slide" parent="id">
+      <div class="blueGrey8 text-white pad-10 padY-20">
+          <div class="row">
+              <div class="col m3 l3 s12">
+                  <div class="pad-20">
+                      <mg-image [circled]="true" src="https://picsum.photos/300/300?random=3"></mg-image>
+                  </div>
+              </div>
+              <div class="col m9 l9 s12">
+                  <div class="pad-10">
+                      <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.</p>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+  </mg-widget>
+  <mg-widget type="slideshowv2" id="wid-3-slide" parent="id">
+      <div class="amber text-black pad-10 padY-20">
+          <div class="row">
+              <div class="col m3 l3 s12">
+                  <div class="pad-20">
+                      <mg-image [circled]="true" src="https://picsum.photos/300/300?random=9"></mg-image>
+                  </div>
+              </div>
+              <div class="col m9 l9 s12">
+                  <div class="pad-10">
+                      <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.</p>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+  </mg-widget>
+  <mg-widget type="slideshowv2" id="wid-4-slide" parent="id">
+      <div class="orange text-black pad-10 padY-20">
+          <div class="row">
+              <div class="col m3 l3 s12">
+                  <div class="pad-20">
+                      <mg-image [circled]="true" src="https://picsum.photos/300/300?random=6"></mg-image>
+                  </div>
+              </div>
+              <div class="col m9 l9 s12">
+                  <div class="pad-10">
+                      <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </mg-widget>
+  <mg-widget type="slideshowv2" id="wid-5-slide" parent="id">
+      <div class="red8 text-white pad-10 padY-20">
+          <div class="row">
+              <div class="col m3 l3 s12">
+                  <div class="pad-20">
+                      <mg-image [circled]="true" src="https://picsum.photos/300/300?random=1"></mg-image>
+                  </div>
+              </div>
+              <div class="col m9 l9 s12">
+                  <div class="pad-10">
+                      <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem quo totam obcaecati! Sequi sunt sed nihil commodi doloribus! Reiciendis eligendi, beatae deserunt magni nisi sequi minima quis aliquam fugiat.</p>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+  </mg-widget>
+</mg-slideshow-v2>
+<br/>
+<mg-button btnStyle="outline" taskType="slideshowV2" task="prev" target="id" theme="danger">Previous</mg-button>
+<mg-button theme="success" taskType="slideshowV2" task="next" target="id">Next</mg-button> `;
 
   outputOptions = [];
 

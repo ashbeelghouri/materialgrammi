@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Theme } from '../../types';
 
 @Component({
   selector: 'mg-accordion',
@@ -6,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./accordion.component.css']
 })
 export class AccordionComponent implements OnInit {
-  @Input() theme = "primary";
+  @Input() theme: Theme = "primary";
 
   @Input() items: any = [{
     title: "Panel 1",

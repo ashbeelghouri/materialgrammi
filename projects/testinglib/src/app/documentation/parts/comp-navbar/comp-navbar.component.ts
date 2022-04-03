@@ -80,6 +80,13 @@ export class CompNavbarComponent implements OnInit {
     type: "string"
   }];
 
+
+  example_code_2 = `<mg-navbar>
+  <div slot="brand">Brand</div>
+  <div slot="left-nav">Left</div>
+  <div slot="right-nav">Right</div>
+</mg-navbar>`;
+
   constructor(private seo: SeoService) { }
 
   ngOnInit(): void {

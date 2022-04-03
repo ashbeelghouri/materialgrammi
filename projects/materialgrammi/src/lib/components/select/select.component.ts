@@ -1,5 +1,6 @@
 import { Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Theme } from '../../types';
 
 export interface Option {
   name: string,
@@ -14,7 +15,7 @@ export interface Option {
 export class SelectComponent implements OnInit {
   @Output() value = new EventEmitter();
   @Input() searchOpt: FormControl = new FormControl('');
-  @Input() theme = "dark";
+  @Input() theme: Theme | string = "dark";
   @Input() selectTitle = "Select";
   @Input() selectType = "control";
   @Input() enableSearch = false;
@@ -115,6 +116,14 @@ export class SelectComponent implements OnInit {
     if(enterPressed && this.highlighted.length > 0){
       this.searchOpt.setValue("");
       this.selectOption(opt);
+    }
+  }
+
+  inputTheme(){
+    if(["primary", "success", "danger", "dark", "info"].includes(this.theme)){
+      return "lite";
+    }else{
+      return "dark";
     }
   }
 

@@ -1,6 +1,6 @@
-<div class="form-{{fStyle}} {{theme}}" [ngClass]="mainClasses()">
-  <label [innerHtml]="label" (click)="labelClick()"></label>
-  <textarea #inputElementText (focus)="onFocusIn()" (focusout)="onFocusOut()" (keyup)="onKeyUp($event)"></textarea>
+<div class="form-{{form}} {{theme}}" [ngClass]="mainClasses()">
+  <label (click)="labelClick()"><ng-content></ng-content></label>
+  <textarea #inputElementText (focus)="onFocusIn()" (focusout)="onFocusOut()" (keyup)="onKeyUp($event)" [innerHtml]="value"></textarea>
   <ng-container *ngIf="info && info.msg && info.msg.length > 0">
     <p [innerHtml]="info.msg" [ngClass]="infoClasses()"></p>
   </ng-container>

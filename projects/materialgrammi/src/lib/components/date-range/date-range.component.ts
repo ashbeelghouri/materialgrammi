@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { RangeSelected } from '../../interfaces';
+import { InputStyle, Theme } from '../../types';
 
 export interface DisabledRange {
   before: false | string | Date,
@@ -13,25 +14,21 @@ export interface DisabledRange {
   styleUrls: ['./date-range.component.css']
 })
 export class DateRangeComponent implements OnInit, OnChanges {
+
+  @Input() dark = false;
+
   @Input() labels = {
     start: "start date",
     end: "end date"
   };
 
-  @Input() style = {
-    input: {
-      theme: "primary",
-      style: "control",
-      darkmode: false,
-      class: ""
-    },
-    calendar: {
-      disabled: [],
-      theme: "success"
-    }
-  };
+  @Input() startTheme: Theme = "primary";
+  @Input() startStyle: InputStyle = "control";
+  @Input() startClass = "";
 
-  @Input() class = "";
+  @Input() endTheme: Theme = "primary";
+  @Input() endStyle: InputStyle = "control";
+  @Input() endClass = "";
 
   @Input() info = {
     type: "success",
@@ -60,24 +57,9 @@ export class DateRangeComponent implements OnInit, OnChanges {
   constructor() { }
 
   ngOnInit(): void {
-    this.initInput();
   }
 
   ngOnChanges(): void {
-      this.initInput();
-  }
-
-  initInput(){
-    this.formattedInput = {
-      one: {
-        ...this.style.input
-      },
-      two: {
-        ...this.style.input
-      }
-    };
-    this.formattedInput.one.control = new FormControl();
-    this.formattedInput.two.control = new FormControl();
   }
 
   selectedStartDate(event: any){

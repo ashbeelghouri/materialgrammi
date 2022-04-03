@@ -14,24 +14,24 @@ export class CompSelectComponent implements OnInit {
     default: "dark"
   }, {
     name: "searchOpt",
-    allowed: "true | false",
-    type: "boolean",
-    default: "true"
+    allowed: "FormControl",
+    type: "FormControl",
+    default: "FormControl('')"
   }, {
     name: "selectTitle",
-    allowed: "true | false",
-    type: "boolean",
-    default: "false"
+    allowed: "any string",
+    type: "string",
+    default: "Select"
   }, {
     name: "selectType",
-    allowed: "true | false",
-    type: "boolean",
-    default: "true"
+    allowed: "control",
+    type: "string",
+    default: "control"
   }, {
     name: "enableSearch",
     allowed: "true | false",
     type: "boolean",
-    default: "true"
+    default: "false"
   }, {
     name: "options",
     allowed: "[{name: html, val: string}]",

@@ -18,11 +18,6 @@ export class CompInputComponent implements OnInit {
     type: "string",
     default: "control"
   }, {
-    name: "label",
-    allowed: "any string",
-    type: "string",
-    default: "Input Value"
-  }, {
     name: "placeholder",
     allowed: "any string",
     type: "string",
@@ -38,17 +33,17 @@ export class CompInputComponent implements OnInit {
     type: "string",
     default: "text"
   }, {
-    name: "onDark",
+    name: "dark",
     allowed: "true | false",
     type: "boolean",
     default: "false"
   }, {
-    name: "inputCustomClasses",
+    name: "class",
     allowed: "css class",
     type: "string",
     default: ""
   }, {
-    name: "textValue",
+    name: "value",
     allowed: "any string",
     type: "string",
     default: ""

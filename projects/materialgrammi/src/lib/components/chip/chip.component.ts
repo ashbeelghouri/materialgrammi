@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Theme } from '../../types';
 
 @Component({
   selector: 'mg-chip',
@@ -6,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./chip.component.css']
 })
 export class ChipComponent implements OnInit {
-  @Input() theme = "primary";
+  @Input() theme: Theme = "primary";
   @Input() outline = false;
   @Input() class = "";
   constructor() { }

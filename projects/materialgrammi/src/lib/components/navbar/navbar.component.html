@@ -1,48 +1,62 @@
 <div class="navbar-wrapper">
   <div class="navbar {{theme}}" [ngClass]="mainNavClasses()">
     <div class="section brand">
-      <a [innerHtml]="navData.brand.name" [routerLink]="navData.brand.link"></a>
-      <a (click)="toggleNav()" class="small-only-open-nav" [innerHtml]="onSmallMenuButton"></a>
-    </div>
-
-    <div class="section left-nav">
-      <ng-container *ngIf="navData && navData.left && navData.left.navType == 'input'">
-        <input type="text" (keyup) = "onEnterSearchQuery($event)" class="input" [placeholder]="navData.left.data.placeholder" />
-        <a class="input-button" *ngIf="navData.left.data.btn" [innerHtml]="navData.left.data.name"></a>
+      <ng-container *ngIf="navData && navData.brand">
+        <a [innerHtml]="navData.brand.name" [routerLink]="navData.brand.link"></a>
+        <a (click)="toggleNav()" class="small-only-open-nav" [innerHtml]="onSmallMenuButton"></a>
       </ng-container>
-      <ng-container *ngIf="navData && navData.left && navData.left.navType == 'links'">
-        <ng-container *ngFor="let ndata of navData.left.data">
-          <!-- dropdown -->
-          <ng-container *ngIf="ndata.type && ndata.type == 'dropdown'">
-            <div class="dropdown">
-              <a [innerHtml]="ndata.name" [routerLink]="ndata.link" class="trigger-dropdown"></a>
-              <div class="drop-menu">
-                <a *ngFor="let droplink of ndata.links" [innerHtml]="droplink.name"></a>
+      <ng-container *ngIf="!navData.brand">
+        <ng-content select="[slot=brand]"></ng-content>
+      </ng-container>
+    </div>
+    <div class="section left-nav">
+      <ng-container *ngIf="navData.left">
+        <ng-container *ngIf="navData && navData.left && navData.left.navType == 'input'">
+          <input type="text" (keyup) = "onEnterSearchQuery($event)" class="input" [placeholder]="navData.left.data.placeholder" />
+          <a class="input-button" *ngIf="navData.left.data.btn" [innerHtml]="navData.left.data.name"></a>
+        </ng-container>
+        <ng-container *ngIf="navData && navData.left && navData.left.navType == 'links'">
+          <ng-container *ngFor="let ndata of navData.left.data">
+            <!-- dropdown -->
+            <ng-container *ngIf="ndata.type && ndata.type == 'dropdown'">
+              <div class="dropdown">
+                <a [innerHtml]="ndata.name" [routerLink]="ndata.link" class="trigger-dropdown"></a>
+                <div class="drop-menu">
+                  <a *ngFor="let droplink of ndata.links" [innerHtml]="droplink.name"></a>
+                </div>
               </div>
-            </div>
-          </ng-container>
-          <ng-container *ngIf="!ndata.type">
-            <a [innerHtml]="ndata.name" [routerLink]="ndata.link"></a>
+            </ng-container>
+            <ng-container *ngIf="!ndata.type">
+              <a [innerHtml]="ndata.name" [routerLink]="ndata.link"></a>
+            </ng-container>
           </ng-container>
         </ng-container>
+      </ng-container>
+      <ng-container *ngIf="!navData.left">
+        <ng-content select="[slot=left-nav]"></ng-content>
       </ng-container>
     </div>
     <div class="section right-nav">
-      <ng-container *ngIf="navData && navData.right && navData.right.navType == 'links'">
-        <ng-container *ngFor="let ndata of navData.right.data">
-          <!-- dropdown -->
-          <ng-container *ngIf="ndata.type && ndata.type == 'dropdown'">
-            <div class="dropdown">
-              <a [innerHtml]="ndata.name" [routerLink]="ndata.link" class="trigger-dropdown"></a>
-              <div class="drop-menu">
-                <a *ngFor="let droplink of ndata.links" [innerHtml]="droplink.name"></a>
+      <ng-container *ngIf="navData.right">
+        <ng-container *ngIf="navData && navData.right && navData.right.navType == 'links'">
+          <ng-container *ngFor="let ndata of navData.right.data">
+            <!-- dropdown -->
+            <ng-container *ngIf="ndata.type && ndata.type == 'dropdown'">
+              <div class="dropdown">
+                <a [innerHtml]="ndata.name" [routerLink]="ndata.link" class="trigger-dropdown"></a>
+                <div class="drop-menu">
+                  <a *ngFor="let droplink of ndata.links" [innerHtml]="droplink.name"></a>
+                </div>
               </div>
-            </div>
-          </ng-container>
-          <ng-container *ngIf="!ndata.type">
-            <a [innerHtml]="ndata.name" [routerLink]="ndata.link"></a>
+            </ng-container>
+            <ng-container *ngIf="!ndata.type">
+              <a [innerHtml]="ndata.name" [routerLink]="ndata.link"></a>
+            </ng-container>
           </ng-container>
         </ng-container>
+      </ng-container>
+      <ng-container *ngIf="!navData.right">
+        <ng-content select="[slot=right-nav]"></ng-content>
       </ng-container>
     </div>
   </div>

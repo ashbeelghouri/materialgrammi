@@ -8,4 +8,12 @@
     <app-examples [name]="title" [code] = "code" [optionsApplied]="optionsApplied">
         <mg-navbar [navData]="optionsApplied.navData" [theme]="optionsApplied.theme"></mg-navbar>
     </app-examples>
+
+    <app-examples [name]="title" [code] = "example_code_2">
+        <mg-navbar>
+            <div slot="brand">Brand</div>
+            <div slot="left-nav">Left</div>
+            <div slot="right-nav">Right</div>
+        </mg-navbar>
+    </app-examples>
 </div>

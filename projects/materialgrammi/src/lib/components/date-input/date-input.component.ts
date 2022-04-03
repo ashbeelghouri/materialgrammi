@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { CalendarForDateInput, DisabledRange } from '../../interfaces';
+import { InputStyle, Theme } from '../../types';
 
 @Component({
   selector: 'mg-date',
@@ -8,15 +9,11 @@ import { CalendarForDateInput, DisabledRange } from '../../interfaces';
   styleUrls: ['./date-input.component.css']
 })
 export class DateInputComponent implements OnInit, OnChanges {
-  @Input() input = {
-    theme: "primary",
-    style: "control",
-    control: new FormControl(''),
-    darkmode: false,
-    class: ""
-  };
 
-  @Input() label = "Select Date";
+  @Input() theme: Theme = "primary";
+  @Input() style: InputStyle = "control";
+  @Input() control: FormControl = new FormControl('');
+  @Input() dark: boolean = false;
 
   @Input() class = "";
 
@@ -47,7 +44,7 @@ export class DateInputComponent implements OnInit, OnChanges {
   @Output() getdate = new EventEmitter<String>();
 
   active = false;
-  textValue = "";
+  value = "";
   constructor() { }
 
   ngOnInit(): void {
@@ -75,8 +72,8 @@ export class DateInputComponent implements OnInit, OnChanges {
 
   dateSelected(event: any) {
     if (event && event.dateFormatted) {
-      this.textValue = event.dateFormatted;
-      this.getdate.emit(this.textValue);
+      this.value = event.dateFormatted;
+      this.getdate.emit(this.value);
     }
   }
 

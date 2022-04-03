@@ -10,7 +10,7 @@
         </mg-button>
         <div class="row">
           <div class="col m3 l3 s6" *ngFor="let filter of filterQuery">
-            <mg-input [control]="filter.val" [label]="filter.name"></mg-input>
+            <mg-input [control]="filter.val"><span [innerHtml]="filter.name"></span></mg-input>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { InputStyle } from '../../types';
 
 @Component({
   selector: 'mg-text',
@@ -8,11 +9,12 @@ import { FormControl } from '@angular/forms';
 })
 export class TextInputComponent implements OnInit {
   @Input() theme = "primary";
-  @Input() fStyle = "control";
-  @Input() on_dark = false;
-  @Input() label = "textarea input";
+  @Input() form: InputStyle = "control";
+  @Input() dark = false;
+  @Input() value = "";
   @Input() control: FormControl = new FormControl('');
-  @Output() value = new EventEmitter<FormControl>();
+  @Input() filled = false;
+  @Output() data = new EventEmitter<FormControl>();
   @Output() isFocused = new EventEmitter<boolean>();
   @Output() keyup = new EventEmitter<string>();
   @Input() info = {
@@ -21,7 +23,6 @@ export class TextInputComponent implements OnInit {
   };
   @ViewChild('inputElementText') private inputElem!: ElementRef;
   active = false;
-  textValue = "";
   focused = false;
   constructor() { }
 
@@ -35,23 +36,24 @@ export class TextInputComponent implements OnInit {
 
   onFocusOut() {
     this.focused = false;
-    if (!(this.textValue.length > 0)) {
+    if (!(this.value.length > 0)) {
       this.active = false;
     }
     this.isFocused.emit(this.active);
   }
 
   onKeyUp(event: any) {
-    this.textValue = event.target.value;
+    this.value = event.target.value;
     this.control.setValue(event.target.value);
-    this.keyup.emit(this.textValue);
-    this.value.emit(this.control);
+    this.keyup.emit(this.value);
+    this.data.emit(this.control);
   }
 
   mainClasses() {
     let classes = ``;
     classes += ` ${this.active ? 'active' : ''}`;
-    classes += this.on_dark ? " on-dark" : " on-lite";
+    classes += this.dark ? " on-dark" : " on-lite";
+    classes += this.form === "control" ? (this.filled ? " filled" : " outline") : "";
     return classes;
   }
 

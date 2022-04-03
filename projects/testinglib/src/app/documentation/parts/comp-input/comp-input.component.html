@@ -6,8 +6,10 @@
 <app-output-options [options]="outputOptions"></app-output-options>
 <div class="pad-10">
     <app-examples [name]="title" [code] = "code" [optionsApplied]="optionsApplied">
-        <mg-input label="Control" theme="dark"></mg-input>
+        <mg-input theme="primary" [filled]="false" placeholder="Write Here...">
+            Control
+        </mg-input>
         <br/>
-        <mg-input label="Material Form" fStyle="material"></mg-input>
+        <mg-input [style]="'material'">Material Form</mg-input>
     </app-examples>
 </div>
