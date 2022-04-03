@@ -3,7 +3,6 @@
   <label (click)="labelClick()"><ng-content></ng-content></label>
 
   <input #inputElement [type]="type" (focus)="onFocusIn()" (focusout)="onFocusOut()" (keyup)="onKeyUp($event)" [value]="value" [ngClass]="class + (rounded ? 'radius-5' : '')" [placeholder] = "input_placeholder"/>
-`
   <ng-container *ngIf="info && info.msg && info.msg.length > 0">
     <p [innerHtml]="info.msg" [ngClass]="infoClasses()"></p>
   </ng-container>
