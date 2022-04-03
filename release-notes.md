@@ -1,5 +1,5 @@
 # ![version 0.1.3](https://img.shields.io/badge/version-1.3-green)
-> 02 April 2022
+> 03 April 2022
 
 ```
 materialgrammi - css => 2.0.8
@@ -9,11 +9,22 @@ ng-materialgrammi - angular => 0.1.3
 - Multi Select
 
 ## Bug Fixes
-- No
+- Input
+    - removed label input paramter and added it as ng-content
+    - changed input onDark to dark
+    - changed textValue input to value
+- Date Input
+    - removed label input paramter and added it as ng-content
+    - changed input darkmode to dark
+    - changed textValue input to value
+- Date Range
+    - added separate input parameters for startdate and endDate
 
 ## Improvement
 - Navbar
     - introduced the slots "left", "right", "brand" > so navbar works with ng-content
+- Type Theme
+    - introduced new type = Theme for constant values of theme.
 
 # ![version 0.1.0](https://img.shields.io/badge/version-1.1-green)
 > 02 April 2022

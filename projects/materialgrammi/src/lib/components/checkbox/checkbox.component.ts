@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MaterialgrammiService } from '../../materialgrammi.service';
+import { Theme } from '../../types';
 
 @Component({
   selector: 'mg-checkbox',
@@ -8,7 +9,7 @@ import { MaterialgrammiService } from '../../materialgrammi.service';
 })
 export class CheckboxComponent implements OnInit {
   @Input() size = "m";
-  @Input() theme = "primary";
+  @Input() theme: Theme = "primary";
   @Input() onDark = false;
   @Input() isSelected = false;
   @Input() class = "";

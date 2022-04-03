@@ -1,16 +1,26 @@
-<div class="row" [ngClass]="class">
+<div class="row">
     <div class="col m6 l6 s12">
         <div class="padR-3">
-            <mg-date [input]="formattedInput.one" [label]="labels.start" 
+            <mg-date [theme]="startTheme"
             [disabledRange] = "disable_range_start"
-            (getdate)="selectedStartDate($event)" [info]="info"></mg-date>
+            [style]="startStyle"
+            [dark]="dark"
+            [class]="startClass"
+            (getdate)="selectedStartDate($event)" [info]="info">
+        <span [innerHtml]="labels.start"></span>
+        </mg-date>
         </div>
     </div>
     <div class="col m6 l6 s12">
         <div class="padL-3">
-            <mg-date [input]="formattedInput.two" 
+            <mg-date [theme]="endTheme" 
             [disabledRange] = "disable_range_end"
-            [label]="labels.end" (getdate)="selectedEndDate($event)" [info]="info"></mg-date>
+            [style]="endStyle"
+            [dark]="dark"
+            [class]="endClass"
+            (getdate)="selectedEndDate($event)" [info]="info">
+            <span [innerHtml]="labels.end"></span>
+        </mg-date>
         </div>
     </div>
 </div>
