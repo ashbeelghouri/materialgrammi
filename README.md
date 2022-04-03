@@ -22,4 +22,4 @@ install the components package, which can be found [here](https://www.npmjs.com/
 - [documentation](https://www.materialgrammi.com)
 
 ### Release Notes
-https://github.com/ashbeelghouri/materialgrammi/blob/master/release-notes.md
+[![release_notes](https://img.shields.io/badge/release-notes-blue)](https://github.com/ashbeelghouri/materialgrammi/blob/master/release-notes.md)
