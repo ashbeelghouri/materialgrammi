@@ -16599,120 +16599,269 @@ $alertTextSize: $p + 0.3em;
 
 /***********************************************************************************/
 
-.form-control input,
-.form-control.dark input,
-.form-control textarea,
-.form-control.dark textarea {
-    border: 1px solid #{$clr_lite_dark};
+.form-control.outline.primary label {
+    color: $clr_primary_lite !important;
 }
-
-.form-control.dark label {
-    color: $clr_dark_lite;
+.form-control.outline.primary input,
+.form-control.outline.primary textarea {
+    border: 1px solid #{$clr_primary_lite};
+    color: $clr_primary !important;
 }
-.form-control.lite label {
-    color: $clr_dark_lite;
-}
-
-
-.form-control.warning input::placeholder, 
-.form-control.lite input::placeholder {
-    color: $clr_dark_lite;
-}
-
-.form-control.primary input::placeholder, 
-.form-control.success input::placeholder, 
-.form-control.danger input::placeholder,
-.form-control.dark input::placeholder,
-.form-control.info input::placeholder {
-    color: $clr_lite_dark;
-}
-
-.form-control.active input,
-.form-control.dark.active input,
-.form-control.active textarea,
-.form-control.dark.active textarea {
-    border: 1px solid #{$clr_dark_dark};
-}
-
-.form-control.primary input,
-.form-control.primary textarea {
+.form-control.outline.primary.active input,
+.form-control.outline.primary.active textarea {
     border: 1px solid #{$clr_primary};
-    color: $clr_lite;
-}
-.form-control.primary label {
-    color: $clr_primary;
 }
 
-.form-control.primary.active input,
-.form-control.primary.active textarea {
-    border-bottom: 1px solid #{$clr_primary};
+.form-control.filled.primary label {
+    color: $clr_primary_lite !important;
+}
+.form-control.filled.primary input,
+.form-control.filled.primary textarea {
+    background-color: $clr_primary;
+    color: $clr_lite !important;
+}
+.form-control.filled.primary input::placeholder,
+.form-control.filled.primary textarea::placeholder {
+    color: $clr_lite_dark !important;
+}
+.form-control.filled.primary.active input,
+.form-control.filled.primary.active textarea {
+    background-color: $clr_primary_lite;
 }
 
-.form-control.warning input,
-.form-control.warning textarea {
-    border: 1px solid #{$clr_warning};
-}
-.form-control.warning label {
-    color: $clr_warning;
+.form-control.filled.primary.active label,
+.form-control.outline.primary.active label {
+    color: $clr_primary_dark;
+    font-weight: bold;
 }
 
-.form-control.warning.active input,
-.form-control.warning.active textarea {
-    border: 1px solid #{$clr_warning};
+// SUCCESS
+.form-control.outline.success label {
+    color: $clr_success_lite !important;
 }
-.form-control.success input,
-.form-control.success textarea {
+.form-control.outline.success input,
+.form-control.outline.success textarea {
     border: 1px solid #{$clr_success_lite};
+    color: $clr_success !important;
 }
-.form-control.success label {
-    color: $clr_success;
-}
-.form-control.success.active input,
-.form-control.success.active textarea {
-    border: 1px solid #{$clr_success_lite};
+.form-control.outline.success.active input,
+.form-control.outline.success.active textarea {
+    border: 1px solid #{$clr_success};
 }
 
-.form-control.danger input,
-.form-control.danger textarea {
+.form-control.filled.success label {
+    color: $clr_success_lite !important;
+}
+.form-control.filled.success input,
+.form-control.filled.success textarea {
+    background-color: $clr_success;
+    color: $clr_lite !important;
+}
+.form-control.filled.success input::placeholder,
+.form-control.filled.success textarea::placeholder {
+    color: $clr_lite_dark !important;
+}
+.form-control.filled.success.active input,
+.form-control.filled.success.active textarea {
+    background-color: $clr_success_lite;
+}
+.form-control.filled.success.active label,
+.form-control.outline.success.active label {
+    color: $clr_success_dark;
+    font-weight: bold;
+}
+
+// DANGER
+.form-control.outline.danger label {
+    color: $clr_danger_lite !important;
+}
+.form-control.outline.danger input,
+.form-control.outline.danger textarea {
     border: 1px solid #{$clr_danger_lite};
+    color: $clr_danger !important;
 }
-.form-control.danger label {
-    color: $clr_danger;
-}
-.form-control.danger.active input,
-.form-control.danger.active textarea {
-    border: 1px solid #{$clr_danger_lite};
+.form-control.outline.danger.active input,
+.form-control.outline.danger.active textarea {
+    border: 1px solid #{$clr_danger};
 }
 
-.form-control.lite input,
-.form-control.lite textarea {
-    border: 1px solid #{$clr_lite};
+.form-control.filled.danger label {
+    color: $clr_danger_lite !important;
 }
-.form-control.lite.active input,
-.form-control.lite.active textarea {
-    border: 1px solid #{$clr_lite};
+.form-control.filled.danger input,
+.form-control.filled.danger textarea {
+    background-color: $clr_danger;
+    color: $clr_lite !important;
 }
-
-
-.form-control.on-dark input,
-.form-control.on-dark textarea {
-    color: $clr_lite_dark;
+.form-control.filled.danger input::placeholder,
+.form-control.filled.danger textarea::placeholder {
+    color: $clr_lite_dark !important;
 }
-
-.form-control.active.on-dark input,
-.form-control.active.on-dark textarea {
-    color: $clr_lite_lite;
+.form-control.filled.danger.active input,
+.form-control.filled.danger.active textarea {
+    background-color: $clr_danger_lite;
 }
-
-.form-control.on-lite input,
-.form-control.on-lite textarea {
-    color: $clr_dark_lite;
+.form-control.filled.danger.active label,
+.form-control.outline.danger.active label {
+    color: $clr_danger_dark;
+    font-weight: bold;
 }
 
-.form-control.active.on-lite input,
-.form-control.active.on-lite textarea {
+
+// INFO
+.form-control.outline.info label {
+    color: $clr_info_lite !important;
+}
+.form-control.outline.info input,
+.form-control.outline.info textarea {
+    border: 1px solid #{$clr_info_lite};
+    color: $clr_info !important;
+}
+.form-control.outline.info.active input,
+.form-control.outline.info.active textarea {
+    border: 1px solid #{$clr_info};
+}
+
+.form-control.filled.info label {
+    color: $clr_info_lite !important;
+}
+.form-control.filled.info input,
+.form-control.filled.info textarea {
+    background-color: $clr_info;
+    color: $clr_lite !important;
+}
+.form-control.filled.info input::placeholder,
+.form-control.filled.info textarea::placeholder {
+    color: $clr_lite_dark !important;
+}
+.form-control.filled.info.active input,
+.form-control.filled.info.active textarea {
+    background-color: $clr_info_lite;
+}
+.form-control.filled.info.active label,
+.form-control.outline.info.active label {
+    color: $clr_info_dark;
+    font-weight: bold;
+}
+
+// DARK
+.form-control.outline.dark label {
+    color: $clr_dark_lite !important;
+}
+.form-control.outline.dark input,
+.form-control.outline.dark textarea {
+    border: 1px solid #{$clr_dark_lite};
+    color: $clr_dark !important;
+}
+.form-control.outline.dark.active input,
+.form-control.outline.dark.active textarea {
+    border: 1px solid #{$clr_dark};
+}
+
+.form-control.filled.dark label {
+    color: $clr_dark_lite !important;
+}
+.form-control.filled.dark input,
+.form-control.filled.dark textarea {
+    background-color: $clr_dark;
+    color: $clr_lite !important;
+}
+.form-control.filled.dark input::placeholder,
+.form-control.filled.dark textarea::placeholder {
+    color: $clr_lite_dark !important;
+}
+.form-control.filled.dark.active input,
+.form-control.filled.dark.active textarea {
+    background-color: $clr_dark_lite;
+}
+.form-control.filled.dark.active label,
+.form-control.outline.dark.active label {
     color: $clr_dark_dark;
+    font-weight: bold;
 }
+
+
+// LITE
+.form-control.outline.lite label {
+    color: $clr_lite_lite !important;
+}
+.form-control.outline.lite input,
+.form-control.outline.lite textarea {
+    border: 1px solid #{$clr_lite_lite};
+    color: $clr_lite !important;
+}
+.form-control.outline.lite.active input,
+.form-control.outline.lite.active textarea {
+    border: 1px solid #{$clr_lite};
+}
+.form-control.outline.lite input::placeholder,
+.form-control.outline.lite textarea::placeholder {
+    color: $clr_lite_dark !important;
+}
+
+.form-control.filled.lite label {
+    color: $clr_lite_lite !important;
+}
+.form-control.filled.lite input,
+.form-control.filled.lite textarea {
+    background-color: $clr_lite;
+    color: $clr_lite !important;
+}
+.form-control.filled.lite input::placeholder,
+.form-control.filled.lite textarea::placeholder {
+    color: $clr_lite_dark !important;
+}
+.form-control.filled.lite.active input,
+.form-control.filled.lite.active textarea {
+    background-color: $clr_lite_lite;
+}
+.form-control.filled.lite.active label,
+.form-control.outline.lite.active label {
+    color: $clr_lite;
+    font-weight: bold;
+}
+
+
+// WARNING
+.form-control.outline.warning label {
+    color: $clr_warning_lite !important;
+}
+.form-control.outline.warning input,
+.form-control.outline.warning textarea {
+    border: 1px solid #{$clr_warning_lite};
+    color: $clr_warning !important;
+}
+.form-control.outline.warning.active input,
+.form-control.outline.warning.active textarea {
+    border: 1px solid #{$clr_warning};
+}
+.form-control.outline.warning input::placeholder,
+.form-control.outline.warning textarea::placeholder {
+    color: $clr_lite_dark !important;
+}
+
+.form-control.filled.warning label {
+    color: $clr_warning_lite !important;
+}
+.form-control.filled.warning input,
+.form-control.filled.warning textarea {
+    background-color: $clr_warning;
+    color: $clr_dark !important;
+}
+.form-control.filled.warning input::placeholder,
+.form-control.filled.warning textarea::placeholder {
+    color: $clr_warning_dark !important;
+}
+.form-control.filled.warning.active input,
+.form-control.filled.warning.active textarea {
+    background-color: $clr_warning_lite;
+}
+.form-control.filled.warning.active label,
+.form-control.outline.warning.active label {
+    color: $clr_warning;
+    font-weight: bold;
+}
+
 
 // radio button
 .radio {

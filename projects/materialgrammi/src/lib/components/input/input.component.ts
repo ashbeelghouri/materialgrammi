@@ -20,6 +20,7 @@ export class InputComponent implements OnInit {
   @Output() keyup = new EventEmitter();
   @Input() value = "";
   @Input() rounded = false;
+  @Input() filled = false;
 
   @Input() info = {
     type: "success",
@@ -66,6 +67,7 @@ export class InputComponent implements OnInit {
     let classes = ``;
     classes += ` ${this.active ? 'active' : ''}`;
     classes += this.dark ? " on-dark" : " on-lite";
+    classes += this.style === "control" ? (this.filled ? " filled" : " outline") : "";
     return classes;
   }
 
