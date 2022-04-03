@@ -13,9 +13,11 @@ npm install materialgrammi
 ```bash:js
 npm install ng-materialgrammi
 ```
+
+![cli 13.0.3](https://img.shields.io/badge/cli version-13.0.3-red)
+
+
 install the components package as well, which can be found [here](https://www.npmjs.com/package/ng-materialgrammi)
 
 ### Release Notes
 https://github.com/ashbeelghouri/materialgrammi/blob/master/release-notes.md
-
-ng cli version: 13.0.4 
