@@ -5,7 +5,7 @@
 materialgrammi - css => 2.0.8
 ng-materialgrammi - angular => 0.1.3
 ```
-## Features
+## New Features
 - Multi Select
 
 ## Bug Fixes
@@ -33,7 +33,7 @@ ng-materialgrammi - angular => 0.1.3
 materialgrammi - css => 2.0.7
 ng-materialgrammi - angular => 0.1.2
 ```
-## Features
+## New Features
 - Notifications
 - Slideshow v2
 
@@ -60,7 +60,7 @@ ng-materialgrammi - angular => 0.1.2
 materialgrammi - css => 2.0.0
 ng-materialgrammi - angular => 0.0.1
 ```
-## Features
+## New Features
 - Everything started here
 ## Bug Fixes
 - No
