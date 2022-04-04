@@ -1,0 +1,11 @@
+<ng-container *ngIf="show">
+    <div class="placeholder" [ngClass]="type + ' ' + class">
+        <div class="spinner-eclipse">
+            <div class="eclipse">
+                <div></div>
+            </div>
+        </div>
+        <ng-content></ng-content>
+    </div>
+</ng-container>
+

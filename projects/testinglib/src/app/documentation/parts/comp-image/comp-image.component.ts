@@ -38,6 +38,16 @@ export class CompImageComponent implements OnInit {
     type: "string",
     default: ""
   }, {
+    name: "lazyLoad",
+    allowed: "boolean",
+    type: "boolean",
+    default: "true"
+  }, {
+    name: "applyFilters",
+    allowed: "boolean",
+    type: "boolean",
+    default: "true"
+  }, {
     name: "filters",
     allowed: "{ blur: false | brightness: false | contrast: false | grayscale: false | invert: false | hue: false | opacity: false | saturate: false | sepia: false }",
     type: "object",
@@ -67,10 +77,10 @@ export class CompImageComponent implements OnInit {
 
   optionsApplied = {
     filters: {
-      brightness: 100,
-      contrast: 120, 
+      brightness: 90,
+      contrast: 110, 
       sepia: 10,
-      hue: 30
+      hue: 10
     }
   }
 

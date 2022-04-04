@@ -19232,3 +19232,57 @@ table.info tbody tr td:hover {
     position: relative;
     width: 100%;
 }
+
+
+.placeholder {
+    display: inline;
+}
+
+.placeholder.img {
+    display: block;
+    height: 200px;
+    width: 100%;
+    background: $clr_lite_dark;
+    transition: all .30s ease-in-out;
+}
+
+@keyframes eclipse-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.eclipse div {
+    position: absolute;
+    animation: eclipse-animation 1.35s linear infinite;
+    width: 100px;
+    height: 100px;
+    top: 25%;
+    left: 25%;
+    border-radius: 50%;
+    box-shadow: 0 2px 0 0 #{$clr_dark_lite};
+    transform-origin: 50px 51px;
+}
+.spinner-eclipse {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    overflow: hidden;
+    background: none;
+}
+.eclipse {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+}
+.eclipse div {
+    box-sizing: content-box;
+}

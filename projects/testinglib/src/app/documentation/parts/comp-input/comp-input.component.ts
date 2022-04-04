@@ -13,7 +13,7 @@ export class CompInputComponent implements OnInit {
     type: "string",
     default: "success"
   }, {
-    name: "style",
+    name: "form",
     allowed: "control | material",
     type: "string",
     default: "control"

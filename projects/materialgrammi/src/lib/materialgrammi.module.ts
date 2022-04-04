@@ -1,4 +1,7 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+
+
 import { MaterialgrammiComponent } from './materialgrammi.component';
 import { TestComponentComponent } from './components/test-component/test-component.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
@@ -49,6 +52,7 @@ import { SliderComponent } from './components/slider/slider.component';
 import { SlideshowV2Component } from './components/slideshow-v2/slideshow-v2.component';
 import { FixerComponent } from './components/fixer/fixer.component';
 import { MuliselectComponent } from './components/muliselect/muliselect.component';
+import { PlaceholderComponent } from './components/placeholder/placeholder.component';
 
 @NgModule({
   declarations: [
@@ -99,11 +103,13 @@ import { MuliselectComponent } from './components/muliselect/muliselect.componen
     SliderComponent,
     SlideshowV2Component,
     FixerComponent,
-    MuliselectComponent
+    MuliselectComponent,
+    PlaceholderComponent
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   exports: [
     MaterialgrammiComponent,
