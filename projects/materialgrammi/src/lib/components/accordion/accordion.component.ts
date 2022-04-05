@@ -7,7 +7,6 @@ import { Theme } from '../../types';
   styleUrls: ['./accordion.component.css']
 })
 export class AccordionComponent implements OnInit {
-  @Input() id = "";
   @Input() theme: Theme = "primary";
 
   @Input() items: any = [{
