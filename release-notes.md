@@ -9,8 +9,8 @@
 # ![version 0.1.4](https://img.shields.io/badge/version-1.4-green)
 > 09 April 2022
 
-materialgrammi - ![version 2.0.9](https://img.shields.io/badge/version-2.0.9-blue)
-ng-materialgrammi - ![version 0.1.4](https://img.shields.io/badge/version-0.1.4-blue)
+- materialgrammi ![version 2.0.9](https://img.shields.io/badge/version-2.0.9-blue)
+- ng-materialgrammi ![version 0.1.4](https://img.shields.io/badge/version-0.1.4-blue)
 
 ## New Features
 - Multi Select
