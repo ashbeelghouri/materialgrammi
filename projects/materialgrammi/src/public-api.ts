@@ -52,3 +52,5 @@ export * from './lib/components/widget/widget.component';
 export * from './lib/components/wizard/wizard.component';
 export * from './lib/components/slideshow-v2/slideshow-v2.component';
 export * from './lib/components/fixer/fixer.component';
+export * from './lib/components/muliselect/muliselect.component';
+export * from './lib/components/inview/inview.component';

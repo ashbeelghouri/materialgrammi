@@ -53,6 +53,9 @@ import { SlideshowV2Component } from './components/slideshow-v2/slideshow-v2.com
 import { FixerComponent } from './components/fixer/fixer.component';
 import { MuliselectComponent } from './components/muliselect/muliselect.component';
 import { PlaceholderComponent } from './components/placeholder/placeholder.component';
+import { InviewComponent } from './components/inview/inview.component';
+import { BadgeComponent } from './components/badge/badge.component';
+import { HoscrollComponent } from './components/hoscroll/hoscroll.component';
 
 @NgModule({
   declarations: [
@@ -104,7 +107,10 @@ import { PlaceholderComponent } from './components/placeholder/placeholder.compo
     SlideshowV2Component,
     FixerComponent,
     MuliselectComponent,
-    PlaceholderComponent
+    PlaceholderComponent,
+    InviewComponent,
+    BadgeComponent,
+    HoscrollComponent
   ],
   imports: [
     CommonModule,
@@ -156,7 +162,9 @@ import { PlaceholderComponent } from './components/placeholder/placeholder.compo
     DateRangeComponent,
     ComponentComponent,
     SlideshowV2Component,
-    FixerComponent
+    FixerComponent,
+    MuliselectComponent,
+    InviewComponent
   ]
 })
 export class MaterialgrammiModule { }

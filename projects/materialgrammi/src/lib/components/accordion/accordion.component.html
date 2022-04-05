@@ -1,10 +1,13 @@
-<ng-container *ngIf="items.length > 0">
-  <div class="accordion" [ngClass]="class">
-    <ng-container *ngFor="let item of items; let i = index">
-      <div class="marginB-2">
-        <mg-accordion-item [theme]="theme" [itemid]="i" [item]="item" (isClicked)="toggleItem($event)">
-        </mg-accordion-item>
-      </div>
-    </ng-container>
-  </div>
-</ng-container>
+<div  [id]="id">
+  <ng-container *ngIf="items.length > 0">
+    <div class="accordion" [ngClass]="class">
+      <ng-container *ngFor="let item of items; let i = index">
+        <div class="marginB-2">
+          <mg-accordion-item [theme]="theme" [itemid]="i" [item]="item" (isClicked)="toggleItem($event)">
+          </mg-accordion-item>
+        </div>
+      </ng-container>
+    </div>
+  </ng-container>
+</div>
+
