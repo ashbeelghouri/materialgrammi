@@ -666,8 +666,11 @@ export class MaterialgrammiService {
     });
   }
 
-  
-
+  scrollTo(query: string): void {
+    if(document.querySelectorAll(query)[0]) {
+      document.querySelectorAll(query)[0].scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    }
+  }
 
 
 }
