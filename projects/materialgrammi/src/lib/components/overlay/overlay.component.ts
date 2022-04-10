@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
 import { MaterialgrammiService } from '../../materialgrammi.service';
 
 @Component({
@@ -15,6 +15,11 @@ export class OverlayComponent implements OnInit {
   @Input() active = false;
 
   @Output() isClosed = new EventEmitter();
+
+  @HostListener('document:keydown.escape', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    this.close();
+  }
 
   constructor(private service: MaterialgrammiService) { }
 

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { MaterialgrammiService } from '../../materialgrammi.service';
 
 @Component({
@@ -11,6 +11,13 @@ export class OffcanvasComponent implements OnInit {
   @Input() id = this.service.makeid(10, this.service.makeid(10, "offcanvas"));
 
   widgetID = "";
+
+
+  @HostListener('document:keydown.escape', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    this.close();
+  }
+
   constructor( private service: MaterialgrammiService ) { }
 
   ngOnInit(): void {
