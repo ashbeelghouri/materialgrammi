@@ -1,14 +1,25 @@
-<app-headers>{{title}}</app-headers>
+<app-headers>{{title.single}}</app-headers>
 <app-description></app-description>
-<app-selectors>{{selector}}</app-selectors>
+<app-selectors>{{selector.single}}</app-selectors>
 <h3 class="padH-10">Input Options</h3>
-<app-input-options [options]="inputOptions"></app-input-options>
-<app-output-options [options]="outputOptions"></app-output-options>
+<app-input-options [options]="inputOptions.single"></app-input-options>
+<app-output-options [options]="outputOptions.single"></app-output-options>
 <div class="pad-10">
-    <app-examples [name]="title" [code] = "code" [optionsApplied]="optionsApplied">
+    <app-examples [name]="title.single" [code] = "code.single" [optionsApplied]="optionsApplied.single">
         <mg-select  [enableSearch]="true" theme="primary"></mg-select>
-        <br/>
-        <br/>
+    </app-examples>
+</div>
+
+<div class="padY-20"></div>
+
+<app-headers>{{title.multiple}}</app-headers>
+<app-description></app-description>
+<app-selectors>{{selector.multiple}}</app-selectors>
+<h3 class="padH-10">Input Options</h3>
+<app-input-options [options]="inputOptions.multiple"></app-input-options>
+<app-output-options [options]="outputOptions.multiple"></app-output-options>
+<div class="pad-10">
+    <app-examples [name]="title.single" [code] = "code.multiple" [optionsApplied]="optionsApplied.multiple">
         <mg-muliselect></mg-muliselect>
     </app-examples>
 </div>

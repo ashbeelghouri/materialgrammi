@@ -5,12 +5,23 @@
     <div class="multi-select-selected">
         <div class="row">
             <div class="col m11 l11 s10">
-                <ng-container *ngFor="let opt of selectedValues">
-                    <div class="selected-pill">
-                        <span [innerHtml]="opt" class="selected-description"></span>
-                        <span (click)="removeOptions(opt)" class="selected-description" [innerHtml]="removeIcon"></span>
-                    </div>
+                <ng-container *ngIf="viewType === 'option'">
+                    <ng-container *ngFor="let opt of selectedOptions">
+                        <div class="selected-pill">
+                            <span [innerHtml]="opt" class="selected-description"></span>
+                            <span (click)="removeOptions(opt)" class="selected-description" [innerHtml]="removeIcon"></span>
+                        </div>
+                    </ng-container>
                 </ng-container>
+                <ng-container *ngIf="viewType != 'option'">
+                    <ng-container *ngFor="let opt of selectedValues">
+                        <div class="selected-pill">
+                            <span [innerHtml]="opt" class="selected-description"></span>
+                            <span (click)="removeOptions(opt)" class="selected-description" [innerHtml]="removeIcon"></span>
+                        </div>
+                    </ng-container>
+                </ng-container>
+                
                 <ng-container *ngIf="selectedValues.length < 1">
                     <span [innerHtml]="placeholder" class="pad-5"></span>
                 </ng-container>
@@ -22,7 +33,7 @@
     </div>
     <div class="multi-select-options">
         <ng-container *ngFor="let opt of options">
-            <div class="multi-option" [innerHtml]="opt.name" (click)="selectValue(opt.value)"></div>
+            <div class="multi-option" [innerHtml]="opt.name" (click)="selectValue(opt.value, opt.name)"></div>
         </ng-container>
     </div>
 </div>

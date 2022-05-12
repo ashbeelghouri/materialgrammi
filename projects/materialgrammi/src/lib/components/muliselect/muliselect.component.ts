@@ -30,13 +30,13 @@ export class MuliselectComponent implements OnInit, OnChanges {
   }];
   @Input() allowDuplicates: boolean = false;
   @Input() deleteIcon = `<i class="fas fa-times"></i>`;
+  @Input() viewType = "option";
 
   @Output() data = new EventEmitter();
 
   selectedValues: any = [];
+  selectedOptions: any = [];
   openOptions = false;
-
-
 
   constructor(private eRef: ElementRef) { }
 
@@ -48,8 +48,8 @@ export class MuliselectComponent implements OnInit, OnChanges {
   }
 
   @HostListener('document:click', ['$event'])
-  clickout(event:any) {
-    if(!this.eRef.nativeElement.contains(event.target)) {
+  clickout(event: any) {
+    if (!this.eRef.nativeElement.contains(event.target)) {
       this.openOptions = false;
     }
   }
@@ -57,37 +57,59 @@ export class MuliselectComponent implements OnInit, OnChanges {
   handleKeyboardEvent(event: KeyboardEvent) {
     this.openOptions = false;
   }
-  
 
-  toggleOptions(){
+
+  toggleOptions() {
     this.openOptions = !this.openOptions;
   }
 
-  closeOptions(){
+  closeOptions() {
     this.openOptions = false;
     console.log("Options close");
   }
 
-  removeOptions(opt: any){
-    this.selectedValues = this.selectedValues.filter((o:any)=>{
-      return o !== opt;
-    });
+  valueFromOption(option: any){
+    for(let op of this.options) {
+      if(op.name === option) {
+        return op.value;
+      }
+    }
+    return false;
+  }
+
+  removeOptions(opt: any) {
+    if (this.viewType === "option") { 
+      let opValue = this.valueFromOption(opt);
+      if(opValue) {
+        this.selectedValues = this.selectedValues.filter((o: any) => {
+          return o !== opValue;
+        });
+      }
+      this.selectedOptions = this.selectedOptions.filter((o: any) => {
+        return o !== opt;
+      });
+    }else {
+      this.selectedValues = this.selectedValues.filter((o: any) => {
+        return o !== opt;
+      });
+    }
     this.data.emit(this.selectedValues);
   }
 
-  selectValue(value: any){
-    if((!this.allowDuplicates && !this.selectedValues.includes(value)) || this.allowDuplicates) {
+  selectValue(value: any, name: any) {
+    if ((!this.allowDuplicates && !this.selectedValues.includes(value)) || this.allowDuplicates) {
       this.selectedValues.push(value);
+      this.selectedOptions.push(name);
     }
 
     this.data.emit(this.selectedValues);
   }
 
-  mainClasses(){
+  mainClasses() {
     let classes = "";
     classes += this.theme;
     classes += this.openOptions ? " active" : "";
     return classes;
   }
-  
+
 }
