@@ -1,8 +1,9 @@
 import { Component, Input, OnInit, HostListener, ElementRef, Output, EventEmitter, OnChanges } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 export interface multiOption {
-  name?: string,
-  value?: string
+  name: string,
+  value: string
 };
 
 @Component({
@@ -11,8 +12,9 @@ export interface multiOption {
   styleUrls: ['./muliselect.component.css']
 })
 export class MuliselectComponent implements OnInit, OnChanges {
-  @Input() theme = "warning";
+  @Input() theme = "primary";
   @Input() title = "multi select title";
+  @Input() searchOpt: FormControl = new FormControl('');
   @Input() placeholder = "click here";
   @Input() removeIcon = `<i class="fas fa-times"></i>`;
   @Input() options: multiOption[] = [{
@@ -31,13 +33,14 @@ export class MuliselectComponent implements OnInit, OnChanges {
   @Input() allowDuplicates: boolean = false;
   @Input() deleteIcon = `<i class="fas fa-times"></i>`;
   @Input() viewType = "option";
+  @Input() enableSearch = false;
 
   @Output() data = new EventEmitter();
 
   selectedValues: any = [];
   selectedOptions: any = [];
   openOptions = false;
-
+  highlighted = "";
   constructor(private eRef: ElementRef) { }
 
   ngOnInit(): void {
@@ -50,6 +53,7 @@ export class MuliselectComponent implements OnInit, OnChanges {
   @HostListener('document:click', ['$event'])
   clickout(event: any) {
     if (!this.eRef.nativeElement.contains(event.target)) {
+      this.searchOpt.setValue("");
       this.openOptions = false;
     }
   }
@@ -65,7 +69,6 @@ export class MuliselectComponent implements OnInit, OnChanges {
 
   closeOptions() {
     this.openOptions = false;
-    console.log("Options close");
   }
 
   valueFromOption(option: any){
@@ -101,7 +104,7 @@ export class MuliselectComponent implements OnInit, OnChanges {
       this.selectedValues.push(value);
       this.selectedOptions.push(name);
     }
-
+    this.closeOptions()
     this.data.emit(this.selectedValues);
   }
 
@@ -110,6 +113,47 @@ export class MuliselectComponent implements OnInit, OnChanges {
     classes += this.theme;
     classes += this.openOptions ? " active" : "";
     return classes;
+  }
+
+  searchFromOptions(val:any){
+    let enterPressed = false;
+    if(val && val.code == "Enter" || val.key == "Enter"){
+      enterPressed = true;
+    }
+    val = val.target.value;
+    var opt:any = false;
+    for(let i = 0; i < this.options.length; i++) {
+      if(val.length > 0 && this.options && this.options[i] && this.options[i].name && this.options[i].name.indexOf(val) > 1){
+        this.highlighted = this.options[i].name;
+        opt = this.options[i];
+      }else if(val.length > 0 && this.options[i].value.indexOf(val) > 1){
+        this.highlighted = this.options[i].name;
+        opt = this.options[i];
+      }
+    }
+    if(val.length < 1){
+      this.highlighted = "";
+    }
+    if(enterPressed && this.highlighted.length > 0){
+      this.searchOpt.setValue("");
+      this.selectValue(opt.value, opt.name);
+    }
+  }
+
+  inputTheme(){
+    if(["primary", "success", "danger", "dark", "info"].includes(this.theme)){
+      return "lite";
+    }else{
+      return "dark";
+    }
+  }
+
+  isHighlighted(name: string){
+    if(this.highlighted == name){
+      return "highlighted";
+    }else{
+      return "";
+    }
   }
 
 }

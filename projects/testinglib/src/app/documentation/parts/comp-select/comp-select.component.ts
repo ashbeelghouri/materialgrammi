@@ -75,6 +75,11 @@ export class CompSelectComponent implements OnInit {
       allowed: "option | value",
       type: "string",
       default: "option"
+    }, {
+      name: "enableSearch",
+      allowed: "true | false",
+      type: "boolean",
+      default: "false"
     }]
   };
 
@@ -102,7 +107,10 @@ export class CompSelectComponent implements OnInit {
       name: "value",
       type: "string"
     }],
-    multiple: []
+    multiple: [{
+      name: "data",
+      type: "object"
+    }]
   };
 
   constructor(private seo: SeoService) { }
