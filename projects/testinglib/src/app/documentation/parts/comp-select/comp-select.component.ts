@@ -89,8 +89,8 @@ export class CompSelectComponent implements OnInit {
   };
 
   title = { 
-    single: "Select",
-    multiple: "Multi-Select"
+    single: "Single Select",
+    multiple: "Multi Select"
   };
   code = {
     single: `<mg-select  [enableSearch]="true" theme="primary"></mg-select>`,
