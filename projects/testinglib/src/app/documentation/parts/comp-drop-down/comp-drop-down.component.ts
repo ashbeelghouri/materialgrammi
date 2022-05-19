@@ -11,17 +11,20 @@ export class CompDropDownComponent implements OnInit {
     name: "id",
     allowed: "",
     type: "string",
-    default: ""
+    default: "",
+    definition: ``
   }, {
     name: "active",
     allowed: "true | false",
     type: "boolean",
-    default: "false"
+    default: "false",
+    definition: ``
   }, {
     name: "position",
     allowed: "{horizontal: string<right | left>, vertical: string<top | bottom>}",
     type: "object",
-    default: "{horizontal: right, vertical: bottom}"
+    default: "{horizontal: right, vertical: bottom}",
+    definition: ``
   }];
 
   selector = "mg-dropdown";

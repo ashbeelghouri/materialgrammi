@@ -11,57 +11,68 @@ export class CompTableComponent implements OnInit {
     name: "theme",
     allowed: "primary | success | warning | danger | info | lite | dark",
     type: "string",
-    default: "dark"
+    default: "dark",
+    definition: `This property implements the color scheme which includes background as well as text color.`
   }, {
     name: "mgData",
     allowed: "[{any}]",
     type: "array of objects",
-    default: "[ ]"
+    default: "[ ]",
+    definition: ``
   }, {
     name: "ignoredColumns",
     allowed: "[object properties]",
     type: "array of strings",
-    default: "[ ]"
+    default: "[ ]",
+    definition: ``
   }, {
     name: "sortBy",
     allowed: "object property",
     type: "string",
-    default: ""
+    default: "",
+    definition: ``
   }, {
     name: "sortDirection",
     allowed: "ASC | DESC",
     type: "boolean",
-    default: "ASC"
+    default: "ASC",
+    definition: ``
   }, {
     name: "tableTitle",
     allowed: "string",
     type: "string",
-    default: "Table"
+    default: "Table",
+    definition: ``
   }, {
     name: "columnsOrder",
     allowed: "[`object property`]",
     type: "array of strings",
-    default: "[ ]"
+    default: "[ ]",
+    definition: ``
   }, {
     name: "showOptions",
     allowed: "{ title: boolean, filter: boolean, sort: boolean, count: boolean }",
     type: "object",
-    default: "{ false, false, false, false}"
+    default: "{ false, false, false, false}",
+    definition: ``
   }, {
     name: "fixedHeader",
     allowed: "true | false",
     type: "boolean",
-    default: "false"
+    default: "false",
+    definition: ``
   }, {
     name: "dragableSort",
     allowed: "true | false",
     type: "boolean",
-    default: "false"
+    default: "false",
+    definition: ``
   }, {
     name: "paginate",
     allowed: "{status: boolean, perPage: number}",
     type: "objrct",
-    default: "{status: false, perPage: 5}"
+    default: "{status: false, perPage: 5}",
+    definition: ``
   }];
   selector = "mg-table";
 

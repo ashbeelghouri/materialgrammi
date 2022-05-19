@@ -11,12 +11,14 @@ export class CompDragableComponent implements OnInit {
     name: "dragable",
     allowed: "true | false",
     type: "boolean",
-    default: "true"
+    default: "true",
+    definition: ``
   }, {
     name: "data",
     allowed: "any",
     type: "any",
-    default: ""
+    default: "",
+    definition: ``
   }];
 
   selector = "mg-dragable";

@@ -11,32 +11,38 @@ export class CompOverlayComponent implements OnInit {
     name: "bgClass",
     allowed: "css class",
     type: "string",
-    default: "grey1"
+    default: "grey1",
+    definition: ``
   }, {
     name: "overlayClass",
     allowed: "css class",
     type: "string",
-    default: "bg-b-3"
+    default: "bg-b-3",
+    definition: ``
   }, {
     name: "offSize",
     allowed: "1 | 2 | 3 | 4 | 5",
     type: "string",
-    default: "1"
+    default: "1",
+    definition: ``
   }, {
     name: "canvasPosition",
     allowed: "top | bottom | right | left",
     type: "string",
-    default: "top"
+    default: "top",
+    definition: ``
   }, {
     name: "widgetId",
     allowed: "string",
     type: "string",
-    default: "1"
+    default: "1",
+    definition: ``
   }, {
     name: "active",
     allowed: "true | false",
     type: "boolean",
-    default: "false"
+    default: "false",
+    definition: ``
   }];
 
   selector = "mg-overlay";

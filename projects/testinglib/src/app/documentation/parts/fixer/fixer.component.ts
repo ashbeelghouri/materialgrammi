@@ -18,22 +18,26 @@ export class FixerComponent implements OnInit {
     name: "x",
     allowed: "left | center | right",
     type: "string",
-    default: "left"
+    default: "left",
+    definition: ``
   }, {
     name: "y",
     allowed: "top | center | bottom",
     type: "string",
-    default: "top"
+    default: "top",
+    definition: ``
   }, {
     name: "class",
     allowed: "any css class",
     type: "string",
-    default: ""
+    default: "",
+    definition: ``
   }, {
     name: "active",
     allowed: "true | false",
     type: "boolean",
-    default: "false"
+    default: "false",
+    definition: ``
   }];
 
   selector = "mg-fixer";

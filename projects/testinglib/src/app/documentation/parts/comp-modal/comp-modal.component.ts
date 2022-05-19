@@ -11,27 +11,32 @@ export class CompModalComponent implements OnInit {
     name: "show",
     allowed: "true | false",
     type: "boolean",
-    default: "false"
+    default: "false",
+    definition: ``
   }, {
     name: "id",
     allowed: "string",
     type: "string",
-    default: "0"
+    default: "0",
+    definition: ``
   }, {
     name: "position",
     allowed: "top | bottom",
     type: "boolean",
-    default: "top"
+    default: "top",
+    definition: ``
   }, {
     name: "modalSize",
     allowed: "sm | md | lg",
     type: "boolean",
-    default: "md"
+    default: "md",
+    definition: ``
   }, {
     name: "overlayClass",
     allowed: "any class for overlay",
     type: "string",
-    default: "grey8"
+    default: "grey8",
+    definition: ``
   }];
 
   selector = "mg-modal";

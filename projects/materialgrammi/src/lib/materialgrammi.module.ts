@@ -1,4 +1,7 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+
+
 import { MaterialgrammiComponent } from './materialgrammi.component';
 import { TestComponentComponent } from './components/test-component/test-component.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
@@ -49,6 +52,10 @@ import { SliderComponent } from './components/slider/slider.component';
 import { SlideshowV2Component } from './components/slideshow-v2/slideshow-v2.component';
 import { FixerComponent } from './components/fixer/fixer.component';
 import { MuliselectComponent } from './components/muliselect/muliselect.component';
+import { PlaceholderComponent } from './components/placeholder/placeholder.component';
+import { InviewComponent } from './components/inview/inview.component';
+import { BadgeComponent } from './components/badge/badge.component';
+import { HoscrollComponent } from './components/hoscroll/hoscroll.component';
 
 @NgModule({
   declarations: [
@@ -99,11 +106,16 @@ import { MuliselectComponent } from './components/muliselect/muliselect.componen
     SliderComponent,
     SlideshowV2Component,
     FixerComponent,
-    MuliselectComponent
+    MuliselectComponent,
+    PlaceholderComponent,
+    InviewComponent,
+    BadgeComponent,
+    HoscrollComponent
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   exports: [
     MaterialgrammiComponent,
@@ -150,7 +162,9 @@ import { MuliselectComponent } from './components/muliselect/muliselect.componen
     DateRangeComponent,
     ComponentComponent,
     SlideshowV2Component,
-    FixerComponent
+    FixerComponent,
+    MuliselectComponent,
+    InviewComponent
   ]
 })
 export class MaterialgrammiModule { }

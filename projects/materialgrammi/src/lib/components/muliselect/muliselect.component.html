@@ -1,1 +1,45 @@
-<p>muliselect works!</p>
+<div class="multi-select-container" [ngClass]="mainClasses()">
+    <div class="multi-select-title" (click)="toggleOptions()">
+        <p [innerHtml]="title"></p>
+    </div>
+    <div class="multi-select-selected" (click)="toggleOptions()">
+        <div class="row">
+            <div class="col m11 l11 s10">
+                <ng-container *ngIf="viewType === 'option'">
+                    <ng-container *ngFor="let opt of selectedOptions">
+                        <div class="selected-pill">
+                            <span [innerHtml]="opt" class="selected-description"></span>
+                            <span (click)="removeOptions(opt)" class="selected-description"
+                                [innerHtml]="removeIcon"></span>
+                        </div>
+                    </ng-container>
+                </ng-container>
+                <ng-container *ngIf="viewType != 'option'">
+                    <ng-container *ngFor="let opt of selectedValues">
+                        <div class="selected-pill">
+                            <span [innerHtml]="opt" class="selected-description"></span>
+                            <span (click)="removeOptions(opt)" class="selected-description"
+                                [innerHtml]="removeIcon"></span>
+                        </div>
+                    </ng-container>
+                </ng-container>
+
+                <ng-container *ngIf="selectedValues.length < 1">
+                    <span [innerHtml]="placeholder" class="pad-5"></span>
+                </ng-container>
+            </div>
+            <div class="col m1 l1 s2 text-right">
+                <i class="fas fa-angle-down"></i>
+            </div>
+        </div>
+    </div>
+    <div class="multi-select-options">
+        <ng-container *ngIf="enableSearch">
+            <mg-input placeholder="search" [theme]="inputTheme()" (keyup)="searchFromOptions($event)" [filled]="true">
+            </mg-input>
+        </ng-container>
+        <ng-container *ngFor="let opt of options">
+            <div class="multi-option" [ngClass]="isHighlighted(opt.name)" [innerHtml]="opt.name" (click)="selectValue(opt.value, opt.name)"></div>
+        </ng-container>
+    </div>
+</div>

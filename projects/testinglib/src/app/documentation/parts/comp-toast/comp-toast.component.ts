@@ -11,22 +11,26 @@ export class CompToastComponent implements OnInit {
     name: "theme",
     allowed: "primary | success | warning | danger | info | lite | dark",
     type: "string",
-    default: "dark"
+    default: "dark",
+    definition: `This property implements the color scheme which includes background as well as text color.`
   }, {
     name: "show",
     allowed: "true | false",
     type: "boolean",
-    default: "true"
+    default: "true",
+    definition: ``
   }, {
     name: "position",
     allowed: "top | bottom | left | right",
     type: "string",
-    default: "bottom"
+    default: "bottom",
+    definition: ``
   }, {
     name: "timeout",
     allowed: "number",
     type: "number",
-    default: "4000"
+    default: "4000",
+    definition: ``
   }];
 
   selector = "mg-toast";

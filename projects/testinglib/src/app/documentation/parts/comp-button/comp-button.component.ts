@@ -11,72 +11,86 @@ export class CompButtonComponent implements OnInit {
     name: "theme",
     allowed: "primary | success | warning | danger | info | lite | dark",
     type: "string",
-    default: "default"
+    default: "default",
+    definition: `This property implements the color scheme which includes background as well as text color.`
   }, {
     name: "taskType",
     allowed: "link | modal | offCanvas | slideShow | wizard | collapse | overlay | slideshowV2",
     type: "string",
-    default: "none"
+    default: "none",
+    definition: ``
   }, {
     name: "btnStyle",
     allowed: "solid | outline",
     type: "string",
-    default: "solid"
+    default: "solid",
+    definition: ``
   }, {
     name: "task",
     allowed: "open | close",
     type: "string",
-    default: "open"
+    default: "open",
+    definition: ``
   }, {
     name: "target",
     allowed: "/",
     type: "string",
-    default: "/"
+    default: "/",
+    definition: ``
   }, {
     name: "class",
     allowed: "css classes",
     type: "string",
-    default: ""
+    default: "",
+    definition: ``
   }, {
     name: "btnSize",
     allowed: "sm | md | lg",
     type: "string",
-    default: "md"
+    default: "md",
+    definition: ``
   }, {
     name: "isBlock",
     allowed: "true | false",
     type: "boolean",
-    default: "false"
+    default: "false",
+    definition: ``
   }, {
     name: "round",
     allowed: "true | false",
     type: "boolean",
-    default: "false"
+    default: "false",
+    definition: ``
   }, {
     name: "allowMargin",
     allowed: "true | false",
     type: "boolean",
-    default: "true"
+    default: "true",
+    definition: ``
   }, {
     name: "allowShrink",
     allowed: "true | false",
     type: "boolean",
-    default: "true"
+    default: "true",
+    definition: ``
   }, {
     name: "options",
     allowed: "",
     type: "boolean",
-    default: "{}"
+    default: "{}",
+    definition: ``
   }, {
     name: "isExtended",
     allowed: "true | false",
     type: "boolean",
-    default: "open"
+    default: "open",
+    definition: ``
   }, {
     name: "newTab",
     allowed: "true | false",
     type: "boolean",
-    default: "false"
+    default: "false",
+    definition: ``
   }];
 
   selector = "mg-button";

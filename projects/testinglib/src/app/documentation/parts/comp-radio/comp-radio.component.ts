@@ -11,32 +11,38 @@ export class CompRadioComponent implements OnInit {
     name: "theme",
     allowed: "primary | success | warning | danger | info | lite | dark",
     type: "string",
-    default: "primary"
+    default: "primary",
+    definition: `This property implements the color scheme which includes background as well as text color.`
   }, {
     name: "options",
     allowed: "[{name: html, value: string}]",
     type: "array of objects",
-    default: "[ ]"
+    default: "[ ]",
+    definition: ``
   }, {
     name: "radioName",
     allowed: "string",
     type: "string",
-    default: "opt"
+    default: "opt",
+    definition: ``
   }, {
     name: "size",
     allowed: "s | m | l | xl",
     type: "string",
-    default: "s"
+    default: "s",
+    definition: ``
   }, {
     name: "isInline",
     allowed: "true | false",
     type: "boolean",
-    default: "true"
+    default: "true",
+    definition: ``
   }, {
     name: "onDark",
     allowed: "true | false",
     type: "boolean",
-    default: "false"
+    default: "false",
+    definition: ``
   }];
 
   selector = "mg-radio";

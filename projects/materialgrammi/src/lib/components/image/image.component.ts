@@ -1,4 +1,7 @@
+import { HttpClient, HttpEventType, HttpHeaders } from '@angular/common/http';
 import { AfterViewInit, Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
+
+
 
 @Component({
   selector: 'mg-image',
@@ -11,6 +14,8 @@ export class ImageComponent implements OnInit, AfterViewInit {
   @Input() rounded = false;
   @Input() circled = false;
   @Input() shadowed = false;
+  @Input() applyFilters = true;
+  @Input() lazyLoad = true;
   @Input() class = "";
 
   @Input() filters: any = {
@@ -25,21 +30,48 @@ export class ImageComponent implements OnInit, AfterViewInit {
     sepia: false
   }
 
-  @ViewChild('myImage') private image!: ElementRef;
+  @ViewChild('imageEl') private image!: ElementRef;
+  @ViewChild('imageProgress') private imageProgress!: ElementRef;
 
-  constructor(private renderer: Renderer2) { }
+  loaded = false;
+  constructor(private renderer: Renderer2, private http: HttpClient) { }
 
   ngOnInit(): void {
-
+    if(this.lazyLoad) {
+      this.loadImage();
+    }
   }
 
   ngAfterViewInit() {
-    this.applyFilters();
+    this.filterize();
   }
 
-  applyFilters(){
-    let filters = this.createFilters();
-    this.renderer.setStyle(this.image.nativeElement, 'filter', filters);
+  loadImage(){
+    this.http.get(this.src, {
+      responseType: "blob",
+      reportProgress: true,
+      observe: "events",
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    }).subscribe(event=>{
+      if(event.type === HttpEventType.DownloadProgress && event.total) {
+        const percentage = (event.loaded/event.total) * 100;
+        this.imageProgress.nativeElement.value = percentage;
+      }
+      if(event.type === HttpEventType.Response && event.body){
+        this.loaded = true;
+        this.image.nativeElement.src = window.URL.createObjectURL(event.body);
+        this.filterize();
+      }
+    });
+  }
+
+  filterize(){
+    if(this.applyFilters && !this.loaded) {
+      let filters = this.createFilters();
+      this.renderer.setStyle(this.image.nativeElement, 'filter', filters);
+    }
   }
 
   imageClasses() {
@@ -63,7 +95,6 @@ export class ImageComponent implements OnInit, AfterViewInit {
     filter += (this.filters.opacity !== undefined && this.filters.opacity !== false) ? ` opacity(${this.filters.opacity}%)` : "";
     filter += (this.filters.saturate !== undefined && this.filters.saturate !== false) ? ` saturate(${this.filters.saturate}%)` : "";
     filter += (this.filters.sepia !== undefined && this.filters.sepia !== false) ? ` sepia(${this.filters.sepia}%)` : "";
-    console.log("Filter loooks like ==> ", filter);
     return filter;
   }
 

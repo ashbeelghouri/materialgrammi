@@ -11,32 +11,38 @@ export class CompChatComponent implements OnInit {
     name: "theme",
     allowed: "primary | success | warning | danger | info | lite | dark",
     type: "string",
-    default: "dark"
+    default: "dark",
+    definition: `This property implements the color scheme which includes background as well as text color.`
   }, {
     name: "header",
     allowed: "",
     type: "string",
-    default: "Chat Box"
+    default: "Chat Box",
+    definition: ``
   }, {
     name: "show",
     allowed: "true | false",
     type: "boolean",
-    default: "true"
+    default: "true",
+    definition: ``
   }, {
     name: "openBody",
     allowed: "true | false",
     type: "boolean",
-    default: "true"
+    default: "true",
+    definition: ``
   }, {
     name: "time",
     allowed: "string",
     type: "string",
-    default: ""
+    default: "",
+    definition: ``
   }, {
     name: "messages",
     allowed: "[{sender: string, description: string, isSender: boolean}]",
     type: "array of objects",
-    default: "[]"
+    default: "[]",
+    definition: ``
   }];
 
   selector = "mg-chat";

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { MaterialgrammiService } from '../../materialgrammi.service';
 
 @Component({
@@ -12,6 +12,12 @@ export class ModalComponent implements OnInit {
   @Input() position = "top";
   @Input() modalSize = "md";
   @Input() overlayClass = "grey8";
+
+  @HostListener('document:keydown.escape', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    this.close();
+  }
+
   constructor( private service: MaterialgrammiService) { }
 
   ngOnInit(): void {

@@ -1,1 +1,13 @@
-<img [src]="src" [ngClass]="imageClasses()" #myImage/>
+<ng-container *ngIf="lazyLoad">
+    <mg-placeholder type="img" [show]="!loaded">
+        <progress #imageProgress value = "0" max="100" class="image-progress"></progress>
+    </mg-placeholder>
+    
+    <img #imageEl [ngClass]="!loaded ? 'hide' : '' + imageClasses()"/>
+</ng-container>
+
+<ng-container *ngIf="!lazyLoad">
+    <img [src]="src" #imageEl [ngClass]="imageClasses()"/>
+</ng-container>
+
+

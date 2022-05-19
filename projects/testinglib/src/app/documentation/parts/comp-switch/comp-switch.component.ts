@@ -11,47 +11,56 @@ export class CompSwitchComponent implements OnInit {
     name: "theme",
     allowed: "primary | success | warning | danger | info | lite | dark",
     type: "string",
-    default: "dark"
+    default: "dark",
+    definition: `This property implements the color scheme which includes background as well as text color.`
   }, {
     name: "options",
     allowed: "{left: html, right: html}",
     type: "object",
-    default: ""
+    default: "",
+    definition: ``
   }, {
     name: "type",
     allowed: "filled | empty",
     type: "string",
-    default: "filled"
+    default: "filled",
+    definition: ``
   }, {
     name: "size",
     allowed: "s | m | l | xl",
     type: "boolean",
-    default: "true"
+    default: "true",
+    definition: ``
   }, {
     name: "showChoices",
     allowed: "true | false",
     type: "boolean",
-    default: "true"
+    default: "true",
+    definition: ``
   }, {
     name: "onDark",
     allowed: "true | false",
     type: "boolean",
-    default: "false"
+    default: "false",
+    definition: ``
   }, {
     name: "selected",
     allowed: "true | false",
     type: "boolean",
-    default: "true"
+    default: "true",
+    definition: ``
   }, {
     name: "closeBtn",
     allowed: "true | false",
     type: "boolean",
-    default: "true"
+    default: "true",
+    definition: ``
   }, {
     name: "closeBtn",
     allowed: "true | false",
     type: "boolean",
-    default: "true"
+    default: "true",
+    definition: ``
   }];
 
   selector = "mg-switch";

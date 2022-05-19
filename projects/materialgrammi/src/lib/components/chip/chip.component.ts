@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Theme } from '../../types';
 
 @Component({
@@ -10,6 +10,8 @@ export class ChipComponent implements OnInit {
   @Input() theme: Theme = "primary";
   @Input() outline = false;
   @Input() class = "";
+  @Input() closeBtn = `<i class="fas fa-times"></i>`;
+  @Output() close = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {

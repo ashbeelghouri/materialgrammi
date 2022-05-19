@@ -11,32 +11,38 @@ export class CompWidgetComponent implements OnInit {
     name: "id",
     allowed: "string",
     type: "string",
-    default: ""
+    default: "",
+    definition: ``
   }, {
     name: "parent",
     allowed: "string",
     type: "string",
-    default: "general-parent-1"
+    default: "general-parent-1",
+    definition: ``
   }, {
     name: "type",
     allowed: "general",
     type: "string ",
-    default: "general"
+    default: "general",
+    definition: ``
   }, {
     name: "options",
     allowed: "any",
     type: "any",
-    default: "false"
+    default: "false",
+    definition: ``
   }, {
     name: "status",
     allowed: "true | false",
     type: "boolean",
-    default: "false"
+    default: "false",
+    definition: ``
   }, {
     name: "standalone",
     allowed: "true | false",
     type: "boolean",
-    default: "false"
+    default: "false",
+    definition: ``
   }];
 
   selector = "mg-widget";

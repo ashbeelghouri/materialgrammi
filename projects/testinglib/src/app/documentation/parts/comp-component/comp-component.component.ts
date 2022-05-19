@@ -11,7 +11,8 @@ export class CompComponentComponent implements OnInit {
     name: "size",
     allowed: "n | s | m | l | xl",
     type: "string",
-    default: "n"
+    default: "n",
+    definition: ``
   }];
 
   selector = "mg-component";

@@ -11,32 +11,38 @@ export class CompTabComponent implements OnInit {
     name: "theme",
     allowed: "primary | success | warning | danger | info | lite | dark",
     type: "string",
-    default: "success"
+    default: "success",
+    definition: `This property implements the color scheme which includes background as well as text color.`
   }, {
     name: "options",
     allowed: "[]",
     type: "array of objects",
-    default: "[ ]"
+    default: "[ ]",
+    definition: ``
   }, {
     name: "isVertical",
     allowed: "true | false",
     type: "boolean",
-    default: "true"
+    default: "true",
+    definition: ``
   }, {
     name: "bg",
     allowed: "css class",
     type: "string",
-    default: ""
+    default: "",
+    definition: ``
   }, {
     name: "active",
     allowed: "widgetid",
     type: "string",
-    default: "1"
+    default: "1",
+    definition: ``
   }, {
     name: "id",
     allowed: "string",
     type: "string",
-    default: "1"
+    default: "1",
+    definition: ``
   }];
 
   selector = "mg-tab";

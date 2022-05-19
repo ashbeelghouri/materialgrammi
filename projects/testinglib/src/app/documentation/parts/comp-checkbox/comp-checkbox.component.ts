@@ -11,22 +11,26 @@ export class CompCheckboxComponent implements OnInit {
     name: "theme",
     allowed: "primary | success | warning | danger | info | lite | dark",
     type: "string",
-    default: "dark"
+    default: "dark",
+    definition: `This property implements the color scheme which includes background as well as text color.`
   }, {
     name: "size",
     allowed: "s | m | l | xl",
     type: "string",
-    default: "m"
+    default: "m",
+    definition: ``
   }, {
     name: "onDark",
     allowed: "true | false",
     type: "boolean",
-    default: "false"
+    default: "false",
+    definition: ``
   }, {
     name: "isSelected",
     allowed: "true | false",
     type: "boolean",
-    default: "true"
+    default: "true",
+    definition: ``
   }];
 
   selector = "mg-checkbox";

@@ -11,17 +11,20 @@ export class CompBreadcrumbComponent implements OnInit {
     name: "links",
     allowed: "[{name: string, url: string}]",
     type: "string",
-    default: "[]"
+    default: "[]",
+    definition: ``
   }, {
     name: "darkmode",
     allowed: "true | false",
     type: "boolean",
-    default: "false"
+    default: "false",
+    definition: ``
   }, {
     name: "devider",
     allowed: "any string",
     type: "string",
-    default: "/"
+    default: "/",
+    definition: ``
   }];
 
   selector = "mg-breadcrumb";

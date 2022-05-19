@@ -11,17 +11,20 @@ export class CompCowntdownComponent implements OnInit {
     name: "till",
     allowed: "any date string compatible with JS date object",
     type: "string",
-    default: "25 December 2050"
+    default: "25 December 2050",
+    definition: ``
   }, {
     name: "expiredText",
     allowed: "string",
     type: "string",
-    default: "expired"
+    default: "expired",
+    definition: ``
   }, {
     name: "parseProperties",
     allowed: "{day: string, days: string, hour: string, hours: string, minute: string, minutes: string, second: string, seconds: string}",
     type: "string",
-    default: ""
+    default: "",
+    definition: ``
   }];
 
   selector = "mg-countdown";
@@ -30,7 +33,7 @@ export class CompCowntdownComponent implements OnInit {
   code = `<mg-countdown [till]="optionsApplied.till"></mg-countdown>`;
 
   optionsApplied = {
-    till: "27 February 2022 10:20 AM"
+    till: "27 December 2022 10:20 AM"
   }
 
   outputOptions = [{

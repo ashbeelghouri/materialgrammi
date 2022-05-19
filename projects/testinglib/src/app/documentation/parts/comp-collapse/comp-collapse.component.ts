@@ -11,12 +11,14 @@ export class CompCollapseComponent implements OnInit {
     name: "id",
     allowed: "",
     type: "string",
-    default: "1"
+    default: "1",
+    definition: `This property implements the color scheme which includes background as well as text color.`
   }, {
     name: "show",
     allowed: "true | false",
     type: "boolean",
-    default: "true"
+    default: "true",
+    definition: ``
   }];
 
   selector = "mg-collapse";

@@ -11,7 +11,8 @@ export class CompDropableComponent implements OnInit {
     name: "dropFiles",
     allowed: "true | false",
     type: "boolean",
-    default: "true"
+    default: "true",
+    definition: ``
   }];
 
   selector = "mg-dropable";

@@ -12,12 +12,14 @@ export class CompAccordionComponent implements OnInit {
     name: "theme",
     allowed: "primary | success | warning | danger | info | lite | dark",
     type: "string",
-    default: "dark"
+    default: "dark",
+    definition: `This property implements the color scheme which includes background as well as text color.`
   }, {
     name: "items",
     allowed: "[{title: string, description: string, active: boolean}]",
     type: "array",
-    default: "[ ]"
+    default: "[ ]",
+    definition: `This property takes all the items as specified in the options, title will be visible and on clicking the title user is able to see the description.`
   }];
 
   selector = "mg-accordion";

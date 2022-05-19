@@ -11,27 +11,32 @@ export class CompTextInputComponent implements OnInit {
     name: "theme",
     allowed: "primary | success | warning | danger | info | lite | dark",
     type: "string",
-    default: "dark"
+    default: "dark",
+    definition: `This property implements the color scheme which includes background as well as text color.`
   }, {
     name: "form",
     allowed: "control | material",
     type: "string",
-    default: "control"
+    default: "control",
+    definition: ``
   }, {
     name: "dark",
     allowed: "true | false",
     type: "boolean",
-    default: "false"
+    default: "false",
+    definition: ``
   }, {
     name: "control",
     allowed: "FormControl",
     type: "FormControl",
-    default: "new FormControl('')"
+    default: "new FormControl('')",
+    definition: ``
   }, {
     name: "filled",
     allowed: "Boolean",
     type: "boolean",
-    default: "true"
+    default: "true",
+    definition: ``
   }];
 
   selector = "mg-text";

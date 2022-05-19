@@ -11,32 +11,38 @@ export class CompPaginationComponent implements OnInit {
     name: "theme",
     allowed: "primary | success | warning | danger | info | lite | dark",
     type: "string",
-    default: "dark"
+    default: "dark",
+    definition: `This property implements the color scheme which includes background as well as text color.`
   }, {
     name: "data",
     allowed: "[any object]",
     type: "array of objects",
-    default: "[ ]"
+    default: "[ ]",
+    definition: ``
   }, {
     name: "fullDataMode",
     allowed: "true | false",
     type: "boolean",
-    default: "false"
+    default: "false",
+    definition: ``
   }, {
     name: "perPage",
     allowed: "number",
     type: "number",
-    default: "10"
+    default: "10",
+    definition: ``
   }, {
     name: "currentPage",
     allowed: "number",
     type: "number",
-    default: "1"
+    default: "1",
+    definition: ``
   }, {
     name: "icons",
     allowed: "{next: html, previous: html}",
     type: "object",
-    default: ""
+    default: "",
+    definition: ``
   }];
 
   selector = "mg-pagination";
