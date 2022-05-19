@@ -11,12 +11,14 @@ export class CompFooterComponent implements OnInit {
     name: "theme",
     allowed: "primary | success | warning | danger | info | lite | dark",
     type: "string",
-    default: "dark"
+    default: "dark",
+    definition: `This property implements the color scheme which includes background as well as text color.`
   }, {
     name: "toBottom",
     allowed: "true | false",
     type: "boolean",
-    default: "false"
+    default: "false",
+    definition: ``
   }];
 
   selector = "mg-footer";

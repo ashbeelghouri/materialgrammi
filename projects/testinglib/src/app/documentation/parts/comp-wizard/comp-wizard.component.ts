@@ -11,17 +11,20 @@ export class CompWizardComponent implements OnInit {
     name: "active",
     allowed: "number",
     type: "number",
-    default: "0"
+    default: "0",
+    definition: ``
   }, {
     name: "id",
     allowed: "string",
     type: "string",
-    default: "1"
+    default: "1",
+    definition: ``
   }, {
     name: "widgets",
     allowed: "['widget ids']",
     type: "array of strings",
-    default: "[ ]"
+    default: "[ ]",
+    definition: ``
   }];
 
   selector = "mg-wizard";

@@ -11,42 +11,50 @@ export class CompInputComponent implements OnInit {
     name: "theme",
     allowed: "primary | success | warning | danger | info | lite | dark",
     type: "string",
-    default: "success"
+    default: "success",
+    definition: `This property implements the color scheme which includes background as well as text color.`
   }, {
     name: "form",
     allowed: "control | material",
     type: "string",
-    default: "control"
+    default: "control",
+    definition: ``
   }, {
     name: "placeholder",
     allowed: "any string",
     type: "string",
-    default: ""
+    default: "",
+    definition: ``
   }, {
     name: "control",
     allowed: "FormControl",
     type: "FormControl",
-    default: "new FormControl('')"
+    default: "new FormControl('')",
+    definition: ``
   }, {
     name: "type",
     allowed: "Input Type",
     type: "string",
-    default: "text"
+    default: "text",
+    definition: ``
   }, {
     name: "dark",
     allowed: "true | false",
     type: "boolean",
-    default: "false"
+    default: "false",
+    definition: ``
   }, {
     name: "class",
     allowed: "css class",
     type: "string",
-    default: ""
+    default: "",
+    definition: ``
   }, {
     name: "value",
     allowed: "any string",
     type: "string",
-    default: ""
+    default: "",
+    definition: ``
   }];
 
   selector = "mg-input";

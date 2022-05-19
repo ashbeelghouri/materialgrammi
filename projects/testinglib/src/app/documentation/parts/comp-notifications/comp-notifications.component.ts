@@ -11,12 +11,14 @@ export class CompNotificationsComponent implements OnInit {
     name: "position",
     allowed: "topLeft | topRight | topCenter | centerLeft | centerCenter | centerRight | bottomLeft | bottomCenter | bottomRight",
     type: "string",
-    default: "topLeft"
+    default: "topLeft",
+    definition: ``
   }, {
     name: "close",
     allowed: "any html string",
     type: "string",
-    default: `<i class="fas fa-times"></i>`
+    default: `<i class="fas fa-times"></i>`,
+    definition: ``
   }];
 
   selector = "mg-notification";

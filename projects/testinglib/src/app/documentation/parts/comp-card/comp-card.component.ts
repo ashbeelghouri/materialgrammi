@@ -11,7 +11,8 @@ export class CompCardComponent implements OnInit {
     name: "class",
     allowed: "any css class",
     type: "string",
-    default: ""
+    default: "",
+    definition: ``
   }];
 
   selector = "mg-card";

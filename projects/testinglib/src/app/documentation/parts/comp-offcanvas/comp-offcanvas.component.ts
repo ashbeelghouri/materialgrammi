@@ -11,17 +11,20 @@ export class CompOffcanvasComponent implements OnInit {
     name: "theme",
     allowed: "primary | success | warning | danger | info | lite | dark",
     type: "string",
-    default: "dark"
+    default: "dark",
+    definition: `This property implements the color scheme which includes background as well as text color.`
   }, {
     name: "isActive",
     allowed: "true | false",
     type: "boolean",
-    default: "true"
+    default: "true",
+    definition: ``
   }, {
     name: "id",
     allowed: "string",
     type: "string",
-    default: "1"
+    default: "1",
+    definition: ``
   }];
 
   selector = "mg-offcanvas";

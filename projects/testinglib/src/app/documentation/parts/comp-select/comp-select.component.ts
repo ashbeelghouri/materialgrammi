@@ -13,73 +13,87 @@ export class CompSelectComponent implements OnInit {
       name: "theme",
       allowed: "primary | success | warning | danger | info | lite | dark",
       type: "string",
-      default: "dark"
+      default: "dark",
+      definition: `This property implements the color scheme which includes background as well as text color.`
     }, {
       name: "searchOpt",
       allowed: "FormControl",
       type: "FormControl",
-      default: "FormControl('')"
+      default: "FormControl('')",
+      definition: ``
     }, {
       name: "selectTitle",
       allowed: "any string",
       type: "string",
-      default: "Select"
+      default: "Select",
+      definition: ``
     }, {
       name: "selectType",
       allowed: "control",
       type: "string",
-      default: "control"
+      default: "control",
+      definition: ``
     }, {
       name: "enableSearch",
       allowed: "true | false",
       type: "boolean",
-      default: "false"
+      default: "false",
+      definition: ``
     }, {
       name: "options",
       allowed: "[{name: html, val: string}]",
       type: "array of objects",
-      default: "[ ]"
+      default: "[ ]",
+      definition: ``
     }],
     multiple: [{
       name: "theme",
       allowed: "primary | success | warning | danger | info | lite | dark",
       type: "string",
-      default: "dark"
+      default: "dark",
+      definition: `This property implements the color scheme which includes background as well as text color.`
     }, {
       name: "options",
       allowed: "[{name: string, value: string}]",
       type: "array of objects",
-      default: "[]"
+      default: "[]",
+      definition: ``
     }, {
       name: "title",
       allowed: "any string",
       type: "string",
-      default: "multi select title"
+      default: "multi select title",
+      definition: ``
     }, {
       name: "placeholder",
       allowed: "any string",
       type: "string",
-      default: "click here"
+      default: "click here",
+      definition: ``
     }, {
       name: "removeIcon",
       allowed: "html",
       type: "string",
-      default: '<i class="fas fa-times"></i>'
+      default: '<i class="fas fa-times"></i>',
+      definition: ``
     }, {
       name: "allowDuplicates",
       allowed: "true | false",
       type: "boolean",
-      default: "false"
+      default: "false",
+      definition: ``
     }, {
       name: "viewType",
       allowed: "option | value",
       type: "string",
-      default: "option"
+      default: "option",
+      definition: ``
     }, {
       name: "enableSearch",
       allowed: "true | false",
       type: "boolean",
-      default: "false"
+      default: "false",
+      definition: ``
     }]
   };
 

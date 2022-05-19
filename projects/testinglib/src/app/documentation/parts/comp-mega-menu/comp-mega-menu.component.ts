@@ -11,17 +11,20 @@ export class CompMegaMenuComponent implements OnInit {
     name: "theme",
     allowed: "primary | success | warning | danger | info | lite | dark",
     type: "string",
-    default: "dark"
+    default: "dark",
+    definition: `This property implements the color scheme which includes background as well as text color.`
   }, {
     name: "id",
     allowed: "id of main menu",
     type: "string",
-    default: "1"
+    default: "1",
+    definition: ``
   }, {
     name: "menu",
     allowed: "[{name: string, id: string}]",
     type: "array of objects",
-    default: "[]"
+    default: "[]",
+    definition: ``
   }];
 
   selector = "mg-megamenu";

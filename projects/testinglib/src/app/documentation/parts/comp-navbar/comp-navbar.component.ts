@@ -11,32 +11,38 @@ export class CompNavbarComponent implements OnInit {
     name: "theme",
     allowed: "primary | success | warning | danger | info | lite | dark",
     type: "string",
-    default: "dark"
+    default: "dark",
+    definition: `This property implements the color scheme which includes background as well as text color.`
   }, {
     name: "spaceAround",
     allowed: "true | false",
     type: "boolean",
-    default: "true"
+    default: "true",
+    definition: ``
   }, {
     name: "onSmallMenuButton",
     allowed: "html",
     type: "string",
-    default: "="
+    default: "=",
+    definition: ``
   }, {
     name: "isFixed",
     allowed: "true | false",
     type: "boolean",
-    default: "false"
+    default: "false",
+    definition: ``
   }, {
     name: "partitionType",
     allowed: "1:1 | 1:2 | 2:1",
     type: "string",
-    default: "2:1"
+    default: "2:1",
+    definition: ``
   }, {
     name: "navData",
     allowed: "{brand: {name: html, link: string} , left: {navType: input | links, data: {if input(btn: boolean, name: html, placeholder: string, id: string) | if links(name: html, link: string, active: boolean | type: dropdown -> links: [links])}}} - same for the right",
     type: "object",
-    default: "{}"
+    default: "{}",
+    definition: ``
   }];
 
   selector = "mg-navbar";

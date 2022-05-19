@@ -11,27 +11,32 @@ export class CompCalendarComponent implements OnInit {
     name: "theme",
     allowed: "primary | success | warning | danger | info | lite | dark",
     type: "string",
-    default: "dark"
+    default: "dark",
+    definition: `This property implements the color scheme which includes background as well as text color.`
   }, {
     name: "abbreviations",
     allowed: "true | false",
     type: "boolean",
-    default: "false"
+    default: "false",
+    definition: ``
   }, {
     name: "disabledDates",
     allowed: "['date string here']",
     type: "array of strings",
-    default: "[]"
+    default: "[]",
+    definition: ``
   }, {
     name: "events",
     allowed: "[{name: string, date: string, description: string, buzz: string}]",
     type: "array of objects",
-    default: "[]"
+    default: "[]",
+    definition: ``
   }, {
     name: "icons",
     allowed: "{month: {next: 'string', previous: 'string'}, year: {next: 'string', previous: 'string'}}",
     type: "object",
-    default: ""
+    default: "",
+    definition: ``
   }];
 
   selector = "mg-calendar";

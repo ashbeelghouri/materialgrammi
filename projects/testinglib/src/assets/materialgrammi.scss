@@ -18791,6 +18791,18 @@ table.info tbody tr td:hover {
     color: $clr_dark_dark;
 }
 
+.capital {
+    text-transform: capitalize;
+}
+
+.lower {
+    text-transform: lowercase;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
 .collapse-filter-box {
     margin-top: 5px;
     border: 1px solid $clr_lite_dark;

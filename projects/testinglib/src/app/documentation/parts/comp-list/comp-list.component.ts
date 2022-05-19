@@ -11,12 +11,14 @@ export class CompListComponent implements OnInit {
     name: "theme",
     allowed: "primary | success | warning | danger | info | lite | dark",
     type: "string",
-    default: "dark"
+    default: "dark",
+    definition: `This property implements the color scheme which includes background as well as text color.`
   }, {
     name: "items",
     allowed: "[`string here` ...`]",
     type: "array of string",
-    default: "[ ]"
+    default: "[ ]",
+    definition: ``
   }];
 
   selector = "mg-list";

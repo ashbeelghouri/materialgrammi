@@ -3,6 +3,15 @@
 <app-selectors>{{selector}}</app-selectors>
 <h3 class="padH-10">Input Options</h3>
 <app-input-options [options]="inputOptions"></app-input-options>
+<div class="pad-10">
+    <h3 class="marginB-10">Definitions</h3>
+    <div class="marginB-10" *ngFor="let def of inputOptions">
+        <h5 [innerHtml]="def.name" class="capital bold font-16"></h5>
+        <ng-container *ngIf="def.definition">
+            <p [innerText]="def.definition" class="text-grey7 font-13"></p>
+        </ng-container>
+    </div>
+</div>
 <app-output-options [options]="outputOptions"></app-output-options>
 <app-examples [name]="title" [code] = "code" [optionsApplied]="optionsApplied">
     <mg-date></mg-date>

@@ -9,34 +9,52 @@ import { SeoService } from 'projects/materialgrammi/src/public-api';
 export class CompImageComponent implements OnInit {
   inputOptions = [{
     name: "src",
-    allowed: "primary | success | warning | danger | info | lite | dark",
+    allowed: "address of image",
     type: "string",
-    default: "dark"
+    default: "dark",
+    definition: ``
   }, {
     name: "responsive",
     allowed: "true | false",
     type: "boolean",
-    default: "true"
+    default: "true",
+    definition: ``
   }, {
     name: "rounded",
     allowed: "true | false",
     type: "boolean",
-    default: "false"
+    default: "false",
+    definition: ``
   }, {
     name: "circled",
     allowed: "true | false",
     type: "boolean",
-    default: "false"
+    default: "false",
+    definition: ``
   }, {
     name: "shadowed",
     allowed: "true | false",
     type: "boolean",
-    default: "false"
+    default: "false",
+    definition: ``
   }, {
     name: "class",
     allowed: "css class",
     type: "string",
-    default: ""
+    default: "",
+    definition: ``
+  }, {
+    name: "lazyLoad",
+    allowed: "boolean",
+    type: "boolean",
+    default: "true",
+    definition: ``
+  }, {
+    name: "applyFilters",
+    allowed: "boolean",
+    type: "boolean",
+    default: "true",
+    definition: ``
   }, {
     name: "lazyLoad",
     allowed: "boolean",
@@ -51,7 +69,8 @@ export class CompImageComponent implements OnInit {
     name: "filters",
     allowed: "{ blur: false | brightness: false | contrast: false | grayscale: false | invert: false | hue: false | opacity: false | saturate: false | sepia: false }",
     type: "object",
-    default: " blur: false | brightness: false | contrast: false | grayscale: false | invert: false | hue: false | opacity: false | saturate: false | sepia: false }"
+    default: " blur: false | brightness: false | contrast: false | grayscale: false | invert: false | hue: false | opacity: false | saturate: false | sepia: false }",
+    definition: ``
   }];
 
   selector = "mg-image";
